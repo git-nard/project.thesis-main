@@ -29,6 +29,9 @@ function App() {
           <Route path="/view-calendar" element={<ViewCalendarPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/" element={<Destinations />} />
+          <Route path="/tourist-spots" element={<TouristSpotsList />} />
+          <Route path="/tourist-spots/:id" element={<TouristSpotPage />} />
+
         </Routes>
         {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
       </>
