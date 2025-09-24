@@ -13,8 +13,10 @@ import AboutPage from "./pages/AboutPage";
 import routes from "tempo-routes";
 import Destinations from "./pages/Destinations";
 import LoginPage from "./pages/LoginPage";
-import TouristSpotPage from "./pages/TouristSpot";
-import TouristSpotsList from "./components/tourists-spots/TouristSpotsList";
+import TouristSpotPage from "./pages/TouristSpotPage";
+
+
+
 
 function App() {
   return (
@@ -33,7 +35,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/" element={<Destinations />} />
 
-          <Route path="/tourist-spots" element={<TouristSpotsList />} />
+          <Route path="/tourist-spots" element={<TouristSpotPage />} />
           <Route path="/tourist-spots/:id" element={<TouristSpotPage />} />
 
 
