@@ -14,6 +14,8 @@ import routes from "tempo-routes";
 import Destinations from "./pages/Destinations";
 import LoginPage from "./pages/LoginPage";
 import TouristSpotPage from "./pages/TouristSpotPage";
+import SafetyPage from "./pages/SafetyPage";
+
 
 
 
@@ -37,6 +39,7 @@ function App() {
 
           <Route path="/tourist-spots" element={<TouristSpotPage />} />
           <Route path="/tourist-spots/:id" element={<TouristSpotPage />} />
+          <Route path="/safety" element={<SafetyPage />} /> {/* ⬅️ NEW ROUTE */}
 
 
 

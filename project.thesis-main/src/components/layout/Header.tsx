@@ -91,6 +91,11 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
                   About Albay
                 </a>
               </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="/safety" className="w-full">
+                  Traveler's Safety Guide
+                </a>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
