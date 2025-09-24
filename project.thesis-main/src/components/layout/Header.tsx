@@ -114,6 +114,10 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
           </form>
         </div>
 
+        <button>
+          <i className="fa-solid fa-user"></i>
+        </button>
+
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-gray-700 hover:text-red-600"

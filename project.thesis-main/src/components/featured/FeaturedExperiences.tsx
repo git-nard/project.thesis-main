@@ -308,7 +308,7 @@ const FeaturedExperiences = ({
           {/* Carousel */}
           <div className="overflow-hidden">
             <motion.div
-              className="flex gap-6 justify-center flex-wrap md:flex-nowrap"
+              className="flex gap-6 justify-center items-stretch flex-wrap md:flex-nowrap"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}

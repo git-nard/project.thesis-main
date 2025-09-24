@@ -6,10 +6,10 @@ const spots = [
     id: "1",
     name: "Mayon Volcano",
     image:
-      "https://images.unsplash.com/photo-1577976793837-0eb37f6e4e19?auto=format&fit=crop&w=1000&q=80",
+      "https://albay.gov.ph/wp-content/uploads/2020/02/joenabells_20200226_120826_0.jpg",
     description:
       'Known as the "Perfect Cone" for its symmetrical shape, Mayon Volcano is the most iconic landmark in Albay.',
-    location: "Albay Province, Philippines",
+    location: "Tabaco City, Albay, Philippines",
     category: "Natural Wonder",
     openingHours: "Open 24 hours",
   },
@@ -22,6 +22,94 @@ const spots = [
       "Historic ruins of a 16th-century church destroyed by Mayon's eruption in 1814.",
     location: "Daraga, Albay, Philippines",
     category: "Historical Site",
+    openingHours: "6:00 AM - 6:00 PM",
+  },
+  {
+    id: "3",
+    name: "Danao Lake",
+    image:
+      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A peaceful crater lake surrounded by lush greenery in Polangui, Albay.",
+    location: "Brgy. Danao, Polangui, Albay",
+    category: "Natural Attraction",
+    openingHours: "6:00 AM - 6:00 PM",
+  },
+  {
+    id: "4",
+    name: "Kawa Kawa Hills",
+    image:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A hill shaped like a cauldron, known for its pilgrimage site and scenic views.",
+    location: "Ligao City, Albay",
+    category: "Natural Attraction",
+    openingHours: "6:00 AM - 6:00 PM",
+  },
+  {
+    id: "5",
+    name: "Joroan Church",
+    image:
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A historic church in Tiwi, Albay, home to the revered image of Our Lady of Salvation.",
+    location: "Brgy. Joroan, Tiwi, Albay",
+    category: "Religious Site",
+    openingHours: "6:00 AM - 6:00 PM",
+  },
+  {
+    id: "6",
+    name: "Mayon Skyline",
+    image:
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A viewpoint in Tabaco City offering panoramic views of Mayon Volcano.",
+    location: "Brgy. Buang, Tabaco City, Albay",
+    category: "Viewpoint",
+    openingHours: "6:00 AM - 6:00 PM",
+  },
+  {
+    id: "7",
+    name: "Misibis Beach Resort & Casino",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A luxury beach resort with white sands, water activities, and world-class amenities.",
+    location: "Bacacay, Albay",
+    category: "Resort",
+    openingHours: "Open 24 hours",
+  },
+  {
+    id: "8",
+    name: "Vera Falls",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A beautiful waterfall at the foot of Mt. Malinao surrounded by lush forests.",
+    location: "Brgy. Bulang, Malinao, Albay",
+    category: "Waterfall",
+    openingHours: "6:00 AM - 6:00 PM",
+  },
+  {
+    id: "9",
+    name: "Blacksand Beaches",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "Unique volcanic black sand beaches formed from Mayon Volcano’s eruptions.",
+    location: "Bacacay, Albay",
+    category: "Beach",
+    openingHours: "Open 24 hours",
+  },
+  {
+    id: "10",
+    name: "Cagraray Eco Park",
+    image:
+      "https://images.unsplash.com/photo-1465311440773-0c3c31c375c3?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A nature park offering eco-friendly adventures and scenic landscapes.",
+    location: "Cagraray, Bacacay, Albay",
+    category: "Eco Park",
     openingHours: "6:00 AM - 6:00 PM",
   },
 ];
