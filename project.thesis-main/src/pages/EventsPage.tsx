@@ -178,7 +178,9 @@ const EventsPage = () => {
               </CardContent>
 
               <CardFooter>
-                <Button className="w-full">View Event Details</Button>
+                <Link to={`/events/${event.id}`}>
+                  <Button className="w-full">View Event Details</Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}

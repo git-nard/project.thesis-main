@@ -28,7 +28,7 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm border-b border-gray-200">
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+      <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
           <a href="/" className="flex items-center space-x-2">
@@ -100,29 +100,23 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
           </DropdownMenu>
         </nav>
 
-        {/* Search Bar */}
-        <div className="hidden md:flex items-center space-x-4">
-          <form onSubmit={handleSearchSubmit} className="relative">
-            <Input
-              type="search"
-              placeholder="Search places..."
-              className="w-64 pr-10"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <button
-              type="submit"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
-            >
-              <Search className="h-4 w-4" />
-            </button>
-          </form>
-        </div>
+          <form onSubmit={handleSearchSubmit} className="relative ml-4">
+  <Input
+    type="search"
+    placeholder="Search places..."
+    className="pr-10 h-12 text-sm"
+    value={searchQuery}
+    onChange={(e) => setSearchQuery(e.target.value)}
+  />
+  <button
+    type="submit"
+    className="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600"
+  >
+    <Search className="h-4 w-4" />
+  </button>
+</form>
 
-        <button>
-          <i className="fa-solid fa-user"></i>
-        </button>
-
+        
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-gray-700 hover:text-red-600"
@@ -136,6 +130,49 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
           )}
         </button>
       </div>
+
+      {/* User Dropdown */}
+<DropdownMenu>
+  <DropdownMenuTrigger asChild>
+    <button className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100">
+      <i className="fa-solid fa-user text-gray-700"></i>
+    </button>
+  </DropdownMenuTrigger>
+  <DropdownMenuContent align="end" className="w-48">
+    <DropdownMenuItem>
+      <a href="/profile" className="flex items-center w-full">
+        <i className="fa-solid fa-id-card mr-2 text-gray-500"></i>
+        <span>Profile</span>
+      </a>
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <a href="/itineraries" className="flex items-center w-full">
+        <i className="fa-solid fa-route mr-2 text-gray-500"></i>
+        <span>My Itineraries</span>
+      </a>
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <a href="/saved" className="flex items-center w-full">
+        <i className="fa-solid fa-bookmark mr-2 text-gray-500"></i>
+        <span>Saved Places</span>
+      </a>
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <a href="/settings" className="flex items-center w-full">
+        <i className="fa-solid fa-gear mr-2 text-gray-500"></i>
+        <span>Settings</span>
+      </a>
+    </DropdownMenuItem>
+    <DropdownMenuItem className="text-red-600 focus:text-red-600">
+      <button className="flex items-center w-full text-left">
+        <i className="fa-solid fa-right-from-bracket mr-2"></i>
+        <span>Logout</span>
+      </button>
+    </DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+
+      
 
       {/* Mobile Menu */}
       {isMenuOpen && (

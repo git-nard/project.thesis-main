@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Search } from "lucide-react";
 
-interface HeroSectionProps {
+interface HeroSectionProps {  
   backgroundImage?: string;
   title?: string;
   subtitle?: string;
@@ -13,7 +13,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({
-  backgroundImage = "https://images.unsplash.com/photo-1577976793837-0eb37f6e4e19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+  backgroundImage = "https://albay.gov.ph/wp-content/uploads/2020/02/joenabells_20200226_120826_0.jpg",
   title = "Discover the Beauty of Albay",
   subtitle = "Home to the majestic Mayon Volcano and rich Filipino culture",
   searchPlaceholder = "Search for attractions, hotels, or restaurants...",

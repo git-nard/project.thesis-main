@@ -7,6 +7,7 @@ import RestaurantsPage from "./pages/RestaurantsPage";
 import ExperiencesPage from "./pages/ExperiencesPage";
 import MapPage from "./pages/MapPage";
 import EventsPage from "./pages/EventsPage";
+import EventsDetalilsPage from "./pages/EventsDetailsPage";
 import CalendarPage from "./pages/CalendarPage";
 import ViewCalendarPage from "./pages/ViewCalendarPage";
 import AboutPage from "./pages/AboutPage";
@@ -32,6 +33,8 @@ function App() {
           <Route path="/experiences" element={<ExperiencesPage />} />
           <Route path="/map" element={<MapPage />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/events/:id" element={<EventsDetalilsPage event={undefined} />} />
+
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/view-calendar" element={<ViewCalendarPage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -40,7 +43,7 @@ function App() {
           <Route path="/tourist-spots" element={<TouristSpotPage />} />
           <Route path="/tourist-spots/:id" element={<TouristSpotPage />} />
           <Route path="/safety" element={<SafetyPage />} /> {/* ⬅️ NEW ROUTE */}
-
+=
 
 
           <Route path="/login" element={<LoginPage />} />

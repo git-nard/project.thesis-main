@@ -39,7 +39,7 @@ const AboutPage = () => {
           {/* Hero Image */}
           <div className="relative h-80 rounded-lg overflow-hidden mb-10">
             <img
-              src="https://images.unsplash.com/photo-1577976793837-0eb37f6e4e19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              src="https://albay.gov.ph/wp-content/uploads/2020/02/joenabells_20200226_120826_0.jpg"
               alt="Mayon Volcano"
               className="w-full h-full object-cover"
             />

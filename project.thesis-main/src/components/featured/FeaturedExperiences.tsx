@@ -44,7 +44,7 @@ const FeaturedExperiences = ({
       id: "1",
       name: "Mayon Volcano Hike",
       image:
-        "https://images.unsplash.com/photo-1577976793837-0eb37f6e4e19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "https://albay.gov.ph/wp-content/uploads/2020/01/adventure.jpg",
       description:
         "Experience the thrill of hiking the perfect cone of Mayon Volcano with experienced guides and breathtaking views.",
       type: "attraction",
