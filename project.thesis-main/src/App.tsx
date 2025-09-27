@@ -16,6 +16,7 @@ import Destinations from "./pages/Destinations";
 import LoginPage from "./pages/LoginPage";
 import TouristSpotPage from "./pages/TouristSpotPage";
 import SafetyPage from "./pages/SafetyPage";
+import AttractionsDetailsPage from "./components/attractions/AttractionsDetailsPage";
 
 
 
@@ -28,11 +29,19 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/attractions" element={<AttractionsPage />} />
+          <Route path="/attractions/:id" element={<AttractionsDetailsPage />} />
+
           <Route path="/hotels" element={<HotelsPage />} />
+
+
           <Route path="/restaurants" element={<RestaurantsPage />} />
+
+
           <Route path="/experiences" element={<ExperiencesPage />} />
+
           <Route path="/map" element={<MapPage />} />
-          <Route path="/events" element={<EventsPage />} />
+
+          <Route path="/events" element={<EventsPage />} /> 
           <Route path="/events/:id" element={<EventsDetalilsPage event={undefined} />} />
 
           <Route path="/calendar" element={<CalendarPage />} />

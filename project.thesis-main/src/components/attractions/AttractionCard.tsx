@@ -10,6 +10,7 @@ import {
 } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
+import { Link } from "react-router-dom";
 
 interface AttractionCardProps {
   id?: string;
@@ -103,9 +104,11 @@ const AttractionCard = ({
       </CardContent>
 
       <CardFooter className="p-4 pt-0 flex justify-between">
-        <Button variant="outline" size="sm" onClick={onClick}>
-          View Details
-        </Button>
+        <Link to={`/attractions/${id}`}>
+          <Button variant="outline" size="sm">
+            View Details
+          </Button>
+        </Link>
         <Button
           variant="ghost"
           size="sm"
