@@ -9,7 +9,7 @@ const Saved = () => {
     {
       title: "Saved Tourist Spots",
       description: "View the attractions you’ve bookmarked for later.",
-      link: "/saved/spots",
+      link: "/saved/tourist-spots",
       icon: <Landmark className="w-10 h-10 text-blue-600" />,
       bg: "bg-gradient-to-br from-blue-100 to-blue-50",
     },
@@ -28,7 +28,7 @@ const Saved = () => {
       bg: "bg-gradient-to-br from-green-100 to-green-50",
     },
     {
-      title: "All Saved Places",
+      title: "All Saved",
       description: "See everything you’ve saved in one place.",
       link: "/saved/all",
       icon: <Heart className="w-10 h-10 text-red-600" />,
@@ -52,7 +52,7 @@ const Saved = () => {
 
       {/* Title */}
       <h1 className="text-4xl font-extrabold mb-10 text-center text-blue-900">
-        ❤️ Saved Places
+        ❤️ Saved
       </h1>
 
       {/* Saved Grid */}
