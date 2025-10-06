@@ -17,7 +17,12 @@ import LoginPage from "./pages/LoginPage";
 import TouristSpotPage from "./pages/TouristSpotPage";
 import SafetyPage from "./pages/SafetyPage";
 import AttractionsDetailsPage from "./components/attractions/AttractionsDetailsPage";
-
+import Recommended from "./pages/Recommended";
+import Itineraries from "./pages/Itineraries";
+import UpcomingItinerary from "./pages/itineraries/UpcomingItinerary";
+import Saved from "./pages/Saved";
+import SavedTouristSpotsList from "./pages/saved/SavedTouristSpotsList";
+import SavedRestaurantsList from "./pages/saved/SavedRestaurantsList";
 
 
 
@@ -52,7 +57,17 @@ function App() {
           <Route path="/tourist-spots" element={<TouristSpotPage />} />
           <Route path="/tourist-spots/:id" element={<TouristSpotPage />} />
           <Route path="/safety" element={<SafetyPage />} /> {/* ⬅️ NEW ROUTE */}
-=
+          <Route path="/recommended" element={<Recommended />} />
+
+
+          <Route path="/itineraries" element={<Itineraries />} />
+          <Route path="/itineraries/upcoming" element={<UpcomingItinerary />} />
+
+
+
+          <Route path="/saved" element={<Saved />} />
+          <Route path="/saved/tourist-spots" element={<SavedTouristSpotsList />} />
+          <Route path="/saved/restaurants" element={<SavedRestaurantsList  />} />
 
 
           <Route path="/login" element={<LoginPage />} />
