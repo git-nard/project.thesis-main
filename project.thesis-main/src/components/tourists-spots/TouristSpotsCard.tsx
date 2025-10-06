@@ -48,6 +48,13 @@ const TouristSpotCard = ({
         >
           {category}
         </Badge>
+        <button className="group absolute top-3 left-3 bg-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-red-500">
+  <i className="fa-solid fa-bookmark text-red-500 transition-all duration-300 group-hover:text-white"></i>
+</button>
+
+
+
+
       </div>
 
       {/* Header */}
