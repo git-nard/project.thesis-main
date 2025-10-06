@@ -29,7 +29,7 @@ const UserDropdown = () => {
           <DropdownMenuItem>
             <a href="/saved" className="flex items-center w-full">
               <i className="fa-solid fa-bookmark mr-2 text-gray-500"></i>
-              <span>Saved Places</span>
+              <span>Saved</span>
             </a>
           </DropdownMenuItem>
           <DropdownMenuItem>
