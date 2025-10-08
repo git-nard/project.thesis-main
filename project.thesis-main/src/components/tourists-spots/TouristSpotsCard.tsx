@@ -78,7 +78,23 @@ const TouristSpotCard = ({
 
       {/* Footer */}
       <CardFooter className="p-4 pt-0 flex justify-between">
-        <Button variant="outline" size="sm" onClick={() => navigate(`/tourist-spots/${id}`)}>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() =>
+            navigate(`/tourist-spots/${id}`, {
+              state: {
+                id,
+                name,
+                image,
+                description,
+                location,
+                category,
+                openingHours,
+              },
+            })
+          }
+        >
           View Details
         </Button>
         <Button

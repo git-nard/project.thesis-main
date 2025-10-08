@@ -17,7 +17,7 @@ const spots = [
     id: "2",
     name: "Cagsawa Ruins",
     image:
-      "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=1000&q=80",
+      "https://www.southeastasianarchaeology.com/wp-content/uploads/2022/05/Cagsawa-Ruins-The-Philippines.jpg",
     description:
       "Historic ruins of a 16th-century church destroyed by Mayon's eruption in 1814.",
     location: "Daraga, Albay, Philippines",
@@ -28,7 +28,7 @@ const spots = [
     id: "3",
     name: "Danao Lake",
     image:
-      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1000&q=80",
+      "https://polangui.gov.ph/wp-content/uploads/2021/04/Danao_Lake_Polangui_Albay_a.jpg",
     description:
       "A peaceful crater lake surrounded by lush greenery in Polangui, Albay.",
     location: "Brgy. Danao, Polangui, Albay",
@@ -39,7 +39,7 @@ const spots = [
     id: "4",
     name: "Kawa Kawa Hills",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi44hDtNsjshG6TI-LkhBOxZF7x_UzeHVu5N8vfafkXLpftgJbDrHoScYiQmhoiwuqfAc0GgWsOT-6ea8_ioB9gvCTNRjJsNDmcUXM8QU9w9tkW6EPUbUisCNMROprnAVL3nAAKbX4HgIg/s1600/DSC_2017.JPG",
     description:
       "A hill shaped like a cauldron, known for its pilgrimage site and scenic views.",
     location: "Ligao City, Albay",
@@ -50,7 +50,7 @@ const spots = [
     id: "5",
     name: "Joroan Church",
     image:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1000&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1I6jWO9EgXNMUnrToGet44W3E-_76rd8K4Q&s",
     description:
       "A historic church in Tiwi, Albay, home to the revered image of Our Lady of Salvation.",
     location: "Brgy. Joroan, Tiwi, Albay",
@@ -61,7 +61,7 @@ const spots = [
     id: "6",
     name: "Mayon Skyline",
     image:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80",
+      "https://albay.gov.ph/wp-content/uploads/2020/02/downnabells_20200224_111853_0-1024x768.jpg",
     description:
       "A viewpoint in Tabaco City offering panoramic views of Mayon Volcano.",
     location: "Brgy. Buang, Tabaco City, Albay",
@@ -72,7 +72,7 @@ const spots = [
     id: "7",
     name: "Misibis Beach Resort & Casino",
     image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/27/63/f0/misibis-bay-aerial-shot.jpg?w=900&h=-1&s=1",
     description:
       "A luxury beach resort with white sands, water activities, and world-class amenities.",
     location: "Bacacay, Albay",
@@ -83,7 +83,7 @@ const spots = [
     id: "8",
     name: "Vera Falls",
     image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFjIYpoqpyGPmE7niFfgEPoZvFosh9ghbm5w&s",
     description:
       "A beautiful waterfall at the foot of Mt. Malinao surrounded by lush forests.",
     location: "Brgy. Bulang, Malinao, Albay",
@@ -94,7 +94,7 @@ const spots = [
     id: "9",
     name: "Blacksand Beaches",
     image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+      "https://i.pinimg.com/736x/0c/f3/3a/0cf33a7bf30a13619e5e5e43b8091efd.jpg",
     description:
       "Unique volcanic black sand beaches formed from Mayon Volcano’s eruptions.",
     location: "Bacacay, Albay",
@@ -116,7 +116,7 @@ const spots = [
     id: "11",
     name: "Embarcadero de Legazpi",
     image:
-      "https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=1000&q=80",
+      "https://www.vigattintourism.com/assets/article_main_photos/optimize/1346402165628mK6Hy.jpg",
     description:
       "A premier waterfront commercial and entertainment complex offering shopping, dining, and stunning sea views.",
     location: "Legazpi City, Albay",
@@ -127,7 +127,7 @@ const spots = [
     id: "12",
     name: "Kapuntukan Hill",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mount_Mayon%2C_Kapuntukan_Hill_bay_view_Puro_%28Legazpi%2C_Albay%3B_04-22-2023%29.jpg/1280px-Mount_Mayon%2C_Kapuntukan_Hill_bay_view_Puro_%28Legazpi%2C_Albay%3B_04-22-2023%29.jpg",
     description:
       "Also known as Sleeping Lion Hill, it offers panoramic views of Legazpi Port and Mayon Volcano.",
     location: "Puro, Legazpi City, Albay",
@@ -237,7 +237,7 @@ const spots = [
     id: "22",
     name: "Quitinday Green Hills",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
+      "https://nojuanisanisland.com/wp-content/uploads/2015/06/dsc_2572.jpg",
     description:
       "Known as the ‘Chocolate Hills of Albay’, these rolling green hills offer scenic hiking trails and views of Mayon.",
     location: "Camalig, Albay",
