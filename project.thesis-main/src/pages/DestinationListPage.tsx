@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const DestinationsPage = () => {
+const DestinationListPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -65,4 +65,4 @@ const DestinationsPage = () => {
   );
 };
 
-export default DestinationsPage;
+export default DestinationListPage;

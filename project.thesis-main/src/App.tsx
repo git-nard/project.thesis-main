@@ -12,7 +12,7 @@ import CalendarPage from "./pages/CalendarPage";
 import ViewCalendarPage from "./pages/ViewCalendarPage";
 import AboutPage from "./pages/AboutPage";
 import routes from "tempo-routes";
-import Destinations from "./pages/Destinations";
+import DestinationPage from "./pages/DestinationPage";
 import LoginPage from "./pages/LoginPage";
 import TouristSpotPage from "./pages/TouristSpotPage";
 import SafetyPage from "./pages/SafetyPage";
@@ -23,6 +23,10 @@ import UpcomingItinerary from "./pages/itineraries/UpcomingItinerary";
 import Saved from "./pages/Saved";
 import SavedTouristSpotsList from "./pages/saved/SavedTouristSpotsList";
 import SavedRestaurantsList from "./pages/saved/SavedRestaurantsList";
+import TourismActivitiesPage from "./pages/TourismActivitiesPage";
+import DayPlanner from "./pages/itineraries/DayPlanner";
+
+
 
 
 
@@ -52,16 +56,23 @@ function App() {
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/view-calendar" element={<ViewCalendarPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/" element={<Destinations />} />
+          
+          <Route path="/destinations" element={<DestinationPage />} />
+          <Route path="/destinations/:id" element={<DestinationPage />} />
 
           <Route path="/tourist-spots" element={<TouristSpotPage />} />
           <Route path="/tourist-spots/:id" element={<TouristSpotPage />} />
-          <Route path="/safety" element={<SafetyPage />} /> {/* ⬅️ NEW ROUTE */}
+          <Route path="/safety" element={<SafetyPage />} />
           <Route path="/recommended" element={<Recommended />} />
 
 
           <Route path="/itineraries" element={<Itineraries />} />
           <Route path="/itineraries/upcoming" element={<UpcomingItinerary />} />
+          <Route path="/itineraries/day-planner" element={<DayPlanner />} />
+
+
+          <Route path="/tourism-activities" element={<TourismActivitiesPage />} />
+          <Route path="/tourism-activities/:id" element={<TourismActivitiesPage />} />
 
 
 
