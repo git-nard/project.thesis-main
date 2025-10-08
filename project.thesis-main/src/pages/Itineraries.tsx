@@ -1,5 +1,5 @@
 // src/pages/Itineraries.tsx
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, Map, Clock, CheckCircle, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -35,6 +35,10 @@ const Itineraries = () => {
       bg: "bg-gradient-to-br from-yellow-100 to-yellow-50",
     },
   ];
+
+  useEffect(() => {
+    document.title = "My Itineraries - Albay Travel";
+  }, []);
 
   return (
     <div className="p-8 min-h-screen bg-gradient-to-b from-white to-blue-50">
