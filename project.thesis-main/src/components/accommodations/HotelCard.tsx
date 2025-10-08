@@ -1,5 +1,6 @@
 import React from "react";
 import { Star, MapPin, Wifi, Coffee, Utensils } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
   Card,
   CardHeader,
@@ -26,18 +27,12 @@ interface HotelCardProps {
 const HotelCard = ({
   id = "1",
   name = "Mayon View Resort & Spa",
-  image = "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+  image = "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1740&q=80",
   description = "Luxury resort with stunning views of Mayon Volcano, featuring a spa, infinity pool, and fine dining restaurant.",
   location = "Legazpi City, Albay",
   priceRange = "₱5,000 - ₱12,000",
   rating = 4.8,
-  amenities = [
-    "Free WiFi",
-    "Swimming Pool",
-    "Restaurant",
-    "Spa",
-    "Fitness Center",
-  ],
+  amenities = ["Free WiFi", "Swimming Pool", "Restaurant", "Spa", "Fitness Center"],
   onClick = () => console.log("Hotel card clicked"),
 }: HotelCardProps) => {
   // Generate star rating display
@@ -48,19 +43,13 @@ const HotelCard = ({
 
     for (let i = 0; i < fullStars; i++) {
       stars.push(
-        <Star
-          key={`star-${i}`}
-          className="h-4 w-4 fill-yellow-400 text-yellow-400"
-        />,
+        <Star key={`star-${i}`} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
       );
     }
 
     if (hasHalfStar) {
       stars.push(
-        <Star
-          key="half-star"
-          className="h-4 w-4 fill-yellow-400 text-yellow-400 opacity-50"
-        />,
+        <Star key="half-star" className="h-4 w-4 fill-yellow-400 text-yellow-400 opacity-50" />
       );
     }
 
@@ -69,23 +58,17 @@ const HotelCard = ({
 
   // Render amenity icons
   const renderAmenityIcon = (amenity: string) => {
-    if (amenity.toLowerCase().includes("wifi"))
-      return <Wifi className="h-4 w-4" />;
-    if (
-      amenity.toLowerCase().includes("restaurant") ||
-      amenity.toLowerCase().includes("dining")
-    )
+    if (amenity.toLowerCase().includes("wifi")) return <Wifi className="h-4 w-4" />;
+    if (amenity.toLowerCase().includes("restaurant") || amenity.toLowerCase().includes("dining"))
       return <Utensils className="h-4 w-4" />;
-    if (
-      amenity.toLowerCase().includes("coffee") ||
-      amenity.toLowerCase().includes("breakfast")
-    )
+    if (amenity.toLowerCase().includes("coffee") || amenity.toLowerCase().includes("breakfast"))
       return <Coffee className="h-4 w-4" />;
     return null;
   };
 
   return (
     <Card className="w-full max-w-sm overflow-hidden transition-all duration-300 hover:shadow-lg bg-white">
+      {/* Image Section */}
       <div className="relative h-48 w-full overflow-hidden">
         <img
           src={image}
@@ -99,6 +82,7 @@ const HotelCard = ({
         </div>
       </div>
 
+      {/* Info Section */}
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
           <CardTitle className="text-xl font-bold">{name}</CardTitle>
@@ -135,9 +119,21 @@ const HotelCard = ({
       </CardContent>
 
       <CardFooter>
-        <Button variant="outline" onClick={onClick} className="w-full">
-          View Details
-        </Button>
+        <Link
+          to={`/hotels/${id}`}
+          state={{
+            id,
+            name,
+            image,
+            description,
+            location,
+            priceRange,
+            rating,
+            amenities,
+          }}
+        >
+          <Button onClick={onClick}>View Details</Button>
+        </Link>
       </CardFooter>
     </Card>
   );
