@@ -112,6 +112,171 @@ const spots = [
     category: "Eco Park",
     openingHours: "6:00 AM - 6:00 PM",
   },
+  {
+    id: "11",
+    name: "Embarcadero de Legazpi",
+    image:
+      "https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A premier waterfront commercial and entertainment complex offering shopping, dining, and stunning sea views.",
+    location: "Legazpi City, Albay",
+    category: "Lifestyle & Shopping",
+    openingHours: "10:00 AM - 9:00 PM",
+  },
+  {
+    id: "12",
+    name: "Kapuntukan Hill",
+    image:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "Also known as Sleeping Lion Hill, it offers panoramic views of Legazpi Port and Mayon Volcano.",
+    location: "Puro, Legazpi City, Albay",
+    category: "Hill / Viewpoint",
+    openingHours: "Open 24 hours",
+  },
+  {
+    id: "13",
+    name: "Japanese Tunnel",
+    image:
+      "https://images.unsplash.com/photo-1594589305091-9cb5b87bba6e?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A historic tunnel built during World War II, offering visitors a glimpse into Albay’s wartime history.",
+    location: "Mt. Kitwinan, Camalig, Albay",
+    category: "Historical Site",
+    openingHours: "8:00 AM - 5:00 PM",
+  },
+  {
+    id: "14",
+    name: "Albay Park and Wildlife",
+    image:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A family-friendly park with a small zoo, picnic areas, and scenic views of Mayon Volcano.",
+    location: "Bogtong, Legazpi City, Albay",
+    category: "Family Park",
+    openingHours: "8:00 AM - 6:00 PM",
+  },
+  {
+    id: "15",
+    name: "Lignon Hill Nature Park",
+    image:
+      "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A popular spot for ziplining, hiking, and sightseeing with a 360° view of Legazpi and Mayon Volcano.",
+    location: "Daraga, Albay",
+    category: "Viewpoint / Adventure Park",
+    openingHours: "6:00 AM - 6:00 PM",
+  },
+  {
+    id: "16",
+    name: "Legazpi Boulevard",
+    image:
+      "https://images.unsplash.com/photo-1516900557540-ebb7d13cc5d3?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A scenic seaside boulevard perfect for jogging, cycling, and viewing the Mayon Volcano.",
+    location: "Puro, Legazpi City, Albay",
+    category: "Seaside Promenade",
+    openingHours: "Open 24 hours",
+  },
+  {
+    id: "17",
+    name: "Hoyop-Hoyopan Cave",
+    image:
+      "https://images.unsplash.com/photo-1594589305091-9cb5b87bba6e?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A limestone cave with natural formations and historical significance as a refuge during World War II.",
+    location: "Brgy. Cotmon, Legazpi City, Albay",
+    category: "Cave",
+    openingHours: "8:00 AM - 5:00 PM",
+  },
+  {
+    id: "18",
+    name: "Calabidongan Cave",
+    image:
+      "https://images.unsplash.com/photo-1604079628046-9431d8cb7e5a?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "An adventurous cave system in Camalig with stunning rock formations and underground streams.",
+    location: "Brgy. Calabidongan, Camalig, Albay",
+    category: "Cave / Adventure",
+    openingHours: "8:00 AM - 5:00 PM",
+  },
+  {
+    id: "19",
+    name: "Mainit Hot Spring",
+    image:
+      "https://images.unsplash.com/photo-1569429592675-c3b5a7c1f9de?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A natural hot spring resort offering therapeutic waters and relaxing mountain ambiance.",
+    location: "Brgy. Pariaan, Camalig, Albay",
+    category: "Hot Spring",
+    openingHours: "7:00 AM - 7:00 PM",
+  },
+  {
+    id: "20",
+    name: "Quituinan Hill",
+    image:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A World War II historical site featuring bunkers, tunnels, and scenic views of Mayon Volcano.",
+    location: "Camalig, Albay",
+    category: "Historical Site",
+    openingHours: "8:00 AM - 6:00 PM",
+  },
+  {
+    id: "21",
+    name: "Sumlang Lake",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A peaceful lake offering bamboo rafting with a perfect view of Mayon Volcano.",
+    location: "Camalig, Albay",
+    category: "Lake / Nature",
+    openingHours: "7:00 AM - 6:00 PM",
+  },
+  {
+    id: "22",
+    name: "Quitinday Green Hills",
+    image:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "Known as the ‘Chocolate Hills of Albay’, these rolling green hills offer scenic hiking trails and views of Mayon.",
+    location: "Camalig, Albay",
+    category: "Natural Attraction",
+    openingHours: "6:00 AM - 6:00 PM",
+  },
+  {
+    id: "23",
+    name: "Busay Falls",
+    image:
+      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "A majestic multi-tiered waterfall located in Malilipot, surrounded by tropical vegetation.",
+    location: "Malilipot, Albay",
+    category: "Waterfall",
+    openingHours: "6:00 AM - 6:00 PM",
+  },
+  {
+    id: "24",
+    name: "Jovellar Underground River",
+    image:
+      "https://images.unsplash.com/photo-1614280977882-474d3dfc1a4a?auto=format&fit=crop&w=1000&q=80",
+    description:
+      "An underground river accessible by bamboo raft, featuring limestone formations and clear waters.",
+    location: "Jovellar, Albay",
+    category: "Underground River / Adventure",
+    openingHours: "8:00 AM - 5:00 PM",
+  },
+  {
+  id: "25",
+  name: "Pototan Cave",
+  image:
+    "https://images.unsplash.com/photo-1604079628046-9431d8cb7e5a?auto=format&fit=crop&w=1000&q=80",
+  description:
+    "A hidden gem in Rapu-Rapu, Pototan Cave features stunning stalactite and stalagmite formations and an underground stream that leads to a cool freshwater pool.",
+  location: "Batan Island, Rapu-Rapu, Albay",
+  category: "Cave / Natural Attraction",
+  openingHours: "8:00 AM - 5:00 PM",
+},
 ];
 
 const TouristSpotsList = () => {
