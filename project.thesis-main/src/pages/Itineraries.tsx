@@ -23,7 +23,7 @@ const Itineraries = () => {
     {
       title: "Past Trips",
       description: "Review your past travel experiences and memories.",
-      link: "/itineraries/past",
+      link: "/itineraries/past-trips",
       icon: <CheckCircle className="w-10 h-10 text-green-600" />,
       bg: "bg-gradient-to-br from-green-100 to-green-50",
     },
