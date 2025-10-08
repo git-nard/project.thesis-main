@@ -49,7 +49,7 @@ const HeroSection = ({
         </p>
 
         {/* Search Bar */}
-        <form onSubmit={handleSearchSubmit} className="mb-8 w-full max-w-3xl">
+        {/* <form onSubmit={handleSearchSubmit} className="mb-8 w-full max-w-3xl">
           <div className="relative flex overflow-hidden rounded-full bg-white shadow-lg">
             <input
               type="text"
@@ -66,7 +66,7 @@ const HeroSection = ({
               <Search className="h-5 w-5" />
             </button>
           </div>
-        </form>
+        </form> */}
 
         {/* CTA Button */}
         <Button
