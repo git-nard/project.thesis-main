@@ -144,12 +144,12 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
             </button>
 
             {results.length > 0 && searchQuery.length > 0 && (
-              <div className="results-container p-5 border border-gray-200 bg-white mt-1 absolute w-full rounded-sm shadow-lg">
+              <div className="results-container border border-gray-200 bg-white mt-1 absolute w-full rounded-sm shadow-lg">
                 {/* Search results will be displayed here */}
                 <ul>
                   {results.map((result, index) => (
                     <li key={index}>
-                      <Link to={`/destinations/${result.id}`} state={result}>
+                      <Link to={`/destinations/${result.id}`} state={result} className="block p-5 hover:bg-gray-100 rounded">
                         {result.name}
                       </Link>
                     </li>
