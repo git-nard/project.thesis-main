@@ -15,7 +15,6 @@ import routes from "tempo-routes";
 import DestinationListPage from "./pages/DestinationListPage";
 import DestinationDetailPage from "./pages/destinations/DestinationDetailPage";
 import LoginPage from "./pages/LoginPage";
-import TouristSpotPage from "./pages/TouristSpotPage";
 import SafetyPage from "./pages/SafetyPage";
 import AttractionsDetailsPage from "./components/attractions/AttractionsDetailsPage";
 import Recommended from "./pages/Recommended";
@@ -27,7 +26,9 @@ import SavedRestaurantsList from "./pages/saved/SavedRestaurantsList";
 import TourismActivitiesPage from "./pages/TourismActivitiesPage";
 import DayPlanner from "./pages/itineraries/DayPlanner";
 import PastTrips from "./pages/itineraries/PastTrips";
-
+import TouristSpotListPage from "./components/tourists-spots/TouristSpotListPage";
+import TouristSpotDetailsPage from "./components/tourists-spots/TouristSpotDetailsPage";
+import HotelsDetailsPage from "./pages/hotels/HotelsDetailsPage";
 
 
 
@@ -42,7 +43,7 @@ function App() {
           <Route path="/attractions/:id" element={<AttractionsDetailsPage />} />
 
           <Route path="/hotels" element={<HotelsPage />} />
-
+          <Route path="/hotels/:id" element={<HotelsDetailsPage />} />
 
           <Route path="/restaurants" element={<RestaurantsPage />} />
 
@@ -61,8 +62,10 @@ function App() {
           <Route path="/destinations" element={<DestinationListPage />} />
           <Route path="/destinations/:id" element={<DestinationDetailPage />} />
 
-          <Route path="/tourist-spots" element={<TouristSpotPage />} />
-          <Route path="/tourist-spots/:id" element={<TouristSpotPage />} />
+          <Route path="/tourist-spots" element={<TouristSpotListPage />} />
+          <Route path="/tourist-spots/:id" element={<TouristSpotDetailsPage />} />
+
+
           <Route path="/safety" element={<SafetyPage />} />
           <Route path="/recommended" element={<Recommended />} />
 
