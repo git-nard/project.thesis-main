@@ -2,7 +2,7 @@ import React from "react";
 import DestinationsCard from "./DestinationsCard";
 
 
-const destinations = [
+export const destinations = [
   {
     id: "1",
     name: "Mulakbugak Spring Falls",
