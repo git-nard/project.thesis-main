@@ -74,7 +74,7 @@ const FeaturedExperiences = ({
       id: "3",
       name: "The Oriental Legazpi",
       image:
-        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+        "https://www.theorientalhotels.com/legazpi/wp-content/uploads/sites/2/2024/04/Web-Page-Banner-1-2-2560x1707.jpg",
       description:
         "Luxury hotel offering panoramic views of Mayon Volcano and Albay Gulf, with world-class amenities and exceptional service.",
       type: "hotel",
