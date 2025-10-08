@@ -160,22 +160,7 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
 
           </form>
 
-        
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-gray-700 hover:text-red-600"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
-        </button>
-      </div>
-
-      {/* User Dropdown */}
+          {/* User Dropdown */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <button className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100">
@@ -215,6 +200,23 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+
+        
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-gray-700 hover:text-red-600"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
+        </button>
+      </div>
+
+      
 
       
 
