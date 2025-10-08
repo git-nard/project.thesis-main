@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Search, Menu, X, MapPin, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
+import { destinations } from "../destinations/DestinationsLists";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,6 +18,7 @@ interface HeaderProps {
 const Header = ({ onSearch = () => {} }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [results, setResults] = useState([])
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,6 +28,14 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const filteredResults = useMemo(() => {
+    setResults(destinations.filter((dest) => dest.name.toLowerCase().includes(searchQuery.toLowerCase())));
+
+    return results;
+
+  }, [destinations, searchQuery]); 
+
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm border-b border-gray-200">
@@ -48,6 +59,24 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
             Attractions
           </a>
           <a
+            href="/tourist-spots"
+            className="text-gray-700 hover:text-red-600 font-medium"
+          >
+            Tourist Spots
+          </a>
+          <a
+            href="/Destinations"
+            className="text-gray-700 hover:text-red-600 font-medium"
+          >
+            Destinations
+          </a>
+          <a
+            href="/tourism-activities"
+            className="text-gray-700 hover:text-red-600 font-medium"
+          >
+            Tourism-Activites
+          </a>
+          <a
             href="/hotels"
             className="text-gray-700 hover:text-red-600 font-medium"
           >
@@ -58,12 +87,6 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
             className="text-gray-700 hover:text-red-600 font-medium"
           >
             Restaurants
-          </a>
-          <a
-            href="/experiences"
-            className="text-gray-700 hover:text-red-600 font-medium"
-          >
-            Experiences
           </a>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -79,6 +102,11 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
               <DropdownMenuItem>
                 <a href="/map" className="w-full">
                   Interactive Map
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="/experiences" className="w-full">
+                  Experiences
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem>
@@ -101,20 +129,36 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
         </nav>
 
           <form onSubmit={handleSearchSubmit} className="relative ml-4">
-  <Input
-    type="search"
-    placeholder="Search places..."
-    className="pr-10 h-12 text-sm"
-    value={searchQuery}
-    onChange={(e) => setSearchQuery(e.target.value)}
-  />
-  <button
-    type="submit"
-    className="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600"
-  >
-    <Search className="h-4 w-4" />
-  </button>
-</form>
+            <Input
+              type="search"
+              placeholder="Search places..."
+              className="pr-10 h-12 text-sm"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <button
+              type="submit"
+              className="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600"
+            >
+              <Search className="h-4 w-4" />
+            </button>
+
+            {results.length > 0 && searchQuery.length > 0 && (
+              <div className="results-container p-5 border border-gray-200 bg-white mt-1 absolute w-full rounded-sm shadow-lg">
+                {/* Search results will be displayed here */}
+                <ul>
+                  {results.map((result, index) => (
+                    <li key={index}>
+                      <Link to={`/destinations/${result.id}`} state={result}>
+                        {result.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+          </form>
 
         
         {/* Mobile Menu Button */}
