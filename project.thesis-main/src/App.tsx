@@ -12,7 +12,8 @@ import CalendarPage from "./pages/CalendarPage";
 import ViewCalendarPage from "./pages/ViewCalendarPage";
 import AboutPage from "./pages/AboutPage";
 import routes from "tempo-routes";
-import DestinationPage from "./pages/DestinationPage";
+import DestinationListPage from "./pages/DestinationListPage";
+import DestinationDetailPage from "./pages/destinations/DestinationDetailPage";
 import LoginPage from "./pages/LoginPage";
 import TouristSpotPage from "./pages/TouristSpotPage";
 import SafetyPage from "./pages/SafetyPage";
@@ -25,7 +26,7 @@ import SavedTouristSpotsList from "./pages/saved/SavedTouristSpotsList";
 import SavedRestaurantsList from "./pages/saved/SavedRestaurantsList";
 import TourismActivitiesPage from "./pages/TourismActivitiesPage";
 import DayPlanner from "./pages/itineraries/DayPlanner";
-
+import PastTrips from "./pages/itineraries/PastTrips";
 
 
 
@@ -57,8 +58,8 @@ function App() {
           <Route path="/view-calendar" element={<ViewCalendarPage />} />
           <Route path="/about" element={<AboutPage />} />
           
-          <Route path="/destinations" element={<DestinationPage />} />
-          <Route path="/destinations/:id" element={<DestinationPage />} />
+          <Route path="/destinations" element={<DestinationListPage />} />
+          <Route path="/destinations/:id" element={<DestinationDetailPage />} />
 
           <Route path="/tourist-spots" element={<TouristSpotPage />} />
           <Route path="/tourist-spots/:id" element={<TouristSpotPage />} />
@@ -69,6 +70,9 @@ function App() {
           <Route path="/itineraries" element={<Itineraries />} />
           <Route path="/itineraries/upcoming" element={<UpcomingItinerary />} />
           <Route path="/itineraries/day-planner" element={<DayPlanner />} />
+          <Route path="/itineraries/past-trips" element={<PastTrips />} />
+        
+          
 
 
           <Route path="/tourism-activities" element={<TourismActivitiesPage />} />
