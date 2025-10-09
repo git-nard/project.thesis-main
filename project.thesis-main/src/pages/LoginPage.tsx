@@ -1,12 +1,13 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
     email: "",
-    password: ""
+    password: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -14,56 +15,104 @@ const LoginPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Call your API here
+    // TODO: Handle login API call
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
-      {/* Creative Title */}
-      <h1 className="mb-8 text-5xl font-extrabold text-white tracking-wide drop-shadow-lg">
-        Wanderer
-      </h1>
-
-      {/* Login Card */}
-      <div className="w-full max-w-md p-8 bg-white rounded-2xl shadow-xl">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-          Login
-        </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          />
-          <button
-            type="submit"
-            className="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition"
+    <div className="min-h-screen flex flex-col md:flex-row bg-gray-900 text-white">
+      {/* LEFT SIDE - Hero Image */}
+      <div className="relative hidden md:flex md:w-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80"
+          alt="Travel background"
+          className="object-cover w-full h-full opacity-80"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900/60 to-transparent" />
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-8">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-5xl font-extrabold tracking-wide mb-4 text-white drop-shadow-xl"
           >
-            Login
-          </button>
-        </form>
-        <p className="mt-4 text-sm text-center text-gray-600">
-          Don’t have an account?{" "}
-          <a href="/register" className="text-indigo-600 hover:underline">
-            Sign up
-          </a>
-        </p>
+            Wanderer
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="text-lg max-w-md text-gray-200 leading-relaxed"
+          >
+            Discover breathtaking destinations, hidden gems, and new adventures
+            every day — your next journey starts here.
+          </motion.p>
+        </div>
+      </div>
+
+      {/* RIGHT SIDE - Login Form */}
+      <div className="flex flex-col justify-center items-center w-full md:w-1/2 relative p-8 md:p-16">
+        {/* Subtle background glow */}
+        <div className="absolute top-0 left-0 w-60 h-60 bg-indigo-500/20 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-72 h-72 bg-pink-500/20 blur-3xl rounded-full translate-x-1/2 translate-y-1/2 pointer-events-none" />
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="w-full max-w-md z-10"
+        >
+          <h2 className="text-3xl font-bold text-center text-white mb-6">
+            Welcome Back 👋
+          </h2>
+          <p className="text-center text-gray-400 mb-8">
+            Log in to continue exploring the world.
+          </p>
+
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div>
+              <label className="block text-gray-300 mb-1 text-sm">Email</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-700 bg-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+              />
+            </div>
+
+            <div>
+              <label className="block text-gray-300 mb-1 text-sm">
+                Password
+              </label>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-700 bg-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-2 bg-gradient-to-r from-indigo-600 to-pink-500 text-white font-semibold rounded-lg shadow-md hover:opacity-90 transition-all"
+            >
+              Login
+            </button>
+          </form>
+
+          <p className="mt-6 text-sm text-center text-gray-400">
+            Don’t have an account?{" "}
+            <a href="/register" className="text-indigo-400 hover:underline">
+              Sign up
+            </a>
+          </p>
+        </motion.div>
       </div>
     </div>
   );
