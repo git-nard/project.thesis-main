@@ -101,14 +101,30 @@ const TouristSpotCard = ({
           variant="ghost"
           size="sm"
           className="text-blue-600"
-          onClick={() =>
-            window.open(
-              `https://maps.google.com/?q=${encodeURIComponent(name + " " + location)}`,
-              "_blank"
-            )
-          }
+          onClick={() => {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(
+                (position) => {
+                  const { latitude, longitude } = position.coords;
+                  const destination = encodeURIComponent(`${name} ${location}`);
+                  const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${destination}`;
+                  window.open(mapsUrl, "_blank");
+                },
+                (error) => {
+                  console.error("Geolocation error:", error);
+                  // Fallback: use My Location if permission denied
+                  const fallbackUrl = `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${encodeURIComponent(
+                    name + " " + location
+                  )}`;
+                  window.open(fallbackUrl, "_blank");
+                }
+              );
+            } else {
+              alert("Geolocation is not supported by your browser.");
+            }
+          }}
         >
-          <MapPin className="w-4 h-4 mr-1" /> Map
+          <MapPin className="w-4 h-4 mr-1" /> Directions
         </Button>
       </CardFooter>
     </Card>

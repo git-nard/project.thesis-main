@@ -66,14 +66,14 @@ const TouristSpotDetailsPage = () => {
         <Button
           onClick={() =>
             window.open(
-              `https://maps.google.com/?q=${encodeURIComponent(
+              `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${encodeURIComponent(
                 name + " " + location
               )}`,
               "_blank"
             )
           }
         >
-          View on Google Maps
+          Get Directions
         </Button>
       </div>
 
