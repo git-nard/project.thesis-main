@@ -3,14 +3,7 @@ import { Search, SlidersHorizontal, X } from "lucide-react";
 import HotelCard from "./HotelCard";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Card, CardContent } from "@/components/ui/card";
+import FilterModal from "./FilterModal";
 
 interface Hotel {
   id: string;
@@ -34,7 +27,7 @@ const HotelsList = ({
       id: "1",
       name: "Mayon View Resort & Spa",
       image:
-        "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1740&q=80",
       description:
         "Luxury resort with stunning views of Mayon Volcano, featuring a spa, infinity pool, and fine dining restaurant.",
       location: "Legazpi City, Albay",
@@ -52,7 +45,7 @@ const HotelsList = ({
       id: "2",
       name: "Albay Boutique Hotel",
       image:
-        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1470&q=80",
       description:
         "Charming boutique hotel in the heart of Legazpi City with traditional Filipino design elements and modern amenities.",
       location: "Legazpi City, Albay",
@@ -69,7 +62,7 @@ const HotelsList = ({
       id: "3",
       name: "Daraga Homestay",
       image:
-        "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=1470&q=80",
       description:
         "Authentic Filipino homestay experience with local hosts, home-cooked meals, and cultural immersion opportunities.",
       location: "Daraga, Albay",
@@ -134,92 +127,84 @@ const HotelsList = ({
   onHotelSelect = (id) => console.log(`Hotel selected: ${id}`),
 }: HotelsListProps) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [priceFilter, setPriceFilter] = useState("");
-  const [ratingFilter, setRatingFilter] = useState("");
-  const [amenityFilter, setAmenityFilter] = useState("");
   const [filteredHotels, setFilteredHotels] = useState<Hotel[]>(hotels);
   const [showFilters, setShowFilters] = useState(false);
+  const [filters, setFilters] = useState({
+    price: { min: "", max: "" },
+    rating: { min: "", max: "" },
+    amenity: [] as string[],
+  });
 
-  // List of all unique amenities from all hotels
-  const allAmenities = Array.from(
-    new Set(hotels.flatMap((hotel) => hotel.amenities)),
-  ).sort();
-
-  // Apply filters when any filter changes
+  // --- FILTERING LOGIC ---
   useEffect(() => {
     let result = hotels;
 
-    // Apply search filter
+    // Search Filter
     if (searchTerm) {
       const term = searchTerm.toLowerCase();
       result = result.filter(
         (hotel) =>
           hotel.name.toLowerCase().includes(term) ||
           hotel.location.toLowerCase().includes(term) ||
-          hotel.description.toLowerCase().includes(term),
+          hotel.description.toLowerCase().includes(term)
       );
     }
 
-    // Apply price range filter
-    if (priceFilter) {
-      switch (priceFilter) {
-        case "budget":
-          result = result.filter(
-            (hotel) =>
-              hotel.priceRange.includes("₱1,000") ||
-              hotel.priceRange.includes("₱2,000"),
-          );
-          break;
-        case "midrange":
-          result = result.filter(
-            (hotel) =>
-              hotel.priceRange.includes("₱3,000") ||
-              hotel.priceRange.includes("₱4,000"),
-          );
-          break;
-        case "luxury":
-          result = result.filter(
-            (hotel) =>
-              hotel.priceRange.includes("₱5,000") ||
-              hotel.priceRange.includes("₱6,000") ||
-              hotel.priceRange.includes("₱7,000") ||
-              hotel.priceRange.includes("₱8,000") ||
-              hotel.priceRange.includes("₱9,000") ||
-              hotel.priceRange.includes("₱10,000"),
-          );
-          break;
-      }
+    // Price Range
+    if (filters.price.min || filters.price.max) {
+      result = result.filter((hotel) => {
+        const [lowStr, highStr] = hotel.priceRange
+          .replace(/[₱,]/g, "")
+          .split(" - ")
+          .map((v) => parseInt(v.trim(), 10));
+
+        const low = isNaN(lowStr) ? 0 : lowStr;
+        const high = isNaN(highStr) ? Infinity : highStr;
+        const min = filters.price.min ? parseInt(filters.price.min) : 0;
+        const max = filters.price.max ? parseInt(filters.price.max) : Infinity;
+
+        return high >= min && low <= max;
+      });
     }
 
-    // Apply rating filter
-    if (ratingFilter) {
-      const minRating = parseFloat(ratingFilter);
-      result = result.filter((hotel) => hotel.rating >= minRating);
+    // Rating Range
+    if (filters.rating.min || filters.rating.max) {
+      result = result.filter((hotel) => {
+        const rating = hotel.rating;
+        const min = filters.rating.min ? parseFloat(filters.rating.min) : 0;
+        const max = filters.rating.max ? parseFloat(filters.rating.max) : 5;
+        return rating >= min && rating <= max;
+      });
     }
 
-    // Apply amenity filter
-    if (amenityFilter) {
+    // Amenity Filter
+    if (filters.amenity.length > 0) {
       result = result.filter((hotel) =>
-        hotel.amenities.some(
-          (amenity) => amenity.toLowerCase() === amenityFilter.toLowerCase(),
-        ),
+        filters.amenity.every((a) =>
+          hotel.amenities.some(
+            (hA) => hA.toLowerCase() === a.toLowerCase()
+          )
+        )
       );
     }
 
     setFilteredHotels(result);
-  }, [searchTerm, priceFilter, ratingFilter, amenityFilter, hotels]);
+  }, [searchTerm, filters, hotels]);
 
   const clearFilters = () => {
     setSearchTerm("");
-    setPriceFilter("");
-    setRatingFilter("");
-    setAmenityFilter("");
+    setFilters({
+      price: { min: "", max: "" },
+      rating: { min: "", max: "" },
+      amenity: [],
+    });
   };
 
   return (
     <div className="w-full bg-gray-50 py-8 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col space-y-4">
+          {/* --- HEADER --- */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <h2 className="text-3xl font-bold text-gray-900">
               Accommodations in Albay
@@ -239,12 +224,16 @@ const HotelsList = ({
               <Button
                 variant="outline"
                 size="icon"
-                onClick={() => setShowFilters(!showFilters)}
-                className="flex-shrink-0"
+                onClick={() => setShowFilters(true)}
               >
                 <SlidersHorizontal className="h-4 w-4" />
               </Button>
-              {(searchTerm || priceFilter || ratingFilter || amenityFilter) && (
+              {(searchTerm ||
+                filters.price.min ||
+                filters.price.max ||
+                filters.rating.min ||
+                filters.rating.max ||
+                filters.amenity.length > 0) && (
                 <Button
                   variant="ghost"
                   size="sm"
@@ -257,71 +246,16 @@ const HotelsList = ({
             </div>
           </div>
 
+          {/* --- FILTER MODAL --- */}
           {showFilters && (
-            <Card className="w-full bg-white">
-              <CardContent className="p-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Price Range</label>
-                    <Select value={priceFilter} onValueChange={setPriceFilter}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Any price range" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="">Any price range</SelectItem>
-                        <SelectItem value="budget">
-                          Budget (₱1,000 - ₱2,500)
-                        </SelectItem>
-                        <SelectItem value="midrange">
-                          Mid-range (₱3,000 - ₱4,500)
-                        </SelectItem>
-                        <SelectItem value="luxury">Luxury (₱5,000+)</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Rating</label>
-                    <Select
-                      value={ratingFilter}
-                      onValueChange={setRatingFilter}
-                    >
-                      <SelectTrigger>
-                        <SelectValue placeholder="Any rating" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="">Any rating</SelectItem>
-                        <SelectItem value="3">3+ stars</SelectItem>
-                        <SelectItem value="4">4+ stars</SelectItem>
-                        <SelectItem value="4.5">4.5+ stars</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Amenities</label>
-                    <Select
-                      value={amenityFilter}
-                      onValueChange={setAmenityFilter}
-                    >
-                      <SelectTrigger>
-                        <SelectValue placeholder="Any amenities" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="">Any amenities</SelectItem>
-                        {allAmenities.map((amenity) => (
-                          <SelectItem key={amenity} value={amenity}>
-                            {amenity}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <FilterModal
+              onClose={() => setShowFilters(false)}
+              filters={filters}
+              setFilters={setFilters}
+            />
           )}
 
+          {/* --- HOTEL LIST --- */}
           {filteredHotels.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-12 text-center">
               <div className="text-gray-400 mb-4">
@@ -343,14 +277,7 @@ const HotelsList = ({
               {filteredHotels.map((hotel) => (
                 <div key={hotel.id} className="flex justify-center">
                   <HotelCard
-                    id={hotel.id}
-                    name={hotel.name}
-                    image={hotel.image}
-                    description={hotel.description}
-                    location={hotel.location}
-                    priceRange={hotel.priceRange}
-                    rating={hotel.rating}
-                    amenities={hotel.amenities}
+                    {...hotel}
                     onClick={() => onHotelSelect(hotel.id)}
                   />
                 </div>
