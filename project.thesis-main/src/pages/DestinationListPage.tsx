@@ -48,7 +48,7 @@ const DestinationListPage = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-md">
               <img
-                src="https://source.unsplash.com/1200x800/?Lignon%20Hill,Mayon%20Volcano"
+                src="https://albay.gov.ph/wp-content/uploads/2020/02/DSC_0053-1024x678.jpg"
                 alt="Ligñon Hill"
                 className="w-full h-64 object-cover"
               />
