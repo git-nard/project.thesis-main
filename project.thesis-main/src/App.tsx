@@ -29,6 +29,9 @@ import PastTrips from "./pages/itineraries/PastTrips";
 import TouristSpotListPage from "./components/tourists-spots/TouristSpotListPage";
 import TouristSpotDetailsPage from "./components/tourists-spots/TouristSpotDetailsPage";
 import HotelsDetailsPage from "./pages/hotels/HotelsDetailsPage";
+import RestaurantsDetailsPage from "./pages/restaurants/RestaurantsDetailsPage";
+
+
 
 
 
@@ -46,6 +49,7 @@ function App() {
           <Route path="/hotels/:id" element={<HotelsDetailsPage />} />
 
           <Route path="/restaurants" element={<RestaurantsPage />} />
+          <Route path="/restaurants/:id" element={<RestaurantsDetailsPage />} />
 
 
           <Route path="/experiences" element={<ExperiencesPage />} />
