@@ -6,7 +6,7 @@ export const destinations = [
   {
     id: "1",
     name: "Mulakbugak Spring Falls",
-    image: "https://source.unsplash.com/1000x700/?Mulakbugak%20Spring%20Falls",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmfTON_5ERTz3JUzEFtx3-UnA_9R44uFO_bQ&s",
     description: "Mulakbugak is a spring type waterfall famed for its clean, cold, and crystal clear water. As stated by the locals “Kun ika iinitan , digdi ka magdalagan, paglabtu mo ika tulos tatakigan”, you can visit here and experience the cold refreshing water.",
     location: "Tinapian, Manito, Albay",
     category: "Falls",
@@ -15,7 +15,7 @@ export const destinations = [
   {
     id: "2",
     name: "Nag Aso Boiling Lake",
-    image: "https://source.unsplash.com/1000x700/?Nag%20Aso%20Boiling%20Lake",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh0tzX0tKVMBaf58ZnqVXZT5H1UdyQcPJNBA&s",
     description: "Nag-Aso Boiling Lake is considered as prime tourist destination in the municipality of Manito. It measures one hectare bordered by a lush tapestry of green fields and abundant trees which makes it as the largest boiling lake in Bicol that also provides habitat for flora and fauna.",
     location: "Hulogan, Manito, Albay",
     category: "Lakes and Pond",
@@ -24,7 +24,7 @@ export const destinations = [
   {
     id: "3",
     name: "Aqua Silvi Mangrove Site",
-    image: "https://source.unsplash.com/1000x700/?Aqua%20Silvi%20Mangrove%20Site",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG8PBQaGbHTsuIHgWowJDMPjX-e3trWwoEBg&s",
     description: "From Bgy. Marigondon, boats ferry visitors to the mangrove area visitor center where they may see the mangrove forest up close, Immerse in the calm and quiet of the surroundings, and enjoy the picturesque vistas.",
     location: "Marigondon, Pio Duran, Albay",
     category: "Marine Park (e.g. aquarium, open parks)",
@@ -33,7 +33,7 @@ export const destinations = [
   {
     id: "4",
     name: "Bulalacao Cave Exploration",
-    image: "https://source.unsplash.com/1000x700/?Bulalacao%20Cave%20Exploration",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCTrsxME88zuZKkVT1Vx_-haeTFnodSofXJQ&s",
     description: "The 30-minute hike to Bulalacao Cave is the perfect trial adventure. It begins with a gradual descent through grassy, undulating hills puntuated here and there by the lone bahay kubo and errant farm animals.",
     location: "Flores, Pio Duran, Albay",
     category: "Caves (inland)",
@@ -42,7 +42,7 @@ export const destinations = [
   {
     id: "5",
     name: "Muladbucad White Beach Resort",
-    image: "https://source.unsplash.com/1000x700/?Muladbucad%20White%20Beach%20Resort",
+    image: "https://sandee.com/_next/image?url=https%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPVyCGZgrCbSRYpdGcn2CxgAD14KUBXsIPUZVAV%3Ds1600-k-no&w=3840&q=75",
     description: "A resort that can be considered as one of the few white beaches situated in Albay and is accessible by land. An hour away from the City of Legazpi, is a place where you can feel the soothing ambiance of nature, vibe in with the melody of chirping birds while relaxing with the whisper of the waves.",
     location: "Hulogan, Manito, Albay",
     category: "Unique Natural Landscape / Seascape",
@@ -51,7 +51,7 @@ export const destinations = [
   {
     id: "6",
     name: "Kalabidungan Cave Exploration",
-    image: "https://source.unsplash.com/1000x700/?Kalabidungan%20Cave%20Exploration",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoEi0iME5vss7YX5bb-vUGJ9jC9vTU3HGTpQ&s",
     description: "Kalabidungan Cave is a shallow cave with a short underground river whose depth has yet to be officially measured. Within it's dark cavern are stunning flowstones, bacon draperies, stalactites, stalagmites, and a healthy colony of bats hence the cave's name, Kalabidungan Cave",
     location: "Rawis, Pio Duran, Albay",
     category: "Caves (inland)",
@@ -60,7 +60,7 @@ export const destinations = [
   {
     id: "7",
     name: "Oras Falls",
-    image: "https://source.unsplash.com/1000x700/?Oras%20Falls",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShOKwepigw5l9ZrbyTMKqHluQui4Nh0HxV3A&s",
     description: "It is a single thin cascade over which thick foliage forms a natural backdrop.",
     location: "Oras, Tabaco City, Albay",
     category: "Falls",
@@ -69,7 +69,7 @@ export const destinations = [
   {
     id: "8",
     name: "Abion Falls",
-    image: "https://source.unsplash.com/1000x700/?Abion%20Falls",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6uE5x49nDMFd4iqv6f8n1zEqB-mR5GoZkJg&s",
     description: "Located in Sitio Bagong Sirang Brgy. Tinapian Manito Albay, is where you can find the breath-taking view of this waterfalls that will ease your fatigue and be amazed with its pristine cool water and the refreshing feels of the waterfalls.",
     location: "Tinapian, Manito, Albay",
     category: "Falls",
@@ -78,7 +78,7 @@ export const destinations = [
   {
     id: "9",
     name: "Zoeis Beach Resort",
-    image: "https://source.unsplash.com/1000x700/?Zoeis%20Beach%20Resort",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7HyGzFenQm2Oj-WdoHihvKs7xuWHPyfzGvg&s",
     description: "Located in Brgy Cawayan Manito, Albay is where you can find Zoei’s Beach Resort. It is a private resort that can be considered as one of the few beaches situated in Albay and is also accessible by land and is an hour away from the City of Legazpi.",
     location: "Cawayan, Manito, Albay",
     category: "Unique Natural Landscape / Seascape",
@@ -87,7 +87,7 @@ export const destinations = [
   {
     id: "10",
     name: "Busay Falls - Malilipot",
-    image: "https://source.unsplash.com/1000x700/?Busay%20Falls%20-%20Malilipot",
+    image: "https://legazpirentacar.com/wp-content/uploads/sites/4/2023/05/Busay-6.jpg",
     description: "Busay Falls is a popular day trip destination for local tourists. The seven-tiered falls is considered one of the highest waterfalls in the country descending in stages from a height of 250 meters cascading into seven small pools.",
     location: "Barangay 1, Malilipot, Albay",
     category: "Falls",
@@ -96,7 +96,7 @@ export const destinations = [
   {
     id: "11",
     name: "Mayon Planetarium and Science Park",
-    image: "https://source.unsplash.com/1000x700/?Mayon%20Planetarium%20and%20Science%20Park",
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIPdZOaVxtu2YhyphenhyphenbAAF_23UiKQx7lN6SKNse2f6VtEVK2I0xh8bQFESEbhmZBK07tqKGMRgjP6rY80ltuVWPzn7LOd7vXh9D-EHVEzqSEn3bktOI8yxbdCiZsbXg6Om6mDzlzk1Um2IjE/s16000-rw/DSC_2384.JPG",
     description: "Built on a protected area nestled on the slopes of beautiful Mt. Mayon. It serves as a learning center and a tourist spot that boasts a birds-eye view of the whole city.",
     location: "Magapo, Tabaco City, Albay",
     category: "Mountains / Hills / Highlands",
@@ -105,7 +105,7 @@ export const destinations = [
   {
     id: "12",
     name: "Manito Mangrove Area",
-    image: "https://source.unsplash.com/1000x700/?Manito%20Mangrove%20Area",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTntxg1OXTOptEpl0EUfch_Zcxb4K75XzxhTg&s",
     description: "Manito Eco Park will surely give you an amazing experience, having that feeling of tranquility while enjoying the scenic beauty of Manito’s very own Mangrove Eco Park indulging in its rich biodiversity.",
     location: "It-Ba, Manito, Albay",
     category: "Unique Natural Landscape / Seascape",
@@ -114,7 +114,7 @@ export const destinations = [
   {
     id: "13",
     name: "San Miguel Fish Sanctuary and Marine Reserve",
-    image: "https://source.unsplash.com/1000x700/?San%20Miguel%20Fish%20Sanctuary%20and%20Marine%20Reserve",
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/b3/56/c3/san-miguel-island.jpg?w=1200&h=-1&s=1",
     description: "San Miguel Fish Sanctuary and Marine Reserve is a 2.25 square kilometer protected area located at Barangay Sagurong. It was adjudged as 2nd best-managed coral reef in the entire Philippines.",
     location: "Sagurong, Tabaco City, Albay",
     category: "Dive Sites",
@@ -123,7 +123,7 @@ export const destinations = [
   {
     id: "14",
     name: "Natunawan Cove",
-    image: "https://source.unsplash.com/1000x700/?Natunawan%20Cove",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd6NESi5P85pG1qLnKwrMUelkAWAmKpl1ruw&s",
     description: "A natural cove that formed during a catastrophe that hit Tabaco. According to the narratives of former inhabitants of the place, it was completely submerged by storm surge during Typhoon Trix in 1952 thus it was called \"Natunawan\".",
     location: "San Carlos, Tabaco City, Albay",
     category: "Unique Natural Landscape / Seascape",
@@ -132,7 +132,7 @@ export const destinations = [
   {
     id: "15",
     name: "Cabulwangan Hill Spring Resort",
-    image: "https://source.unsplash.com/1000x700/?Cabulwangan%20Hill%20Spring%20Resort",
+    image: "https://bicoltravelguides.com/wp-content/uploads/2025/09/Bicol-Travel-Guides-Blog-Images-2025-09-04T175436.054.png",
     description: "A cold spring resort found beside the lush mountain of Malilipot, Albay. It is a haven for nature lovers.",
     location: "Barangay 1, Malilipot, Albay",
     category: "Lakes and Pond",
@@ -141,7 +141,7 @@ export const destinations = [
   {
     id: "16",
     name: "Sumlang Lake",
-    image: "https://source.unsplash.com/1000x700/?Sumlang%20Lake",
+    image: "https://gttp.images.tshiftcdn.com/472453/x/0/sumlang-lake.jpg",
     description: "Sumlang Lake, with an area of 9.21 hectares is located in Barangay Sumlang, Camalig, Albay approximately three (3) kilometers from the Poblacion (Camalig Town Center) and 11 kms. from Legazpi City, the nearest growth center.",
     location: "Sumlang, Camalig, Albay",
     category: "Lakes and Pond",
@@ -150,7 +150,7 @@ export const destinations = [
   {
     id: "17",
     name: "Diamond Beach Resort",
-    image: "https://source.unsplash.com/1000x700/?Diamond%20Beach%20Resort",
+    image: "https://images.trvl-media.com/lodging/18000000/17710000/17709600/17709505/5f06486f.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
     description: "Diamond Beach Parong Resort is a place used for vacation, relaxation or as a daytime getaway. This stunning resort in town of Manito combines the scenic qualities and escapist nature of hot spring facing the Mount Mayon Volcano.",
     location: "Pawa, Manito, Albay",
     category: "Unique Natural Landscape / Seascape",
@@ -159,7 +159,7 @@ export const destinations = [
   {
     id: "18",
     name: "Namuropuwerta Rock Formation and Mataas Beach",
-    image: "https://source.unsplash.com/1000x700/?Namuropuwerta%20Rock%20Formation%20and%20Mataas%20Beach",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlGr9fPbpgTybG9VmteoPsc5MhObJNgnk5QQ&s",
     description: "Located in Barangay Mataas , the majestic rock formations seem handcrafted by nature, perfect for an action-packed climbing adventure. The uniquely embedded rock formation was formed overtime through the continous spashing of the waves during high tide.",
     location: "Mataas, Bacacay, Albay",
     category: "Coastal Landscape and Seascape",
@@ -168,7 +168,7 @@ export const destinations = [
   {
     id: "19",
     name: "Adam Rock Formation, Marine Reserve and Fish Sanctuary",
-    image: "https://source.unsplash.com/1000x700/?Adam%20Rock%20Formation,%20Marine%20Reserve%20and%20Fish%20Sanctuary",
+    image: "https://www.syramay.com/wp-content/uploads/Imaga-rock-formation-cabacungan-allen-samar.jpg",
     description: "The Adam rock formation found in Uson is unremarkable, but is sure to amaze visitors and visitors alike with its gorgeous appearance, forged by nature's invisible hand. Uson, Buang, Pongco-Bonga fish sanctuary is one of the largest marine protected areas in Bicol region.",
     location: "Uson, Bacacay, Albay",
     category: "Unique Natural Landscape / Seascape",
@@ -177,7 +177,7 @@ export const destinations = [
   {
     id: "20",
     name: "Cagbulawan Beach",
-    image: "https://source.unsplash.com/1000x700/?Cagbulawan%20Beach",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXqgBz8tMpOJ_damWqojws4uxgJ5OXKrHthg&s",
     description: "Its name is derived from the word \"Bulawan\" with means gold because of its golden colored sand.",
     location: "Namanday, Bacacay, Albay",
     category: "Unique Natural Landscape / Seascape",
@@ -186,7 +186,7 @@ export const destinations = [
   {
     id: "21",
     name: "Cagbungahan Beach",
-    image: "https://source.unsplash.com/1000x700/?Cagbungahan%20Beach",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXXUYy5SqO9_Ucv4WHRt-R3Gl_cpBDclmSRw&s",
     description: "White sand beach and there are available cottages for rent and visitors can request a delicious freshly cooked lunch on the site.",
     location: "Namanday, Bacacay, Albay",
     category: "Unique Natural Landscape / Seascape",
@@ -195,7 +195,7 @@ export const destinations = [
   {
     id: "22",
     name: "El Miro De Shie Integrated Farm",
-    image: "https://source.unsplash.com/1000x700/?El%20Miro%20De%20Shie%20Integrated%20Farm",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq-5MS_SsO1jcdOKoeymTD8uHQ4S7qNGtn3A&s",
     description: "An accredited Farm Tourism Site, Agricultural Training Institute and TESDA located in Barangay Salugan approximately two (2) kilometers from the Poblacion (Camalig) and 12 kms. from Legazpi City, the nearest growth center .",
     location: "Salugan, Camalig, Albay",
     category: "Other Natural Attractions (e.g. century old trees/forest, endemic species)",
@@ -204,7 +204,7 @@ export const destinations = [
   {
     id: "23",
     name: "Black Sand Beaches",
-    image: "https://source.unsplash.com/1000x700/?Black%20Sand%20Beaches",
+    image: "https://i.pinimg.com/736x/0c/f3/3a/0cf33a7bf30a13619e5e5e43b8091efd.jpg",
     description: "A summer getaway for water-loving travelers. During summer and Holy Week, its long black sand beaches are occupied by families, balik-bayan and other foreign tourists.",
     location: "Hindi, Bacacay, Albay",
     category: "Unique Natural Landscape / Seascape",
@@ -213,7 +213,7 @@ export const destinations = [
   {
     id: "24",
     name: "Quituinan Ranch",
-    image: "https://source.unsplash.com/1000x700/?Quituinan%20Ranch",
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgasSoLq2Wh6q-hwFPcmslkC_zg8IlUTaK5jYj3eisqRaqNCpTLpkTUfMHKHCke8OusrzF4toVqLz7kxauhim_rJEdZSdZgsp___AdHfPuCdYFtqBKbeuzmuZI9vwS-ZuLv7hypDacw12yI/s16000-rw/DSC_1218.JPG",
     description: "Located in Quituinan Hills, a former Japanese camp and important landmark, showcased the clear vista of the Mayon Volcano, Albay Gulf and other parts of Albay. Situated approximately three (3) kilometers from the Poblacion (Camalig) and 17 kms. from Legazpi City, the nearest growth center .",
     location: "Brgy. Tinago, Camalig, Albay",
     category: "Mountains / Hills / Highlands",
@@ -222,7 +222,7 @@ export const destinations = [
   {
     id: "25",
     name: "Solong Eco-Park",
-    image: "https://source.unsplash.com/1000x700/?Solong%20Eco-Park",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3b9FfRdJq2F3jYjxxduoGb8V_0dXWny1HgQ&s",
     description: "A newly developed DOT accredited Farm Site situated approximately 14 kms from the Poblacion (Camalig Town Center and 9 kms from the BIA, the nearest gateway.",
     location: "Brgy. Solong, Camalig, Albay",
     category: "Other Natural Attractions (e.g. century old trees/forest, endemic species)",
@@ -231,7 +231,7 @@ export const destinations = [
   {
     id: "26",
     name: "Little Coron / Cagbulacao Rock Formation",
-    image: "https://source.unsplash.com/1000x700/?Little%20Coron%20/%20Cagbulacao%20Rock%20Formation",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlMxycMZdKU-Tzz6GI-28kOasv5mz4_6Coyg&sn",
     description: "Lime stone rock formation is located in Barangay Cagbulacao. It was also featured in one travel shows\" Byahe ni Drew\".",
     location: "Cagbulacao, Bacacay, Albay",
     category: "Coastal Landscape and Seascape",
@@ -240,7 +240,7 @@ export const destinations = [
   {
     id: "27",
     name: "Quitinday Green Hills",
-    image: "https://source.unsplash.com/1000x700/?Quitinday%20Green%20Hills",
+    image: "https://scontent.fmnl3-4.fna.fbcdn.net/v/t1.15752-9/558021861_2274549406301510_6667255974447133927_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeESue03ODbjeC6m1ELLCJNYW1utYZH85H5bW61hkfzkfi6klGa65LFuivJ7YX2pmDQlhcJ6nlyWKANtAuzEyw6-&_nc_ohc=6RsmeiV2ZAkQ7kNvwE9WrjE&_nc_oc=Adk-17BQsUlZ2QRKN8YwFRBFjP0tSWvBfg_ELlviinXgUvsW5vO7xNHcFkWgOMAqfw4&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&oh=03_Q7cD3gHa0A0WT_lX1VYQP94QKhpZhAgMsfs3AqtAf9s6KqpPhA&oe=690DFD32",
     description: "Different coned shape hills formations nearly similar of Bohol’s Chocolate Hills with two caves that can be found on top of a hill. It is located 15 kms. from the Poblacion(Camalig Town Center) and 19 kms from the BIA, the nearest gateway.",
     location: "Barangay Quitinday, Camalig, Albay",
     category: "Mountains / Hills / Highlands",
@@ -249,7 +249,7 @@ export const destinations = [
   {
     id: "28",
     name: "Nagsagimsim Island (Monkey Sanctuary)",
-    image: "https://source.unsplash.com/1000x700/?Nagsagimsim%20Island%20(Monkey%20Sanctuary)",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsYEMP7MEoueTNl3XV37MPs2y5mFzwWlfWgg&s",
     description: "This Island of Barangay Manaet is the home for monkeys, the only inhabitants of the said island. That is why, most tourist visited the pace as called monkey Island\"",
     location: "Manaet, Bacacay, Albay",
     category: "Mountains / Hills / Highlands",
@@ -258,7 +258,7 @@ export const destinations = [
   {
     id: "29",
     name: "Sula Channel",
-    image: "https://source.unsplash.com/1000x700/?Sula%20Channel",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLUNfDevPmUNcJwpv-aNhHYHik-0_kNzUwrA&s",
     description: "Sula Channel is a marine channel linking Albay Gulf to the Pacific Ocean. It is located near Bgy. Sula, Cagraray Island, thus its name. During Spanish times, the coves in the area were used to shelter galleons. Currently, these are still used as haven for ships during bad weather.",
     location: "Sula, Bariw, Namantao, Bacacay, Albay",
     category: "Unique Natural Landscape / Seascape",
@@ -267,7 +267,7 @@ export const destinations = [
   {
     id: "30",
     name: "Pinamuntugan Island",
-    image: "https://source.unsplash.com/1000x700/?Pinamuntugan%20Island",
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhijLfW2s8reuqI2NE2zpIE-4lhAx6N_BmiQuCvufyRYu77zJUHwsffJr5S2rtdd9P_IvmdOOhIFjVFeM84mAH0oe0uu48n5fE4Acy_QSv20ypZHI_P2-_oAiAuMa7sxf7Ag8yk3HUcwFYV/s1600/Pinamuntugan_Island-min.jpg",
     description: "Pinamuntugan Island is now an emerging tourist site located in Barangay Langaton, Bacacay, Albay. This is popularly known because of its color white sand and pristine beauty. There are also available cottage for rent and can also bring a tent for some overnight getaway.",
     location: "Langaton, Bacacay, Albay",
     category: "Unique Natural Landscape / Seascape",
@@ -276,7 +276,7 @@ export const destinations = [
   {
     id: "31",
     name: "Mount Manaet",
-    image: "https://source.unsplash.com/1000x700/?Mount%20Manaet",
+    image: "https://kalayaanatpagibig.wordpress.com/wp-content/uploads/2012/04/dsc_0046.jpg",
     description: "This exceptional view is a wonder display of nature's gift. Mt. Manaet trekking is one of the Emerging tourism activities here in Bacacay. Group of mountaineers are the frequent visitors of the site and they are all speechless when they reach the top because of the picture perfect view of Mayon.",
     location: "Manaet, Bacacay, Albay",
     category: "Mountains / Hills / Highlands",
@@ -285,7 +285,7 @@ export const destinations = [
   {
     id: "32",
     name: "Tanagan Falls",
-    image: "https://source.unsplash.com/1000x700/?Tanagan%20Falls",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT01VPZLnY-1dFcpDPiJUuDj2Up_wK0yXyqqw&s",
     description: "Experience serenity and listen to the music of nature. You can also enjoy a relaxing massage as you let the water plunge on your body.",
     location: "Tanagan, Bacacay, Albay",
     category: "Falls",
@@ -294,7 +294,7 @@ export const destinations = [
   {
     id: "33",
     name: "Pighulugan Cave",
-    image: "https://source.unsplash.com/1000x700/?Pighulugan%20Cave",
+    image: "https://farm5.staticflickr.com/4829/43974035970_9f812d5e4a_z.jpg",
     description: "Bacacay boast of various caves with mostly limestone rock formation & well-developed stalactites and stalagmites. This cave is ideal for tourist who want spelunking adventures. These can be accessed by hiking & climbing through dense forest.",
     location: "Misibis, Bacacay, Albay",
     category: "Caves (inland)",
@@ -303,7 +303,7 @@ export const destinations = [
   {
     id: "34",
     name: "Mataas Cave",
-    image: "https://source.unsplash.com/1000x700/?Mataas%20Cave",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvd7XA0fb94DDWjEc1c8xGAC-d3_CzlsFSfQ&s",
     description: "Bacacay boast of various caves with mostly limestone rock formation & well-developed stalactites and stalagmites. This cave is ideal for tourist who want spelunking adventures. These can be accessed by hiking & climbing through dense forest.",
     location: "Mataas, Bacacay, Albay",
     category: "Caves (inland)",
@@ -312,7 +312,7 @@ export const destinations = [
   {
     id: "35",
     name: "Cagbulacao Cave",
-    image: "https://source.unsplash.com/1000x700/?Cagbulacao%20Cave",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZq1BorhHHvqVwDOYPY0Dnx8G5yLWlAYi3Dg&s",
     description: "Bacacay boast of various caves with mostly limestone rock formation & well-developed stalactites and stalagmites. This cave is ideal for tourist who want spelunking adventures. These can be accessed by hiking & climbing through dense forest.",
     location: "Cagbulacao, Bacacay, Albay",
     category: "Caves (inland)",
@@ -321,7 +321,7 @@ export const destinations = [
   {
     id: "36",
     name: "Nagtikwil Cave",
-    image: "https://source.unsplash.com/1000x700/?Nagtikwil%20Cave",
+    image: "https://files01.pna.gov.ph/ograph/2023/04/14/camalig-cave.jpg",
     description: "Bacacay boast of various caves with mostly limestone rock formation & well-developed stalactites and stalagmites. This cave is ideal for tourist who want spelunking adventures. These can be accessed by hiking & climbing through dense forest.",
     location: "Cagbulacao, Bacacay, Albay",
     category: "Caves (inland)",
@@ -330,7 +330,7 @@ export const destinations = [
   {
     id: "37",
     name: "Boton Cave",
-    image: "https://source.unsplash.com/1000x700/?Boton%20Cave",
+    image: "https://www8.gmanews.tv/webpics/v3/2013/04/2danny_6643.jpg",
     description: "Bacacay boast of various caves with mostly limestone rock formation & well-developed stalactites and stalagmites. This cave is ideal for tourist who want spelunking adventures. These can be accessed by hiking & climbing through dense forest.",
     location: "Cagbulacao, Bacacay, Albay",
     category: "Caves (inland)",
@@ -339,7 +339,7 @@ export const destinations = [
   {
     id: "38",
     name: "Tanagan Cave",
-    image: "https://source.unsplash.com/1000x700/?Tanagan%20Cave",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGuF5eBa6P09M4iWH-5GSwgUwnUyJJdMH4Zg&s",
     description: "Bacacay boast of various caves with mostly limestone rock formation & well-developed stalactites and stalagmites. This cave is ideal for tourist who want spelunking adventures. These can be accessed by hiking & climbing through dense forest.",
     location: "Tanagan, Bacacay, Albay",
     category: "Caves (inland)",
@@ -348,7 +348,7 @@ export const destinations = [
   {
     id: "39",
     name: "Jovellar Underground River, Caves and Rainforest",
-    image: "https://source.unsplash.com/1000x700/?Jovellar%20Underground%20River,%20Caves%20and%20Rainforest",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCaKJS9D_VmYx_5InyQPJXNHItLBk9jF6m6g&s",
     description: "An underground river cave passing underneath the rice and coconut plantation with formation of stalactites and stalagmites.  It can be explored aboard a kayak or raft.  Located in Brgy. Quitinday, 1 km from the poblacion town.",
     location: "Quitinday, Jovellar, Albay",
     category: "Caves (inland)",
@@ -356,8 +356,8 @@ export const destinations = [
   },
   {
     id: "40",
-    name: "SIGPIT WATERFALLS",
-    image: "https://source.unsplash.com/1000x700/?SIGPIT%20WATERFALLS",
+    name: "Sigpit Waterfalls",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4s4Phuroo3y8HO_pBzbIiz9wZybeKHNj9Bg&s",
     description: "The very famous waterfalls in the locality, known as \"Sigpit\" because of its narrow and long body of water that lays between large formation of rocks. Attracts domestic and foreign tourists because of its green and cold refreshing water. Located in Brgy. Quitinday, 0.8 km from the poblacion town.",
     location: "Quitinday, Jovellar, Albay",
     category: "Falls",
@@ -365,8 +365,8 @@ export const destinations = [
   },
   {
     id: "41",
-    name: "NAGLAUS UNDERGROUND RIVER CAVE",
-    image: "https://source.unsplash.com/1000x700/?NAGLAUS%20UNDERGROUND%20RIVER%20CAVE",
+    name: "Naglaus Underground River Cave",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ff92uFthvi88e4xqszqTW1VZEloUYwGxjw&s",
     description: "Located in Brgy. Del Rosario, 7 kms. from the poblacion town, traversable underground river that directly leads to Nabasan, Daraga, Albay. Naturally inspired by nature, at the mouth of the cave, a clear & cold small lagoon is framed by rocks.",
     location: "Del Rosario, Jovellar, Albay",
     category: "River and Landscape (includes subterranean rivers)",
@@ -375,7 +375,7 @@ export const destinations = [
   {
     id: "42",
     name: "Amater Spring Resort",
-    image: "https://source.unsplash.com/1000x700/?Amater%20Spring%20Resort",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9P2C8hQgiW7455GJQwpaxDIArQHJ5hXeLwQ&s",
     description: "Amater Spring Resort is a nature attraction with pool of fresh and very cold water from natural spring which makes it ideal and popular during hot summer days.",
     location: "Tanawan, Malinao, Albay",
     category: "Lakes and Pond",
@@ -383,8 +383,8 @@ export const destinations = [
   },
   {
     id: "43",
-    name: "MAGTAGUINTING FALLS",
-    image: "https://source.unsplash.com/1000x700/?MAGTAGUINTING%20FALLS",
+    name: "Magtaguinting Falls",
+    image: "https://pbs.twimg.com/media/Bl0sSgSCUAEdYD5.jpg",
     description: "Cascading clear, crystal water to more than 70 ft in height, located at Brgy. Bagacay, 3 kms from the poblacion town.",
     location: "Bagacay, Jovellar, Albay",
     category: "Falls",
@@ -392,8 +392,8 @@ export const destinations = [
   },
   {
     id: "44",
-    name: "QUIBARAW FALLS",
-    image: "https://source.unsplash.com/1000x700/?QUIBARAW%20FALLS",
+    name: "Quibaraw Falls",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi9kUnAQFo0mi1dtanCHDn8CRhlLhpnrXmvg&s",
     description: "Surrounded by a lagoon framed by rocks located at Brgy. SAn Vicente, 3 kms away from the poblacion town. It features a limestone karst mountain landscape with a full mountain landscape that protects a forest.",
     location: "San Vicente, Jovellar, Albay",
     category: "Falls",
@@ -402,7 +402,7 @@ export const destinations = [
   {
     id: "45",
     name: "Vera Falls",
-    image: "https://source.unsplash.com/1000x700/?Vera%20Falls",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD0hIYsnY2dyJMgI5JgPWlNdNkbRfgy-5BSw&s",
     description: "Vera Falls is a stunning waterfall of very clear and cold water coming out of rocks of the mountain. A few minutes of trekking is needed to get down to the area.",
     location: "Soa / Bulang, Malinao, Albay",
     category: "Falls",
@@ -410,8 +410,8 @@ export const destinations = [
   },
   {
     id: "46",
-    name: "MAYANPAYAN HILLS & NATURAL PARK",
-    image: "https://source.unsplash.com/1000x700/?MAYANPAYAN%20HILLS%20&%20NATURAL%20PARK",
+    name: "Mayanpayan Hills & Natural Park",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHRMxTViQUrYvG4Andpj_maKwSFoEdeUdqqg&s",
     description: "Panoramic mountain views with the majestic mayon volcano on its background, the sunrise/sunset over the top of the mountain will await the backpackers to conquer the place. Located at Brgy. San Roque, 3 kms. away from the poblacion town going to the newly built Jovellar-Donsol highway.",
     location: "San Roque, Jovellar, Albay",
     category: "Mountains / Hills / Highlands",
@@ -419,8 +419,8 @@ export const destinations = [
   },
   {
     id: "47",
-    name: "MEKAWA LAGOON",
-    image: "https://source.unsplash.com/1000x700/?MEKAWA%20LAGOON",
+    name: "Mekawa Lagoon",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwKaR9VvN4SqoyMk9FLSchF30Fg8EEvggugQ&s",
     description: "Located in Brgy. Quitinday, roughly 700 mtrs from the Jovellar Underground River flowing down to Sigpit Falls. It is flowing and cold that refreshes anyone who explore the place.",
     location: "Quitinday, Jovellar, Albay",
     category: "Lakes and Pond",
@@ -429,7 +429,7 @@ export const destinations = [
   {
     id: "48",
     name: "Tigbao Highlands",
-    image: "https://source.unsplash.com/1000x700/?Tigbao%20Highlands",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShydmirCrf9ZbUrhbJYJUoX5QqIbxXXAIIpA&s",
     description: "The adrenaline for a nature adventure makes Tigbao Highlands a local version of Scotland. It is now becoming a favorite location for a quick getaway because of its lush meadows and hay-like trees for travelers who love to unwind and meditate.",
     location: "Oma-Oma, Ligao City, Albay",
     category: "Mountains / Hills / Highlands",
@@ -437,8 +437,8 @@ export const destinations = [
   },
   {
     id: "49",
-    name: "SILAY CAVE 1",
-    image: "https://source.unsplash.com/1000x700/?SILAY%20CAVE%201",
+    name: "Silay Cave 1",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwDzcscyHZ9p1XLC5VUQOFZAs8V6cLqpDmSQ&s",
     description: "Located at Brgy. Quitinday merely 500 to 600 meters from the holding area and about 100 to 200 meters from the underground river. To reach the cave, you’ll cross the river taking a bamboo bridge and climb uphill. Provide a variety of rock formations from the entrance and many more as you go deeper.",
     location: "Quitinday, Jovellar, Albay",
     category: "Caves (inland)",
@@ -447,7 +447,7 @@ export const destinations = [
   {
     id: "50",
     name: "Mount Quiasog Monolith Rock",
-    image: "https://source.unsplash.com/1000x700/?Mount%20Quiasog%20Monolith%20Rock",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIWU8bQCMo5ve_4JfyjWse2B52pBJ8F8zbNw&s",
     description: "Located at Macabugos-Tambo border, Mount Quiasog is a karstic environment with systems of caves, rolling hills, and a towering limestone monolith which protrudes at the summit and can clearly be seen from the lowlands, said to be the home of its masculine enchanter-protector, Asog.",
     location: "Macabugos, Libon, Albay",
     category: "Mountains / Hills / Highlands",
@@ -455,8 +455,8 @@ export const destinations = [
   },
   {
     id: "51",
-    name: "SILAY CAVE 2",
-    image: "https://source.unsplash.com/1000x700/?SILAY%20CAVE%202",
+    name: "Silay Cave 2",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcCxepWKNu4X-bRp4wo5Gy5L-X8CVZzPOnQA&s",
     description: "Located at Brgy. Quitinday, 1km from the poblacion town and about 200 meters from the Jovellar Underground River and 200 meters from Silay Cave 1. This cave served as the guerillas’ hideout during the Japanese War (1937-1945).",
     location: "Quitinday, Jovellar, Albay",
     category: "Caves (inland)",
@@ -465,7 +465,7 @@ export const destinations = [
   {
     id: "52",
     name: "Bantigue Coves and Rock Formations",
-    image: "https://source.unsplash.com/1000x700/?Bantigue%20Coves%20and%20Rock%20Formations",
+    image: "https://sandee.com/_next/image?url=https%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMNd8GUJwgYpcaqOCOcc3htR2Bpq894KROvy-tI%3Ds1600-k-no&w=3840&q=75",
     description: "Located Libon's coastline, Bantigue is frequented by tourists to see its marine rocks formations, crystal-clear waters and cozy lagoons. It has pebble-sand beaches and well-preserved coral reefs, being part of Libon's marine protected area and fish sanctuary and marine reserve (FSMR).",
     location: "Talin-Talin, Libon, Albay",
     category: "Coastal Landscape and Seascape",
@@ -473,8 +473,8 @@ export const destinations = [
   },
   {
     id: "53",
-    name: "QUE MOLAR CAVE",
-    image: "https://source.unsplash.com/1000x700/?QUE%20MOLAR%20CAVE",
+    name: "Que Molar Cave",
+    image: "https://www8.gmanews.tv/webpics/v3/2013/04/2danny_6643.jpg",
     description: "located at Brgy. Quitinday, 1km from the poblacion town. It has complicated entrance with plenty of rock chambers. Only medium sized individuals could pass through the tight entrance with the assistance of other companions. It has spacious interior with variety of rock formations.",
     location: "Quitinday, Jovellar, Albay",
     category: "Caves (inland)",
@@ -482,8 +482,8 @@ export const destinations = [
   },
   {
     id: "54",
-    name: "SAGAMA CAVE",
-    image: "https://source.unsplash.com/1000x700/?SAGAMA%20CAVE",
+    name: "Sagama Cave",
+    image: "https://lp-cms-production.imgix.net/2023-06/shutterstock1041613192.jpg",
     description: "Located at Brgy. Quitinday, 1 km from the poblacion town and about 200 meters north of the holding areas. Rubbles can be seen, believed to be evidence of past erosion.  Large quantities of limestone rock deposits are observed.",
     location: "Quitinday, Jovellar, Albay",
     category: "Caves (inland)",
@@ -491,8 +491,8 @@ export const destinations = [
   },
   {
     id: "55",
-    name: "CATTLE CAVE",
-    image: "https://source.unsplash.com/1000x700/?CATTLE%20CAVE",
+    name: "Cattle Cave",
+    image: "https://lifeisacelebration.blog/wp-content/uploads/2011/03/bicol-252.jpg",
     description: "located at Brgy. Quitinday, 1 km from the poblacion town, the nearest cave to the holding area merely 100 meters above. It has low entrance, you’ll partly crawl when entering the cave. The inner part of the cave measures about 6 feet tall and is maintained throughout the span of the cave.",
     location: "Quitinday, Jovellar, Albay",
     category: "Caves (inland)",
@@ -501,7 +501,7 @@ export const destinations = [
   {
     id: "56",
     name: "Trinity Island",
-    image: "https://source.unsplash.com/1000x700/?Trinity%20Island",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiRkkeJGp9iA3Kvkuxu6Nj2VIunmGaxix9zQ&s",
     description: "A group of low-lying hills surrounding the gentle valleys along the coast in rural Albay; a pebbly, sandy shore, a boscage of lush trees, a blue lagoon, fishing boat that seem to have become part of the landscape.",
     location: "Cagmanaba, Oas, Albay",
     category: "Coastal Landscape and Seascape",
@@ -509,8 +509,8 @@ export const destinations = [
   },
   {
     id: "57",
-    name: "CATTLE CAVE EXTREME",
-    image: "https://source.unsplash.com/1000x700/?CATTLE%20CAVE%20EXTREME",
+    name: "Cattle Cave Extreme",
+    image: "https://www.travelersuniverse.com/wp-content/uploads/2025/06/albay-bicol-caves-and-hills-exploration-tour-by-zchedulista-800x450.jpg",
     description: "Located at Brgy. Quitinday, 1 km from the poblacion town and 35 meters from the holding area. This is a tunnel-shaped cave with a stretch of more or less 700 meters. One has to crawl to go through the inner-most part of the cave.",
     location: "Quitinday, Jovellar, Albay",
     category: "Caves (inland)",
@@ -519,7 +519,7 @@ export const destinations = [
   {
     id: "58",
     name: "Mount Lanagan Sea of Clouds",
-    image: "https://source.unsplash.com/1000x700/?Mount%20Lanagan%20Sea%20of%20Clouds",
+    image: "https://www.alltrails.com/_next/image?url=https%3A%2F%2Fimages.alltrails.com%2FeyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvOTc3MjY2MTAvODg0NjNlOGEwYWQ2MWVhYzQxN2MyYTJmN2U1YTg2MjEuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxMDgwLCJoZWlnaHQiOjcwMCwiZml0IjoiY292ZXIifSwicm90YXRlIjpudWxsLCJqcGVnIjp7InRyZWxsaXNRdWFudGlzYXRpb24iOnRydWUsIm92ZXJzaG9vdERlcmluZ2luZyI6dHJ1ZSwib3B0aW1pc2VTY2FucyI6dHJ1ZSwicXVhbnRpc2F0aW9uVGFibGUiOjN9fX0%3D&w=3840&q=90",
     description: "Libon’s highest elevation, Mt. Lanagan has several caves, two mountain lakes, and a panoramic view of Burias Pass and areas of Albay and Cam Sur. Cottages are offered at the summit relaxation of campers or hikers. Visitors who spend the night at the summit can witness sea of clouds during dawn.",
     location: "Caguscos, Libon, Albay",
     category: "Mountains / Hills / Highlands",
@@ -528,7 +528,7 @@ export const destinations = [
   {
     id: "59",
     name: "Rawis Sandbar",
-    image: "https://source.unsplash.com/1000x700/?Rawis%20Sandbar",
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/f0/3e/4f/photo1jpg.jpg?w=900&h=500&s=1",
     description: "This baura is a 232-hectare sandbar which, during low tides and full moons, visitors could skin dive, spot sea creatures such as starfishes and sea urchins, and walk on white sand, at the middle of the sea! It is located at Libon’s protected fish sanctuary and marine reserve off the coast of Rawis.",
     location: "Rawis, Libon, Albay",
     category: "Coastal Landscape and Seascape",
@@ -537,7 +537,7 @@ export const destinations = [
   {
     id: "60",
     name: "Buga Lake",
-    image: "https://source.unsplash.com/1000x700/?Buga%20Lake",
+    image: "https://photos.wikimapia.org/p/00/01/16/02/92_big.jpg",
     description: "Libon’s share of Bato Lake is a major fishing zone in the municipality. Aside from boating and fishing, visitors are provided an amazing view of some of Bicol’s prominent mountains including the Mayon Volcano, Mount Masaraga, Mount Iriga and Mount Malinao.",
     location: "Buga, Libon, Albay",
     category: "Lakes and Pond",
@@ -546,7 +546,7 @@ export const destinations = [
   {
     id: "61",
     name: "Bambusetum",
-    image: "https://source.unsplash.com/1000x700/?Bambusetum",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTjNlejg_Drr7RtMw7-TsirMptru7ZlwV4Jw&s",
     description: "a two-hectare bamboo plantation adjacent to Kawa-Kawa, lushed with a variety of bamboo species. Different kinds of flowering plants are also found in the scenic site.",
     location: "Tuburan, Ligao City, Albay",
     category: "Other Natural Attractions (e.g. century old trees/forest, endemic species)",
@@ -555,7 +555,7 @@ export const destinations = [
   {
     id: "62",
     name: "Buhawi Hill Camping Site",
-    image: "https://source.unsplash.com/1000x700/?Buhawi%20Hill%20Camping%20Site",
+    image: "https://albay.gov.ph/wp-content/uploads/2020/02/87364783_1305621266305518_1576858665330147328_o-1024x683.jpg",
     description: "Buhawi Hill Camping Site is found in the beautiful Municipaity of Pioduran. The Camping Site offers an outdoor activities where a group of people spends time with nature, far away from the City. The hill has an approximately 330 meters above sea level.",
     location: "Panganiran, Pio Duran, Albay",
     category: "Mountains / Hills / Highlands",
@@ -564,7 +564,7 @@ export const destinations = [
   {
     id: "63",
     name: "Kawa Kawa Natural Park",
-    image: "https://source.unsplash.com/1000x700/?Kawa%20Kawa%20Natural%20Park",
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/2b/59/d2/img-20180326-100821-largejpg.jpg?w=1200&h=-1&s=1",
     description: "Dubbed as the “hill without a hill top”, Kawa Kawa Natural Park is visited by an average of 600,000 tourists every year. Its cauldron-like shape with Stations of the Cross lining around the hill is famous for the life-size statues depicting the Passion of Christ.",
     location: "Tuburan, Ligao City, Albay",
     category: "Mountains / Hills / Highlands",
@@ -573,7 +573,7 @@ export const destinations = [
   {
     id: "64",
     name: "The Campsite",
-    image: "https://source.unsplash.com/1000x700/?The%20Campsite",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRVEZYGLHm94Wt3EHOkrPGolw5oWXxBFT7ZA&s",
     description: "The first tourist attraction developed in Mt. Masaraga. With its perfect location, fronting the incomparable beauty of Mt. Mayon, it has become very popular to people who love nature, like campers, trekkers and adventurers.",
     location: "Amtic, Ligao City, Albay",
     category: "Mountains / Hills / Highlands",
@@ -582,7 +582,7 @@ export const destinations = [
   {
     id: "65",
     name: "Gogongon Falls",
-    image: "https://source.unsplash.com/1000x700/?Gogongon%20Falls",
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/4c/d2/9c/the-main-plunge-of-bolan.jpg?w=900&h=-1&s=1",
     description: "Gogongon Falls sits on a high cliff draining its water in a deep lagoon ideal for swimming. The river bed going to the falls is like a cemented road which crystal-clear waters swiftly flowing. It takes more than one hour of walking along greeneries and several small falls are found along the way.",
     location: "Harigue, Libon, Albay",
     category: "Falls",
@@ -591,7 +591,7 @@ export const destinations = [
   {
     id: "66",
     name: "Paayahayan sa Bulod",
-    image: "https://source.unsplash.com/1000x700/?Paayahayan%20sa%20Bulod",
+    image: "https://bicoltravelguides.com/wp-content/uploads/2025/07/Bicol-Travel-Guides-Blog-Images-2-1.jpg",
     description: "As Mt. Masaraga became a popular tourist destination in Bicol, Paayahayan Sa Bulod soon emerged as a captivating tourist attraction in the site. It has a wide area enough to home various species of ornamental and flowering plants.",
     location: "Amtic, Ligao City, Albay",
     category: "Mountains / Hills / Highlands",
@@ -600,7 +600,7 @@ export const destinations = [
   {
     id: "67",
     name: "Hobbit Hill",
-    image: "https://source.unsplash.com/1000x700/?Hobbit%20Hill",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhs6Nbng7HvoXcoU5bjXWRB6k_UB2lKXI1UA&s",
     description: "Has a refreshing scenic site, with a great view of Bicol’s pride, Mt. Mayon. Its perfect location is a good point that attracts many tourists with the thought that Hobbit attracts many tourists wherein one could mistake hobbit as found or located outside the country.",
     location: "Amtic, Ligao City, Albay",
     category: "Mountains / Hills / Highlands",
@@ -609,7 +609,7 @@ export const destinations = [
   {
     id: "68",
     name: "Balinsasayawan Cave",
-    image: "https://source.unsplash.com/1000x700/?Balinsasayawan%20Cave",
+    image: "https://gieofelnido.wordpress.com/wp-content/uploads/2010/11/balinsasayaw-nest-site1.jpg?w=584",
     description: "Named after the swiftlets, Balinsasayawan cave sits on a mountain slope and its top-most part serves as a view deck overlooking Libon- Polangui, Bato Lake and Buhi Mountain Lake. The cave interior is big and wide with cool air soothing the skin and is abundant in stalagmites and stalactites.",
     location: "San Ramon, Libon, Albay",
     category: "Caves (inland)",
@@ -618,7 +618,7 @@ export const destinations = [
   {
     id: "69",
     name: "Mt. Masaraga",
-    image: "https://source.unsplash.com/1000x700/?Mt.%20Masaraga",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzN9c5QFD-EnNVtASLo8_q5V6HhesZ5FgBzw&s",
     description: "The third of the three beautiful mountains comprising the Magayon Trio in Albay.  The newest sports tourism site in Ligao City with a breath-taking and scenic trails makes it one of the most exciting and fast-growing destinations just perfect for those who love adventures in the Bicol Region.",
     location: "Amtic, Ligao City, Albay",
     category: "Mountains / Hills / Highlands",
@@ -627,7 +627,7 @@ export const destinations = [
   {
     id: "70",
     name: "Tagas Falls",
-    image: "https://source.unsplash.com/1000x700/?Tagas%20Falls",
+    image: "https://www.vigattintourism.com/assets/article_main_photos/optimize/1345010459BmI5Ijbo.jpg",
     description: "These mutual falls at Pantao is a little paradise with blue water lagoon hidden in a virgin rain forest. The water cascading from the water falls goes deep down to a clear lagoon. The site is 40 minutes travel from Poblacion Libon, Albay and 20 minutes walk from Barangay Proper (Balyena Street).",
     location: "Pantao, Libon, Albay",
     category: "Falls",
@@ -636,7 +636,7 @@ export const destinations = [
   {
     id: "71",
     name: "Cañeta and Mararag Falls",
-    image: "https://source.unsplash.com/1000x700/?Cañeta%20and%20Mararag%20Falls",
+    image: "https://ik.imagekit.io/tvlk/blog/2023/07/shutterstock_654595693.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2",
     description: "Considered as hidden gems of San Jose, these mutual falls are an hour away from the barangay proper. Mararag falls is vertically measured at 35 feet while Cañeta falls is 25 feet.",
     location: "San Jose, Libon, Albay",
     category: "Falls",
@@ -645,7 +645,7 @@ export const destinations = [
   {
     id: "72",
     name: "Tambac Beach Resorts",
-    image: "https://source.unsplash.com/1000x700/?Tambac%20Beach%20Resorts",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6_N_1mOr6VpUch2nF4T9UiCHDggt_pgsMnA&s",
     description: "The Beach Resorts of Ligao have pristine swimming opportunities waiting to greet you! The 8-kilometer-long stretch of powdery, almost-white sand, and sparkling blue waters welcomes divers and snorkelers to enjoy, discover its beauty and revel in the delightful coral reefs.",
     location: "Maonon, Ligao City, Albay",
     category: "Coastal Landscape and Seascape",
@@ -654,7 +654,7 @@ export const destinations = [
   {
     id: "73",
     name: "Batong Languyon",
-    image: "https://source.unsplash.com/1000x700/?Batong%20Languyon",
+    image: "https://ligaocity.albay.gov.ph/wp-content/uploads/2015/11/Batong-Languyon4.jpg",
     description: "It is an islet of natural rock formation located in the coastal area of Ligao. In the waters surrounding the rock islet, divers can see at a depth of 80 feet, with a variety of beautiful coral reefs, and marine species.",
     location: "Maonon, Ligao City, Albay",
     category: "Coastal Landscape and Seascape",
@@ -663,7 +663,7 @@ export const destinations = [
   {
     id: "74",
     name: "Mangrove Plantation",
-    image: "https://source.unsplash.com/1000x700/?Mangrove%20Plantation",
+    image: "https://ligaocity.albay.gov.ph/wp-content/uploads/2015/11/mangrove-plantation3.jpg",
     description: "A 42-hectare plantation with thousands mangrove propagules planted since 2008. This was initiated to advocate for marine biodiversity protection and preservation of environmental resources to sustain livelihood for the coastal communities.",
     location: "Cabarian, Ligao City, Albay",
     category: "Unique Natural Landscape / Seascape",
@@ -672,7 +672,7 @@ export const destinations = [
   {
     id: "75",
     name: "Camp One Tree Hill",
-    image: "https://source.unsplash.com/1000x700/?Camp%20One%20Tree%20Hill",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0BmtAkQfnBBRrRU3xb7qnvCnG6iq71UM8hg&s",
     description: "It is a potential tourism attraction with a panoramic view of rolling hills similar to chocolate hills in Bohol. You will be delighted to see the magnificent beauty of Mt. Mayon and Mt. Masaraga.  Visit this place where you can recharge and energize your tired body and soul.",
     location: "Macalidong, Ligao City, Albay",
     category: "Mountains / Hills / Highlands",
@@ -681,7 +681,7 @@ export const destinations = [
   {
     id: "76",
     name: "Mayon Volcano Natural Park",
-    image: "https://source.unsplash.com/1000x700/?Mayon%20Volcano%20Natural%20Park",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/81/Mt.Mayon_tam3rd.jpg",
     description: "The perfect getaway, Nature and Adventure, here you can go Trekking, explore new terrain for Down Hill Mountain Biking and see the Enchanted Centennial tree at the heart of MVNP.",
     location: "Lidong, Santo Domingo, Albay",
     category: "Other Natural Attractions (e.g. century old trees/forest, endemic species)",
@@ -690,7 +690,7 @@ export const destinations = [
   {
     id: "77",
     name: "Inang Maharang Mud Pool",
-    image: "https://source.unsplash.com/1000x700/?Inang%20Maharang%20Mud%20Pool",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4XnwzX9WgOnDT_xbZjpTunWH01LMPr3C9DQ&s",
     description: "Located in Sitio Inang-Maharang, Barangay Nagotgot, Manito, Albay is the Inang-Maharang Mud Pool which is typically a volcanic geyser. This Mud Pool scattered small wells oozing sulfuric smell and is an abundant source of mud pack.",
     location: "Sitio Inang Maharang Brgy. Nagotgot, Manito, Albay",
     category: "Lakes and Pond",
@@ -699,7 +699,7 @@ export const destinations = [
   {
     id: "78",
     name: "Mangrove Forest",
-    image: "https://source.unsplash.com/1000x700/?Mangrove%20Forest",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTntxg1OXTOptEpl0EUfch_Zcxb4K75XzxhTg&s",
     description: "Mangrove Forest are important ecosystem so we should care about Mangroves because they give Biodiversity by providing a nesting and breeding area for fish and shellfish, with these it gives livelihood to the people, maintain water quality, coastal defense and fight climate change.",
     location: "Buhatan, Santo Domingo, Albay",
     category: "Other Natural Attractions (e.g. century old trees/forest, endemic species)",
@@ -708,7 +708,7 @@ export const destinations = [
   {
     id: "79",
     name: "Manilao Cave",
-    image: "https://source.unsplash.com/1000x700/?Manilao%20Cave",
+    image: "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_728/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/s8apqn4mc27zly9x8fb9/AlbayBicolCavesandHillsExplorationTour.jpg",
     description: "Named after the \"Anilao\" tree, which was abundant in the area, the cave is classified Class II by the DENR. Although the cave is good for tourism, portion of it is restricted. The cave is still unexplored by tourist.",
     location: "BInanderahan, Camalig, Albay",
     category: "Caves (inland)",
@@ -717,7 +717,7 @@ export const destinations = [
   {
     id: "80",
     name: "Ligñon Hill",
-    image: "https://source.unsplash.com/1000x700/?Ligñon%20Hill",
+    image: "https://albay.gov.ph/wp-content/uploads/2020/02/DSC_0053-1024x678.jpg",
     description: "Experience Ligñon Hill with its breathtaking 360-degree view of the city at its famous view deck on the hill top.",
     location: "Bogtong, Legazpi City, Albay",
     category: "Mountains / Hills / Highlands",
@@ -725,8 +725,8 @@ export const destinations = [
   },
   {
     id: "81",
-    name: "PHILCERAMICS",
-    image: "https://source.unsplash.com/1000x700/?PHILCERAMICS",
+    name: "Philceramics",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHrVTvoNBnAeErzOklQuOVYpSRLn9FryFQ9Q&s",
     description: "The PHILCERAMICS is a shared service facility which aims to propel the development of terra-cotta industry. The pottery and ceramic industry is a century old industry in Putsan, Tiwi, Albay and is the primary livelihood of the community. Coron is Tiwi's \"One Town One Product\"",
     location: "Putsan, Tiwi, Albay",
     category: "Other Historical or Cultural Attractions",
@@ -735,7 +735,7 @@ export const destinations = [
   {
     id: "82",
     name: "Plaza del Cristo Rey",
-    image: "https://source.unsplash.com/1000x700/?Plaza%20del%20Cristo%20Rey",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Tabaco_Park_%28Ziga_Avenue%2C_Tabaco%2C_Albay%3B_04-18-2023%29.jpg/1100px-Tabaco_Park_%28Ziga_Avenue%2C_Tabaco%2C_Albay%3B_04-18-2023%29.jpg",
     description: "Centuries old plaza that forms a part of the Saint John the Baptist Church.",
     location: "San Juan, Tabaco City, Albay",
     category: "Structures and Buildings",
@@ -744,7 +744,7 @@ export const destinations = [
   {
     id: "83",
     name: "Saint Michael the Archangel Parish Church",
-    image: "https://source.unsplash.com/1000x700/?Saint%20Michael%20the%20Archangel%20Parish%20Church",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMxhQkihiAllpGp2KlvxhQr8plD1mdniIqpw&s",
     description: "A Roman Catholic church in Oas, Albay, which consists of the main church structure adjoining a bell tower on one side and a parish house on the other.",
     location: "Iraya Norte, Oas, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -752,8 +752,8 @@ export const destinations = [
   },
   {
     id: "84",
-    name: "OUR LADY OF ASSUMPTION PARISH",
-    image: "https://source.unsplash.com/1000x700/?OUR%20LADY%20OF%20ASSUMPTION%20PARISH",
+    name: "our lady of assumption parish",
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/3e/98/19/church-facade.jpg?w=1200&h=-1&s=1",
     description: "Church",
     location: "Poblacion, Guinobatan, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -762,7 +762,7 @@ export const destinations = [
   {
     id: "85",
     name: "Our Lady of Mt. Carmel Parish",
-    image: "https://source.unsplash.com/1000x700/?Our%20Lady%20of%20Mt.%20Carmel%20Parish",
+    image: "https://wowlegazpi.com/wp-content/uploads/2020/10/Our-Lady-of-Mount-Carmel-Parish-Church-IV-Malilipot-Albay-Diocese-of-Legazpi-Mary-Anne-Buen-scaled.jpeg",
     description: "Our Lady of Mt. Carmel Parish has been declared as a national historical and cultural property recognized by the local government. It was built on 1877 after 88 years of construction.",
     location: "Barangay 2 & 5, Malilipot, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -770,8 +770,8 @@ export const destinations = [
   },
   {
     id: "86",
-    name: "MUSEO de GUINOBATAN",
-    image: "https://source.unsplash.com/1000x700/?MUSEO%20de%20GUINOBATAN",
+    name: "Museo de Guinobatan",
+    image: "https://64.media.tumblr.com/a793595b5c23906c956ecda2c5b6a628/7bbe34259a068013-4f/s1280x1920/55e732aed4ca5be26deecf780abb859b0e4f22bf.jpg",
     description: "museum",
     location: "Iraya, Guinobatan, Albay",
     category: "Museum",
@@ -780,7 +780,7 @@ export const destinations = [
   {
     id: "87",
     name: "St. John the Baptist Church",
-    image: "https://source.unsplash.com/1000x700/?St.%20John%20the%20Baptist%20Church",
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3g-KSSHtiQUQnb7P9mXyM5dnIJyMcc2_xHhfBfB9dvfBxR6vC_Ns-VcwXKSuGLdCrQMKoXckMsb_ePGtZdkasSFuc6zKVSARQhXW4eBij0dyJydDAV1ulB3mmh7xVfY-_W16kC-0L-eQG/s2048/DSC_0536.jpg",
     description: "One of the town's significant heritage structures. Declared by the NHCP as Levell II heritage structure with historical marker and Important Cultural Property by the National Museum.",
     location: "Barangay 2, Camalig, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -789,7 +789,7 @@ export const destinations = [
   {
     id: "88",
     name: "Cluster of Colonial Houses",
-    image: "https://source.unsplash.com/1000x700/?Cluster%20of%20Colonial%20Houses",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR119JHNoo9Jt_9AA_pX9-Sc9MBVtzOUpUqDg&s",
     description: "Old Houses located in the Camalig Old Pueblo that bear high historical significance, built during the Spanish and American period, once owned by the prominent families that served as the leaders of the town and the province.",
     location: "Barangays 5 and 7, Camalig, Albay",
     category: "Structures and Buildings",
@@ -798,7 +798,7 @@ export const destinations = [
   {
     id: "89",
     name: "St. John the Baptist Parish Church",
-    image: "https://source.unsplash.com/1000x700/?St.%20John%20the%20Baptist%20Parish%20Church",
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/92/ed/b0/st-john-the-baptist-church.jpg?w=1200&h=-1&s=1",
     description: "The Parish Church of San Juan Bautista Tabaco Albay was declared as one of the Albay's four national treasures.",
     location: "San Juan, Tabaco City, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -807,7 +807,7 @@ export const destinations = [
   {
     id: "90",
     name: "Hoyop-hoyopan Cave",
-    image: "https://source.unsplash.com/1000x700/?Hoyop-hoyopan%20Cave",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhMDYqdZi4zUZhxB7QNMQz0FfVPwYNFjZ_vg&s",
     description: "Approximately situated 10 kms. from the Poblacion (Camalig Town Center and 7 kms. from the BIA, the nearest gateway. Pottery, human bones, beadwork and artifacts believed to be 4,000 years old have been unearthed from these caves.",
     location: "Barangay Cotmon, Camalig, Albay",
     category: "Archaeological / Historic Sites",
@@ -816,7 +816,7 @@ export const destinations = [
   {
     id: "91",
     name: "Bahay-Kalakal ni Smith, Bell & Company",
-    image: "https://source.unsplash.com/1000x700/?Bahay-Kalakal%20ni%20Smith,%20Bell%20&%20Company",
+    image: "https://philhistoricsites.nhcp.gov.ph/wp-content/uploads/2023/06/Bahay-Kalakal-ng-Smith-Bell-Co.-Tabaco-Albay-1.jpg",
     description: "The Spanish-era structure of durable stone & delicate capiz was once the office of an import-export firm dealing in abaca whose origins dated from 1868. This company house was owned by a talented poetess named Angela Manalang-Gloria.",
     location: "Cormidal, Tabaco City, Albay",
     category: "Structures and Buildings",
@@ -825,7 +825,7 @@ export const destinations = [
   {
     id: "92",
     name: "St. Lawrence the Martyr Parish Church",
-    image: "https://source.unsplash.com/1000x700/?St.%20Lawrence%20the%20Martyr%20Parish%20Church",
+    image: "https://pbs.twimg.com/media/E2hkhNGVoAQDziH.jpg:large",
     description: "St. Lawrence the Martyr Parish Church was built in 1829 and became the parish church of Tiwi in 1863 after it was dedicated to St. Lawrence the Martyr.",
     location: "Tigbi, Tiwi, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -834,7 +834,7 @@ export const destinations = [
   {
     id: "93",
     name: "Tabaco Catholic Cemetery Cimburrio",
-    image: "https://source.unsplash.com/1000x700/?Tabaco%20Catholic%20Cemetery%20Cimburrio",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQZVCZWIKDVlqDEtTuiS-B7UIhYxD8cGP76A&s",
     description: "The chapel was built in 1861 with a combination of medieval & baroque architecture which was patterned after the structural design of St. John the Baptist Church.",
     location: "Tagas, Tabaco City, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -843,7 +843,7 @@ export const destinations = [
   {
     id: "94",
     name: "Our Lady of Salvacion Parish Church",
-    image: "https://source.unsplash.com/1000x700/?Our%20Lady%20of%20Salvacion%20Parish%20Church",
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/e7/90/c6/our-lady-of-salvation.jpg?w=900&h=500&s=1",
     description: "One of the Pilgrim destinations in the Province of Albay, The Church houses the Image of Our Lady of Salvation, which is the Diocesan Patroness of Albay. It was declared a Diocesan Shrine in 1976 after the canonical coronation of Our Lady of Salvation by Jaime Cardinal Sin.",
     location: "Joroan, Tiwi, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -852,7 +852,7 @@ export const destinations = [
   {
     id: "95",
     name: "Ligao City Heritage Library and Museum",
-    image: "https://source.unsplash.com/1000x700/?Ligao%20City%20Heritage%20Library%20and%20Museum",
+    image: "https://upload.wikimedia.org/wikipedia/en/6/6c/Ligao_City_Library_%28Old_National_Road%2C_Ligao%2C_Albay%3B_04-16-2023%29.jpg",
     description: "It's a one stop Research and Resource center that houses contemporary and rare reading materials on Philippine Arts, Language, Religion, History and Culture among many others. Also found are vintage periodicals, photographs, memorabilia and maps of Ligao City.",
     location: "Dunao, Ligao City, Albay",
     category: "Museum",
@@ -861,7 +861,7 @@ export const destinations = [
   {
     id: "96",
     name: "The Fallen Sons of Ligao",
-    image: "https://source.unsplash.com/1000x700/?The%20Fallen%20Sons%20of%20Ligao",
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiOn6YnPApV35Qe0h5hc5F5wFGcCz_ujh8BuM6z6Wl8A6aXUmIu_QSE9YTM-7Y20dtmA0lpObe0erq-7hWSHJpN0bI0xlZiFjmwDEEODgyQNCqrZ5dB1jVDXNUEXap9ufRrW2-LyPjqKuI/s1600/Fallen+Sons_Sherwin+Magayanes.jpg",
     description: "This is one of Ligao City’s most important landmarks. The monument with the names of the war veterans engraved on it reminds the Ligaoenos of their fallen heroes who sacrificed their lives for freedom. It is now considered a must in every tourist and visitor’s itinerary.",
     location: "Dunao, Ligao City, Albay",
     category: "Historic Monuments",
@@ -870,7 +870,7 @@ export const destinations = [
   {
     id: "97",
     name: "St. Stephen Protomartyr Parish Church",
-    image: "https://source.unsplash.com/1000x700/?St.%20Stephen%20Protomartyr%20Parish%20Church",
+    image: "https://ligaocity.albay.gov.ph/wp-content/uploads/2017/03/church.png",
     description: "– Ligao is indeed gifted with both natural and historical riches. St. Stephen the Proto-martyr Parish is one of the 17th century churches and is among the greatest landmarks of Albay. It is one of the city’s best and proudest attractions as it bridges the past to the present.",
     location: "Guilid, Ligao City, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -879,7 +879,7 @@ export const destinations = [
   {
     id: "98",
     name: "Sts. Joachim and Anne Church",
-    image: "https://source.unsplash.com/1000x700/?Sts.%20Joachim%20and%20Anne%20Church",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRreq0C1CEahSZnRu_wLtadeEy6gsjrJXifuA&s",
     description: "Sts. Joachim and Anne Parish Church is built in the year 1600 during the Spaniards colonization of the country. It was damaged during the 1766 Mayon Volcano eruption and later rebuilt.",
     location: "Poblacion, Malinao, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -888,7 +888,7 @@ export const destinations = [
   {
     id: "99",
     name: "Libon Flaming Water",
-    image: "https://source.unsplash.com/1000x700/?Libon%20Flaming%20Water",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flaming_Water%2C_Poblacion%2C_Libon%2C_Albay.jpg/1200px-Flaming_Water%2C_Poblacion%2C_Libon%2C_Albay.jpg",
     description: "Located at Libon Central School, the flaming water was accidentally-discovered by its school janitor in 1962. When he lighted a cigarette, he threw the matchstick into a pond and alas, the water suddenly burst into flames! Today, it is housed in a facility that harnesses energy used for cooking.",
     location: "Zone II, Libon, Albay",
     category: "Other Historical or Cultural Attractions",
@@ -897,7 +897,7 @@ export const destinations = [
   {
     id: "100",
     name: "Saint James the Greater Parish Church and Relics of Santiago el Mayor",
-    image: "https://source.unsplash.com/1000x700/?Saint%20James%20the%20Greater%20Parish%20Church%20and%20Relics%20of%20Santiago%20el%20Mayor",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRONJvY8Df_ytsJfkASkyDLkviVy5IEIYx3Tw&s",
     description: "Declared as a pilgrim church for the celebration of 300 YOC, the St. James the Greater Parish Church reminds visitors of Libon’s opulent past as one of the only eight villas in the country, and of its role in the propagation of Christianity in Bicol during the Spanish occupation of the country.",
     location: "Zone III, Libon, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -906,7 +906,7 @@ export const destinations = [
   {
     id: "101",
     name: "Oas Bell Tower",
-    image: "https://source.unsplash.com/1000x700/?Oas%20Bell%20Tower",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPVz_5NQkZKuMyEieFYU6hQ8mtQdDYxBEDWA&s",
     description: "In 1825, a church of rock and stones was built that was reconstructed in 1866 after being razed by fire.",
     location: "Iraya Norte, Oas, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -915,7 +915,7 @@ export const destinations = [
   {
     id: "102",
     name: "Rizal Park",
-    image: "https://source.unsplash.com/1000x700/?Rizal%20Park",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgZ0vl6CuDaINu2C5FvdIO9kNQvQdsOSgOzg&s",
     description: "The monument was built in 1955. It shows Rizal in his usual overcoat with his book in his left. The monument in the town plaza of Oas is a model of simplicity.",
     location: "Iraya Norte, Oas, Albay",
     category: "Historic Monuments",
@@ -924,7 +924,7 @@ export const destinations = [
   {
     id: "103",
     name: "Divine Mercy Shrine and Monastery of the Carmelite Nuns of the Holy Trinity",
-    image: "https://source.unsplash.com/1000x700/?Divine%20Mercy%20Shrine%20and%20Monastery%20of%20the%20Carmelite%20Nuns%20of%20the%20Holy%20Trinity",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZM8vgeyz80FJdw3Sw513yusoAlcxblqzKBw&s",
     description: "It serves as a Pilgrim Center of Ligao City drawing in visitors from different places in the country. The shrine has a columbary and a wide staircases bearing the footprints and handprints of the Shrine’s visitors and devotees.",
     location: "Tuburan, Ligao City, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -933,7 +933,7 @@ export const destinations = [
   {
     id: "104",
     name: "Miguel Lopez de Legazpi Monument",
-    image: "https://source.unsplash.com/1000x700/?Miguel%20Lopez%20de%20Legazpi%20Monument",
+    image: "https://wowlegazpi.com/wp-content/uploads/2020/10/legazpi-monument.jpg",
     description: "Also known as El Adelantado and El Viejo (The Elder). Was a Basque-Spanish navigator and governor who established the first Spanish settlement in the East Indies when his expedition crossed the Pacific Ocean.",
     location: "Brgy. Dap-Dap, Legazpi City, Albay",
     category: "Historic Monuments",
@@ -942,7 +942,7 @@ export const destinations = [
   {
     id: "105",
     name: "The Obelisk",
-    image: "https://source.unsplash.com/1000x700/?The%20Obelisk",
+    image: "https://wowlegazpi.com/wp-content/uploads/2020/10/masonic-obelisk-legazpi.jpg",
     description: "The first-ever obelisk built and instituted in the entire Southern Luzon and of the whole Luzon Island with 13.1 feet in height.",
     location: "Puro, Legazpi City, Albay",
     category: "Historic Monuments",
@@ -951,7 +951,7 @@ export const destinations = [
   {
     id: "106",
     name: "Battle of Legazpi Memorial Pylon",
-    image: "https://source.unsplash.com/1000x700/?Battle%20of%20Legazpi%20Memorial%20Pylon",
+    image: "https://c8.alamy.com/comp/2FN13E2/the-battle-of-legazpi-obelisk-2FN13E2.jpg",
     description: "It is a memorial to the valiant defense of Albayanos against American invaders in 1900. Located at the heart of Central Business District of the City.",
     location: "Brgy. Capantawan, Legazpi City, Albay",
     category: "Historic Monuments",
@@ -960,7 +960,7 @@ export const destinations = [
   {
     id: "107",
     name: "Headless Monument",
-    image: "https://source.unsplash.com/1000x700/?Headless%20Monument",
+    image: "https://d37rmf1ynyg9aw.cloudfront.net/fit-in/1280x1280/data/v4/resources/images/e4441a4d-6c74-4a28-b649-412e0dbbdd25.jpg",
     description: "Constructed as a dedication to the unknown heroes who died and shed their blood during the Japanese military occupation in Legazpi City",
     location: "Brgy. Lapu-Lapu, Legazpi City, Legazpi City, Albay",
     category: "Historic Monuments",
@@ -969,7 +969,7 @@ export const destinations = [
   {
     id: "108",
     name: "St. Dominic Church",
-    image: "https://source.unsplash.com/1000x700/?St.%20Dominic%20Church",
+    image: "https://stdominicdeguzmanparish.com/wp-content/uploads/2024/10/St-Dominic-de-Guzman-Parish-Church-View-1024x720.webp",
     description: "First Church Built: 1749, in 1850 The old Church roof of basag (split bamboo) was burned to ashes to ashes, hence the transfer of the service to the present church, which was nearing completion under the direction of D. Martin Martinez.",
     location: "Market Site, Santo Domingo, Albay",
     category: "Church, Mosque, Temples or other Religious Sites",
@@ -978,7 +978,7 @@ export const destinations = [
   {
     id: "109",
     name: "General Ignacio Paua Monument",
-    image: "https://source.unsplash.com/1000x700/?General%20Ignacio%20Paua%20Monument",
+    image: "https://biklish.com/wp-content/uploads/2008/08/ignaciopaua.jpg",
     description: "The only pure-blooded Chinese general who supported the Katipuneros in the fight against the Spaniards.",
     location: "Banadero, Legazpi City, Albay",
     category: "Historic Monuments",
@@ -987,7 +987,7 @@ export const destinations = [
   {
     id: "110",
     name: "Pugad Lawin Park",
-    image: "https://source.unsplash.com/1000x700/?Pugad%20Lawin%20Park",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrU-U2M1SkvquBcUjX31VeLArTSFIgKhDGDg&s",
     description: "Constructed: 1926-1927 1st in Bicol Initiated by: Diego Balin together with the revolutionary Veteran. Here also lies the remains of Potenciano V. Gregorio the composer of the beloved song of Bicol SARUNG BANGGI. Composed one dark night in 1910 in the little town of Libog at the foot of Mayon.",
     location: "Poblacion, Santo Domingo, Albay",
     category: "Historic Monuments",
@@ -996,7 +996,7 @@ export const destinations = [
   {
     id: "111",
     name: "Ibalong Heroes Monument",
-    image: "https://source.unsplash.com/1000x700/?Ibalong%20Heroes%20Monument",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYpDYlvNou1T6dMfB96uQCRtffST2J4VFVug&s",
     description: "An honor to the three Ibalong mythical heroes namely Baltog, Handyong and Bantong, for the bravery they have exemplified",
     location: "Lapu-Lapu, Legazpi City, Albay",
     category: "Historic Monuments",
@@ -1005,7 +1005,7 @@ export const destinations = [
   {
     id: "112",
     name: "Padang Memorial Shrine",
-    image: "https://source.unsplash.com/1000x700/?Padang%20Memorial%20Shrine",
+    image: "https://legazpi.gov.ph/wp-content/uploads/2023/04/PADANG-MEMORIAL-SHRINE.jpg",
     description: "Repository shrine in memory of the residents of Padang who died during Typhoon Reming",
     location: "Padang, Legazpi City, Albay",
     category: "Historic Monuments",
@@ -1014,7 +1014,7 @@ export const destinations = [
   {
     id: "113",
     name: "Albay Gulf Landing Commemorative Pylon",
-    image: "https://source.unsplash.com/1000x700/?Albay%20Gulf%20Landing%20Commemorative%20Pylon",
+    image: "https://photos.worldtravelserver.com/photo/1937/medium/90207802.jpg",
     description: "Built in 1995 in connection with the 50th Anniversary of the Landing of the Allied American Forces in Legazpi City, which led to the City's liberation from the Japanese occupation forces",
     location: "Rawis, Legazpi City, Albay",
     category: "Historic Monuments",
@@ -1023,7 +1023,7 @@ export const destinations = [
   {
     id: "114",
     name: "Tabaco City Presidencia Building",
-    image: "https://source.unsplash.com/1000x700/?Tabaco%20City%20Presidencia%20Building",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu7hEE0_obuscUJ7bOlnp_VJ-KMeOhFrBeUg&s",
     description: "This near century-old structure which was completed in 1929, serves as Tabaco's civil government center since the American period - responsible for catering to the social need and providing government services to the public.",
     location: "Quinale, Tabaco City, Albay",
     category: "Structures and Buildings",
@@ -1032,7 +1032,7 @@ export const destinations = [
   {
     id: "115",
     name: "Tabaco City Material Recovery Facility (MRF)",
-    image: "https://source.unsplash.com/1000x700/?Tabaco%20City%20Material%20Recovery%20Facility%20(MRF)",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXx6gVBOHY8UBzjaU37efnF8-y-hMbFd6JZw&s",
     description: "Facility owned by the City Government of Tabaco where recyclable and biodegradable materials are turned into reusable products like eco-bricks and natural composts.",
     location: "San Vicente, Tabaco City, Albay",
     category: "Industrial Facilities (e.g. Gov't flagship facilities like model recycling centers)",
@@ -1041,7 +1041,7 @@ export const destinations = [
   {
     id: "116",
     name: "Pandayan sa Cobo",
-    image: "https://source.unsplash.com/1000x700/?Pandayan%20sa%20Cobo",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Tabaco_Cemetery_Chapel_%282517084409%29.jpg/640px-Tabaco_Cemetery_Chapel_%282517084409%29.jpg",
     description: "Barangay Cobo is the Home of great blacksmiths in Tabaco City. Tabak-making is a labor-intensive craft forging world-class cutlery products.",
     location: "Cobo, Tabaco City, Albay",
     category: "Arts and Craft",
@@ -1050,7 +1050,7 @@ export const destinations = [
   {
     id: "117",
     name: "Villa Miranda Farm and Resort (Grapes Farm)",
-    image: "https://source.unsplash.com/1000x700/?Villa%20Miranda%20Farm%20and%20Resort%20(Grapes%20Farm)",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5R4VuoNdE4vE8bS3NJs6YS9Mm_d_ZQ72ivw&s",
     description: "The Home of Grapes in the South, Villa Miranda Farm and Resort is the first vineyard in the Bicol Region that harvests locally-grown red cardinal grapes. It houses a mushroom farm and a vegetable terraces. Located at Macabugos, VMFR is a DOT-accredited farm site owned by the Sasutona family.",
     location: "Macabugos, Libon, Albay",
     category: "Farm / Ranch",
@@ -1059,7 +1059,7 @@ export const destinations = [
   {
     id: "118",
     name: "Brizuela Natural Farm",
-    image: "https://source.unsplash.com/1000x700/?Brizuela%20Natural%20Farm",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRPbc-ayewt3twWq3HFBAwNnjgcABBkMbs2w&s",
     description: "Private diversified farming that can be used as a study tour for farmers and farming enthusiasts.",
     location: "Tabiguian, Tabaco City, Albay",
     category: "Farm / Ranch",
@@ -1068,7 +1068,7 @@ export const destinations = [
   {
     id: "119",
     name: "Mirisbiris Garden and Nature Center",
-    image: "https://source.unsplash.com/1000x700/?Mirisbiris%20Garden%20and%20Nature%20Center",
+    image: "https://q-xx.bstatic.com/xdata/images/hotel/max500/208240101.jpg?k=a9c250b14b6fe1381d45fe205a1144b828bfff48d52b5b16482edade2177e445&o=",
     description: "A hobbyist botanical garden, with medical and kitchen herbs, and organic tropical fruits and veggies. Rainforest to coral reefs. B&B, coffe shop. Welcome!",
     location: "Salvacion, Santo Domingo, Albay",
     category: "Farm / Ranch",
@@ -1077,7 +1077,7 @@ export const destinations = [
   {
     id: "120",
     name: "Sto. Domingo Handicraft",
-    image: "https://source.unsplash.com/1000x700/?Sto.%20Domingo%20Handicraft",
+    image: "https://mb.com.ph/uploads/imported_images/mb-mkt-neo-prod-1-uploads-2/media/equjuzah_f69c1865a2/equjuzah_f69c1865a2.png",
     description: "A place where the design are carefully hand crafted by the Domingueño workers, most of it are Wall Frames, Picture and Certificate Frames, Office and Chocolate Boxes, Sashes, Trophies and other personalized design.",
     location: "San Juan St., Santo Domingo, Albay",
     category: "Arts and Craft",
@@ -1086,7 +1086,7 @@ export const destinations = [
   {
     id: "121",
     name: "Tabaco City Plaza",
-    image: "https://source.unsplash.com/1000x700/?Tabaco%20City%20Plaza",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREsdO08btZ0dlzEL6JsZCGRg4UDrTcGwyWKw&s",
     description: "A converging point for huge crowds during important activities of the city.",
     location: "Quinale, Tabaco City, Albay",
     category: "Parks",

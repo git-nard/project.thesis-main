@@ -138,7 +138,7 @@ const spots = [
     id: "13",
     name: "Japanese Tunnel",
     image:
-      "https://images.unsplash.com/photo-1594589305091-9cb5b87bba6e?auto=format&fit=crop&w=1000&q=80",
+      "https://img.truvvle.com/?src=aHR0cHM6Ly9pbWFnZXMuaGl2ZS5ibG9nL3AvRG9nTjdmRjNvSkRUdk1kb3ozTUdTM2R6bW9UbjQzakNuOFB2bmpoRmJIQldFTk5EQVQxWnF3RmZqVFR4U2dxdEd1UkVjYnFtb3g0dVZLQjltRDlLMzN1SlNZQ21TeXVSVzdTMmFvVTR1eXp1dTRvQUxIV0hybVVrNlQ4dVRYODlTd3FLQXBVa1RRTURZTWhtRHo2UGNVM1ZpRGNBcFZtcHpvQmQ4ZGV1VTdVZWZkclBiVTdwdkdCckZacUZYV0dYRm5idkhRbWFKbjNjNy8_Zm9ybWF0PW1hdGNoJm1vZGU9Zml0&width=1920",
     description:
       "A historic tunnel built during World War II, offering visitors a glimpse into Albay’s wartime history.",
     location: "Mt. Kitwinan, Camalig, Albay",
@@ -149,7 +149,7 @@ const spots = [
     id: "14",
     name: "Albay Park and Wildlife",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
+      "https://albay.gov.ph/wp-content/uploads/2020/02/83482656_112131743673516_509040236886491136_o-1024x683.jpg",
     description:
       "A family-friendly park with a small zoo, picnic areas, and scenic views of Mayon Volcano.",
     location: "Bogtong, Legazpi City, Albay",
@@ -160,7 +160,7 @@ const spots = [
     id: "15",
     name: "Lignon Hill Nature Park",
     image:
-      "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1000&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3SlaeVoAs1Df1V3_1v4ILUbFM8fEITxtl3w&s",
     description:
       "A popular spot for ziplining, hiking, and sightseeing with a 360° view of Legazpi and Mayon Volcano.",
     location: "Daraga, Albay",
@@ -171,7 +171,7 @@ const spots = [
     id: "16",
     name: "Legazpi Boulevard",
     image:
-      "https://images.unsplash.com/photo-1516900557540-ebb7d13cc5d3?auto=format&fit=crop&w=1000&q=80",
+      "https://legazpi.gov.ph/wp-content/uploads/2023/04/Legazpi-Boulevard-2-scaled.jpg",
     description:
       "A scenic seaside boulevard perfect for jogging, cycling, and viewing the Mayon Volcano.",
     location: "Puro, Legazpi City, Albay",
@@ -182,7 +182,7 @@ const spots = [
     id: "17",
     name: "Hoyop-Hoyopan Cave",
     image:
-      "https://images.unsplash.com/photo-1594589305091-9cb5b87bba6e?auto=format&fit=crop&w=1000&q=80",
+      "https://primer.com.ph/travel/wp-content/uploads/sites/6/2017/05/h1-e1493968717772.jpg",
     description:
       "A limestone cave with natural formations and historical significance as a refuge during World War II.",
     location: "Brgy. Cotmon, Legazpi City, Albay",
@@ -193,7 +193,7 @@ const spots = [
     id: "18",
     name: "Calabidongan Cave",
     image:
-      "https://images.unsplash.com/photo-1604079628046-9431d8cb7e5a?auto=format&fit=crop&w=1000&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRSfwld7hfGpDoFsWXIWRXpB0BTJUn2v4fQ&s",
     description:
       "An adventurous cave system in Camalig with stunning rock formations and underground streams.",
     location: "Brgy. Calabidongan, Camalig, Albay",
@@ -204,7 +204,7 @@ const spots = [
     id: "19",
     name: "Mainit Hot Spring",
     image:
-      "https://images.unsplash.com/photo-1569429592675-c3b5a7c1f9de?auto=format&fit=crop&w=1000&q=80",
+      "https://tourism.biliranisland.com/wp-content/uploads/2016/02/Mainit-Hot-Spring-6.jpg",
     description:
       "A natural hot spring resort offering therapeutic waters and relaxing mountain ambiance.",
     location: "Brgy. Pariaan, Camalig, Albay",
@@ -215,7 +215,7 @@ const spots = [
     id: "20",
     name: "Quituinan Hill",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
+      "https://campsites.ph/uploads/images/campsite-104-quituinan-hills-464d1c10afa7b06fe0bd8c3ed6824e81.jpg",
     description:
       "A World War II historical site featuring bunkers, tunnels, and scenic views of Mayon Volcano.",
     location: "Camalig, Albay",
@@ -226,7 +226,7 @@ const spots = [
     id: "21",
     name: "Sumlang Lake",
     image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+      "https://legazpirentacar.com/wp-content/uploads/sites/4/2023/05/Sumlang-9.jpg",
     description:
       "A peaceful lake offering bamboo rafting with a perfect view of Mayon Volcano.",
     location: "Camalig, Albay",
@@ -248,7 +248,7 @@ const spots = [
     id: "23",
     name: "Busay Falls",
     image:
-      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1000&q=80",
+      "https://malilipot.wordpress.com/wp-content/uploads/2018/05/busayfalls3-e1526603709826.jpg?w=1086",
     description:
       "A majestic multi-tiered waterfall located in Malilipot, surrounded by tropical vegetation.",
     location: "Malilipot, Albay",
@@ -259,7 +259,7 @@ const spots = [
     id: "24",
     name: "Jovellar Underground River",
     image:
-      "https://images.unsplash.com/photo-1614280977882-474d3dfc1a4a?auto=format&fit=crop&w=1000&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnzdm_tByTCuK6K5cauBJsGL3tQXwA7lyBIg&s",
     description:
       "An underground river accessible by bamboo raft, featuring limestone formations and clear waters.",
     location: "Jovellar, Albay",
@@ -270,7 +270,7 @@ const spots = [
   id: "25",
   name: "Pototan Cave",
   image:
-    "https://images.unsplash.com/photo-1604079628046-9431d8cb7e5a?auto=format&fit=crop&w=1000&q=80",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUi1Sljr0OgbEDkp88jA6pe_5zUIYW4gY02g&s",
   description:
     "A hidden gem in Rapu-Rapu, Pototan Cave features stunning stalactite and stalagmite formations and an underground stream that leads to a cool freshwater pool.",
   location: "Batan Island, Rapu-Rapu, Albay",
