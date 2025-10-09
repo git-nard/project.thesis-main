@@ -34,9 +34,9 @@ const TourismActivitiesPage = () => {
           <h2 className="text-2xl font-semibold mb-4">Featured Activities</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Featured items — these IDs must match items in the main list */}
-            <LinkFeatured id="legazpi-mayon-atv" title="Mayon ATV Adventure" img="https://images.unsplash.com/photo-1611682582438-bb7066a04e12?auto=format&fit=crop&w=1400&q=80" category="Adventure" municipality="Legazpi City, Albay" />
-            <LinkFeatured id="camalig-sumlang-rafting" title="Sumlang Lake Rafting" img="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80" category="Leisure / Nature" municipality="Camalig, Albay" />
-            <LinkFeatured id="bacacay-cagraray" title="Cagraray Eco Park & Misibis Bay" img="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80" category="Resort / Park" municipality="Bacacay, Albay" />
+            <LinkFeatured id="legazpi-mayon-atv" title="Mayon ATV Adventure" img="https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/cvqclaybh3wv68t4zila.jpg" category="Adventure" municipality="Legazpi City, Albay" />
+            <LinkFeatured id="camalig-sumlang-rafting" title="Sumlang Lake Rafting" img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSbEGqKWASl4oLyUOfbL07lFq1wvBdnZn67Q&s" category="Leisure / Nature" municipality="Camalig, Albay" />
+            <LinkFeatured id="bacacay-cagraray" title="Cagraray Eco Park & Misibis Bay" img="https://cf.bstatic.com/xdata/images/hotel/max1024x768/431956171.jpg?k=c8d9d4c852ef78a67074523ab9c96507dd624936d483ab9308b13a0330aa2a58&o=&hp=1" category="Resort / Park" municipality="Bacacay, Albay" />
           </div>
         </div>
 
