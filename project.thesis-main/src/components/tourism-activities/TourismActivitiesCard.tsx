@@ -71,7 +71,7 @@ const TourismActivitiesCard = ({
       </CardContent>
 
       {/* Footer */}
-      <CardFooter className="p-4 pt-0 flex justify-between">
+      <CardFooter className="p-4 pt-0 flex justify-between ">
         <Button variant="outline" size="sm" onClick={() => navigate(`/tourism-activities/${id}`)}>
           View Details
         </Button>
@@ -84,6 +84,8 @@ const TourismActivitiesCard = ({
         >
           <MapPin className="w-4 h-4 mr-1" /> Map
         </Button>
+
+        
       </CardFooter>
     </Card>
   );
