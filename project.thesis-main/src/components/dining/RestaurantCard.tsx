@@ -144,6 +144,7 @@ const RestaurantCard = ({
             rating,
             openingHours,
             features,
+            onClick
           }}
         >
           <Button onClick={onClick}>View Details</Button>
