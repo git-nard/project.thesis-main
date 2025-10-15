@@ -6,30 +6,33 @@ import HotelsPage from "./pages/HotelsPage";
 import RestaurantsPage from "./pages/RestaurantsPage";
 import ExperiencesPage from "./pages/ExperiencesPage";
 import MapPage from "./pages/MapPage";
-import EventsPage from "./pages/EventsPage";
-import EventsDetalilsPage from "./pages/EventsDetailsPage";
 import CalendarPage from "./pages/CalendarPage";
 import ViewCalendarPage from "./pages/ViewCalendarPage";
 import AboutPage from "./pages/AboutPage";
 import routes from "tempo-routes";
 import DestinationListPage from "./pages/DestinationListPage";
-import DestinationDetailPage from "./pages/destinations/DestinationDetailPage";
 import LoginPage from "./pages/LoginPage";
 import SafetyPage from "./pages/SafetyPage";
 import AttractionsDetailsPage from "./components/attractions/AttractionsDetailsPage";
 import Recommended from "./pages/Recommended";
 import Itineraries from "./pages/Itineraries";
-import UpcomingItinerary from "./pages/itineraries/UpcomingItinerary";
 import Saved from "./pages/Saved";
 import SavedTouristSpotsList from "./pages/saved/SavedTouristSpotsList";
 import SavedRestaurantsList from "./pages/saved/SavedRestaurantsList";
 import TourismActivitiesPage from "./pages/TourismActivitiesPage";
-import DayPlanner from "./pages/itineraries/DayPlanner";
-import PastTrips from "./pages/itineraries/PastTrips";
 import TouristSpotListPage from "./components/tourists-spots/TouristSpotListPage";
 import TouristSpotDetailsPage from "./components/tourists-spots/TouristSpotDetailsPage";
 import HotelsDetailsPage from "./pages/hotels/HotelsDetailsPage";
 import RestaurantsDetailsPage from "./pages/restaurants/RestaurantsDetailsPage";
+import EventsPage from "./components/events/EventsPage";
+import EventsDetailsPage from "./components/events/EventsDetailsPage";
+import CreateYourItinerary from "./pages/itineraries/CreateYourItenerary";
+import RecommendedIteneraries from "./pages/itineraries/RecommendedItenearies";
+import SavedIteneraries from "./pages/itineraries/SavedIteneraries";
+import ViewItenerary from "./pages/itineraries/ViewItenerary";
+import RestaurantMenuPage from "./components/dining/RestaurantMenuPage";
+import TourismActivityDetailsPage from "./components/tourism-activities/TourismActivityDetailsPage";
+import DestinationDetailPage from "./components/destinations/DestinationDetailPage";
 
 
 
@@ -50,14 +53,15 @@ function App() {
 
           <Route path="/restaurants" element={<RestaurantsPage />} />
           <Route path="/restaurants/:id" element={<RestaurantsDetailsPage />} />
+          <Route path="/restaurants/:id/menu" element={<RestaurantMenuPage />} />
 
 
           <Route path="/experiences" element={<ExperiencesPage />} />
 
           <Route path="/map" element={<MapPage />} />
 
-          <Route path="/events" element={<EventsPage />} /> 
-          <Route path="/events/:id" element={<EventsDetalilsPage event={undefined} />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/events/:id" element={<EventsDetailsPage />} />
 
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/view-calendar" element={<ViewCalendarPage />} />
@@ -75,14 +79,18 @@ function App() {
 
 
           <Route path="/itineraries" element={<Itineraries />} />
-          <Route path="/itineraries/upcoming" element={<UpcomingItinerary />} />
-          <Route path="/itineraries/day-planner" element={<DayPlanner />} />
-          <Route path="/itineraries/past-trips" element={<PastTrips />} />
+          <Route path="/itineraries/:id" element={<Itineraries />} />
+          <Route path="/itineraries/recommended" element={<RecommendedIteneraries />} />
+          <Route path="/itineraries/create" element={<CreateYourItinerary />} />
+          <Route path="/saved-itineraries" element={<SavedIteneraries />} />
+          <Route path="/itinerary/:id" element={<ViewItenerary />} />
+          
         
           
 
 
           <Route path="/tourism-activities" element={<TourismActivitiesPage />} />
+          <Route path="/tourism-activities/:id" element={<TourismActivityDetailsPage />} />
           <Route path="/tourism-activities/:id" element={<TourismActivitiesPage />} />
 
 
