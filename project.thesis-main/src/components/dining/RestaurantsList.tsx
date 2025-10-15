@@ -31,14 +31,13 @@ interface RestaurantsListProps {
   onRestaurantSelect?: (restaurantId: string) => void;
 }
 
-const RestaurantsList = ({
+export const RestaurantsList = ({
   restaurants = [
-    // --- TIWI (IDs 1-3) ---
     {
       id: "1",
       name: "DJC Halo Halo",
       image:
-        "https://images.unsplash.com/photo-1604152135912-04a707e92c02?auto=format&fit=crop&w=1470&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUmVR3JJUqakTpDO4MRrz7abmm12GFYifjsQ&s",
       description: "Famous for its creamy halo-halo and delightful local desserts.",
       location: "Tiwi, Albay",
       priceRange: "₱150 - ₱500",
@@ -49,7 +48,7 @@ const RestaurantsList = ({
       id: "2",
       name: "Magayon Pizzeria",
       image:
-        "https://images.unsplash.com/photo-1594007654729-407eedc4be63?auto=format&fit=crop&w=1470&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Qi4J6e_0SjA7P9eJYjwHe2RwmHPYA3DRVA&s",
       description: "Authentic Filipino-style pizza with a local twist.",
       location: "Tiwi, Albay",
       priceRange: "₱250 - ₱700",
@@ -60,7 +59,7 @@ const RestaurantsList = ({
       id: "3",
       name: "24/7 Balikbayan Resort (with Restaurant)",
       image:
-        "https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1470&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBf53DutXqy29TqQ-a5SOgBamy3EVZsHThDA&s",
       description: "Resort with a full-service restaurant and relaxing ambiance.",
       location: "Tiwi, Albay",
       priceRange: "₱500 - ₱1,200",
@@ -68,12 +67,11 @@ const RestaurantsList = ({
       features: ["Dine In"],
     },
 
-    // --- TABACO CITY (IDs 4-15) ---
     {
       id: "4",
       name: "Papa Roland's",
       image:
-        "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=1470&q=80",
+        "https://lh3.googleusercontent.com/p/AF1QipO0vMPvyAw5RkokyObXkM91f4F9oJFvfES59Jcc=s1360-w1360-h1020-rw",
       description: "Local favorite offering hearty Filipino dishes and seafood.",
       location: "Tabaco City, Albay",
       priceRange: "₱200 - ₱600",
@@ -84,7 +82,7 @@ const RestaurantsList = ({
       id: "5",
       name: "Graceland",
       image:
-        "https://images.unsplash.com/photo-1617196034796-73dfa9a7bdb2?auto=format&fit=crop&w=1470&q=80",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/0e/31/e3/graceland.jpg?w=1200&h=1200&s=1",
       description: "Family restaurant serving Bicolano comfort food and pastries.",
       location: "Tabaco City, Albay",
       priceRange: "₱150 - ₱500",
@@ -95,7 +93,7 @@ const RestaurantsList = ({
       id: "6",
       name: "Jollibee",
       image:
-        "https://images.unsplash.com/photo-1630629325159-9d5f4b48c2f3?auto=format&fit=crop&w=1470&q=80",
+        "https://images.deliveryhero.io/image/fd-ph/LH/r6xn-hero.jpg?width=480&height=360&quality=45",
       description: "Iconic Filipino fast-food chain (Chickenjoy, Jolly Spaghetti).",
       location: "Tabaco City, Albay",
       priceRange: "₱100 - ₱300",
@@ -106,7 +104,7 @@ const RestaurantsList = ({
       id: "7",
       name: "McDonald's",
       image:
-        "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKv4aeFsarZg1WBpu_4nsOfOJtp27I8dRNew&s",
       description: "Classic burgers, fries, coffee.",
       location: "Tabaco City, Albay",
       priceRange: "₱120 - ₱400",
@@ -117,7 +115,7 @@ const RestaurantsList = ({
       id: "8",
       name: "Chowking",
       image:
-        "https://images.unsplash.com/photo-1606756790138-57b9b4b79fdd?auto=format&fit=crop&w=1470&q=80",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/36/3a/e9/chowking-tabaco.jpg?w=500&h=-1&s=1",
       description: "Chinese-inspired fast food (noodles, rice meals, halo-halo).",
       location: "Tabaco City, Albay",
       priceRange: "₱100 - ₱400",
@@ -128,7 +126,7 @@ const RestaurantsList = ({
       id: "9",
       name: "Mang Inasal",
       image:
-        "https://images.unsplash.com/photo-1627308595187-9c6ed1f10c7b?auto=format&fit=crop&w=1470&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOHhE5MNx6pzKKKkrJ9CFycVnJL2KdmtwJcg&s",
       description: "Popular for grilled chicken (inasal) and unlimited rice.",
       location: "Tabaco City, Albay",
       priceRange: "₱120 - ₱350",
@@ -139,7 +137,7 @@ const RestaurantsList = ({
       id: "10",
       name: "BBQ King",
       image:
-        "https://images.unsplash.com/photo-1555992336-cbf7e4317f8f?auto=format&fit=crop&w=1470&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0gpDikWPJUkEHHsKhYatnIH2xSH_jyx6FrA&s",
       description: "Grilled meats, seafood, pulutan favorites.",
       location: "Tabaco City, Albay",
       priceRange: "₱150 - ₱500",
@@ -150,7 +148,7 @@ const RestaurantsList = ({
       id: "11",
       name: "Taiwan Blended Teas",
       image:
-        "https://images.unsplash.com/photo-1521305916504-4a1121188589?auto=format&fit=crop&w=1470&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKWyMfwZeR_7gnTRNECs5EDs230DaXl5E0VA&s",
       description: "Milk teas and fruit blends.",
       location: "Tabaco City, Albay",
       priceRange: "₱100 - ₱250",
@@ -161,7 +159,7 @@ const RestaurantsList = ({
       id: "12",
       name: "Tea Habit",
       image:
-        "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=1470&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX2lw119NMjvcdiNd7W0hgRRMPHj0CE1j14Q&s",
       description: "Trendy milk tea and snack café.",
       location: "Tabaco City, Albay",
       priceRange: "₱120 - ₱250",
@@ -172,7 +170,7 @@ const RestaurantsList = ({
       id: "13",
       name: "Chai Connection",
       image:
-        "https://images.unsplash.com/photo-1600959907703-17ffb36d9d16?auto=format&fit=crop&w=1470&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3WY3KDgMcBli1KjSYxFuaBoPIX5g61PbGFQ&s",
       description: "Tea, coffee, and comfort food.",
       location: "Tabaco City, Albay",
       priceRange: "₱150 - ₱400",
@@ -183,7 +181,7 @@ const RestaurantsList = ({
       id: "14",
       name: "Bon Appetea",
       image:
-        "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1470&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG_7Ktc7jIoyn4W4agNODJgMQmqof9ic0LqA&s",
       description: "Tea-based drinks, frappes and light snacks.",
       location: "Tabaco City, Albay",
       priceRange: "₱100 - ₱300",
@@ -194,7 +192,7 @@ const RestaurantsList = ({
       id: "15",
       name: "Mesa Mano Restaurant",
       image:
-        "https://images.unsplash.com/photo-1582457576331-3f2b3be49f3a?auto=format&fit=crop&w=1470&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDvUGbVH3AFWg6nD9u8mOQzA8pEtH-Tnuc9w&s",
       description: "Casual dining serving Filipino and Asian dishes.",
       location: "Tabaco City, Albay",
       priceRange: "₱300 - ₱800",
@@ -204,7 +202,7 @@ const RestaurantsList = ({
         {
       id: "16",
       name: "The Brew Authoritea",
-      image: "https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW7eTvx2ti2XemnuzLwruoFssdxEKPja-EzA&s",
       description: "Modern café serving handcrafted milk tea, coffee, and pastries.",
       location: "Tabaco City, Albay",
       priceRange: "₱120 - ₱300",
@@ -214,7 +212,7 @@ const RestaurantsList = ({
     {
       id: "17",
       name: "Tabaco Benvenuti Italian Resto",
-      image: "https://images.unsplash.com/photo-1601924579440-54381e268db4?auto=format&fit=crop&w=1470&q=80",
+      image: "https://s3-media0.fl.yelpcdn.com/bphoto/snj_wblio6YsjCIngMn9hA/1000s.jpg",
       description: "Authentic Italian cuisine — pasta, pizza, and fine dining experience.",
       location: "Tabaco City, Albay",
       priceRange: "₱400 - ₱1,000",
@@ -224,7 +222,7 @@ const RestaurantsList = ({
     {
       id: "18",
       name: "Abing’s Food Haus",
-      image: "https://images.unsplash.com/photo-1625938145735-3c879f4ebcb8?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmal6DKbNw9zRfhxRG5-M3cYXxR8VM3-56XQ&s",
       description: "Cozy local food house offering Filipino home-cooked meals.",
       location: "Tabaco City, Albay",
       priceRange: "₱100 - ₱300",
@@ -234,7 +232,7 @@ const RestaurantsList = ({
     {
       id: "19",
       name: "Nok’s Lechon Manok & Refreshment",
-      image: "https://images.unsplash.com/photo-1628177597606-9f0cbddc63c5?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxnmuMy93ZFwS8UOI1OhCPYX5ljtBeR62QTA&s",
       description: "Grilled chicken, refreshments, and local comfort food.",
       location: "Tabaco City, Albay",
       priceRange: "₱120 - ₱350",
@@ -244,7 +242,7 @@ const RestaurantsList = ({
     {
       id: "20",
       name: "Q Place Kubo Restogrill",
-      image: "https://images.unsplash.com/photo-1573821663912-56fe4e16d3f9?auto=format&fit=crop&w=1470&q=80",
+      image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/f2/8d/6f/getlstd-property-photo.jpg?w=900&h=500&s=1",
       description: "Rustic kubo-style restogrill offering grilled meats and seafood.",
       location: "Tabaco City, Albay",
       priceRange: "₱200 - ₱700",
@@ -254,7 +252,7 @@ const RestaurantsList = ({
     {
       id: "21",
       name: "Angel’s Pizza",
-      image: "https://images.unsplash.com/photo-1571066811602-716837d681de?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK-8cnSZe1C2B2pt0iH3RqENc6ZOYDVb2osw&s",
       description: "Popular pizza chain serving thin-crust and classic flavors.",
       location: "Tabaco City, Albay",
       priceRange: "₱250 - ₱800",
@@ -264,7 +262,7 @@ const RestaurantsList = ({
     {
       id: "22",
       name: "Unicorner Café",
-      image: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvB2aGTIhtyDEfcRIWwug3Spj2iYptG0r5XA&s",
       description: "Charming café with desserts, milk teas, and Instagrammable interiors.",
       location: "Tabaco City, Albay",
       priceRange: "₱120 - ₱400",
@@ -274,7 +272,7 @@ const RestaurantsList = ({
     {
       id: "23",
       name: "Urbanitea Tabaco",
-      image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5IKwHsiOOzLhrdxxy2uTOMrYS2GR1pWIfJg&s",
       description: "Trendy tea and coffee spot with a city vibe.",
       location: "Tabaco City, Albay",
       priceRange: "₱100 - ₱300",
@@ -284,7 +282,7 @@ const RestaurantsList = ({
     {
       id: "24",
       name: "Singapo Lah Café",
-      image: "https://images.unsplash.com/photo-1617196034796-73dfa9a7bdb2?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVwqWjlp9H5ve0q825rkkHzFH6ZZXV9AP6cg&s",
       description: "Singaporean-inspired café with flavorful dishes and drinks.",
       location: "Tabaco City, Albay",
       priceRange: "₱150 - ₱400",
@@ -294,7 +292,7 @@ const RestaurantsList = ({
     {
       id: "25",
       name: "Molave Café",
-      image: "https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpSmXdViLTo7cUN_hZ5mNWHz-OlJg8vzEgIg&s",
       description: "Rustic café surrounded by greenery, perfect for coffee lovers.",
       location: "Tabaco City, Albay",
       priceRange: "₱120 - ₱400",
@@ -304,7 +302,7 @@ const RestaurantsList = ({
     {
       id: "26",
       name: "Ishiaya Grey’s Café",
-      image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdHdlFrBoB66GKGQ3U-1mMYoYK5Aer-mOHSQ&s",
       description: "Stylish café with signature drinks and all-day breakfast.",
       location: "Tabaco City, Albay",
       priceRange: "₱150 - ₱500",
@@ -314,7 +312,7 @@ const RestaurantsList = ({
     {
       id: "27",
       name: "Ishiaya Garden Bistro",
-      image: "https://images.unsplash.com/photo-1543779502-9fc12e57c4b3?auto=format&fit=crop&w=1470&q=80",
+      image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/dd/6f/46/ishiaya-s-restaurant.jpg?w=900&h=500&s=1",
       description: "Alfresco dining featuring Filipino and fusion cuisine.",
       location: "Tabaco City, Albay",
       priceRange: "₱300 - ₱800",
@@ -324,7 +322,7 @@ const RestaurantsList = ({
     {
       id: "28",
       name: "Bona’s Café",
-      image: "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiZw-Na0DADbqVbiMqzFN5q_UUYBRJvcSJcg&s",
       description: "Casual café offering coffee, cakes, and snacks.",
       location: "Tabaco City, Albay",
       priceRange: "₱100 - ₱300",
@@ -334,18 +332,18 @@ const RestaurantsList = ({
     {
       id: "29",
       name: "Martha’s Kitchen",
-      image: "https://images.unsplash.com/photo-1598514982586-df23c9aef9c1?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1r0yW1_I3b1uGob6lpXo9r-viTcqz-bafbg&s",
       description: "Home-style kitchen serving hearty Filipino meals.",
       location: "Tabaco City, Albay",
       priceRange: "₱150 - ₱450",
       rating: 4.3,
       features: ["Dine In"],
     },
-        // ===================== MALILIPOT, ALBAY =====================
+    // MALILIPOT, ALBAY
     {
       id: "30",
       name: "Bonafe Eatery",
-      image: "https://images.unsplash.com/photo-1617196036774-f01d5d2b22ab?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3hfVbSuRdlorUins1_YCfolk81rnzMydmgA&s",
       description: "Small local eatery offering home-cooked meals.",
       location: "Malilipot, Albay",
       priceRange: "₱100 - ₱300",
@@ -355,7 +353,7 @@ const RestaurantsList = ({
     {
       id: "31",
       name: "Balunso Eatery",
-      image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM3OF4rzye3CJu3h76DARtqDnd8h9E5IUTwA&s",
       description: "Cozy eatery serving local Filipino favorites.",
       location: "Malilipot, Albay",
       priceRange: "₱100 - ₱300",
@@ -373,11 +371,11 @@ const RestaurantsList = ({
       features: ["Delivery", "Pick-Up"],
     },
 
-    // ===================== BACACAY, ALBAY =====================
+    // BACACAY, ALBAY 
     {
       id: "33",
       name: "Casa Simeon Bed and Breakfast",
-      image: "https://images.unsplash.com/photo-1600047509807-ba9c1f3e0e8b?auto=format&fit=crop&w=1470&q=80",
+      image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/118496605.jpg?k=a31231be0403d19fb488a7f4e5cda247494202ec5a23438d9809e689623d1a96&o=&hp=1",
       description: "Charming heritage inn offering local dishes and lodging.",
       location: "Bacacay, Albay",
       priceRange: "₱350 - ₱900",
@@ -397,7 +395,7 @@ const RestaurantsList = ({
     {
       id: "35",
       name: "Ka Juan Restaurant",
-      image: "https://images.unsplash.com/photo-1541542684-3b2f6c13b5e7?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHu82RCFQPqgW9uu2IxA58P_0s9gKMU5iOQQ&s",
       description: "Serving classic Bicolano comfort food and local favorites.",
       location: "Bacacay, Albay",
       priceRange: "₱150 - ₱450",
@@ -417,7 +415,7 @@ const RestaurantsList = ({
     {
       id: "37",
       name: "Bambivees",
-      image: "https://images.unsplash.com/photo-1576866209830-5a6e3d60e9a4?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8J5zqdclQwhD3nqFoS6Ad4HsWb5xr10C5DA&s",
       description: "Small local eatery offering simple but delicious meals.",
       location: "Bacacay, Albay",
       priceRange: "₱80 - ₱300",
@@ -427,7 +425,7 @@ const RestaurantsList = ({
     {
       id: "38",
       name: "Cups and Mugs",
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReGXDL5tNJL7yzy2JCAk4khwTpT4d168rilg&s",
       description: "Chill café serving coffee, pastries, and light snacks.",
       location: "Bacacay, Albay",
       priceRange: "₱120 - ₱350",
@@ -455,11 +453,11 @@ const RestaurantsList = ({
       features: ["Dine In"],
     },
 
-    // ===================== STO. DOMINGO, ALBAY =====================
+    // STO. DOMINGO, ALBAY
     {
       id: "41",
       name: "Lita's Seafood Restaurant",
-      image: "https://images.unsplash.com/photo-1604908177413-3b5b6b5b8192?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdjaa5kzOP2US0_MwhXQkr08qWTD-DdyughA&s",
       description: "Beachside seafood restaurant serving fresh catch daily.",
       location: "Sto. Domingo, Albay",
       priceRange: "₱300 - ₱800",
@@ -469,7 +467,7 @@ const RestaurantsList = ({
     {
       id: "42",
       name: "Costa Palmera Resort (with Resto)",
-      image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1470&q=80",
+      image: "https://pix10.agoda.net/hotelImages/300195/-1/0bf003520b35b8ea071f05e6b715715c.jpg?ce=0&s=414x232",
       description: "Resort with a full-service restaurant and function area.",
       location: "Sto. Domingo, Albay",
       priceRange: "₱400 - ₱1,200",
@@ -479,7 +477,7 @@ const RestaurantsList = ({
     {
       id: "43",
       name: "Don Bitoy’s Resort and Catering Services",
-      image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1470&q=80",
+      image: "https://pix10.agoda.net/hotelImages/299631/0/23358cdf89e0b4ba1778f0e25a584624.jpeg?s=414x232",
       description: "Resort restaurant offering catering and Filipino dishes.",
       location: "Sto. Domingo, Albay",
       priceRange: "₱300 - ₱700",
@@ -489,7 +487,7 @@ const RestaurantsList = ({
     {
       id: "44",
       name: "Sarung Banggi Beach Resort (with Resto)",
-      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiVvo4bBzjvPAwtue_bWOJT5IVy9Cb2Fru6w&s",
       description: "Beach resort with restaurant and recreational activities.",
       location: "Sto. Domingo, Albay",
       priceRange: "₱500 - ₱1,300",
@@ -499,7 +497,7 @@ const RestaurantsList = ({
     {
       id: "45",
       name: "Puerto Vista Resort (with Resto)",
-      image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1470&q=80",
+      image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/d4/e5/5c/puerto-vista-resort.jpg?w=900&h=-1&s=1",
       description: "Seaside resort with scenic views and dining facilities.",
       location: "Sto. Domingo, Albay",
       priceRange: "₱400 - ₱1,000",
@@ -509,7 +507,7 @@ const RestaurantsList = ({
     {
       id: "46",
       name: "Aguas Farm",
-      image: "https://images.unsplash.com/photo-1544213456-b8a5cddc7f51?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1lhpJsYixor9AvKm06Koi5PJRx76bULAeqA&s",
       description: "Farm-to-table restaurant offering organic dining experience.",
       location: "Sto. Domingo, Albay",
       priceRange: "₱200 - ₱600",
@@ -519,18 +517,18 @@ const RestaurantsList = ({
     {
       id: "47",
       name: "Rose Kinalas and Sisig",
-      image: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw5djwVi-xN0AF3E9_e7Z3Kia8pkPVRgjRLw&s",
       description: "Known for flavorful kinalas, sisig, and local favorites.",
       location: "Sto. Domingo, Albay",
       priceRange: "₱150 - ₱400",
       rating: 4.3,
       features: ["Dine In"],
     },
-        // ===================== LEGAZPI CITY — SM CITY LEGAZPI =====================
+        // LEGAZPI CITY — SM CITY LEGAZPI 
     {
       id: "48",
       name: "528 Ilawod Café",
-      image: "https://images.unsplash.com/photo-1600891963933-96053a4a97a7?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEegjUh06axvz1tBt1bvWi7XUWOqJ_XqyjEw&s",
       description: "A cozy café serving specialty coffee, pastries, and light meals.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱150 - ₱400",
@@ -540,7 +538,7 @@ const RestaurantsList = ({
     {
       id: "49",
       name: "Beanleaf",
-      image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR98x4e9NZPi51EWxZy41CDb-e1qlAPUq1rRA&s",
       description: "Trendy café offering handcrafted milk teas and coffee blends.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱120 - ₱350",
@@ -550,7 +548,7 @@ const RestaurantsList = ({
     {
       id: "50",
       name: "Bigg’s Diner",
-      image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1470&q=80",
+      image: "https://i0.wp.com/travellingpeoples.com/wp-content/uploads/2023/03/img_2517.jpg?resize=810%2C608&ssl=1",
       description: "Homegrown Bicolano diner serving burgers, fried chicken, and pasta.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱150 - ₱450",
@@ -560,7 +558,7 @@ const RestaurantsList = ({
     {
       id: "51",
       name: "Bonchon",
-      image: "https://images.unsplash.com/photo-1598515213625-c6d7262da3e7?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDUlME_q_8mBNaSyiFXoNQVI2MU9H-lMNLCA&s",
       description: "Korean-inspired fast food chain famous for its crispy chicken and rice meals.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱180 - ₱450",
@@ -570,7 +568,7 @@ const RestaurantsList = ({
     {
       id: "52",
       name: "Bottoms Up (Food Court)",
-      image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1470&q=80",
+      image: "https://d3up48wss6lvj.cloudfront.net/data/uploads/2021/09/BOTTOMSUP.png",
       description: "Casual food court stall offering a variety of grilled and local dishes.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱120 - ₱350",
@@ -580,7 +578,7 @@ const RestaurantsList = ({
     {
       id: "53",
       name: "Byron's Ribs (Food Court)",
-      image: "https://images.unsplash.com/photo-1598514982586-df23c9aef9c1?auto=format&fit=crop&w=1470&q=80",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiyUpQIbwfC3dgfuUXHhezb0rpmUZG_BR1aiXIcEniPZmZsAOaFkuZbZsaYGQ9WLpk6Pd5hiC5-XvcEfUzNzD-oity79jQrG5pt_auUlcyH-CJ_9LokjYfSacsWl5YeHwmz0yH8DvxYmNq/s1600/1.jpg",
       description: "Specialty ribs and grilled favorites served in generous portions.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱200 - ₱600",
@@ -590,7 +588,7 @@ const RestaurantsList = ({
     {
       id: "54",
       name: "C-Front Resto",
-      image: "https://images.unsplash.com/photo-1603079849007-55a5847ec3fa?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3ZZU6rhir8_6vxMv_S9Qwfr-Puebara5iBw&s",
       description: "Modern restaurant serving fusion cuisine and refreshing beverages.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱200 - ₱600",
@@ -600,7 +598,7 @@ const RestaurantsList = ({
     {
       id: "55",
       name: "Chatime",
-      image: "https://images.unsplash.com/photo-1522336572468-97b06e8ef143?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWmqlRtM9XfaR5zIvW9ej1RaHvmQg9FbweYg&s",
       description: "Popular milk tea chain serving a wide range of flavors and toppings.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱120 - ₱300",
@@ -610,7 +608,7 @@ const RestaurantsList = ({
     {
       id: "56",
       name: "Chowking",
-      image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNCmp0QKpbay1MTGbxKhhqxPDtHakIaU7JBg&s",
       description: "Fast food restaurant serving Filipino-Chinese favorites.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱120 - ₱350",
@@ -620,7 +618,7 @@ const RestaurantsList = ({
     {
       id: "57",
       name: "Classic Savory",
-      image: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ7KvlOIu9dDuCMNrxob-LH2q6nWIXonFQnQ&s",
       description: "Family-style restaurant famous for its fried chicken and Filipino dishes.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱250 - ₱600",
@@ -630,7 +628,7 @@ const RestaurantsList = ({
     {
       id: "58",
       name: "Colonial Grill",
-      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1470&q=80",
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdCHVN0VKVVc_857cvQQZDqVO871iYRXj0zXrCslanzKKam1frW-PlAG7b94SjYtns9v_GPGWFmBrmi8QUn0l043oGHfQpGJXq6jwxFmsSzbfs-aVzFmvHMZc8w6rRLR52qCkmqJQQfPc/s1600/B12+in+Legaspi-27.jpg",
       description: "Bicol’s pride serving local dishes including the famous sili ice cream.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱250 - ₱650",
@@ -640,7 +638,7 @@ const RestaurantsList = ({
     {
       id: "59",
       name: "Dungan (Food Court)",
-      image: "https://images.unsplash.com/photo-1617196036774-f01d5d2b22ab?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ25lA9veHCxLsbo0iUt1fZU_vdM8K0WYRpQw&s",
       description: "Food court stall offering authentic local dishes and rice meals.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱100 - ₱350",
@@ -650,7 +648,7 @@ const RestaurantsList = ({
     {
       id: "60",
       name: "Dunkin Donuts",
-      image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1470&q=80",
+      image: "https://sih.booky.ph/eyJidWNrZXQiOiJ5YWJ1bmUtYXNzZXRzIiwia2V5IjoiL2Rvc19hc3NldHMvMTczNzM0MzA0Ny03NzMzODA0ODk5MDU1OWUyYjUyYWJjZTAzY2JiZTE1OTgyMGI0YmY3LmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6NTIyLjUsImhlaWdodCI6MzI1LCJmaXQiOiJjb3ZlciJ9fX0=",
       description: "Famous donut and coffee shop offering sweet treats and snacks.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱80 - ₱300",
@@ -660,7 +658,7 @@ const RestaurantsList = ({
     {
       id: "61",
       name: "Four Seasons Restaurant",
-      image: "https://images.unsplash.com/photo-1603079849007-55a5847ec3fa?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4UYdo87thnXAcJkZCWZfrlu5OmR_EuOF4Iw&s",
       description: "Buffet-style restaurant offering a mix of Asian and Filipino cuisines.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱300 - ₱800",
@@ -670,7 +668,7 @@ const RestaurantsList = ({
     {
       id: "62",
       name: "Fruitas (Food Court)",
-      image: "https://images.unsplash.com/photo-1605475122649-c7c92a98e796?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfMpZwpqNL-EgL7sthCoP9SOgPZOwIwjXE-A&s",
       description: "Refreshing fruit shakes and smoothies made from fresh ingredients.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱80 - ₱250",
@@ -680,7 +678,7 @@ const RestaurantsList = ({
     {
       id: "63",
       name: "Gerry’s Grill",
-      image: "https://images.unsplash.com/photo-1603079849007-55a5847ec3fa?auto=format&fit=crop&w=1470&q=80",
+      image: "https://sih.booky.ph/eyJidWNrZXQiOiJ5YWJ1bmUtYXNzZXRzIiwia2V5IjoiL3N0b3Jlcy8xNzI0NzI0NTAwLWUzZDg3YjFmYjY3ZmJjMDVlZmE4MzUzMTM4ZTk5NDBhODc1MTA1MDUuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==",
       description: "Popular grill restaurant offering seafood and Filipino favorites.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱250 - ₱700",
@@ -690,7 +688,7 @@ const RestaurantsList = ({
     {
       id: "64",
       name: "Gong Cha",
-      image: "https://images.unsplash.com/photo-1522336572468-97b06e8ef143?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbCw91GG5eaDmnL9SymVnsklNA5qeFRlrE0Q&s",
       description: "World-renowned bubble tea brand serving refreshing tea-based drinks.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱120 - ₱350",
@@ -700,7 +698,7 @@ const RestaurantsList = ({
         {
       id: "65",
       name: "Graceland",
-      image: "https://images.unsplash.com/photo-1529973565456-c07b56c9d6d4?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGAjPwwJeKd7dmA2oPq9zM6maXv8mMo1BtDg&s",
       description: "Family-friendly restaurant serving Filipino comfort food and baked goods.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱150 - ₱400",
@@ -710,7 +708,7 @@ const RestaurantsList = ({
     {
       id: "66",
       name: "Gringo",
-      image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+      image: "https://cdn.shopify.com/s/files/1/0414/1360/7591/files/FRONT_480x480.jpg?v=1679465536",
       description: "Latin-inspired restaurant known for grilled chicken, ribs, and Tex-Mex cuisine.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱250 - ₱600",
@@ -720,7 +718,7 @@ const RestaurantsList = ({
     {
       id: "67",
       name: "Infinitea",
-      image: "https://images.unsplash.com/photo-1522336572468-97b06e8ef143?auto=format&fit=crop&w=1470&q=80",
+      image: "https://d3up48wss6lvj.cloudfront.net/data/uploads/2020/07/INFINITEA_PEARL_MILK_TEA_CORNER.jpg",
       description: "Popular milk tea shop offering a wide selection of tea-based beverages.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱100 - ₱250",
@@ -730,7 +728,7 @@ const RestaurantsList = ({
     {
       id: "68",
       name: "Jollibee",
-      image: "https://images.unsplash.com/photo-1626082927389-f88fdbb19c1e?auto=format&fit=crop&w=1470&q=80",
+      image: "https://images.deliveryhero.io/image/fd-ph/LH/e5yr-hero.jpg?width=480&height=360&quality=45",
       description: "The Philippines’ most loved fast food chain serving fried chicken, burgers, and spaghetti.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱100 - ₱300",
@@ -740,7 +738,7 @@ const RestaurantsList = ({
     {
       id: "69",
       name: "Kenny Rogers Roasters",
-      image: "https://images.unsplash.com/photo-1606756790138-1f7e3f2b8b79?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWScGwsqfjB2iabgrfEjSN1MjTwV45k0wxw&s",
       description: "Casual dining restaurant serving healthy roasted chicken and side dishes.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱200 - ₱550",
@@ -760,7 +758,7 @@ const RestaurantsList = ({
     {
       id: "71",
       name: "Kuya J",
-      image: "https://images.unsplash.com/photo-1586201375761-83865001e31b?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdLv_ACrrLnv-Kz_4Bl9Qg8QHdR-7QugFEtg&s",
       description: "Restaurant offering classic Filipino favorites like crispy pata and kare-kare.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱250 - ₱600",
@@ -770,7 +768,7 @@ const RestaurantsList = ({
     {
       id: "72",
       name: "Lana's Sweet Delight",
-      image: "https://images.unsplash.com/photo-1587248720329-4b3c03a69d19?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi5x-uwwW41HbfZbelrIifSW5kSnFbmgypNg&s",
       description: "Bakery and café offering cakes, pastries, and sweet delicacies.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱120 - ₱400",
@@ -780,7 +778,7 @@ const RestaurantsList = ({
     {
       id: "73",
       name: "Lucky Fortune",
-      image: "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjyJV_nPhS0qdWgvq8JLI02mbuJ3-ORHTdOg&s",
       description: "Chinese restaurant offering authentic noodles, dim sum, and rice meals.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱200 - ₱550",
@@ -790,7 +788,7 @@ const RestaurantsList = ({
     {
       id: "74",
       name: "Macao Imperial Milk Tea",
-      image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReRtj07wAsCXJBodlZRZ2HRLua6aWvh94myQ&s",
       description: "Premium milk tea brand known for its rich flavors and creamy textures.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱150 - ₱300",
@@ -800,7 +798,7 @@ const RestaurantsList = ({
     {
       id: "75",
       name: "Mang Inasal",
-      image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1470&q=80",
+      image: "https://images.deliveryhero.io/image/fd-ph/LH/h2lk-hero.jpg?width=512&height=384&quality=45",
       description: "Famous for its grilled chicken inasal and unlimited rice meals.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱120 - ₱300",
@@ -810,7 +808,7 @@ const RestaurantsList = ({
     {
       id: "76",
       name: "McDonald's",
-      image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgithnyC8jofZMNjw4sZdTLYxj4C-jl2jU5w&s",
       description: "Global fast food chain serving burgers, fries, and breakfast favorites.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱100 - ₱350",
@@ -820,7 +818,7 @@ const RestaurantsList = ({
     {
       id: "77",
       name: "Mesa",
-      image: "https://images.unsplash.com/photo-1598514982586-df23c9aef9c1?auto=format&fit=crop&w=1470&q=80",
+      image: "https://mesarestaurant.ph/wp-content/uploads/2022/04/Storefacade_SM-Legazpi-300x188.jpg",
       description: "Upscale Filipino restaurant serving modern takes on local dishes.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱250 - ₱700",
@@ -830,7 +828,7 @@ const RestaurantsList = ({
     {
       id: "78",
       name: "Mexita Pizza (Food Court)",
-      image: "https://images.unsplash.com/photo-1603079849007-55a5847ec3fa?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UOgxC9i5VExH6_vVWbfuatmlxIY_2NkTtg&s",
       description: "Food court stall offering affordable pizzas and pasta dishes.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱120 - ₱350",
@@ -840,7 +838,7 @@ const RestaurantsList = ({
     {
       id: "79",
       name: "Mr. Kimbob (Food Court)",
-      image: "https://images.unsplash.com/photo-1603079849007-55a5847ec3fa?auto=format&fit=crop&w=1470&q=80",
+      image: "https://d3up48wss6lvj.cloudfront.net/data/uploads/2020/07/MR_KIMBOB_KOREAN_BBQ.jpg",
       description: "Korean food stall offering bibimbap, ramen, and quick rice meals.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱150 - ₱350",
@@ -850,7 +848,7 @@ const RestaurantsList = ({
     {
       id: "80",
       name: "Pepperlunch",
-      image: "https://images.unsplash.com/photo-1565958011705-44e211f75c3a?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2bWlWxLnEoFe_cT1RsGjiZVrvOZLrQKLcg&s",
       description: "Interactive DIY sizzling plate restaurant serving steak, chicken, and beef rice meals.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱250 - ₱700",
@@ -860,7 +858,7 @@ const RestaurantsList = ({
     {
       id: "81",
       name: "Potato Corner (Food Court)",
-      image: "https://images.unsplash.com/photo-1587248720329-4b3c03a69d19?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyIruA6gaWONeo1puuFreRU7yCcNOP7UI0_w&s",
       description: "Snack stall offering flavored French fries in different sizes and variants.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱80 - ₱200",
@@ -870,7 +868,7 @@ const RestaurantsList = ({
     {
       id: "82",
       name: "Rafabel’s Café",
-      image: "https://images.unsplash.com/photo-1587248720329-4b3c03a69d19?auto=format&fit=crop&w=1470&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNQKHP2z-Z8QjyEZv08r9CCbT9W2S8WHxy7w&s",
       description: "Elegant café offering cakes, pastries, and coffee-based drinks.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱150 - ₱400",
@@ -880,7 +878,7 @@ const RestaurantsList = ({
     {
       id: "83",
       name: "SALO (Food Court)",
-      image: "https://images.unsplash.com/photo-1617196036774-f01d5d2b22ab?auto=format&fit=crop&w=1470&q=80",
+      image: "https://d3up48wss6lvj.cloudfront.net/data/uploads/2021/11/salo.png",
       description: "Local-style food court stall offering rice meals and quick Filipino favorites.",
       location: "SM City Legazpi, Legazpi City, Albay",
       priceRange: "₱100 - ₱300",
@@ -890,7 +888,7 @@ const RestaurantsList = ({
     {
   id: "84",
   name: "Serenitea",
-  image: "https://images.unsplash.com/photo-1583225272820-3609b55b9b64?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1fGoRU6miW-2rGjlK1aCQ1VW_dZRvZR4_eQ&s",
   description: "Milk tea café chain known for its customizable drinks and cozy vibe.",
   location: "SM City Legazpi, Legazpi City, Albay",
   priceRange: "₱120 - ₱250",
@@ -900,7 +898,7 @@ const RestaurantsList = ({
 {
   id: "85",
   name: "Shakey’s",
-  image: "https://images.unsplash.com/photo-1585238342028-3e0f3b45c9d2?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBd7k7-t3rfNw_kKTzMI2-vSamELGY_hWHMw&s",
   description: "Classic pizza and pasta restaurant serving family-style meals.",
   location: "SM City Legazpi, Legazpi City, Albay",
   priceRange: "₱200 - ₱600",
@@ -910,7 +908,7 @@ const RestaurantsList = ({
 {
   id: "86",
   name: "Shou Lamien Hand-Pulled Noodles (Food Court)",
-  image: "https://images.unsplash.com/photo-1617196035092-2f45e65d5118?auto=format&fit=crop&w=1470&q=80",
+  image: "https://images.deliveryhero.io/image/fd-ph/LH/dhbb-hero.jpg?width=512&height=384&quality=45",
   description: "Authentic hand-pulled noodle dishes with rich Chinese flavors.",
   location: "SM City Legazpi, Legazpi City, Albay",
   priceRange: "₱150 - ₱350",
@@ -920,7 +918,7 @@ const RestaurantsList = ({
 {
   id: "87",
   name: "Shou Ramen House (Food Court)",
-  image: "https://images.unsplash.com/photo-1617196036774-f01d5d2b22ab?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9msX5N0smaWjYzNY_cY6C0b0z1h5uofB4vQ&s",
   description: "Japanese ramen spot serving flavorful broths and noodles.",
   location: "SM City Legazpi, Legazpi City, Albay",
   priceRange: "₱180 - ₱450",
@@ -930,7 +928,7 @@ const RestaurantsList = ({
 {
   id: "88",
   name: "Starbucks",
-  image: "https://images.unsplash.com/photo-1579991491280-0c0b1d7d2a7f?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8matPHzBuHMUrFTQn-LuY8ZGqiVw7TDgG2Q&s",
   description: "International coffee chain offering espresso, frappes, and pastries.",
   location: "SM City Legazpi, Legazpi City, Albay",
   priceRange: "₱180 - ₱450",
@@ -940,7 +938,7 @@ const RestaurantsList = ({
 {
   id: "89",
   name: "Superlicious Bakeshop",
-  image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1470&q=80",
+  image: "https://d3up48wss6lvj.cloudfront.net/data/uploads/2020/07/SUPERLICIOUS_BAKESHOP.jpg",
   description: "Local bakery and café serving freshly baked breads and cakes.",
   location: "SM City Legazpi, Legazpi City, Albay",
   priceRange: "₱100 - ₱250",
@@ -950,7 +948,7 @@ const RestaurantsList = ({
 {
   id: "90",
   name: "Turks Shawarma (Food Court)",
-  image: "https://images.unsplash.com/photo-1590080875830-8a8d88d7f3d8?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfZM6J-63EcRzUzNPqL53qh14XxhJr9SEFbw&s",
   description: "Middle Eastern shawarma wraps and rice meals made fresh daily.",
   location: "SM City Legazpi, Legazpi City, Albay",
   priceRange: "₱120 - ₱250",
@@ -960,7 +958,7 @@ const RestaurantsList = ({
 {
   id: "91",
   name: "Wasabi San",
-  image: "https://images.unsplash.com/photo-1606851090034-3cc83a4e2d6b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6TBt9Yc3Q7fpkyWEVTHxQ-wIBwkzyF-IIvw&s",
   description: "Japanese restaurant specializing in sushi, ramen, and tempura dishes.",
   location: "SM City Legazpi, Legazpi City, Albay",
   priceRange: "₱200 - ₱550",
@@ -970,7 +968,7 @@ const RestaurantsList = ({
 {
   id: "92",
   name: "Westside Grill (Food Court)",
-  image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=1470&q=80",
+  image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/c6/98/09/food-court-sm-city-legazpi.jpg?w=1200&h=-1&s=1",
   description: "Food court stall offering grilled Filipino dishes and rice meals.",
   location: "SM City Legazpi, Legazpi City, Albay",
   priceRange: "₱120 - ₱300",
@@ -980,7 +978,7 @@ const RestaurantsList = ({
 {
   id: "93",
   name: "Wings N Things",
-  image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1470&q=80",
+  image: "https://images.deliveryhero.io/image/fd-ph/ph-logos/cu1hu-logo.jpg",
   description: "Buffalo wings and comfort food with various signature sauces.",
   location: "SM City Legazpi, Legazpi City, Albay",
   priceRange: "₱200 - ₱450",
@@ -990,7 +988,7 @@ const RestaurantsList = ({
 {
   id: "94",
   name: "Xinyi Chicken (Food Court)",
-  image: "https://images.unsplash.com/photo-1613145993481-ec0db8f68c14?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ckXxrzcaNzFDiV2mVfzn_bvVMjsPN0yh0g&s",
   description: "Asian-style roasted and fried chicken with rice combos.",
   location: "SM City Legazpi, Legazpi City, Albay",
   priceRange: "₱150 - ₱350",
@@ -1000,17 +998,18 @@ const RestaurantsList = ({
 {
   id: "95",
   name: "Zark’s Burger",
-  image: "https://images.unsplash.com/photo-1606756790138-2515d0d1d3d7?auto=format&fit=crop&w=1470&q=80",
+  image: "https://images.deliveryhero.io/image/fd-ph/LH/u0ty-listing.jpg",
   description: "Casual burger joint known for massive, flavorful burgers.",
   location: "SM City Legazpi, Legazpi City, Albay",
   priceRange: "₱180 - ₱500",
   rating: 4.7,
   features: ["Dine In", "Pick-Up", "Delivery"],
 },
+// Gaisano Mall Restaurants
 {
   id: "96",
   name: "Adobo Connection",
-  image: "https://images.unsplash.com/photo-1608032077018-cb3ee24b87f2?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMryzPB2uHeXj_CDrmLy-Ej-n5T_rZ1E9fGA&s",
   description: "Filipino restaurant serving different variations of Adobo and Pinoy classics.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱120 - ₱350",
@@ -1020,7 +1019,7 @@ const RestaurantsList = ({
 {
   id: "97",
   name: "Bigg’s Diner",
-  image: "https://images.unsplash.com/photo-1598514982586-df23c9aef9c1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/4e/d0/8c/biggs.jpg?w=800&h=500&s=1",
   description: "Bicol’s signature fast-food chain with home-style meals and burgers.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱150 - ₱400",
@@ -1030,7 +1029,7 @@ const RestaurantsList = ({
 {
   id: "98",
   name: "Buko Express Pies & Sweets",
-  image: "https://images.unsplash.com/photo-1606755962773-0b8efb28b2d4?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmqyfUhM9tBoOz2kcxZ0TRLktYPQmAeBayIQ&s",
   description: "Dessert kiosk serving buko pies, sweets, and refreshing drinks.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱80 - ₱250",
@@ -1040,167 +1039,7 @@ const RestaurantsList = ({
 {
   id: "99",
   name: "Chowking",
-  image: "https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?auto=format&fit=crop&w=1470&q=80",
-  description: "Quick-service Chinese restaurant offering lauriat and halo-halo.",
-  location: "Gaisano Mall, Legazpi City, Albay",
-  priceRange: "₱120 - ₱350",
-  rating: 4.4,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "84",
-  name: "Serenitea",
-  image: "https://images.unsplash.com/photo-1583225272820-3609b55b9b64?auto=format&fit=crop&w=1470&q=80",
-  description: "Milk tea café chain known for its customizable drinks and cozy vibe.",
-  location: "SM City Legazpi, Legazpi City, Albay",
-  priceRange: "₱120 - ₱250",
-  rating: 4.6,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "85",
-  name: "Shakey’s",
-  image: "https://images.unsplash.com/photo-1585238342028-3e0f3b45c9d2?auto=format&fit=crop&w=1470&q=80",
-  description: "Classic pizza and pasta restaurant serving family-style meals.",
-  location: "SM City Legazpi, Legazpi City, Albay",
-  priceRange: "₱200 - ₱600",
-  rating: 4.7,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "86",
-  name: "Shou Lamien Hand-Pulled Noodles (Food Court)",
-  image: "https://images.unsplash.com/photo-1617196035092-2f45e65d5118?auto=format&fit=crop&w=1470&q=80",
-  description: "Authentic hand-pulled noodle dishes with rich Chinese flavors.",
-  location: "SM City Legazpi, Legazpi City, Albay",
-  priceRange: "₱150 - ₱350",
-  rating: 4.5,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "87",
-  name: "Shou Ramen House (Food Court)",
-  image: "https://images.unsplash.com/photo-1617196036774-f01d5d2b22ab?auto=format&fit=crop&w=1470&q=80",
-  description: "Japanese ramen spot serving flavorful broths and noodles.",
-  location: "SM City Legazpi, Legazpi City, Albay",
-  priceRange: "₱180 - ₱450",
-  rating: 4.4,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "88",
-  name: "Starbucks",
-  image: "https://images.unsplash.com/photo-1579991491280-0c0b1d7d2a7f?auto=format&fit=crop&w=1470&q=80",
-  description: "International coffee chain offering espresso, frappes, and pastries.",
-  location: "SM City Legazpi, Legazpi City, Albay",
-  priceRange: "₱180 - ₱450",
-  rating: 4.8,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "89",
-  name: "Superlicious Bakeshop",
-  image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1470&q=80",
-  description: "Local bakery and café serving freshly baked breads and cakes.",
-  location: "SM City Legazpi, Legazpi City, Albay",
-  priceRange: "₱100 - ₱250",
-  rating: 4.2,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "90",
-  name: "Turks Shawarma (Food Court)",
-  image: "https://images.unsplash.com/photo-1590080875830-8a8d88d7f3d8?auto=format&fit=crop&w=1470&q=80",
-  description: "Middle Eastern shawarma wraps and rice meals made fresh daily.",
-  location: "SM City Legazpi, Legazpi City, Albay",
-  priceRange: "₱120 - ₱250",
-  rating: 4.3,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "91",
-  name: "Wasabi San",
-  image: "https://images.unsplash.com/photo-1606851090034-3cc83a4e2d6b?auto=format&fit=crop&w=1470&q=80",
-  description: "Japanese restaurant specializing in sushi, ramen, and tempura dishes.",
-  location: "SM City Legazpi, Legazpi City, Albay",
-  priceRange: "₱200 - ₱550",
-  rating: 4.5,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "92",
-  name: "Westside Grill (Food Court)",
-  image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=1470&q=80",
-  description: "Food court stall offering grilled Filipino dishes and rice meals.",
-  location: "SM City Legazpi, Legazpi City, Albay",
-  priceRange: "₱120 - ₱300",
-  rating: 4.1,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "93",
-  name: "Wings N Things",
-  image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1470&q=80",
-  description: "Buffalo wings and comfort food with various signature sauces.",
-  location: "SM City Legazpi, Legazpi City, Albay",
-  priceRange: "₱200 - ₱450",
-  rating: 4.6,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "94",
-  name: "Xinyi Chicken (Food Court)",
-  image: "https://images.unsplash.com/photo-1613145993481-ec0db8f68c14?auto=format&fit=crop&w=1470&q=80",
-  description: "Asian-style roasted and fried chicken with rice combos.",
-  location: "SM City Legazpi, Legazpi City, Albay",
-  priceRange: "₱150 - ₱350",
-  rating: 4.2,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "95",
-  name: "Zark’s Burger",
-  image: "https://images.unsplash.com/photo-1606756790138-2515d0d1d3d7?auto=format&fit=crop&w=1470&q=80",
-  description: "Casual burger joint known for massive, flavorful burgers.",
-  location: "SM City Legazpi, Legazpi City, Albay",
-  priceRange: "₱180 - ₱500",
-  rating: 4.7,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "96",
-  name: "Adobo Connection",
-  image: "https://images.unsplash.com/photo-1608032077018-cb3ee24b87f2?auto=format&fit=crop&w=1470&q=80",
-  description: "Filipino restaurant serving different variations of Adobo and Pinoy classics.",
-  location: "Gaisano Mall, Legazpi City, Albay",
-  priceRange: "₱120 - ₱350",
-  rating: 4.3,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "97",
-  name: "Bigg’s Diner",
-  image: "https://images.unsplash.com/photo-1598514982586-df23c9aef9c1?auto=format&fit=crop&w=1470&q=80",
-  description: "Bicol’s signature fast-food chain with home-style meals and burgers.",
-  location: "Gaisano Mall, Legazpi City, Albay",
-  priceRange: "₱150 - ₱400",
-  rating: 4.6,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "98",
-  name: "Buko Express Pies & Sweets",
-  image: "https://images.unsplash.com/photo-1606755962773-0b8efb28b2d4?auto=format&fit=crop&w=1470&q=80",
-  description: "Dessert kiosk serving buko pies, sweets, and refreshing drinks.",
-  location: "Gaisano Mall, Legazpi City, Albay",
-  priceRange: "₱80 - ₱250",
-  rating: 4.1,
-  features: ["Dine In", "Pick-Up", "Delivery"],
-},
-{
-  id: "99",
-  name: "Chowking",
-  image: "https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?auto=format&fit=crop&w=1470&q=80",
+  image: "https://www.chowking.ph/wp-content/uploads/2023/09/chow-king-franchize-two-2.jpg",
   description: "Quick-service Chinese restaurant offering lauriat and halo-halo.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱120 - ₱350",
@@ -1210,7 +1049,7 @@ const RestaurantsList = ({
 {
   id: "100",
   name: "Colonial Grill",
-  image: "https://images.unsplash.com/photo-1598514982586-df23c9aef9c1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/86/18/81/1st-colonial-grill.jpg?w=700&h=400&s=1",
   description: "Famous for its authentic Bicolano dishes and signature sili ice cream.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱200 - ₱600",
@@ -1220,7 +1059,7 @@ const RestaurantsList = ({
 {
   id: "101",
   name: "Dunkin Donuts",
-  image: "https://images.unsplash.com/photo-1614707267537-7f6b934b4c26?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTQpCjDyQf4YsG0sQnvbkwEq8MV5w5SPTGgg&s",
   description: "Popular coffee and doughnut chain offering pastries and brewed drinks.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱80 - ₱250",
@@ -1230,7 +1069,7 @@ const RestaurantsList = ({
 {
   id: "102",
   name: "Food Court",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVmOH5lb9w5so7zs2oJ6-ZnQ8dtQ4Fe3uKXw&s",
   description: "A collection of various local and international food stalls offering diverse dining options.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱100 - ₱300",
@@ -1240,7 +1079,7 @@ const RestaurantsList = ({
 {
   id: "103",
   name: "Four Seasons Restaurant",
-  image: "https://images.unsplash.com/photo-1600891963935-5dbd51d4f19e?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk1hSd_0IhfVjcD2BRjDY6hBjCzZ_yRbd4rw&s",
   description: "Family-style restaurant offering a mix of Filipino and Chinese cuisine.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱200 - ₱600",
@@ -1250,7 +1089,7 @@ const RestaurantsList = ({
 {
   id: "104",
   name: "Graceland",
-  image: "https://images.unsplash.com/photo-1598514982586-df23c9aef9c1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGAjPwwJeKd7dmA2oPq9zM6maXv8mMo1BtDg&s",
   description: "A popular Bicolano fast-casual restaurant serving Filipino comfort food and pastries.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱150 - ₱400",
@@ -1260,7 +1099,7 @@ const RestaurantsList = ({
 {
   id: "105",
   name: "Greenwich",
-  image: "https://images.unsplash.com/photo-1601924582971-27f9b5f74b6d?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTifk174LI74JbmPjbsIAOC9wnyXUhqsGWU8g&s",
   description: "Well-known pizza and pasta chain offering family-sized meals and combos.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱150 - ₱450",
@@ -1270,7 +1109,7 @@ const RestaurantsList = ({
 {
   id: "106",
   name: "Mang Inasal",
-  image: "https://images.unsplash.com/photo-1606755962773-0b8efb28b2d4?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHmp0oZ-Ql5dagZFfjtHfK47H33H_sadOApg&s",
   description: "Known for its flavorful chicken inasal and unlimited rice meals.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱120 - ₱300",
@@ -1280,7 +1119,7 @@ const RestaurantsList = ({
 {
   id: "107",
   name: "McDonald's",
-  image: "https://images.unsplash.com/photo-1550317138-10000687a72b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://lh3.googleusercontent.com/p/AF1QipMiZq9RNNA4iTCQ7ERbjZrGkfkH_FwWIQu5tOrp=w1024-k",
   description: "Global fast-food chain offering burgers, fries, and classic Filipino favorites.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱100 - ₱300",
@@ -1290,7 +1129,7 @@ const RestaurantsList = ({
 {
   id: "108",
   name: "Pizza Hut",
-  image: "https://images.unsplash.com/photo-1601924582971-27f9b5f74b6d?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYsgxUK0ZD4osWXhxOlNYdYshRQH1byLcv7Q&s",
   description: "Pizza restaurant serving a variety of pizzas, pastas, and side dishes.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱150 - ₱500",
@@ -1300,7 +1139,7 @@ const RestaurantsList = ({
 {
   id: "109",
   name: "Shawarma Shack",
-  image: "https://images.unsplash.com/photo-1603079849535-6a4b8c1a48a9?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhIedCJYk8N5Ao7DX6DH9IVo_6yGz2serdJA&s",
   description: "Popular food stall offering affordable and tasty shawarma wraps and rice meals.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱80 - ₱200",
@@ -1310,18 +1149,18 @@ const RestaurantsList = ({
 {
   id: "110",
   name: "Sisig Society",
-  image: "https://images.unsplash.com/photo-1627662160053-dc49b5cbdc0f?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTixs35bUvB7yPGd3QZ7JYEeD2frSQdCLYAzg&s",
   description: "Modern Filipino restaurant offering a variety of sizzling sisig dishes.",
   location: "Gaisano Mall, Legazpi City, Albay",
   priceRange: "₱120 - ₱350",
   rating: 4.4,
   features: ["Dine In", "Pick-Up", "Delivery"],
 },
-// --- AYALA MALLS LEGAZPI ---
+// AYALA MALLS LEGAZPI RESTAURANTS
 {
   id: "111",
   name: "Mang Inasal",
-  image: "https://images.unsplash.com/photo-1606755962773-0b8efb28b2d4?auto=format&fit=crop&w=1470&q=80",
+  image: "https://cdn1.clickthecity.com/wp-content/uploads/2024/05/16014147/Mang-Inasal-Thumb.jpg",
   description: "Home of the classic chicken inasal served with unlimited rice.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱120 - ₱300",
@@ -1331,7 +1170,7 @@ const RestaurantsList = ({
 {
   id: "112",
   name: "Greenwich",
-  image: "https://images.unsplash.com/photo-1601924582971-27f9b5f74b6d?auto=format&fit=crop&w=1470&q=80",
+  image: "https://images.deliveryhero.io/image/fd-ph/LH/f5gt-hero.jpg?width=512&height=384&quality=45",
   description: "Cozy pizza and pasta chain offering group meals and snacks.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱150 - ₱450",
@@ -1341,7 +1180,7 @@ const RestaurantsList = ({
 {
   id: "113",
   name: "Chowking",
-  image: "https://images.unsplash.com/photo-1598514982586-df23c9aef9c1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://images.deliveryhero.io/image/fd-ph/LH/f7ox-hero.jpg?width=480&height=360&quality=45",
   description: "Chinese fast-food restaurant known for noodles, siopao, and halo-halo.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱100 - ₱300",
@@ -1351,7 +1190,7 @@ const RestaurantsList = ({
 {
   id: "114",
   name: "Jollibee",
-  image: "https://images.unsplash.com/photo-1606851090034-3cc83a4e2d6b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6w3sB2bj7tjjTmnKMm1-0H9_aqCTYN_JOjA&s",
   description: "The country’s favorite fast-food chain offering burgers, spaghetti, and Chickenjoy.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱100 - ₱300",
@@ -1361,7 +1200,7 @@ const RestaurantsList = ({
 {
   id: "115",
   name: "McDonald's",
-  image: "https://images.unsplash.com/photo-1550317138-10000687a72b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://images.deliveryhero.io/image/fd-ph/Products/88680560.jpg?width=%s",
   description: "Global fast-food favorite for burgers, fries, and McCafe beverages.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱100 - ₱300",
@@ -1371,7 +1210,7 @@ const RestaurantsList = ({
 {
   id: "116",
   name: "Serenitea",
-  image: "https://images.unsplash.com/photo-1628102169918-1c9ed3a8f33e?auto=format&fit=crop&w=1470&q=80",
+  image: "https://iloveserenitea.com/wp-content/uploads/2020/10/store-locator-ayala-mall-legazpi-1200x800-1.jpg",
   description: "Trendy milk tea shop serving classic and innovative tea blends.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱120 - ₱250",
@@ -1381,7 +1220,7 @@ const RestaurantsList = ({
 {
   id: "117",
   name: "Kuya J Restaurant",
-  image: "https://images.unsplash.com/photo-1627662160053-dc49b5cbdc0f?auto=format&fit=crop&w=1470&q=80",
+  image: "https://d3up48wss6lvj.cloudfront.net/data/uploads/2021/08/KuyaJ0d5b4t8tb1tb.png",
   description: "Casual Filipino dining with specialties like crispy pata and kare-kare.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱200 - ₱600",
@@ -1391,7 +1230,7 @@ const RestaurantsList = ({
 {
   id: "118",
   name: "Colonial Grill",
-  image: "https://images.unsplash.com/photo-1627662160053-dc49b5cbdc0f?auto=format&fit=crop&w=1470&q=80",
+  image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdCHVN0VKVVc_857cvQQZDqVO871iYRXj0zXrCslanzKKam1frW-PlAG7b94SjYtns9v_GPGWFmBrmi8QUn0l043oGHfQpGJXq6jwxFmsSzbfs-aVzFmvHMZc8w6rRLR52qCkmqJQQfPc/s1600/B12+in+Legaspi-27.jpg",
   description: "Famous for their Bicol Express and unique sili ice cream, offering authentic Bicolano cuisine.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱200 - ₱600",
@@ -1401,7 +1240,7 @@ const RestaurantsList = ({
 {
   id: "119",
   name: "Bigg's Diner",
-  image: "https://images.unsplash.com/photo-1551782450-17144efb9c50?auto=format&fit=crop&w=1470&q=80",
+  image: "https://images.deliveryhero.io/image/fd-ph/LH/tnx0-listing.jpg",
   description: "Retro-themed diner serving burgers, fried chicken, and classic Bicolano dishes.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱150 - ₱450",
@@ -1411,7 +1250,7 @@ const RestaurantsList = ({
 {
   id: "120",
   name: "Graceland",
-  image: "https://images.unsplash.com/photo-1598514982586-df23c9aef9c1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGAjPwwJeKd7dmA2oPq9zM6maXv8mMo1BtDg&s",
   description: "Local favorite for pastries and Filipino comfort food, great for casual family meals.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱150 - ₱400",
@@ -1421,7 +1260,7 @@ const RestaurantsList = ({
 {
   id: "121",
   name: "RamenCo",
-  image: "https://images.unsplash.com/photo-1625943550417-fc3e3d2de9cf?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKFRGBmA75zkzeIS5aycQyWmLGNtdxJ4xQrQ&s",
   description: "Japanese ramen restaurant offering rich, flavorful broths and authentic noodle dishes.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱250 - ₱600",
@@ -1431,7 +1270,7 @@ const RestaurantsList = ({
 {
   id: "122",
   name: "Turks Shawarma (Food Court)",
-  image: "https://images.unsplash.com/photo-1603079849535-6a4b8c1a48a9?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdZe4e6-a-VEOiZOpnRcus3B-Aht7zjwrHuQ&s",
   description: "Popular shawarma stall offering beef and chicken wraps, rice meals, and sides.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱80 - ₱200",
@@ -1441,7 +1280,7 @@ const RestaurantsList = ({
 {
   id: "123",
   name: "Potato Corner (Food Court)",
-  image: "https://images.unsplash.com/photo-1625938145433-8f67b1024c12?auto=format&fit=crop&w=1470&q=80",
+  image: "https://interimweb.s3-ap-southeast-1.amazonaws.com/merchant-images/products/ADDITIONAL/New+01/ADDITIONAL+-+Potato+Corner.jpg",
   description: "Snack stall serving flavored French fries in a variety of fun seasonings.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱60 - ₱150",
@@ -1451,7 +1290,7 @@ const RestaurantsList = ({
 {
   id: "124",
   name: "Master Siomai (Food Court)",
-  image: "https://images.unsplash.com/photo-1585238342028-3b4f9b62d1d4?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZZlc2HmG6UIkGyI5Ni2cHZpsAxN1eDAvIYw&s",
   description: "Quick-service food stall specializing in siomai, siopao, and refreshing gulaman drinks.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱60 - ₱150",
@@ -1461,7 +1300,7 @@ const RestaurantsList = ({
 {
   id: "125",
   name: "J.CO Donuts & Coffee",
-  image: "https://images.unsplash.com/photo-1614707267537-7f6b934b4c26?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk_I2vTlpKfvZTdGG1rYJvedhF8j1KBFp8Jw&s",
   description: "Trendy donut and coffee shop known for its handcrafted donuts and premium brews.",
   location: "Ayala Malls Legazpi, Albay",
   priceRange: "₱150 - ₱400",
@@ -1471,7 +1310,7 @@ const RestaurantsList = ({
 {
   id: "126",
   name: "Delica Japanese Deli",
-  image: "https://images.unsplash.com/photo-1607330289196-6dfc3b9b94e2?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLknYKGkNGC7IUb5i45RNij85HKsZeifZuJg&s",
   description: "Authentic Japanese dishes including sushi, ramen, and bento boxes in a cozy setting.",
   location: "Yashano Mall, Legazpi City, Albay",
   priceRange: "₱250 - ₱600",
@@ -1498,10 +1337,11 @@ const RestaurantsList = ({
   rating: 4.3,
   features: ["Dine In", "Pick-Up", "Delivery"],
 },
+// Around Legazpi City Restaurants
 {
   id: "129",
   name: "Alibar",
-  image: "https://images.unsplash.com/photo-1617196036774-f01d5d2b22ab?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Rn6GaqJAqkAMDT_5ehoOuVeqDwvl7ZuKVA&s",
   description: "Bar and restaurant offering Filipino dishes, cocktails, and live music entertainment.",
   location: "Legazpi City, Albay",
   priceRange: "₱200 - ₱600",
@@ -1511,7 +1351,7 @@ const RestaurantsList = ({
 {
   id: "130",
   name: "Artisan Specialty Coffee",
-  image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7iLlugVOl_fPymptWlYJMqNwkTwCP8YE1dw&s",
   description: "Specialty café known for premium brews, handcrafted coffee, and minimalist interiors.",
   location: "Legazpi City, Albay",
   priceRange: "₱150 - ₱350",
@@ -1521,7 +1361,7 @@ const RestaurantsList = ({
 {
   id: "131",
   name: "Black Scoop Café",
-  image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQRk6wIMs8Qv4wac3YS_lZmu__o_AEbO5WoA&s",
   description: "Trendy café chain serving milk teas, frappes, and snacks in a cozy modern space.",
   location: "Legazpi City, Albay",
   priceRange: "₱120 - ₱300",
@@ -1531,7 +1371,7 @@ const RestaurantsList = ({
 {
   id: "132",
   name: "Boklan Restaurant",
-  image: "https://images.unsplash.com/photo-1600891963932-9602fd355662?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXIyafsV1cd46c8VHLWP4SYpnwMT8s1VImQA&s",
   description: "Classic Filipino restaurant serving home-style dishes and affordable meals.",
   location: "Legazpi City, Albay",
   priceRange: "₱150 - ₱400",
@@ -1541,7 +1381,7 @@ const RestaurantsList = ({
 {
   id: "133",
   name: "Chef Connie’s Resto",
-  image: "https://images.unsplash.com/photo-1585238342028-3b4f9b62d1d4?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOL9ZLhSJ1xSzEO2jTyOfTsDlUH2w03cv9CQ&s",
   description: "Casual Filipino eatery offering take-out meals and local specialties.",
   location: "Legazpi City, Albay",
   priceRange: "₱120 - ₱350",
@@ -1551,7 +1391,7 @@ const RestaurantsList = ({
 {
   id: "134",
   name: "Chef Lee",
-  image: "https://images.unsplash.com/photo-1627662160053-dc49b5cbdc0f?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaQ4tt4HM5T3n3cPlS4eHVcK2SjwHJyQT-5w&s",
   description: "Asian fusion restaurant featuring flavorful Korean and Filipino dishes.",
   location: "Legazpi City, Albay",
   priceRange: "₱150 - ₱400",
@@ -1561,7 +1401,7 @@ const RestaurantsList = ({
 {
   id: "135",
   name: "Cres Snack Inn",
-  image: "https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlF7ikW1AnDIkRPcnroIO6kyUXzt3Lqz_E1g&s",
   description: "Small local eatery offering affordable snacks, rice meals, and refreshments.",
   location: "Legazpi City, Albay",
   priceRange: "₱80 - ₱250",
@@ -1571,7 +1411,7 @@ const RestaurantsList = ({
 {
   id: "136",
   name: "Crossroad Restaurant (Hotel St. Ellis)",
-  image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_AvaaHrsYHdTiH_PfaIbaB3i-mXnnWDOaMw&s",
   description: "Elegant hotel restaurant offering fine dining with local and international dishes.",
   location: "Hotel St. Ellis, Legazpi City, Albay",
   priceRange: "₱300 - ₱800",
@@ -1581,7 +1421,7 @@ const RestaurantsList = ({
 {
   id: "137",
   name: "DJC Halo-Halo",
-  image: "https://images.unsplash.com/photo-1590080875835-6a1d2ef94a46?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZMHk2pxqHyiWSU5_ej5k_4PfzPGwWdkTvDA&s",
   description: "Famous for its creamy halo-halo dessert and cool tropical treats.",
   location: "Legazpi City, Albay",
   priceRange: "₱80 - ₱250",
@@ -1591,7 +1431,7 @@ const RestaurantsList = ({
 {
   id: "138",
   name: "Don Juan Favorites",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdZq97fGWrHUSVOnwiDpYO2Tszn3t35y6ZsA&s",
   description: "Filipino comfort food restaurant offering home-style favorites and hearty meals.",
   location: "Legazpi City, Albay",
   priceRange: "₱150 - ₱400",
@@ -1601,7 +1441,7 @@ const RestaurantsList = ({
 {
   id: "139",
   name: "Family Kitchenette",
-  image: "https://images.unsplash.com/photo-1612874742237-6523e1a5eaba?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj_7_y3Sgj4HMxI7cTB4hPJhOB_dRdHoe1UA&s",
   description: "Neighborhood eatery serving freshly cooked meals for take-out and delivery.",
   location: "Legazpi City, Albay",
   priceRange: "₱100 - ₱300",
@@ -1611,7 +1451,7 @@ const RestaurantsList = ({
 {
   id: "140",
   name: "Four Seasons Restaurant",
-  image: "https://images.unsplash.com/photo-1625943550417-fc3e3d2de9cf?auto=format&fit=crop&w=1470&q=80",
+  image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/dc/d8/47/four-seasons-restaurant.jpg?w=700&h=400&s=1",
   description: "Classic Chinese-Filipino restaurant serving group meals and signature noodles.",
   location: "Legazpi City, Albay",
   priceRange: "₱250 - ₱600",
@@ -1621,7 +1461,7 @@ const RestaurantsList = ({
 {
   id: "141",
   name: "Golden Dragon Restaurant",
-  image: "https://images.unsplash.com/photo-1617196036774-f01d5d2b22ab?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48a9XqQa0hDAaeYf7d7keDfU6n0baXvCwJg&s",
   description: "Authentic Chinese dining experience featuring dim sum, seafood, and hotpot meals.",
   location: "Legazpi City, Albay",
   priceRange: "₱300 - ₱800",
@@ -1631,7 +1471,7 @@ const RestaurantsList = ({
 {
   id: "142",
   name: "I Love Bamboo Resto Grill",
-  image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNB_tqP2nrl9mWHUHXErWanVVa7A1UCHdOmw&s",
   description: "A cozy grill house serving Filipino favorites and grilled specialties with a rustic ambiance.",
   location: "Legazpi City, Albay",
   priceRange: "₱150 - ₱500",
@@ -1641,7 +1481,7 @@ const RestaurantsList = ({
 {
   id: "143",
   name: "Jollibee (Rizal)",
-  image: "https://images.unsplash.com/photo-1604908177017-956d6deb6b8c?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKckQzD9VoUcnRpIa9nrLPthxHKyYd3Fsbnw&s",
   description: "Iconic Filipino fast-food chain known for its Chickenjoy, Jolly Spaghetti, and signature smiles.",
   location: "Rizal Street, Legazpi City, Albay",
   priceRange: "₱100 - ₱300",
@@ -1651,7 +1491,7 @@ const RestaurantsList = ({
 {
   id: "144",
   name: "Kim’s Bowl",
-  image: "https://images.unsplash.com/photo-1625943554018-c5b64a2d4e9b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMtllVAdb8kfH8JNgxo19o849b5s818N6l4g&s",
   description: "A casual dining spot serving rice bowls, noodles, and Filipino comfort food favorites.",
   location: "Legazpi City, Albay",
   priceRange: "₱120 - ₱400",
@@ -1661,7 +1501,7 @@ const RestaurantsList = ({
 {
   id: "145",
   name: "Koffee Klatch",
-  image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMoh1UgO6bqEUYQr8485sU4yIiTHtw-dIVyg&s",
   description: "Charming café offering artisan coffee, pastries, and a relaxing space for conversations.",
   location: "Legazpi City, Albay",
   priceRange: "₱150 - ₱350",
@@ -1671,7 +1511,7 @@ const RestaurantsList = ({
 {
   id: "146",
   name: "Kouzina Tyche Seafood Restaurant",
-  image: "https://images.unsplash.com/photo-1600891964091-0603c03e3c60?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6FynUWcDyRZYvO-nrIscUeSUfBCuQPoHPlQ&s",
   description: "Upscale seafood dining with a Mediterranean-inspired ambiance and fresh daily catch.",
   location: "Tyche Boutique Hotel, Legazpi City, Albay",
   priceRange: "₱300 - ₱800",
@@ -1681,7 +1521,7 @@ const RestaurantsList = ({
 {
   id: "147",
   name: "Layag Resto Grill",
-  image: "https://images.unsplash.com/photo-1573821663912-69c513b4a21d?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm3ZTn3IX1VcQpccqo3YavIcEkt-po0Tvq7w&s",
   description: "A local grill restaurant offering seafood, barbecue, and Filipino comfort dishes.",
   location: "Legazpi City, Albay",
   priceRange: "₱200 - ₱600",
@@ -1691,7 +1531,7 @@ const RestaurantsList = ({
 {
   id: "148",
   name: "Legazpi Airport Buffet",
-  image: "https://images.unsplash.com/photo-1575478259667-0f5e3a9c9d8b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4OVtLPFoLLrutRSi7n1OcnF8u1UtYaWtonw&s",
   description: "Buffet-style dining featuring local and international cuisine near Legazpi Airport.",
   location: "Legazpi Airport, Albay",
   priceRange: "₱350 - ₱700",
@@ -1701,7 +1541,7 @@ const RestaurantsList = ({
 {
   id: "149",
   name: "Ling-Ling Korean BBQ",
-  image: "https://images.unsplash.com/photo-1588167056547-c183313da6e1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWh8Aa-0PEQRLmmcYTULhSzbsHMZzuD5tFZg&s",
   description: "Unlimited Korean BBQ experience with a wide variety of meats, side dishes, and sauces.",
   location: "Legazpi City, Albay",
   priceRange: "₱299 - ₱599",
@@ -1711,7 +1551,7 @@ const RestaurantsList = ({
 {
   id: "150",
   name: "Macao Imperial Milk Tea (Rizal)",
-  image: "https://images.unsplash.com/photo-1590080875839-8be826d5b3a0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4EfCuUJB_iE_sa45MmsL_2ujoP8QUIyPi1A&s",
   description: "Trendy milk tea shop offering a variety of rich and creamy tea-based drinks and snacks.",
   location: "Rizal Street, Legazpi City, Albay",
   priceRange: "₱100 - ₱300",
@@ -1721,7 +1561,7 @@ const RestaurantsList = ({
 {
   id: "151",
   name: "Max’s Restaurant",
-  image: "https://images.unsplash.com/photo-1585238342093-5c67d48f7e7a?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfiVuI8hkINPl7B4IWRgiG6t-3xELe_rN7Vw&s",
   description: "Classic Filipino restaurant famous for its fried chicken and traditional home-style meals.",
   location: "Legazpi City, Albay",
   priceRange: "₱250 - ₱600",
@@ -1731,7 +1571,7 @@ const RestaurantsList = ({
 {
   id: "152",
   name: "McDonald’s (Rizal)",
-  image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQQUk3vatvSre2dfk59ArOlLP6BBjGlZ7JNQ&s",
   description: "Global fast-food chain known for burgers, fries, and quick-service dining.",
   location: "Rizal Street, Legazpi City, Albay",
   priceRange: "₱100 - ₱300",
@@ -1741,7 +1581,7 @@ const RestaurantsList = ({
 {
   id: "153",
   name: "Pares King",
-  image: "https://images.unsplash.com/photo-1630631727335-3ac79b68d984?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZEckIgeU03znUfqkbTGA2mH7PT699NIMQiA&s",
   description: "Home of flavorful beef pares and Filipino comfort food at affordable prices.",
   location: "Legazpi City, Albay",
   priceRange: "₱80 - ₱250",
@@ -1751,7 +1591,7 @@ const RestaurantsList = ({
 {
   id: "154",
   name: "Pares Queen",
-  image: "https://images.unsplash.com/photo-1627308595187-4a1e2667c068?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG7iRiPRlc1cs7xZKC7OXGtz5QjsyH-liO_g&s",
   description: "Local eatery offering hearty Filipino pares meals and silog platters.",
   location: "Legazpi City, Albay",
   priceRange: "₱80 - ₱250",
@@ -1761,7 +1601,7 @@ const RestaurantsList = ({
 {
   id: "155",
   name: "PH 12 Sangyup",
-  image: "https://images.unsplash.com/photo-1604908177017-956d6deb6b8c?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKEQsgqhNalmFR6o9B5hxBMi5SgyXzgn72Cg&s",
   description: "Unlimited Korean BBQ restaurant featuring a variety of meats and banchan side dishes.",
   location: "Legazpi City, Albay",
   priceRange: "₱299 - ₱599",
@@ -1771,7 +1611,7 @@ const RestaurantsList = ({
 {
   id: "156",
   name: "Redbucks Coffee Shack",
-  image: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrnHX9QZw9GOMcMwDHnCWmtciQaHFvLuDj6A&s",
   description: "Cozy coffee shop serving freshly brewed coffee, frappes, and light snacks perfect for relaxing or studying.",
   location: "Legazpi City, Albay",
   priceRange: "₱120 - ₱300",
@@ -1781,7 +1621,7 @@ const RestaurantsList = ({
 {
   id: "157",
   name: "Salu-Salo Restaurant",
-  image: "https://images.unsplash.com/photo-1625943554018-c5b64a2d4e9b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNB_Ww0Wod3WXDFtQhwhST8YGvAu12MFNjJw&s",
   description: "Local Filipino restaurant known for its home-cooked dishes and family-friendly atmosphere.",
   location: "Legazpi City, Albay",
   priceRange: "₱150 - ₱450",
@@ -1791,7 +1631,7 @@ const RestaurantsList = ({
 {
   id: "158",
   name: "Sitti’s",
-  image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsJvzVfjPhiloTCJfAxGSbteaysF_hd38Idg&s",
   description: "Chill café and restaurant offering comfort food, drinks, and an acoustic vibe for casual hangouts.",
   location: "Legazpi City, Albay",
   priceRange: "₱150 - ₱400",
@@ -1801,7 +1641,7 @@ const RestaurantsList = ({
 {
   id: "159",
   name: "Small Talk Café",
-  image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnHrVk1cqQns5c7D6DvMC9-DogFWTFGuIT5Q&s",
   description: "A Legazpi landmark café offering Bicol fusion dishes like Laing Pasta and spicy Pinangat Pizza.",
   location: "Doña Aurora Street, Legazpi City, Albay",
   priceRange: "₱200 - ₱500",
@@ -1811,7 +1651,7 @@ const RestaurantsList = ({
 {
   id: "160",
   name: "Treff Café",
-  image: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr9RNmLZQxzx_2B1ZGnv7VYnE1vxkoaqwXIg&s",
   description: "Modern café known for its milk teas, coffee, and cozy atmosphere perfect for groups.",
   location: "Legazpi City, Albay",
   priceRange: "₱100 - ₱350",
@@ -1821,7 +1661,7 @@ const RestaurantsList = ({
 {
   id: "161",
   name: "Uncle Ton’s Pizza",
-  image: "https://images.unsplash.com/photo-1601924638867-3ec6c78df23f?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB57jwWWu-sJPZqmaTCXeUQCCOeTqEkkvVjg&s",
   description: "Local pizzeria serving thin-crust and cheesy pizzas baked to perfection with a Filipino twist.",
   location: "Legazpi City, Albay",
   priceRange: "₱200 - ₱600",
@@ -1831,7 +1671,7 @@ const RestaurantsList = ({
 {
   id: "162",
   name: "Wafoo Chan",
-  image: "https://images.unsplash.com/photo-1546069901-eacef0df6022?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQalzl1IwfX4TiKSalKwsMV2_IyRJ-Fm3Zofg&s",
   description: "Asian fusion restaurant offering Chinese and Japanese favorites with generous servings.",
   location: "Legazpi City, Albay",
   priceRange: "₱250 - ₱700",
@@ -1841,7 +1681,7 @@ const RestaurantsList = ({
 {
   id: "163",
   name: "Wasabi San (Pepperland Hotel)",
-  image: "https://images.unsplash.com/photo-1580810738599-df6c9ff1f1a3?auto=format&fit=crop&w=1470&q=80",
+  image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/70/a1/70/photo1jpg.jpg?w=900&h=500&s=1",
   description: "Upscale Japanese restaurant located in Pepperland Hotel, serving sushi, ramen, and bento meals.",
   location: "Pepperland Hotel, Legazpi City, Albay",
   priceRange: "₱300 - ₱800",
@@ -1851,7 +1691,7 @@ const RestaurantsList = ({
 {
   id: "164",
   name: "Waway’s Restaurant",
-  image: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=1470&q=80",
+  image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/04/a0/47/waway-s.jpg?w=500&h=-1&s=1",
   description: "Famous Filipino buffet and a must-visit for traditional Bicolano dishes and seafood specials.",
   location: "Legazpi City, Albay",
   priceRange: "₱250 - ₱700",
@@ -1861,7 +1701,7 @@ const RestaurantsList = ({
 {
   id: "165",
   name: "Yellow Cab",
-  image: "https://images.unsplash.com/photo-1601924638867-3ec6c78df23f?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS18886SPx0hGcAtmtnbEjFt6LyBqopIOoTrA&s",
   description: "Popular pizza chain known for its New York-style pizzas, pasta, and chicken wings.",
   location: "Legazpi City, Albay",
   priceRange: "₱250 - ₱700",
@@ -1871,7 +1711,7 @@ const RestaurantsList = ({
 {
   id: "166",
   name: "Yuuna’s Place",
-  image: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1P-K5yC4g7XtVFTRaLpgfnpc3CzXTTY0sVA&s",
   description: "Homey café serving Filipino comfort food, desserts, and refreshing drinks in a laid-back setting.",
   location: "Legazpi City, Albay",
   priceRange: "₱150 - ₱400",
@@ -1881,17 +1721,18 @@ const RestaurantsList = ({
 {
   id: "167",
   name: "Zoe’s Kitchen",
-  image: "https://images.unsplash.com/photo-1589308078055-3364c813d6c7?auto=format&fit=crop&w=1470&q=80",
+  image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/cb/ea/c1/caption.jpg?w=900&h=500&s=1",
   description: "Minimalist café offering healthy meals, pastries, and coffee for those on the go.",
   location: "Legazpi City, Albay",
   priceRange: "₱120 - ₱350",
   rating: 4.4,
   features: ["Take-Out Only"],
 },
+// Daraga, Albay Restaurants
 {
   id: "168",
   name: "Gabbi’s Resto Bar and Grill",
-  image: "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE0fxZ5r477_isD6I_Lvy9-PU8dslJFR9_aA&s",
   description: "Popular hangout spot serving grilled dishes, pulutan, and classic Filipino favorites with live music vibes.",
   location: "Daraga, Albay",
   priceRange: "₱200 - ₱600",
@@ -1901,7 +1742,7 @@ const RestaurantsList = ({
 {
   id: "169",
   name: "Dunkin Donuts",
-  image: "https://images.unsplash.com/photo-1614707267537-7f6b934b4c26?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2PTtKTPIFpD1mQ7xylCnxL7StPlJHEe5ybA&s",
   description: "Classic doughnut and coffee shop offering sweet treats and brewed beverages.",
   location: "Daraga, Albay",
   priceRange: "₱80 - ₱250",
@@ -1911,7 +1752,7 @@ const RestaurantsList = ({
 {
   id: "170",
   name: "Bigg’s Diner",
-  image: "https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDthOeEh4S4ieLQw0oOnTkzP7Cvy4dxBL5Lw&s",
   description: "Famous Bicol-based diner offering burgers, fried chicken, and classic Pinoy comfort food.",
   location: "Daraga, Albay",
   priceRange: "₱150 - ₱400",
@@ -1921,7 +1762,7 @@ const RestaurantsList = ({
 {
   id: "171",
   name: "Graceland",
-  image: "https://images.unsplash.com/photo-1604147706283-d7119b5b63c4?auto=format&fit=crop&w=1470&q=80",
+  image: "https://images.deliveryhero.io/image/fd-ph/LH/do1t-hero.jpg?width=480&height=360&quality=45",
   description: "Local favorite bakery and restaurant serving Filipino meals, cakes, and pastries.",
   location: "Daraga, Albay",
   priceRange: "₱100 - ₱350",
@@ -1931,7 +1772,7 @@ const RestaurantsList = ({
 {
   id: "172",
   name: "Jollibee",
-  image: "https://images.unsplash.com/photo-1626082927389-6f6eeef03d9a?auto=format&fit=crop&w=1470&q=80",
+  image: "https://api.jollibee.com.ph/sites/g/files/iojlck111/files/styles/webp_optimized/public/2025-04/JBPH_APOLLO_STORE-DETAIL_1440X1440_SEO-IMAGE_FA_0.png.webp?itok=7yOt9uGU",
   description: "Beloved fast-food chain offering burgers, spaghetti, fried chicken, and family meals.",
   location: "Daraga, Albay",
   priceRange: "₱100 - ₱300",
@@ -1941,7 +1782,7 @@ const RestaurantsList = ({
 {
   id: "173",
   name: "Chowking",
-  image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9f1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://images.deliveryhero.io/image/fd-ph/LH/d6fv-hero.jpg?width=480&height=360&quality=45",
   description: "Chinese-style fast-food restaurant known for its siopao, pancit, and rice meals.",
   location: "Daraga, Albay",
   priceRange: "₱120 - ₱350",
@@ -1951,7 +1792,7 @@ const RestaurantsList = ({
 {
   id: "174",
   name: "Mathea’s Kinalas",
-  image: "https://images.unsplash.com/photo-1588064649868-68d1585716a2?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhWusN2R3-2nK_1j6BxwJ407EVCtJZiVSkaw&s",
   description: "Homegrown eatery serving authentic Bicolano kinalas, pancit, and other local comfort dishes.",
   location: "Daraga, Albay",
   priceRange: "₱80 - ₱200",
@@ -1961,7 +1802,7 @@ const RestaurantsList = ({
 {
   id: "175",
   name: "McDonald’s",
-  image: "https://images.unsplash.com/photo-1576618148400-f54bed99fc88?auto=format&fit=crop&w=1470&q=80",
+  image: "https://d2kihw5e8drjh5.cloudfront.net/eyJidWNrZXQiOiJ1dGEtaW1hZ2VzIiwia2V5IjoicGxhY2VfaW1nLzcyYTYyNDE1NjA2NjQzNTdiMDQ4ODgxNWM5ZDRiYzNlIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo2NDAsImhlaWdodCI6NjQwLCJmaXQiOiJpbnNpZGUifSwicm90YXRlIjpudWxsLCJ0b0Zvcm1hdCI6ICJ3ZWJwIn19",
   description: "Famous international fast-food chain offering burgers, fries, coffee, and desserts.",
   location: "Daraga, Albay",
   priceRange: "₱100 - ₱300",
@@ -1971,7 +1812,7 @@ const RestaurantsList = ({
 {
   id: "176",
   name: "Palamigan",
-  image: "https://images.unsplash.com/photo-1606756790138-261ed3aa1c3b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/14/11/8d/palamigan-em-s-barrio.jpg?w=900&h=500&s=1",
   description: "Local refreshment spot serving halo-halo, cold desserts, and other Bicolano snacks.",
   location: "Daraga, Albay",
   priceRange: "₱50 - ₱150",
@@ -1981,7 +1822,7 @@ const RestaurantsList = ({
 {
   id: "177",
   name: "Let’s Pinangat",
-  image: "https://images.unsplash.com/photo-1622483215260-b4a2bb73c6d5?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUP60o_MH9O9UgVeE29HD0C2OxnLZKlLUydQ&s",
   description: "Authentic Bicolano restaurant famous for its traditional pinangat and laing dishes made from fresh taro leaves and coconut milk.",
   location: "Camalig, Albay",
   priceRange: "₱100 - ₱250",
@@ -1991,7 +1832,7 @@ const RestaurantsList = ({
 {
   id: "178",
   name: "Genevi’s Grocery and Native Foods",
-  image: "https://images.unsplash.com/photo-1625245582831-558dd902f2bb?auto=format&fit=crop&w=1470&q=80",
+  image: "https://www.camalig.gov.ph/wp-content/uploads/2021/02/52590166_550318775458433_8723322863030894592_o-1024x536.jpg",
   description: "Local eatery and shop offering authentic Bicolano native delicacies, perfect for pasalubong and comfort meals.",
   location: "Camalig, Albay",
   priceRange: "₱100 - ₱300",
@@ -2001,7 +1842,7 @@ const RestaurantsList = ({
 {
   id: "179",
   name: "Vic Special Pinangat",
-  image: "https://images.unsplash.com/photo-1617195737495-0b9d10df9c05?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOpgOU2ogYqalcrYmNwwQSnyJ5fsbMMyugOQ&s",
   description: "Well-known spot in Camalig specializing in authentic Bicolano pinangat wrapped in gabi leaves and cooked in coconut cream.",
   location: "Camalig, Albay",
   priceRange: "₱80 - ₱200",
@@ -2011,7 +1852,7 @@ const RestaurantsList = ({
 {
   id: "180",
   name: "Dad’s Special Pinangat",
-  image: "https://images.unsplash.com/photo-1578975654551-c3b6f64b3451?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUQT2oJkP9-nSm7xu8Wj6X7eBJSWbXstz-uQ&s",
   description: "Famous for their flavorful and creamy pinangat, a must-visit stop for food tourists in Camalig.",
   location: "Camalig, Albay",
   priceRange: "₱100 - ₱250",
@@ -2021,7 +1862,7 @@ const RestaurantsList = ({
 {
   id: "181",
   name: "Sumix Resto Bar",
-  image: "https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtyeS0NOIRomFejh-GwCME0SoKARiiOkhrMg&s",
   description: "Modern local resto-bar offering grilled favorites, pulutan, and Bicolano-inspired meals in a relaxing setting.",
   location: "Camalig, Albay",
   priceRange: "₱200 - ₱500",
@@ -2031,7 +1872,7 @@ const RestaurantsList = ({
 {
   id: "182",
   name: "Big Mike Fast-food & Catering Services",
-  image: "https://images.unsplash.com/photo-1625943517983-46b1f5d5b0a0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://lh6.googleusercontent.com/LA_gwRj1ONseMo-rcXhZxpX4ZfZ_iSQCJrr0etVlR3FFVubk-HwZxMM4kBIQYt_gFA=w368-h206-k-no",
   description: "Popular fast-food and catering service offering local favorites and party trays perfect for any occasion.",
   location: "Rizal St., Iraya, Guinobatan, Albay",
   priceRange: "₱120 - ₱350",
@@ -2041,7 +1882,7 @@ const RestaurantsList = ({
 {
   id: "183",
   name: "Farron Café – J’s Traumen Co.",
-  image: "https://images.unsplash.com/photo-1614692494414-02e3cc6083e8?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVjJjcmkRNlWZ5HhEKC_mgGNlJbkIrw-v8Q&s",
   description: "Trendy café offering frappes, milk tea, and light snacks, perfect for hangouts and study sessions.",
   location: "Mabini St., Ilawod, Guinobatan, Albay",
   priceRange: "₱100 - ₱250",
@@ -2051,7 +1892,7 @@ const RestaurantsList = ({
 {
   id: "184",
   name: "Oarde’s Bakery & Food House",
-  image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyzkdtmEGvIdgQUlkve6vV9HgxKUuFfsTQZQ&s",
   description: "Bakery and casual dining spot serving breads, pastries, and Filipino comfort dishes at affordable prices.",
   location: "Paulate St., Iraya, Guinobatan, Albay",
   priceRange: "₱80 - ₱200",
@@ -2061,7 +1902,7 @@ const RestaurantsList = ({
 {
   id: "185",
   name: "Dreamer’s Kitchen & Function Hall",
-  image: "https://images.unsplash.com/photo-1617195737495-0b9d10df9c05?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStTvpGDve2TjVQZ3s3WMmBCSPrVjB_r2O4bw&s",
   description: "Spacious restaurant and function hall ideal for gatherings, featuring hearty Filipino and Bicolano dishes.",
   location: "Mabini St., Guinobatan, Albay",
   priceRange: "₱200 - ₱500",
@@ -2071,7 +1912,7 @@ const RestaurantsList = ({
 {
   id: "186",
   name: "Elliana’s Food & Refreshment",
-  image: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_AZv30aUW1zH4QCbhD4cr8yh56P49OO-zow&s",
   description: "Cozy eatery known for delicious home-style meals, cool refreshments, and friendly service.",
   location: "Rizal St., Iraya, Guinobatan, Albay",
   priceRange: "₱100 - ₱300",
@@ -2081,7 +1922,7 @@ const RestaurantsList = ({
 {
   id: "187",
   name: "Pizza Lover’s Resto",
-  image: "https://images.unsplash.com/photo-1601924582971-c9e8e0eafc7e?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaxpyORRm819imwvIN2lsA1nCzGwEnxJ1z8g&s",
   description: "Casual pizza restaurant offering classic and local-inspired flavors fresh from the oven.",
   location: "Rizal St., Ilawod, Guinobatan, Albay",
   priceRange: "₱150 - ₱400",
@@ -2091,7 +1932,7 @@ const RestaurantsList = ({
 {
   id: "188",
   name: "Yangmatt Lechon & Eatery (Ilawod)",
-  image: "https://images.unsplash.com/photo-1608039858784-56f37b26c5e8?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbbBB7TMu5-9ij-MD9umB9GvpjLLGS0cyJYA&s",
   description: "Famous for their crispy and flavorful lechon, offering hearty Filipino meals at great value.",
   location: "Rizal St., Ilawod, Guinobatan, Albay",
   priceRange: "₱150 - ₱350",
@@ -2101,7 +1942,7 @@ const RestaurantsList = ({
 {
   id: "189",
   name: "Yangmatt Lechon & Eatery (Iraya)",
-  image: "https://images.unsplash.com/photo-1590080875830-dc3e2fbc6ab9?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDvE4glEVVTZxu6k6Qk1fJ6TFgxAZBIPZ-YQ&s",
   description: "Second branch of Yangmatt Lechon, offering the same beloved roasted dishes and friendly dining atmosphere.",
   location: "Paulate St., Iraya, Guinobatan, Albay",
   priceRange: "₱150 - ₱350",
@@ -2111,7 +1952,7 @@ const RestaurantsList = ({
 {
   id: "190",
   name: "Orejo’s Kitchenette",
-  image: "https://images.unsplash.com/photo-1589308078055-3364c813d6c7?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-l3hF1jcfr5llvV6UzvkPb3ZySsRgOVaG4A&s",
   description: "Small local eatery serving everyday Filipino favorites and merienda dishes with a homely vibe.",
   location: "Rizal St., Ilawod, Guinobatan, Albay",
   priceRange: "₱70 - ₱200",
@@ -2121,7 +1962,7 @@ const RestaurantsList = ({
 {
   id: "191",
   name: "Mishirei Café",
-  image: "https://images.unsplash.com/photo-1592663527359-cf6642f54cff?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXbdKvq9mjFBNgLu6yAstPjQF5Ma1goznbVQ&s",
   description: "Aesthetic café in Binogsacan offering coffee, pastries, and chill ambiance for friends and students.",
   location: "P-1 Lower Binogsacan, Guinobatan, Albay",
   priceRange: "₱120 - ₱300",
@@ -2131,7 +1972,7 @@ const RestaurantsList = ({
 {
   id: "192",
   name: "Top View Bar",
-  image: "https://images.unsplash.com/photo-1587899897387-091ebd01e67e?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLLMujogGgCp-4daG8_SSJjZTFa8sc0Wnb2A&s",
   description: "Rooftop-style bar with scenic views and an extensive menu of drinks and grilled dishes.",
   location: "M.H. del Pilar St., Inamnan Grande, Guinobatan, Albay",
   priceRange: "₱250 - ₱600",
@@ -2141,7 +1982,7 @@ const RestaurantsList = ({
 {
   id: "193",
   name: "Balay Linino Restaurant",
-  image: "https://images.unsplash.com/photo-1601924582971-c9e8e0eafc7e?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXaEzVEXoIxWhseoRhJmGz1kO-9at-93Ecvw&s",
   description: "Rustic Filipino restaurant known for local delicacies, family-style meals, and native-inspired interiors.",
   location: "Maharlika Hi-way, Lower Binogsacan, Guinobatan, Albay",
   priceRange: "₱200 - ₱500",
@@ -2151,7 +1992,7 @@ const RestaurantsList = ({
 {
   id: "194",
   name: "Benzon Burger House",
-  image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHxRbpcvO6ZrZm9TQ9oVpiCyn_vANEibbkFw&s",
   description: "Classic burger joint serving affordable burgers, sandwiches, and comfort snacks.",
   location: "Rizal St., Ilawod, Guinobatan, Albay",
   priceRange: "₱80 - ₱200",
@@ -2161,7 +2002,7 @@ const RestaurantsList = ({
 {
   id: "195",
   name: "Tummy’s Food Hauz",
-  image: "https://images.unsplash.com/photo-1600628422018-7a35d7b78a63?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh8OPLqSNzIBveTyc8EZXgU0gfGTH9bnRK3A&s",
   description: "Homegrown eatery serving Filipino dishes and rice meals, known for generous servings.",
   location: "Rizal St., Ilawod, Guinobatan, Albay",
   priceRange: "₱100 - ₱300",
@@ -2171,7 +2012,7 @@ const RestaurantsList = ({
 {
   id: "196",
   name: "Apollo 18 Food Station",
-  image: "https://images.unsplash.com/photo-1625943517983-46b1f5d5b0a0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSabfnGq2uam3tWsKRyoRToTwoZ3wHtoxbOsQ&s",
   description: "Budget-friendly food stop offering silog meals, burgers, and Filipino street food.",
   location: "Rizal St., Ilawod, Guinobatan, Albay",
   priceRange: "₱70 - ₱200",
@@ -2181,7 +2022,7 @@ const RestaurantsList = ({
 {
   id: "197",
   name: "Kimstent",
-  image: "https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdsQ1z89axz7QJamY3r8b0CYqqiyiaFE9yYw&s",
   description: "Casual dining spot serving a mix of local and international comfort food, ideal for family dining.",
   location: "Guinobatan, Albay",
   priceRange: "₱150 - ₱400",
@@ -2191,7 +2032,7 @@ const RestaurantsList = ({
 {
   id: "198",
   name: "Graziele Ann Eatery (Market Site)",
-  image: "https://images.unsplash.com/photo-1605475128023-3b16ebd7a98e?auto=format&fit=crop&w=1470&q=80",
+  image: "https://i0.wp.com/www.thehungrytravellers.blog/wp-content/uploads/2025/02/IMG_3797.jpeg?resize=960%2C540&ssl=1",
   description: "Local eatery offering affordable Filipino meals and snacks popular among market-goers.",
   location: "Market Site, Poblacion, Guinobatan, Albay",
   priceRange: "₱60 - ₱150",
@@ -2201,7 +2042,7 @@ const RestaurantsList = ({
 {
   id: "199",
   name: "Graziele Ann Eatery (Mabini St.)",
-  image: "https://images.unsplash.com/photo-1601933471369-6d3b8b74a3d8?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_zW8Xxki1ZZyEDK9jRT5HyhOBnV0jv4QZYA&s",
   description: "Neighborhood eatery serving home-style Filipino dishes with friendly service and quick meals.",
   location: "Mabini St., Poblacion, Guinobatan, Albay",
   priceRange: "₱60 - ₱150",
@@ -2211,7 +2052,7 @@ const RestaurantsList = ({
 {
   id: "200",
   name: "Hanns Eatery & Catering Services",
-  image: "https://images.unsplash.com/photo-1555243896-c709bfa0b564?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnyMYHROcLfy6yLK-h-08j6EryNzV-SsU2Dg&s",
   description: "Trusted local caterer and eatery providing delicious home-cooked meals for all occasions.",
   location: "P-3 Travesia, Guinobatan, Albay",
   priceRange: "₱100 - ₱250",
@@ -2221,7 +2062,7 @@ const RestaurantsList = ({
 {
   id: "201",
   name: "Nopias’s Eatery",
-  image: "https://images.unsplash.com/photo-1590080875830-dc3e2fbc6ab9?auto=format&fit=crop&w=1470&q=80",
+  image: "https://i0.wp.com/coverstory.ph/wp-content/uploads/2025/08/longganisa-de-guinobatan.png?fit=988%2C550&ssl=1",
   description: "Simple and cozy eatery offering classic silog meals, pancit, and daily viands.",
   location: "Market Site, Poblacion, Guinobatan, Albay",
   priceRange: "₱60 - ₱120",
@@ -2231,7 +2072,7 @@ const RestaurantsList = ({
 {
   id: "202",
   name: "Judy & Badeth Eatery",
-  image: "https://images.unsplash.com/photo-1625943517983-46b1f5d5b0a0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZouyTHJNcytMwotqAOkEFRiynoUd0SiddhA&s",
   description: "Community-favorite eatery known for budget-friendly meals and friendly neighborhood atmosphere.",
   location: "Market Site, Poblacion, Guinobatan, Albay",
   priceRange: "₱50 - ₱130",
@@ -2241,7 +2082,7 @@ const RestaurantsList = ({
 {
   id: "203",
   name: "Z.B. Villanueva Eatery",
-  image: "https://images.unsplash.com/photo-1607308571541-b3a3e0b8a83a?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhyjK7jGTeSjcuxWEFIbwsR9swBhLDowohuQ&s",
   description: "Family-run eatery serving rice meals, fried dishes, and Bicolano specialties in a casual setting.",
   location: "Mabini St., Poblacion, Guinobatan, Albay",
   priceRange: "₱70 - ₱150",
@@ -2251,7 +2092,7 @@ const RestaurantsList = ({
 {
   id: "204",
   name: "Manya Myr Eatery",
-  image: "https://images.unsplash.com/photo-1589308078055-3364c813d6c7?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Uc8cLM0eLM9EFl8eWG1t_86Y24jLx5EtRw&s",
   description: "Affordable local eatery serving daily Filipino meals and quick snacks for dine-in customers.",
   location: "Market Site, Poblacion, Guinobatan, Albay",
   priceRange: "₱50 - ₱120",
@@ -2261,7 +2102,7 @@ const RestaurantsList = ({
 {
   id: "205",
   name: "M. Villanueva Eatery",
-  image: "https://images.unsplash.com/photo-1604908553623-5f3e2aebcb30?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfHqZxpzvT6DGeVuTjoz0rdIKUpFopfF1Sdg&s",
   description: "Simple eatery serving home-style meals, perfect for a quick and satisfying lunch break.",
   location: "Market Site, Poblacion, Guinobatan, Albay",
   priceRange: "₱50 - ₱150",
@@ -2271,7 +2112,7 @@ const RestaurantsList = ({
 {
   id: "206",
   name: "Zel’s Bread & Eatery",
-  image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOtqWsOdLbpwJyY6lQfuSuAJeKgbtfR83hdw&s",
   description: "Combination bakery and eatery offering breads, snacks, and full Filipino meals daily.",
   location: "Market Site, Poblacion, Guinobatan, Albay",
   priceRange: "₱70 - ₱180",
@@ -2281,7 +2122,7 @@ const RestaurantsList = ({
 {
   id: "207",
   name: "MJ Tess Eatery",
-  image: "https://images.unsplash.com/photo-1617195737495-0b9d10df9c05?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGAb4MXlbpNpXG1CvTE3dKsnH9UefybJm_BQ&s",
   description: "Local turo-turo eatery serving freshly cooked Filipino dishes and friendly customer service.",
   location: "Market Site, Poblacion, Guinobatan, Albay",
   priceRange: "₱60 - ₱140",
@@ -2291,7 +2132,7 @@ const RestaurantsList = ({
 {
   id: "208",
   name: "Crisponde Eatery",
-  image: "https://images.unsplash.com/photo-1555243896-c709bfa0b564?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ZzJbTSKxGjFSTl4p-sKVoYs0-i6JpevLKw&s",
   description: "Neighborhood eatery offering affordable rice meals, merienda, and Filipino comfort food.",
   location: "M.H. Del Pilar St., Inamnan Grande, Guinobatan, Albay",
   priceRange: "₱60 - ₱130",
@@ -2301,7 +2142,7 @@ const RestaurantsList = ({
 {
   id: "209",
   name: "Sean-Susan Food Products",
-  image: "https://images.unsplash.com/photo-1614707267537-7f6b934b4c26?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg0dzuPk5wE4GTdu_hxpO8rM_VfI5FNH2IXg&s",
   description: "Topsilogan and food stall serving classic Filipino breakfast meals and affordable snacks.",
   location: "Market Site, Poblacion, Guinobatan, Albay",
   priceRange: "₱60 - ₱120",
@@ -2311,7 +2152,7 @@ const RestaurantsList = ({
 {
   id: "210",
   name: "San’s Kiosk Open Kitchen",
-  image: "https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeva7_ims3BXJp4TGISJEeKkYcMv8_g4_I2w&s",
   description: "Modern open-style food kiosk serving sizzling meals and rice bowls cooked on the spot.",
   location: "Market Site, Poblacion, Guinobatan, Albay",
   priceRange: "₱80 - ₱180",
@@ -2321,7 +2162,7 @@ const RestaurantsList = ({
 {
   id: "211",
   name: "Kiss Pearl Sizzling Topsi & Drinks",
-  image: "https://images.unsplash.com/photo-1601924582971-c9e8e0eafc7e?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn5wIR3xNU8rLuSkzt-s8RTHp_8MjacC_J9g&s",
   description: "Popular sizzling and tosilog spot serving flavorful meals and refreshing drinks.",
   location: "Ilawod, Guinobatan, Albay",
   priceRange: "₱80 - ₱200",
@@ -2331,7 +2172,7 @@ const RestaurantsList = ({
 {
   id: "212",
   name: "Cynthia Abensai Topsilogan",
-  image: "https://images.unsplash.com/photo-1625943517983-46b1f5d5b0a0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://images.deliveryhero.io/image/fd-ph/LH/cv3s-hero.jpg?width=480&height=360&quality=45",
   description: "Classic Filipino topsilogan offering breakfast plates and rice meals all day.",
   location: "Market Site, Poblacion, Guinobatan, Albay",
   priceRange: "₱60 - ₱120",
@@ -2341,7 +2182,7 @@ const RestaurantsList = ({
 {
   id: "213",
   name: "Nancy Oco Food House",
-  image: "https://images.unsplash.com/photo-1597305643177-03f7b3c1e7f7?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSabfnGq2uam3tWsKRyoRToTwoZ3wHtoxbOsQ&s",
   description: "Local food house serving affordable Filipino dishes, silog meals, and refreshing drinks.",
   location: "Market Site, Poblacion, Guinobatan, Albay",
   priceRange: "₱60 - ₱150",
@@ -2351,7 +2192,7 @@ const RestaurantsList = ({
 {
   id: "214",
   name: "Hot Cup Corner",
-  image: "https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-2tc3kcW96EPoJ7k5giyeOT4Lsx6RrnT1uA&s",
   description: "Cozy café-style topsilogan serving coffee, rice meals, and affordable snacks in a relaxed setting.",
   location: "Ilawod, Guinobatan, Albay",
   priceRange: "₱70 - ₱180",
@@ -2361,7 +2202,7 @@ const RestaurantsList = ({
 {
   id: "215",
   name: "Cabanez Chicken Barbeque",
-  image: "https://images.unsplash.com/photo-1617196034796-73dfa7b1b6f2?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCuzH00mOe6LKSyHK4E6j5eI0qetKs_yPARA&s",
   description: "A popular ambulant food stall serving flavorful grilled chicken barbecue and traditional Filipino street fare.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱50 - ₱200",
@@ -2371,7 +2212,7 @@ const RestaurantsList = ({
 {
   id: "216",
   name: "Gotolocious",
-  image: "https://images.unsplash.com/photo-1601050690597-dfefccf79b1a?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmtkdMbe6RNFw73AuN5kdKd73DrKYK6G2RVQ&s",
   description: "Known for its savory goto, lugaw, and mami — a comforting choice for locals and visitors alike.",
   location: "P-2 Mauraro, Guinobatan, Albay",
   priceRange: "₱50 - ₱150",
@@ -2381,7 +2222,7 @@ const RestaurantsList = ({
 {
   id: "217",
   name: "Rebua’s Chicken",
-  image: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRENPVXBTeed9YyIvQYbkJ3aZ7AACgxvhkSOg&s",
   description: "Serving delicious grilled chicken with signature sauces, a favorite spot for locals on Rizal Street.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱60 - ₱180",
@@ -2391,7 +2232,7 @@ const RestaurantsList = ({
 {
   id: "218",
   name: "Barbeque Stand & Ulam",
-  image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfZ3FKcEQ8Rg9OHjLOlR2TA7iMJmQFoD0_IQ&s",
   description: "Street barbecue stall offering tasty skewers, rice meals, and local viands to-go.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱40 - ₱150",
@@ -2401,7 +2242,7 @@ const RestaurantsList = ({
 {
   id: "219",
   name: "Bonz Pica Pica",
-  image: "https://images.unsplash.com/photo-1562967916-eb82221dfb36?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzV7VudXESUEwxvvwQxef8zQo9elJ_60CNwA&s",
   description: "Offers a fun mix of street food, fries, and snacks perfect for sharing with friends.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱40 - ₱120",
@@ -2411,7 +2252,7 @@ const RestaurantsList = ({
 {
   id: "220",
   name: "NGMP Shawarma Station",
-  image: "https://images.unsplash.com/photo-1625944528168-c0b2f5f4c6ce?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLU41yWT2_SyQzn2LScshFgq0fHl4L2u8PaQ&s",
   description: "Serving mouthwatering shawarma and wraps with a local twist beside the sports center.",
   location: "Beside Sports Center, Guinobatan, Albay",
   priceRange: "₱60 - ₱200",
@@ -2421,7 +2262,7 @@ const RestaurantsList = ({
 {
   id: "221",
   name: "French Fries Stand",
-  image: "https://images.unsplash.com/photo-1585238341986-992247bd6e1f?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSabfnGq2uam3tWsKRyoRToTwoZ3wHtoxbOsQ&s",
   description: "Crispy fries served in different flavors — a local favorite for quick snacks.",
   location: "Poblacion, Guinobatan, Albay",
   priceRange: "₱30 - ₱100",
@@ -2431,7 +2272,7 @@ const RestaurantsList = ({
 {
   id: "222",
   name: "Manrico Food Vending",
-  image: "https://images.unsplash.com/photo-1586769852836-bc069f19e1c1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT02fVoka7aYtJ7gILnpCBl5A_Q7o6blTZmJg&s",
   description: "Mobile food cart offering rice meals and short orders with a local touch.",
   location: "Mabini St., Poblacion, Guinobatan, Albay",
   priceRange: "₱50 - ₱180",
@@ -2441,7 +2282,7 @@ const RestaurantsList = ({
 {
   id: "223",
   name: "Lily’s FoodCart",
-  image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhyjK7jGTeSjcuxWEFIbwsR9swBhLDowohuQ&s",
   description: "Ambulant food cart serving snacks, grilled food, and Filipino favorites.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱40 - ₱120",
@@ -2451,7 +2292,7 @@ const RestaurantsList = ({
 {
   id: "224",
   name: "Coledrei Foods Stall",
-  image: "https://images.unsplash.com/photo-1565958011705-44e211b4b6c1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHzTAg5_Yq85h1e7uM-57__Efi-ZXtGbUCHA&s",
   description: "Small stall offering quick meals and snacks popular with locals and passersby.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱40 - ₱150",
@@ -2461,7 +2302,7 @@ const RestaurantsList = ({
 {
   id: "225",
   name: "MarJhad Fries & Shake Stall",
-  image: "https://images.unsplash.com/photo-1625944533990-c7a0cf2b8f8c?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAQaTYVwvYF5ZIDbo36iU_zGjtd4wJrkd9Gw&s",
   description: "Known for its flavored fries and refreshing shakes, a fun stop for teens and students.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱30 - ₱120",
@@ -2471,7 +2312,7 @@ const RestaurantsList = ({
 {
   id: "226",
   name: "CDO Stall",
-  image: "https://images.unsplash.com/photo-1625944548128-bdeab1b2f7f3?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiyjgj8VUo9cWZzuEjZF5voUXdTqZ0aaLCRw&s",
   description: "Quick-serve food stall selling ready-to-eat meat and snack products.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱40 - ₱150",
@@ -2481,7 +2322,7 @@ const RestaurantsList = ({
 {
   id: "227",
   name: "AB20 Food Products",
-  image: "https://images.unsplash.com/photo-1635344574482-8e660ef2ff1a?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg0--w0iqKuTHZyaTnjDXAmRbaQEdWu_PCpA&s",
   description: "Serving creative street food and local delicacies to-go.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱40 - ₱130",
@@ -2491,7 +2332,7 @@ const RestaurantsList = ({
 {
   id: "228",
   name: "Siomai Lor Foodcart",
-  image: "https://images.unsplash.com/photo-1585238342010-4b94e88c93a7?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0AoeQVJSCQTGUGdY2Wkk8Dt0gvTTFsWLjWw&s",
   description: "Serving delicious siomai and snacks — perfect for quick bites on the go.",
   location: "Mabini St., Poblacion, Guinobatan, Albay",
   priceRange: "₱30 - ₱100",
@@ -2501,7 +2342,7 @@ const RestaurantsList = ({
 {
   id: "229",
   name: "Petmalou Fried Chicken",
-  image: "https://images.unsplash.com/photo-1596560548461-5ff5e3d15c86?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw4oTipeJbymepUwia01GDXe9E6AUE6vLpyw&s",
   description: "Crispy fried chicken goodness served ambulantly with rice and drinks.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱60 - ₱180",
@@ -2511,7 +2352,7 @@ const RestaurantsList = ({
 {
   id: "230",
   name: "Yangmatt Lechon & Eatery II",
-  image: "https://images.unsplash.com/photo-1606756790138-261ed3aa1c3b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRENPVXBTeed9YyIvQYbkJ3aZ7AACgxvhkSOg&s",
   description: "An extension of the famous Yangmatt Eatery, serving lechon and native meals.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱150 - ₱350",
@@ -2521,7 +2362,7 @@ const RestaurantsList = ({
 {
   id: "231",
   name: "Lolit Lugawan",
-  image: "https://images.unsplash.com/photo-1621861449101-20e73bceea14?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVYMYzhfgLFRfJ6O-kFDITXMUISSOwcN-5Gg&s",
   description: "Popular local lugawan serving arroz caldo, goto, and tokwa’t baboy.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱40 - ₱100",
@@ -2531,7 +2372,7 @@ const RestaurantsList = ({
 {
   id: "232",
   name: "Joven’s Lugawan ATBP",
-  image: "https://images.unsplash.com/photo-1617196034796-73dfa7b1b6f2?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdVcdUlgR9QxybekxX59Q0soYAZLk7OBUDyxB-BVEFDovThe0FsutroP6lmRanDFT9nJI&usqp=CAU",
   description: "Serving warm bowls of goto, mami, and silog meals — a comforting local eatery.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱40 - ₱120",
@@ -2541,17 +2382,18 @@ const RestaurantsList = ({
 {
   id: "233",
   name: "Manuel Onguda Peanut Stand",
-  image: "https://images.unsplash.com/photo-1617196034778-2c7e8b3db583?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlr9FRkrW52GGo31P8-n0buptw3mROQLwFKA&s",
   description: "Ambulant vendor selling roasted peanuts and local snacks loved by the community.",
   location: "Rizal St., Poblacion, Guinobatan, Albay",
   priceRange: "₱20 - ₱80",
   rating: 4.3,
   features: ["Take Out"],
 },
+// Ligao City, Albay Restaurants
 {
   id: "234",
   name: "Mang Inasal",
-  image: "https://images.unsplash.com/photo-1617196034796-73dfa7b1b6f2?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRra0O4GMI4dI1ZTdewYGPgh2QhKD6THI3PxA&s",
   description: "Famous Filipino grill restaurant serving chicken inasal, rice meals, and local favorites in a casual dining setting.",
   location: "1 JVG Bldg., McKinley St., Dunao, Ligao City",
   priceRange: "₱150 - ₱300",
@@ -2561,7 +2403,7 @@ const RestaurantsList = ({
 {
   id: "235",
   name: "7HR Bakery",
-  image: "https://images.unsplash.com/photo-1608198093002-ad4e005484f9?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTToPLFVxi7GQvsSGNVffOsRY9EmkkmUD8uJw&s",
   description: "Neighborhood bakery known for freshly baked bread, pastries, and local Filipino delicacies.",
   location: "Purok 3, Barayong, Ligao City",
   priceRange: "₱20 - ₱150",
@@ -2571,7 +2413,7 @@ const RestaurantsList = ({
 {
   id: "236",
   name: "8N' Stick Food Stand",
-  image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLpcESAbaN6Eih-Ettkax6wEy7OGtiK1xToQ&s",
   description: "A small street-style food stand serving skewers, grilled snacks, and rice meals for quick bites.",
   location: "Dunao, Ligao City",
   priceRange: "₱40 - ₱200",
@@ -2581,7 +2423,7 @@ const RestaurantsList = ({
 {
   id: "237",
   name: "90’s Resto Bar & Catering Services",
-  image: "https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2oAnrF1cARUXBDZHSrsAtDjSNyYI9RiwZ1w&s",
   description: "Retro-themed resto-bar offering hearty meals, drinks, and catering for parties and gatherings.",
   location: "Domingo Baybay Building, Purok 2 San Jose St., Sta. Cruz, Ligao City",
   priceRange: "₱250 - ₱800",
@@ -2591,7 +2433,7 @@ const RestaurantsList = ({
 {
   id: "238",
   name: "A & P Transport",
-  image: "https://images.unsplash.com/photo-1536520002442-39764a41e04c?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfma3B7-uQuTgIYYVk9nqQGZnXAkZpWzlyKw&s",
   description: "Local transport service provider ensuring comfortable and safe travel across Ligao and nearby towns.",
   location: "Perida St., Guilid, Ligao City",
   priceRange: "Service-based",
@@ -2601,7 +2443,7 @@ const RestaurantsList = ({
 {
   id: "239",
   name: "A. A. Lagarde Bulalohan",
-  image: "https://images.unsplash.com/photo-1596957049175-56d2d83d47be?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM_yG6M-tU98yGxMmhQJ9kLLYEKNpTjUh9uQ&s",
   description: "Known for its flavorful bulalo soup and Filipino comfort food along the Maharlika Highway.",
   location: "Maharlika Highway, Sta. Cruz, Ligao City",
   priceRange: "₱150 - ₱400",
@@ -2611,7 +2453,7 @@ const RestaurantsList = ({
 {
   id: "240",
   name: "Aida’s Pansitan & Eatery",
-  image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2rSGbz0hxhC11_lNYYD8vaXM1-Ynaa7OwYg&s",
   description: "A local favorite for its delicious pancit, silog meals, and traditional home-cooked dishes.",
   location: "Purok 4, Sta. Cruz, Ligao City",
   priceRange: "₱70 - ₱200",
@@ -2621,7 +2463,7 @@ const RestaurantsList = ({
 {
   id: "241",
   name: "Andok’s Litson Corporation",
-  image: "https://images.unsplash.com/photo-1606756790138-261ed3aa1c3b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBllLYS4gcV4pY87qwhipPYzhf7LSvdvj4IA&s",
   description: "Well-loved Filipino brand offering roasted chicken, liempo, and ready-to-go meals.",
   location: "Daisy Matias Bldg., Maharlika Highway, Sta. Cruz, Ligao City",
   priceRange: "₱150 - ₱350",
@@ -2631,7 +2473,7 @@ const RestaurantsList = ({
 {
   id: "242",
   name: "Andrea Bakery & Bakeshop",
-  image: "https://images.unsplash.com/photo-1625944436164-89d34b78b810?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmNSr6qPQs-KJ3kd46y0CoXLAy0XAcJrqB_Q&s",
   description: "A charming local bakery known for cakes, breads, and pastries baked fresh daily.",
   location: "Riamangi Building, San Jose, Dunao, Ligao City",
   priceRange: "₱30 - ₱250",
@@ -2641,7 +2483,7 @@ const RestaurantsList = ({
 {
   id: "243",
   name: "Ate Luz Loglogan",
-  image: "https://images.unsplash.com/photo-1625944548128-bdeab1b2f7f3?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYI4N6i2Lc0cF1erFrhLClKmaduY-gSwTDLA&s",
   description: "A cozy canteen offering affordable meals and local specialties in the heart of Ligao.",
   location: "Manuel Vasquez Bldg., Mabini St., Tinago, Ligao City",
   priceRange: "₱60 - ₱180",
@@ -2651,7 +2493,7 @@ const RestaurantsList = ({
 {
   id: "244",
   name: "Austero Eatery",
-  image: "https://images.unsplash.com/photo-1625944528168-c0b2f5f4c6ce?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdSSKVtnHE82e2kWQbqRWPDAt2UCgYE5AZyg&s",
   description: "Serving Filipino favorites and silog meals in a welcoming neighborhood setting.",
   location: "Samson St., Sta. Cruz, Ligao City",
   priceRange: "₱70 - ₱200",
@@ -2661,7 +2503,7 @@ const RestaurantsList = ({
 {
   id: "245",
   name: "Aya’s Eatery",
-  image: "https://images.unsplash.com/photo-1601050690597-dfefccf79b1a?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyVp07uWvTAaScsCkH9pUg5zdj3edz8md7KQ&s",
   description: "A casual eatery known for affordable Filipino dishes, perfect for quick and hearty meals.",
   location: "J.C. Lladoc Dealino Bldg., McKinley St., Bagumbayan, Ligao City",
   priceRange: "₱70 - ₱200",
@@ -2671,7 +2513,7 @@ const RestaurantsList = ({
 {
   id: "246",
   name: "Baby M Food Hub",
-  image: "https://images.unsplash.com/photo-1617093727343-374698b1c713?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8htT8UBBEu6j7AXJbpSbp8CQa3ZAwFGC9ZQ&s",
   description: "Trendy food hub serving snacks, milk teas, and rice bowls loved by young locals.",
   location: "Ma. Teresa Oroña Bldg., Calzada, Ligao City",
   priceRange: "₱100 - ₱300",
@@ -2681,7 +2523,7 @@ const RestaurantsList = ({
 {
   id: "247",
   name: "Belleza Eatery",
-  image: "https://images.unsplash.com/photo-1617196034796-73dfa7b1b6f2?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfCq0kYQ5dnxmYPQ-YI6xnj0gpMfm--_qkQ&s",
   description: "Home-style eatery serving classic Filipino ulam dishes and merienda options.",
   location: "Ma. Salve Sampal Tecson Bldg., Sta. Cruz, Ligao City",
   priceRange: "₱60 - ₱180",
@@ -2691,7 +2533,7 @@ const RestaurantsList = ({
 {
   id: "248",
   name: "Benzon Burgerhouse",
-  image: "https://images.unsplash.com/photo-1625944533990-c7a0cf2b8f8c?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHxRbpcvO6ZrZm9TQ9oVpiCyn_vANEibbkFw&s",
   description: "Local burger joint offering affordable meals, catering services, and signature burger plates.",
   location: "Door 10 DY-OK Bldg., Legaspi St., Guilid, Ligao City",
   priceRange: "₱80 - ₱250",
@@ -2701,7 +2543,7 @@ const RestaurantsList = ({
 {
   id: "249",
   name: "Berman Ice Cream",
-  image: "https://images.unsplash.com/photo-1625945278295-cc3fa5b6b49e?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDjNabgwxKQMrycPmgv3Xy8joZhmvIf_2wSQ&s",
   description: "Popular local ice cream spot serving creamy homemade treats in various flavors.",
   location: "Añonuevo Boarding House, San Lorenzo St., Guilid, Ligao City",
   priceRange: "₱50 - ₱150",
@@ -2711,7 +2553,7 @@ const RestaurantsList = ({
 {
   id: "250",
   name: "Berman Ice Cream 1",
-  image: "https://images.unsplash.com/photo-1590080875831-35e31fa1ed4b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_YUFrGxJLFiB_71sQKSFTvXLxD4vovEB7BQ&s",
   description: "Ice cream stand located at LCC Ligao Town Center serving classic and new flavors.",
   location: "LCC Ligao Town Center, McKinley St., Bagumbayan, Ligao City",
   priceRange: "₱50 - ₱120",
@@ -2721,7 +2563,7 @@ const RestaurantsList = ({
 {
   id: "251",
   name: "Bikolnon Pansit Malabon",
-  image: "https://images.unsplash.com/photo-1619096252214-efcb88d3c3de?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjw6hzbFZGKMD5TKnMciG4Rx5CX7OVSQLWvA&s",
   description: "Known for authentic Bicol-style pancit malabon and local merienda favorites.",
   location: "McKinley St., Calzada, Ligao City",
   priceRange: "₱70 - ₱180",
@@ -2731,7 +2573,7 @@ const RestaurantsList = ({
 {
   id: "252",
   name: "Blue Toque Foods Enterprises",
-  image: "https://images.unsplash.com/photo-1617196034778-2c7e8b3db583?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB4k50GyNsEvy-ZHJJI9tMdksnt2WhESJgag&s",
   description: "Modern food cart offering sweet and savory snacks inside LCC Ligao Town Center.",
   location: "LCC Ligao Town Center, McKinley St., Bagumbayan, Ligao City",
   priceRange: "₱50 - ₱200",
@@ -2741,7 +2583,7 @@ const RestaurantsList = ({
 {
   id: "253",
   name: "Boboy-Bobay Foodhaus",
-  image: "https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa7KJUF-cAo5rNulVqxmVFWa8sOXq_Qt7wkw&s",
   description: "Family eatery serving classic Filipino comfort food and local catering services.",
   location: "#160 Purok 2, Tuburan, Ligao City",
   priceRange: "₱80 - ₱250",
@@ -2751,7 +2593,7 @@ const RestaurantsList = ({
 {
   id: "254",
   name: "Bon Vitto Foodhaus (Canteen Extension)",
-  image: "https://images.unsplash.com/photo-1627308595216-4822c8540d19?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZnHh1db4Dxb1MvYrqG2KEw6wFAjAwSWyTGA&s",
   description: "Canteen extension known for quick lunch meals and student-friendly prices.",
   location: "4 AJR Building, McKinley St., Calzada, Ligao City",
   priceRange: "₱60 - ₱150",
@@ -2761,7 +2603,7 @@ const RestaurantsList = ({
 {
   id: "255",
   name: "Boss Abe’s Inihouse",
-  image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKT_SePo5nyj8sUkM0eF4vf7T5nqW0lQXJag&s",
   description: "Grill and inihaw restaurant serving barbecues and Filipino grilled favorites.",
   location: "Seva Building, McKinley St., Calzada, Ligao City",
   priceRange: "₱100 - ₱300",
@@ -2771,7 +2613,7 @@ const RestaurantsList = ({
 {
   id: "256",
   name: "Buddy Mar’s Bakery",
-  image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjEADl1ZhQ6MGZfzaXMOT-HZ-U05rAJSvGSQ&s",
   description: "Home-style bakery offering freshly baked bread, pastries, and local delicacies.",
   location: "Purok 2, Paulba, Ligao City",
   priceRange: "₱20 - ₱100",
@@ -2781,7 +2623,7 @@ const RestaurantsList = ({
 {
   id: "257",
   name: "Bukofrio Foodcart",
-  image: "https://images.unsplash.com/photo-1590080875831-35e31fa1ed4b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCYjBYzbiZI3Y1jPdR6PRKaURYax-QK592nA&s",
   description: "Refreshing buko-based desserts and shakes perfect for hot days in Ligao.",
   location: "LCC Ligao Town Center, McKinley St., Bagumbayan, Ligao City",
   priceRange: "₱40 - ₱120",
@@ -2791,7 +2633,7 @@ const RestaurantsList = ({
 {
   id: "258",
   name: "Cafe Arabella & Beauty Bar - 1",
-  image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnJCkrV1Kukk_z25f1CWP8zzciYcAw0YymxA&s",
   description: "Cozy café serving premium coffee, pastries, and light meals with a chic ambiance.",
   location: "San Lorenzo St., Guilid, Ligao City",
   priceRange: "₱100 - ₱300",
@@ -2801,7 +2643,7 @@ const RestaurantsList = ({
 {
   id: "259",
   name: "Casa de Pizza",
-  image: "https://images.unsplash.com/photo-1601924582971-9813ea0e3cbb?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrzcFmWMM4jJ96iHttPWJs9G2jxzOl4P9h1w&s",
   description: "Homegrown pizza spot known for freshly baked thin crust pizzas and local flavors.",
   location: "McKinley St., Calzada, Ligao City",
   priceRange: "₱150 - ₱400",
@@ -2811,7 +2653,7 @@ const RestaurantsList = ({
 {
   id: "260",
   name: "Casa de Pizza I",
-  image: "https://images.unsplash.com/photo-1601924582971-9813ea0e3cbb?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSii0FpUvLLMgU4Ws3FBI41RboZZaaSheb8hg&s",
   description: "Second branch serving the same beloved pizzas and pasta meals for families.",
   location: "Samson St., Sta Cruz, Ligao City",
   priceRange: "₱150 - ₱400",
@@ -2821,7 +2663,7 @@ const RestaurantsList = ({
 {
   id: "261",
   name: "Casa de Pizza II",
-  image: "https://images.unsplash.com/photo-1555992336-03a23c42dfd3?auto=format&fit=crop&w=1470&q=80",
+  image: "https://ligaocity.albay.gov.ph/wp-content/uploads/2018/01/casa-0de-pizza.jpg",
   description: "Newest branch of Casa de Pizza offering the same great taste and cozy ambiance.",
   location: "Dunao, Ligao City",
   priceRange: "₱150 - ₱400",
@@ -2831,7 +2673,7 @@ const RestaurantsList = ({
 {
   id: "262",
   name: "Cavasi Bakery",
-  image: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRujkQhLNMbTwkIKPSpk8jNb36fp9cE3hyRFQ&s",
   description: "Neighborhood bakery offering affordable breads and native pastries.",
   location: "Cavasi, Ligao City",
   priceRange: "₱20 - ₱100",
@@ -2841,7 +2683,7 @@ const RestaurantsList = ({
 {
   id: "263",
   name: "Cavasi Bakery 1",
-  image: "https://images.unsplash.com/photo-1598373182133-5b74276e0e12?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzb9K0oKyw_oVCCBnJDDjlvu4rGuT50H0Ew0cq0DmSbdoXpgcwE-ZjEwMqdGPsr-RbWiE&usqp=CAU",
   description: "Retail bakery branch located downtown serving a variety of freshly baked goods.",
   location: "Mabini St., Bagumbayan, Ligao City",
   priceRange: "₱20 - ₱100",
@@ -2851,7 +2693,7 @@ const RestaurantsList = ({
 {
   id: "264",
   name: "Chef's Cafe",
-  image: "https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkUCglJrADpeBD7VOwSLKN7UCjy0MmNhi-kA&s",
   description: "A casual dining spot offering hearty meals, pasta, and coffee in a relaxed setting.",
   location: "Rebueno's Building, Blumentritt St., Sta. Cruz, Ligao City",
   priceRange: "₱100 - ₱300",
@@ -2861,7 +2703,7 @@ const RestaurantsList = ({
 {
   id: "265",
   name: "Claire's Resto & Catering",
-  image: "https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1470&q=80",
+  image: "https://ligaocity.albay.gov.ph/wp-content/uploads/2018/07/claire-resto.jpg",
   description: "Full-service restaurant and catering provider known for its flavorful Bicolano dishes.",
   location: "Ildefonso D. Quilingan Space, Concepcion St., Dunao, Ligao City",
   priceRange: "₱120 - ₱400",
@@ -2871,7 +2713,7 @@ const RestaurantsList = ({
 {
   id: "266",
   name: "Crisver Bakery",
-  image: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXdickSaI92SBBZKwrt_Z7kar-mU9PfOO6FQ&s",
   description: "Neighborhood bakery serving classic Filipino bread and pastries daily.",
   location: "Purok 1, Barayong, Ligao City",
   priceRange: "₱20 - ₱100",
@@ -2891,7 +2733,7 @@ const RestaurantsList = ({
 {
   id: "268",
   name: "Dbar Sports Resto Catering & Rental Services",
-  image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPuRlu2ORwzb3gSmnghe4o5FdjHvP8th_rg&s",
   description: "A popular sports-themed resto-bar offering catering and function rentals.",
   location: "National Highway, Sta. Cruz, Ligao City, Albay",
   priceRange: "₱150 - ₱500",
@@ -2901,7 +2743,7 @@ const RestaurantsList = ({
 {
   id: "269",
   name: "Detablan Bakery",
-  image: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVbhsGf2tqxLjnu0o-_l_WW40xv6QCe5309Q&s",
   description: "Local bakery providing freshly baked pandesal, pastries, and local bread favorites.",
   location: "Barayong, Ligao City",
   priceRange: "₱20 - ₱80",
@@ -2911,7 +2753,7 @@ const RestaurantsList = ({
 {
   id: "270",
   name: "Dimple Bakery",
-  image: "https://images.unsplash.com/photo-1598373182133-5b74276e0e12?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS00fc0G1RJqy5h_1yTXe2Pf0mifm9ExCy9RA&s",
   description: "Community bakery known for its delicious breads and sweet pastries in Bay, Ligao.",
   location: "Purok 4, Bay, Ligao City, Albay",
   priceRange: "₱20 - ₱100",
@@ -2931,7 +2773,7 @@ const RestaurantsList = ({
 {
   id: "272",
   name: "Doy-Cel’s Bakeshop",
-  image: "https://images.unsplash.com/photo-1628877124704-8c1f1b13295b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdFPYa0pNDpEy4SjbA80yiVjJHAe7bd4P0MQ&s",
   description: "Bakery and retail shop offering soft breads, pastries, and other baked snacks.",
   location: "Purok 4, Batang, Ligao City",
   priceRange: "₱20 - ₱80",
@@ -2941,7 +2783,7 @@ const RestaurantsList = ({
 {
   id: "273",
   name: "Eiyana Food Products",
-  image: "https://images.unsplash.com/photo-1601050690597-dfbc94cc8c71?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4KWzfxVSuj68j3GDsDUflrbmywBvfKCWEXg&s",
   description: "Local food processor producing native delicacies and snack products in Ligao.",
   location: "Purok 5, Paulog, Ligao City",
   priceRange: "₱50 - ₱200",
@@ -2951,7 +2793,7 @@ const RestaurantsList = ({
 {
   id: "274",
   name: "El Riezo Pizza",
-  image: "https://images.unsplash.com/photo-1601924582971-9813ea0e3cbb?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHlpko6pen_Q-eB8IMItfeXKeHMM1khA8HMA&s",
   description: "Pizza stall inside LCC Ligao serving freshly baked pizzas with local toppings.",
   location: "LCC Ligao Town Center, McKinley St., Bagumbayan, Ligao City",
   priceRange: "₱100 - ₱350",
@@ -2961,7 +2803,7 @@ const RestaurantsList = ({
 {
   id: "275",
   name: "Elkanville Hotel",
-  image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1470&q=80",
+  image: "https://pix10.agoda.net/hotelImages/10774510/-1/3be4831f57ea06b3150de9ae7fa10fe1.jpg?ca=9&ce=1&s=414x232",
   description: "A cozy hotel and restaurant offering comfortable accommodations and homestyle meals.",
   location: "Sitio Tobgon, Batang, Ligao City, Albay",
   priceRange: "₱500 - ₱1500",
@@ -2971,7 +2813,7 @@ const RestaurantsList = ({
 {
   id: "276",
   name: "Emanna Corporation",
-  image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbEqJ6u5XbfTjwpS5PIpB3pWT543nrxlGg8g&s",
   description: "Food stall operating inside LCC Ligao Town Center offering local snacks and beverages.",
   location: "LCC Ligao Town Center, McKinley St., Bagumbayan, Ligao City",
   priceRange: "₱50 - ₱200",
@@ -2981,7 +2823,7 @@ const RestaurantsList = ({
 {
   id: "277",
   name: "Ervin Lopez Fresh Fish",
-  image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRomvPK9vganrT60AHjZqInGH_1XgMQPiU2IQ&s",
   description: "Fresh fish vendor located at the market site offering daily seafood supplies.",
   location: "Fish Section, Market Site, Bagumbayan, Ligao City",
   priceRange: "₱80 - ₱400",
@@ -2991,7 +2833,7 @@ const RestaurantsList = ({
 {
   id: "278",
   name: "Felma’s Canteen",
-  image: "https://images.unsplash.com/photo-1627308595216-4822c8540d19?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfmXDv82hmxKE219rNvl1h8WCPYAbFuYYgeg&s",
   description: "Simple canteen serving affordable meals and home-cooked dishes for locals.",
   location: "Soledad St., Guilid, Ligao City",
   priceRange: "₱60 - ₱150",
@@ -3001,7 +2843,7 @@ const RestaurantsList = ({
 {
   id: "279",
   name: "Food Talk Barbeque House",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW7E196hIGbUN1WKBDq1lv9Ym0j7ohCe4qsw&s",
   description: "Barbecue house offering grilled meats, skewers, and local favorites along Maharlika Highway.",
   location: "Maharlika Highway, Calzada, Ligao City",
   priceRange: "₱100 - ₱300",
@@ -3011,7 +2853,7 @@ const RestaurantsList = ({
 {
   id: "280",
   name: "Francisco Carinderia I",
-  image: "https://images.unsplash.com/photo-1598515213692-1b41c6193c1a?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJpL3odNYlFOm66tGZ4vmJinyxVkqAmSHmow&s",
   description: "Classic carinderia offering home-cooked Bicolano dishes and affordable meals.",
   location: "Stall #14 Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱50 - ₱150",
@@ -3021,7 +2863,7 @@ const RestaurantsList = ({
 {
   id: "281",
   name: "Francisco Carinderia II",
-  image: "https://images.unsplash.com/photo-1600891964336-6e20f6e2c0fb?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4KWzfxVSuj68j3GDsDUflrbmywBvfKCWEXg&s",
   description: "Extension of Francisco Carinderia serving the same hearty local meals and snacks.",
   location: "Stall #15 Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱50 - ₱150",
@@ -3031,7 +2873,7 @@ const RestaurantsList = ({
 {
   id: "282",
   name: "G. Quides Eatery",
-  image: "https://images.unsplash.com/photo-1596394516093-501ba68a0e55?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqqQ612olKtJys67HhkDBkFLHrA2mMA5Aayw&s",
   description: "Small eatery located at the Ligao Market offering quick and affordable meals.",
   location: "Stall #11 Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱50 - ₱120",
@@ -3041,7 +2883,7 @@ const RestaurantsList = ({
 {
   id: "283",
   name: "G. Quides Eatery 1",
-  image: "https://images.unsplash.com/photo-1625944228702-b2e289cfd8a1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReWlG__st-WoE1PKde1P9MZjMJxpERDZ8KAQ&s",
   description: "Second branch of G. Quides Eatery offering the same comfort dishes and rice meals.",
   location: "Stall #6 Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱50 - ₱120",
@@ -3051,7 +2893,7 @@ const RestaurantsList = ({
 {
   id: "284",
   name: "Gabby’s Sizzling House",
-  image: "https://images.unsplash.com/photo-1618213837799-1f82b9f2eb94?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9sWfGTRPskOiLjXba7Qo3QPrz3-MS7-XjpA&s",
   description: "Food cart specializing in sizzling plates, sisig, and grilled meals perfect for quick dining.",
   location: "McKinley St., Dunao, Ligao City",
   priceRange: "₱100 - ₱250",
@@ -3061,7 +2903,7 @@ const RestaurantsList = ({
 {
   id: "285",
   name: "Garibee Barbeque Stand",
-  image: "https://images.unsplash.com/photo-1600891964526-414b87c3d2f6?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTULMC4tlFRSXHU7DfbKDb3S3_XOPN3GDmqkw&s",
   description: "Barbecue stall serving grilled pork, chicken, and street-style dishes for on-the-go customers.",
   location: "McKinley St., Dunao, Ligao City",
   priceRange: "₱50 - ₱150",
@@ -3071,7 +2913,7 @@ const RestaurantsList = ({
 {
   id: "286",
   name: "Garibee Fried Chicken House",
-  image: "https://images.unsplash.com/photo-1626084573974-08e85c65762a?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4j-y_485qvA9GJBn6iYW8CIX_BgfxZ8lbFQ&s",
   description: "Food stall offering crispy fried chicken meals and quick snacks.",
   location: "McKinley St., Dunao, Ligao City",
   priceRange: "₱80 - ₱180",
@@ -3081,7 +2923,7 @@ const RestaurantsList = ({
 {
   id: "287",
   name: "GHQ Bar and Grill",
-  image: "https://images.unsplash.com/photo-1618213827343-6a6cdb5b05f7?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8UmKqV6vBu2HP-sLGGpJ26m9ldvwFhpve8A&s",
   description: "Lively bar and grill offering beer, pulutan, and videoke entertainment for night gatherings.",
   location: "Mabini St., Tinago, Ligao City",
   priceRange: "₱150 - ₱500",
@@ -3091,7 +2933,7 @@ const RestaurantsList = ({
 {
   id: "288",
   name: "Gloh Eatery",
-  image: "https://images.unsplash.com/photo-1600271886736-6f8e6a3bde44?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRObFO7TlsRlP-eGXphBTYtI71L9dwWNNbMgg&s",
   description: "Market-side eatery serving affordable rice meals and local dishes.",
   location: "Stall #4 Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱50 - ₱120",
@@ -3101,7 +2943,7 @@ const RestaurantsList = ({
 {
   id: "289",
   name: "Graceland Food Industries, Inc.",
-  image: "https://images.unsplash.com/photo-1604452911207-055f03df63ae?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToaFqS4ivsk4DNmFO19FXXGvgOKFelsefP3Q&s",
   description: "Popular local chain offering pastries, burgers, and Filipino meals in a café-style setting.",
   location: "McKinley St., Dunao, Ligao City",
   priceRange: "₱80 - ₱300",
@@ -3111,7 +2953,7 @@ const RestaurantsList = ({
 {
   id: "290",
   name: "Graziele Brizuela's Eatery 1",
-  image: "https://images.unsplash.com/photo-1596394516093-501ba68a0e55?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQVBmri8FwxymfkN7kUej1WhHlMM90h_c47Q&s",
   description: "Home-style eatery serving flavorful Filipino dishes for locals and market-goers.",
   location: "Stall #13 Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱50 - ₱130",
@@ -3121,7 +2963,7 @@ const RestaurantsList = ({
 {
   id: "291",
   name: "Graziele Brizuela's Eatery II",
-  image: "https://images.unsplash.com/photo-1600891963966-4cc62b52752b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Q7cLhisrej2zdNIUs_ObtJT9QafMHmjOmxqGFUboLaonfFecerRv9U9m9l_5UGJdBjo&usqp=CAU",
   description: "Sister eatery of Graziele Brizuela’s serving local specialties and snacks.",
   location: "Stall #12 Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱50 - ₱130",
@@ -3131,7 +2973,7 @@ const RestaurantsList = ({
 {
   id: "292",
   name: "Green Bamboo Eatery",
-  image: "https://images.unsplash.com/photo-1600891964610-260f3e7d1b8b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiXbFl1T2A6TOE0oLZV99B0LFzugzFJ7OLCA&s",
   description: "Relaxed eatery offering Filipino favorites in a bamboo-themed setting.",
   location: "Natera St., Sta. Cruz, Ligao City",
   priceRange: "₱80 - ₱200",
@@ -3141,7 +2983,7 @@ const RestaurantsList = ({
 {
   id: "293",
   name: "HPL Ricemill",
-  image: "https://images.unsplash.com/photo-1601050690597-dfbc94cc8c71?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSbOc8BzSoiNsJfgUCtqT0s6OIKpst88XKUg&s",
   description: "Local rice mill serving the agricultural community of Ligao City.",
   location: "Tinampo, Ligao City",
   priceRange: "₱—",
@@ -3151,7 +2993,7 @@ const RestaurantsList = ({
 {
   id: "294",
   name: "Iya’s Canteen",
-  image: "https://images.unsplash.com/photo-1627308595216-4822c8540d19?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ89pxH_5MjYmXz2EHCK73FYJI7QffTzzB4GQ&s",
   description: "Neighborhood canteen serving affordable home-cooked Filipino dishes for students and workers.",
   location: "Purok 1, Bay, Ligao City",
   priceRange: "₱50 - ₱150",
@@ -3161,7 +3003,7 @@ const RestaurantsList = ({
 {
   id: "295",
   name: "J & G Bakery",
-  image: "https://images.unsplash.com/photo-1608198093002-ad4e005484f9?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxiqQ_IsfusmauyXF1Nv_Iw9IlFoQLTP484Q&s",
   description: "Small bakery offering freshly baked breads, pastries, and local delicacies.",
   location: "Purok 2, Paulba, Ligao City",
   priceRange: "₱20 - ₱150",
@@ -3171,7 +3013,7 @@ const RestaurantsList = ({
 {
   id: "296",
   name: "J. Sinforoso’s Fruit Stand",
-  image: "https://images.unsplash.com/photo-1584302179601-529faa3f70c7?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP-ay65NLdC5tgJ-ECCWDpl3n3UahzUy7cAg&s",
   description: "Fruit and refreshment stand along the highway offering fresh fruits, juices, and snacks.",
   location: "Maharlika Highway, Paulog, Ligao City",
   priceRange: "₱30 - ₱200",
@@ -3181,7 +3023,7 @@ const RestaurantsList = ({
 {
   id: "297",
   name: "Jack’s Place",
-  image: "https://images.unsplash.com/photo-1565299543923-37dd37887187?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV3e5SzXPyu554emyCVrVJ6IwSWWXefj_9bg&s",
   description: "Bistro and music bar featuring casual dining, acoustic nights, and Filipino comfort food.",
   location: "Rebueno’s Building, Del Pilar St., Sta. Cruz, Ligao City",
   priceRange: "₱150 - ₱500",
@@ -3191,7 +3033,7 @@ const RestaurantsList = ({
 {
   id: "298",
   name: "Jambos Resto Bar",
-  image: "https://images.unsplash.com/photo-1601924582971-c6a0a26e8f84?auto=format&fit=crop&w=1470&q=80",
+  image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/97/58/e9/romantic-lights-at-night.jpg?w=500&h=-1&s=1",
   description: "Trendy restobar offering grilled dishes, pulutan, and a variety of beverages in a lively atmosphere.",
   location: "Stephanie Barde Building, P-5 Mercado St., Bagumbayan, Ligao City",
   priceRange: "₱150 - ₱600",
@@ -3201,7 +3043,7 @@ const RestaurantsList = ({
 {
   id: "299",
   name: "JCL Delicacies",
-  image: "https://images.unsplash.com/photo-1604909053129-2c25a7586c0b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVQyo6cyrBdJn4xdeiSUu44sEiBREsq6wllQ&s",
   description: "Home-based food processing business producing local delicacies and pasalubong items.",
   location: "Purok 2, Nasisi, Ligao City",
   priceRange: "₱50 - ₱250",
@@ -3211,7 +3053,7 @@ const RestaurantsList = ({
 {
   id: "300",
   name: "Jonna’s Bakery",
-  image: "https://images.unsplash.com/photo-1608198093002-ad4e005484f9?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwHX9ENeTDtoF3-WH7oVwJbZS2UsVTY2q_MA&s",
   description: "Local bakery known for freshly baked breads, cakes, and pastries daily.",
   location: "Winston Clariño Building, Legaspi St., Bagumbayan, Ligao City",
   priceRange: "₱20 - ₱200",
@@ -3221,7 +3063,7 @@ const RestaurantsList = ({
 {
   id: "301",
   name: "Juanita’s Wrap and Roll",
-  image: "https://images.unsplash.com/photo-1612392061777-1a08d6ce303e?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmhefhjqBExAFPmzGRpXyr6oo5IHWWH7lHXg&s",
   description: "Food cart serving shawarma-style wraps, lumpia, and other Filipino snacks.",
   location: "MLQ St., Sta. Cruz, Ligao City",
   priceRange: "₱50 - ₱150",
@@ -3231,7 +3073,7 @@ const RestaurantsList = ({
 {
   id: "302",
   name: "Jun & Glenn Store",
-  image: "https://images.unsplash.com/photo-1627308595471-9c6b73b6b021?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfMwFRki2X2gCLyGZTTuiG_sr_Xv5WTTYwVA&s",
   description: "Market retailer offering basic groceries, snacks, and beverages.",
   location: "Stall #5, Building IV Market Site, Bagumbayan, Ligao City",
   priceRange: "₱20 - ₱500",
@@ -3241,7 +3083,7 @@ const RestaurantsList = ({
 {
   id: "303",
   name: "Junior Burger Hauz",
-  image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHVuCoaUI3qOemMPxYJ2RDLhtAI445bIS5Zw&s",
   description: "Burger stand serving classic burgers, fries, and refreshments in a casual setup.",
   location: "Maria Theresa Sayson Building, San Jose St., Dunao, Ligao City",
   priceRange: "₱80 - ₱200",
@@ -3251,7 +3093,7 @@ const RestaurantsList = ({
 {
   id: "304",
   name: "Kainan ni Manoy",
-  image: "https://images.unsplash.com/photo-1618213762616-6c13e3557d3b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfTWLlrRxb78yVsRQnHZW0Q5ft5enbSludPA&s",
   description: "Traditional carinderia serving local home-cooked dishes at affordable prices.",
   location: "Wilfredo Matias Jr. Building, Washington St., Binatagan, Ligao City",
   priceRange: "₱50 - ₱120",
@@ -3261,7 +3103,7 @@ const RestaurantsList = ({
 {
   id: "305",
   name: "Kainan sa Gulod",
-  image: "https://images.unsplash.com/photo-1625944228702-b2e289cfd8a1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMZ_YTYPRJ84rjPR90wLawvuDd49vub2AGrA&s",
   description: "Rustic eatery located in Tuburan offering native dishes and relaxing ambiance.",
   location: "Tuburan, Ligao City",
   priceRange: "₱60 - ₱200",
@@ -3271,7 +3113,7 @@ const RestaurantsList = ({
 {
   id: "306",
   name: "Kapitan Kafe",
-  image: "https://images.unsplash.com/photo-1576618148400-f54bed99fc88?auto=format&fit=crop&w=1470&q=80",
+  image: "https://ligaocity.albay.gov.ph/wp-content/uploads/2018/07/kapitan.png",
   description: "Cafe-style eatery along the national highway serving coffee, snacks, and Filipino meals.",
   location: "CJBJ Building, National Highway, Guilid, Ligao City",
   priceRange: "₱80 - ₱250",
@@ -3281,7 +3123,7 @@ const RestaurantsList = ({
 {
   id: "307",
   name: "Kids Manna Food Kiosk",
-  image: "https://images.unsplash.com/photo-1625944228702-b2e289cfd8a1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLpcESAbaN6Eih-Ettkax6wEy7OGtiK1xToQ&s",
   description: "Small kiosk serving quick meals and snacks ideal for students and passersby.",
   location: "Purok 2, Tuburan, Ligao City",
   priceRange: "₱40 - ₱120",
@@ -3291,7 +3133,7 @@ const RestaurantsList = ({
 {
   id: "308",
   name: "Kramgyeopsal Grill and Hotpot",
-  image: "https://images.unsplash.com/photo-1601924579970-38b9c7c3a8a0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfHjTz5VMs27WNKIbRwemAtmKKcMuOCBOsyw&s",
   description: "Korean-inspired restaurant offering unlimited samgyeopsal and hotpot meals in Ligao City.",
   location: "Purok 3, National Highway, Sta. Cruz, Ligao City",
   priceRange: "₱299 - ₱499",
@@ -3301,7 +3143,7 @@ const RestaurantsList = ({
 {
   id: "309",
   name: "Kusina Cha",
-  image: "https://images.unsplash.com/photo-1617196034778-2c7e8b3db583?auto=format&fit=crop&w=1470&q=80",
+  image: "https://img.restaurantguru.com/c001-Restaurant-Kusina-CHA-Pancit-Loglog-view.jpg",
   description: "Casual eatery serving home-cooked Filipino favorites and affordable meals for locals.",
   location: "E. Azores Building, Samson St., Sta. Cruz, Ligao City",
   priceRange: "₱60 - ₱200",
@@ -3311,7 +3153,7 @@ const RestaurantsList = ({
 {
   id: "310",
   name: "L.A.M. Foodcart & Catering Services",
-  image: "https://images.unsplash.com/photo-1605478579820-efb0c7e2cf4b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzh3cdU-LDje66lXGJ0KnaPClnMT8yuYOv9Q&s",
   description: "Mobile foodcart and catering service offering delicious party trays and quick snacks.",
   location: "Purok 7, Batang, Ligao City",
   priceRange: "₱100 - ₱400",
@@ -3321,7 +3163,7 @@ const RestaurantsList = ({
 {
   id: "311",
   name: "La Olivera Bakeshop",
-  image: "https://images.unsplash.com/photo-1576618148400-f54bed99fc88?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAef619Dq51wPu_wEcGmMuaLHoNj7DD7tXrQ&s",
   description: "Market bakeshop serving classic breads, pastries, and local baked delicacies daily.",
   location: "Stall #1, Building I, Market Site, Bagumbayan, Ligao City",
   priceRange: "₱20 - ₱120",
@@ -3331,7 +3173,7 @@ const RestaurantsList = ({
 {
   id: "312",
   name: "La Terraza Restaurant",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREunHBBs1UCVpzQGFyswXBNr4rEYxNNP9YCA&s",
   description: "Elegant restaurant and catering venue offering Filipino and international dishes in a cozy setting.",
   location: "Tuburan, Ligao City",
   priceRange: "₱150 - ₱600",
@@ -3341,7 +3183,7 @@ const RestaurantsList = ({
 {
   id: "313",
   name: "Ligao JN Bakeshop (Bagumbayan Branch)",
-  image: "https://images.unsplash.com/photo-1611175694988-9288f9a1f6db?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR69DP5XBTG1BNKf5ucAQlu8cKwuY2XmVwAJQ&s",
   description: "Popular local bakery branch serving a variety of breads, pastries, and cakes.",
   location: "Legaspi St., Bagumbayan, Ligao City",
   priceRange: "₱20 - ₱150",
@@ -3351,7 +3193,7 @@ const RestaurantsList = ({
 {
   id: "314",
   name: "Lim’s Bakery",
-  image: "https://images.unsplash.com/photo-1611077545399-6b47e93a174c?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAlJWL8oZqh2LV8MgJutKCWd2gbf--TJM4A&s",
   description: "Neighborhood bakery offering freshly baked goods and sweet pastries for everyday cravings.",
   location: "1 Bird Corporation, McKinley St., Guilid, Ligao City",
   priceRange: "₱20 - ₱100",
@@ -3361,7 +3203,7 @@ const RestaurantsList = ({
 {
   id: "315",
   name: "Lola Mommy Eatery",
-  image: "https://images.unsplash.com/photo-1618213762616-6c13e3557d3b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTiFhorSEHSHELFiYuaptNgGknSzR_iJ_kdA&s",
   description: "Home-style eatery known for its comforting Filipino meals and generous servings.",
   location: "Quililan Building, San Jose St., Dunao, Ligao City",
   priceRange: "₱70 - ₱180",
@@ -3371,7 +3213,7 @@ const RestaurantsList = ({
 {
   id: "316",
   name: "Lopez-Payoyo Store",
-  image: "https://images.unsplash.com/photo-1627308595471-9c6b73b6b021?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZxEr_X3Svw5ihISHvk8CJ7l_Qi0UqEOwnfw&s",
   description: "Retail store offering essential goods, grocery items, and daily household needs.",
   location: "Stall #8, Building I, Market Site, Bagumbayan, Ligao City",
   priceRange: "₱20 - ₱500",
@@ -3381,7 +3223,7 @@ const RestaurantsList = ({
 {
   id: "317",
   name: "Lopez-Payoyo Store II",
-  image: "https://images.unsplash.com/photo-1605478579820-efb0c7e2cf4b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZxEr_X3Svw5ihISHvk8CJ7l_Qi0UqEOwnfw&s",
   description: "Retail store extension selling various non-essential goods and convenience items.",
   location: "Stall #9, Building I, Market Site, Bagumbayan, Ligao City",
   priceRange: "₱20 - ₱400",
@@ -3391,7 +3233,7 @@ const RestaurantsList = ({
 {
   id: "318",
   name: "Lopez-Payoyo Store III",
-  image: "https://images.unsplash.com/photo-1605478579820-efb0c7e2cf4b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZxEr_X3Svw5ihISHvk8CJ7l_Qi0UqEOwnfw&s",
   description: "Another branch of Lopez-Payoyo retailing daily essentials for the local community.",
   location: "Stall #10, Building I, Market Site, Bagumbayan, Ligao City",
   priceRange: "₱20 - ₱400",
@@ -3401,7 +3243,7 @@ const RestaurantsList = ({
 {
   id: "319",
   name: "M. Lopez Fresh Fish Stall",
-  image: "https://images.unsplash.com/photo-1585647347480-046edb6c4a97?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuBNulr9iSspD7Z8msBPH30WxSwZUXSs7Mzw&s",
   description: "Fish vendor at Ligao Market providing fresh seafood daily for local customers.",
   location: "Old Camarin Market Site, Bagumbayan, Ligao City",
   priceRange: "₱50 - ₱400",
@@ -3411,7 +3253,7 @@ const RestaurantsList = ({
 {
   id: "320",
   name: "Mac Antonette Loglogan I",
-  image: "https://images.unsplash.com/photo-1601924579970-38b9c7c3a8a0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYI4N6i2Lc0cF1erFrhLClKmaduY-gSwTDLA&s",
   description: "Canteen offering affordable breakfast, lunch, and merienda meals for workers and students.",
   location: "McKinley St., Dunao, Ligao City",
   priceRange: "₱60 - ₱150",
@@ -3421,7 +3263,7 @@ const RestaurantsList = ({
 {
   id: "321",
   name: "Mac-Antonette Loglogan",
-  image: "https://images.unsplash.com/photo-1625944228702-b2e289cfd8a1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYI4N6i2Lc0cF1erFrhLClKmaduY-gSwTDLA&s",
   description: "Small food stall serving quick and affordable meals for locals in Guilid.",
   location: "Guilid, Ligao City",
   priceRange: "₱50 - ₱120",
@@ -3431,7 +3273,7 @@ const RestaurantsList = ({
 {
   id: "322",
   name: "Mai Siomai",
-  image: "https://images.unsplash.com/photo-1595433707802-8c046d2e8d3b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpMKBfcMV-Gf-MRWYxRxqYS2p2wdr2YEw3Mw&s",
   description: "Food stall inside LCC Ligao Town Center offering siomai, siopao, and quick snacks.",
   location: "LCC Ligao Town Center, McKinley St., Bagumbayan, Ligao City",
   priceRange: "₱50 - ₱150",
@@ -3441,7 +3283,7 @@ const RestaurantsList = ({
 {
   id: "323",
   name: "Mang Kules Foodpark",
-  image: "https://images.unsplash.com/photo-1605478579820-efb0c7e2cf4b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhFfNxU5vSLQjeYprTkvPslGd9yLDRbNMoxQ&s",
   description: "Outdoor foodpark offering various food stalls, grilled items, and drinks in a chill atmosphere.",
   location: "Calzada, Ligao City",
   priceRange: "₱100 - ₱500",
@@ -3451,7 +3293,7 @@ const RestaurantsList = ({
 {
   id: "324",
   name: "Mariano’s Catering Services",
-  image: "https://images.unsplash.com/photo-1601050690597-dfbc94cc8c71?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLgikiX4OsaqkpvNDVRaCMx0pxXcaiYzAVUQ&s",
   description: "Professional catering service for events, birthdays, and weddings, offering a wide menu selection.",
   location: "MLQ St., Sta. Cruz, Ligao City",
   priceRange: "₱200 - ₱800",
@@ -3461,7 +3303,7 @@ const RestaurantsList = ({
 {
   id: "325",
   name: "Marilyn Loria Store",
-  image: "https://images.unsplash.com/photo-1606813902794-18de3c9e2a0e?auto=format&fit=crop&w=1470&q=80",
+  image: "https://assets.isu.pub/document-structure/241018095012-b528dfdfaf32ea74ef2481ea07672765/v1/f8336150695e14cdcdbbe6ae6ab537cd.jpeg",
   description: "Market retail stall offering a variety of essential and household products for daily needs.",
   location: "Stall #25, Extension I Market Site, Bagumbayan, Ligao City",
   priceRange: "₱20 - ₱400",
@@ -3471,7 +3313,7 @@ const RestaurantsList = ({
 {
   id: "326",
   name: "Mecayer Carinderia",
-  image: "https://images.unsplash.com/photo-1625944228702-b2e289cfd8a1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://ligaocity.albay.gov.ph/wp-content/uploads/2016/02/kuyangs.jpg",
   description: "Traditional carinderia serving freshly cooked Filipino meals at affordable prices.",
   location: "Stall 39, Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱60 - ₱150",
@@ -3481,7 +3323,7 @@ const RestaurantsList = ({
 {
   id: "327",
   name: "Medina's Eatery",
-  image: "https://images.unsplash.com/photo-1618213762616-6c13e3557d3b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://gttp.images.tshiftcdn.com/370882/x/0/10-best-albay-restaurants-legazpi-city-bicolano-cuisine-mayon-volcano-view-16.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883",
   description: "Popular eatery and catering spot offering delicious local dishes and party trays.",
   location: "Stall #3, Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱70 - ₱300",
@@ -3491,7 +3333,7 @@ const RestaurantsList = ({
 {
   id: "328",
   name: "Mercedita Navarro Pomendia Fried Chicken and Ihaw-Ihaw",
-  image: "https://images.unsplash.com/photo-1600891963933-74c98f2a3b51?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXFCYYI08VO7uz3q7SX-lOz3YW_nh1ssarYw&s",
   description: "Local food stall serving fried chicken and grilled favorites with a homemade touch.",
   location: "Dunao, Ligao City",
   priceRange: "₱70 - ₱250",
@@ -3501,7 +3343,7 @@ const RestaurantsList = ({
 {
   id: "329",
   name: "MJ's Tea House",
-  image: "https://images.unsplash.com/photo-1590080875831-7b37d61f1e90?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_fziFlmYpI2WYDbJnHfWIejCklQmD6OMAw&s",
   description: "Cozy refreshment parlor offering milk teas, fruit teas, and light snacks in a relaxing ambiance.",
   location: "McKinley St., Bagumbayan, Ligao City",
   priceRange: "₱60 - ₱200",
@@ -3511,7 +3353,7 @@ const RestaurantsList = ({
 {
   id: "330",
   name: "Nen’s Eatery",
-  image: "https://images.unsplash.com/photo-1625944228702-b2e289cfd8a1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX-YUZ9NdRsGzQ6jy8qGKYaWYfsQYeoBVLpA&s",
   description: "Simple eatery in Binatagan offering affordable Filipino meals and local comfort food.",
   location: "Purok 1, Binatagan, Ligao City",
   priceRange: "₱50 - ₱150",
@@ -3521,7 +3363,7 @@ const RestaurantsList = ({
 {
   id: "331",
   name: "Netsense Lemon Station",
-  image: "https://images.unsplash.com/photo-1580934455241-8bdf9bbbd19e?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1E8Hku9nR222ET6-JczBZ8S663L-IRX1UeA&s",
   description: "Refreshing lemon-based drink stand serving cold beverages and fruity refreshments.",
   location: "45 McKinley St., Calzada, Ligao City",
   priceRange: "₱50 - ₱120",
@@ -3531,7 +3373,7 @@ const RestaurantsList = ({
 {
   id: "332",
   name: "New Kuyang’s Bar and Restaurant",
-  image: "https://images.unsplash.com/photo-1601924579970-38b9c7c3a8a0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_cme3rf83awtbnl-LV2jD_Db0LgjTP09Rvw&s",
   description: "Bar and restaurant serving hearty Filipino dishes, grilled items, and catering for gatherings.",
   location: "San Roque St., Dunao, Ligao City",
   priceRange: "₱150 - ₱500",
@@ -3541,7 +3383,7 @@ const RestaurantsList = ({
 {
   id: "333",
   name: "Newroad Restobar",
-  image: "https://images.unsplash.com/photo-1603052875214-6a9a173a9631?auto=format&fit=crop&w=1470&q=80",
+  image: "https://ligaocity.albay.gov.ph/wp-content/uploads/2018/01/kuyangs.jpg",
   description: "Modern restobar offering great food, drinks, and a lively nightlife atmosphere.",
   location: "LCC Road, Tomolin, Ligao City",
   priceRange: "₱200 - ₱700",
@@ -3551,7 +3393,7 @@ const RestaurantsList = ({
 {
   id: "334",
   name: "Nida Topasi Barbecue Stand",
-  image: "https://images.unsplash.com/photo-1617196034778-2c7e8b3db583?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaHivv7LDRrJ70QLQWxBiWVpF77TN46VNcBA&s",
   description: "Local barbecue stand known for its flavorful grilled chicken and pork skewers.",
   location: "McKinley St., Dunao, Ligao City",
   priceRange: "₱50 - ₱200",
@@ -3561,7 +3403,7 @@ const RestaurantsList = ({
 {
   id: "335",
   name: "Ninay’s Lutong Bahay",
-  image: "https://images.unsplash.com/photo-1600891963933-74c98f2a3b51?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpT1_NrIXag56QjqSjroJ7lKBNuzOIZe_r0g&s",
   description: "Home-cooked meal stall serving affordable Filipino dishes and snacks to locals.",
   location: "McKinley St., Dunao, Ligao City",
   priceRange: "₱60 - ₱180",
@@ -3571,7 +3413,7 @@ const RestaurantsList = ({
 {
   id: "336",
   name: "Nory’s Restaurant",
-  image: "https://images.unsplash.com/photo-1600891963933-74c98f2a3b51?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUuYi_pB9FyzsNSa_0rAu2PRhuDsVf6qFyIA&s",
   description: "Family-friendly restaurant serving Filipino comfort dishes in a cozy atmosphere.",
   location: "Tuburan, Ligao City",
   priceRange: "₱150 - ₱400",
@@ -3581,7 +3423,7 @@ const RestaurantsList = ({
 {
   id: "337",
   name: "Oarde’s Bakery and Foodhauz",
-  image: "https://images.unsplash.com/photo-1576618148400-f54bed99fc88?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3VSxT8uCgX1fDG_icOQ7F-xdU2LKUgNdRYg&s",
   description: "Bakery and food house offering fresh breads, pastries, and short-order meals.",
   location: "Cardiño Building, San Roque St., Dunao, Ligao City",
   priceRange: "₱50 - ₱250",
@@ -3591,7 +3433,7 @@ const RestaurantsList = ({
 {
   id: "338",
   name: "Oloya’s Bakery & Snack House I",
-  image: "https://images.unsplash.com/photo-1611175694988-9288f9a1f6db?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_9RAim2rP-fNX00dQygdNuOd5VAH-J5ziHA&s",
   description: "Bakery and snack shop at the Ligao Market serving breads, pastries, and quick snacks.",
   location: "Stall #16, Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱20 - ₱150",
@@ -3601,7 +3443,7 @@ const RestaurantsList = ({
 {
   id: "339",
   name: "Oloya’s Bakery and Snack House",
-  image: "https://images.unsplash.com/photo-1611175694988-9288f9a1f6db?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAlMHrnWjtOu3Ls1HxOZqvAKWpGFGiZLGZuA&s",
   description: "Another branch of Oloya’s serving baked goods and light snacks along McKinley Street.",
   location: "Barroso Building, McKinley St., Bagumbayan, Ligao City",
   priceRange: "₱20 - ₱150",
@@ -3611,7 +3453,7 @@ const RestaurantsList = ({
 {
   id: "340",
   name: "Ordiz Canteen",
-  image: "https://images.unsplash.com/photo-1625944228702-b2e289cfd8a1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS4MfDJiTk55R4lTEBVJtekiN1n07khZQASg&s",
   description: "Neighborhood canteen offering home-style Filipino meals for students and workers.",
   location: "Purok 2, San Jose St., Sta. Cruz, Ligao City",
   priceRange: "₱60 - ₱180",
@@ -3621,7 +3463,7 @@ const RestaurantsList = ({
 {
   id: "341",
   name: "Palcon’s Bakery",
-  image: "https://images.unsplash.com/photo-1576618148400-f54bed99fc88?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRRdGCwFUurFopx45gUBBW2mbL89kGholYA&s",
   description: "Local bakery in Malama known for its freshly baked breads and pastries.",
   location: "Malama, Ligao City",
   priceRange: "₱20 - ₱120",
@@ -3631,7 +3473,7 @@ const RestaurantsList = ({
 {
   id: "342",
   name: "Paring’s Tsibugan",
-  image: "https://images.unsplash.com/photo-1625944228702-b2e289cfd8a1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://albay.gov.ph/wp-content/uploads/2020/02/83482656_112131743673516_509040236886491136_o-1024x683.jpg",
   description: "Casual eatery offering Filipino comfort food and grilled dishes in Tuburan, Ligao City.",
   location: "Purok 2, Tuburan, Ligao City",
   priceRange: "₱60 - ₱200",
@@ -3641,7 +3483,7 @@ const RestaurantsList = ({
 {
   id: "343",
   name: "Perillo’s Eatery I",
-  image: "https://images.unsplash.com/photo-1618213762616-6c13e3557d3b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuueE_wGKPIugXN_5MCv3nXBMrEV_Sot0b4g&s",
   description: "Home-style eatery serving local Filipino dishes and affordable meals.",
   location: "7 Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱60 - ₱150",
@@ -3651,7 +3493,7 @@ const RestaurantsList = ({
 {
   id: "344",
   name: "Perillo’s Eatery II",
-  image: "https://images.unsplash.com/photo-1600891963933-74c98f2a3b51?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuueE_wGKPIugXN_5MCv3nXBMrEV_Sot0b4g&s",
   description: "Second branch of Perillo’s Eatery offering budget-friendly Filipino dishes.",
   location: "Stall #8, Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱60 - ₱150",
@@ -3661,7 +3503,7 @@ const RestaurantsList = ({
 {
   id: "345",
   name: "Perillo’s Eatery III",
-  image: "https://images.unsplash.com/photo-1618213762616-6c13e3557d3b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuueE_wGKPIugXN_5MCv3nXBMrEV_Sot0b4g&s",
   description: "Third branch of Perillo’s Eatery known for its flavorful local meals.",
   location: "Stall #10, Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱60 - ₱150",
@@ -3671,7 +3513,7 @@ const RestaurantsList = ({
 {
   id: "346",
   name: "Pizza Lovers Resto",
-  image: "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2c?auto=format&fit=crop&w=1470&q=80",
+  image: "https://ligaocity.albay.gov.ph/wp-content/uploads/2018/01/pizza-lovers.jpg",
   description: "Cozy snack place serving pizzas, burgers, and refreshments.",
   location: "San Jose St., Dunao, Ligao City",
   priceRange: "₱100 - ₱400",
@@ -3681,7 +3523,7 @@ const RestaurantsList = ({
 {
   id: "347",
   name: "Porcalla’s Bakery",
-  image: "https://images.unsplash.com/photo-1576618148400-f54bed99fc88?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG7OvoSu4k8-vBBeOGMJ_D5hwVHNYO4AbAuQ&s",
   description: "Neighborhood bakery offering freshly baked bread and pastries daily.",
   location: "Purok 1, Macalidong, Ligao City",
   priceRange: "₱20 - ₱100",
@@ -3691,7 +3533,7 @@ const RestaurantsList = ({
 {
   id: "348",
   name: "Primo’s Bistro",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJbjEbJJti1z0dIxalM5plyvaRCqZkeE2KQw&s",
   description: "Modern bistro serving delicious meals and drinks in a relaxed ambiance.",
   location: "David Building, Blumentritt St., Guilid, Ligao City",
   priceRange: "₱180 - ₱500",
@@ -3701,7 +3543,7 @@ const RestaurantsList = ({
 {
   id: "349",
   name: "Primo’s Restaurant & Catering Services",
-  image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1470&q=80",
+  image: "https://ligaocity.albay.gov.ph/wp-content/uploads/2018/01/primos.jpg",
   description: "Full-service restaurant and catering provider for events and gatherings.",
   location: "Guilid, Ligao City",
   priceRange: "₱200 - ₱800",
@@ -3711,7 +3553,7 @@ const RestaurantsList = ({
 {
   id: "350",
   name: "Rancherito’s Pizzeria",
-  image: "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2c?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScwTWfJksI1eaVLXY95p-lIok5j8fg4TjIOQ&s",
   description: "Pizzeria and restaurant serving Italian-inspired dishes and party platters.",
   location: "84 Washington St., Binatagan, Ligao City",
   priceRange: "₱250 - ₱700",
@@ -3721,7 +3563,7 @@ const RestaurantsList = ({
 {
   id: "351",
   name: "Rendoll Bakeshop",
-  image: "https://images.unsplash.com/photo-1576618148400-f54bed99fc88?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47Girku_c2fQj66jeNZaOicbhPX8LOmA1nQ&s",
   description: "Local bakeshop in Guilid offering fresh bread, pastries, and snacks.",
   location: "Guilid, Ligao City",
   priceRange: "₱20 - ₱100",
@@ -3741,7 +3583,7 @@ const RestaurantsList = ({
 {
   id: "353",
   name: "Ricardojinky’s Bakeshop",
-  image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz2A__-_m6rFReD_m9wpMm_yI6M0Q-Opd_Mw&s",
   description: "Bakery known for its tasty local breads and affordable baked products.",
   location: "Mabini St., Tinago, Ligao City",
   priceRange: "₱20 - ₱120",
@@ -3751,7 +3593,7 @@ const RestaurantsList = ({
 {
   id: "354",
   name: "Rising Sun Food Corporation",
-  image: "https://images.unsplash.com/photo-1601924579970-38b9c7c3a8a0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRosUOppVO83I1apbLoQxA6tB81VuIJxTTouA&s",
   description: "Snack house inside LCC Ligao Town Center serving fast snacks and drinks.",
   location: "4 LCC Ligao Town Center, McKinley St., Bagumbayan, Ligao City",
   priceRange: "₱80 - ₱250",
@@ -3761,7 +3603,7 @@ const RestaurantsList = ({
 {
   id: "355",
   name: "Ro-Sheil Bakery",
-  image: "https://images.unsplash.com/photo-1576618148400-f54bed99fc88?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXdickSaI92SBBZKwrt_Z7kar-mU9PfOO6FQ&s",
   description: "Community bakery offering daily baked goods and local pastries.",
   location: "Purok 7, Batang, Ligao City",
   priceRange: "₱20 - ₱120",
@@ -3771,7 +3613,7 @@ const RestaurantsList = ({
 {
   id: "356",
   name: "S. Lopez Fresh Fish Stall",
-  image: "https://images.unsplash.com/photo-1590080875831-7b37d61f1e90?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi7PJUjIWPkFWWOdqom8vMNe31IxCvHxecIw&s",
   description: "Fish stall offering fresh seafood selections at Ligao public market.",
   location: "Fish Section, Market Site, Bagumbayan, Ligao City",
   priceRange: "₱100 - ₱600",
@@ -3781,7 +3623,7 @@ const RestaurantsList = ({
 {
   id: "357",
   name: "S. Y. Zabaldica Litson Manok",
-  image: "https://images.unsplash.com/photo-1588167056547-7d8e6b7fa9f3?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkiU85Eu80vuvQnq5PCo0JlhE86WuM1wyglA&s",
   description: "Local roasted chicken shop serving freshly cooked litson manok daily.",
   location: "Dunao, Ligao City",
   priceRange: "₱200 - ₱350",
@@ -3791,7 +3633,7 @@ const RestaurantsList = ({
 {
   id: "358",
   name: "Sam Jade Resto Bar",
-  image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa0nkmebtsQt8dDKUO3ivookrMSQaV2X2wvg&s",
   description: "Bar and grill featuring local dishes, drinks, and nightly entertainment.",
   location: "Maharlika Highway, Sta. Cruz, Ligao City",
   priceRange: "₱250 - ₱700",
@@ -3801,7 +3643,7 @@ const RestaurantsList = ({
 {
   id: "359",
   name: "Sanone Bulalohan III",
-  image: "https://images.unsplash.com/photo-1625944228702-b2e289cfd8a1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsvDcOs3PCUuxgyRHRALh1exh5RGTlROkU1w&s",
   description: "A cozy eatery famous for its flavorful bulalo and home-style Filipino dishes.",
   location: "1 Salud Space Rental, Sta. Cruz, Ligao City",
   priceRange: "₱120 - ₱350",
@@ -3811,7 +3653,7 @@ const RestaurantsList = ({
 {
   id: "360",
   name: "Sanone’s Bulalohan I",
-  image: "https://images.unsplash.com/photo-1601050690597-1fca6df27360?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDxlsY0Lq1w526d8A49L-jMQJb0hVUf4pJpA&s",
   description: "Well-loved bulalohan spot offering hearty soups and local comfort food.",
   location: "1 Edgar Remonte Bldg., McKinley St., Calzada, Ligao City",
   priceRange: "₱120 - ₱350",
@@ -3821,7 +3663,7 @@ const RestaurantsList = ({
 {
   id: "361",
   name: "Sasha’s Place",
-  image: "https://images.unsplash.com/photo-1627308595216-439b387441b0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoHGcEz7lbdsmqeJ0dtKIoGsgPsByJBh8L_g&s",
   description: "A friendly canteen serving quick and affordable meals to locals and students.",
   location: "Concepcion St., Dunao, Ligao City",
   priceRange: "₱60 - ₱150",
@@ -3831,7 +3673,7 @@ const RestaurantsList = ({
 {
   id: "362",
   name: "SDL Canteen",
-  image: "https://images.unsplash.com/photo-1600891963933-74c98f2a3b51?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfmXDv82hmxKE219rNvl1h8WCPYAbFuYYgeg&s",
   description: "Local canteen known for serving freshly cooked Filipino dishes daily.",
   location: "Purok 3, Binatagan, Ligao City",
   priceRange: "₱50 - ₱120",
@@ -3841,7 +3683,7 @@ const RestaurantsList = ({
 {
   id: "363",
   name: "Sinson Eatery I",
-  image: "https://images.unsplash.com/photo-1598515214211-b4388a9c79bb?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt8nJ7tRg0RnlhjMiIAxwBykfiWT8xzjTziQ&s",
   description: "Popular carinderia offering traditional Filipino dishes and catering services.",
   location: "Stall #1, Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱60 - ₱150",
@@ -3851,7 +3693,7 @@ const RestaurantsList = ({
 {
   id: "364",
   name: "Sinson Eatery II",
-  image: "https://images.unsplash.com/photo-1601050690597-1fca6df27360?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAdICDBL_FzatiL2gCf0EaFqu6cMvBpbtp7A&s",
   description: "Second branch of Sinson Eatery offering homestyle meals and catering.",
   location: "Stall #2, Carinderia Market Site, Bagumbayan, Ligao City",
   priceRange: "₱60 - ₱150",
@@ -3861,7 +3703,7 @@ const RestaurantsList = ({
 {
   id: "365",
   name: "Stik-Q Grilled & Fried Foods",
-  image: "https://images.unsplash.com/photo-1601924579970-38b9c7c3a8a0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://static01.nyt.com/images/2024/11/14/multimedia/SEW-skillet-fried-chicken-pan-wlzc-copy/SEW-skillet-fried-chicken-pan-wlzc-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
   description: "Food stall serving grilled and fried Filipino favorites in a casual setting.",
   location: "McKinley St., Dunao, Ligao City",
   priceRange: "₱80 - ₱250",
@@ -3871,7 +3713,7 @@ const RestaurantsList = ({
 {
   id: "366",
   name: "Stop and Frappe",
-  image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWvfiVJCnlUoBX59odjOzzMDSMDgX3tBHgTw&s",
   description: "Trendy food house offering coffee, frappes, and light snacks.",
   location: "Betty Patetico Bldg., Washington St., Sta. Cruz, Ligao City",
   priceRange: "₱80 - ₱250",
@@ -3881,7 +3723,7 @@ const RestaurantsList = ({
 {
   id: "367",
   name: "Such Sugar and Cheese Inc.",
-  image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1470&q=80",
+  image: "https://albay.gov.ph/wp-content/uploads/2020/02/lombok.jpg",
   description: "Dessert kiosk specializing in sweet and cheesy snack creations.",
   location: "LCC Ligao Town Center, McKinley St., Bagumbayan, Ligao City",
   priceRange: "₱80 - ₱200",
@@ -3891,7 +3733,7 @@ const RestaurantsList = ({
 {
   id: "368",
   name: "Theo’s Farm Camp",
-  image: "https://images.unsplash.com/photo-1526679493070-4e37c4f11877?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6qMvLWk6DlfbH_FcHpQLoci_EVMnqg2v1Jw&s",
   description: "Farm restaurant promoting organic farming and outdoor dining experiences.",
   location: "Maharlika Highway, Calzada, Ligao City",
   priceRange: "₱250 - ₱600",
@@ -3901,7 +3743,7 @@ const RestaurantsList = ({
 {
   id: "369",
   name: "Turkish Shawarma and Pastry Food Hub",
-  image: "https://images.unsplash.com/photo-1601924579970-38b9c7c3a8a0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKq7hXAek5G8H_flGdREa4SD9ZwV7ZQPa7Sw&s",
   description: "Food hub offering Turkish shawarma, pastries, and Mediterranean snacks.",
   location: "AJR Building, Natera St., Dunao, Ligao City",
   priceRange: "₱100 - ₱300",
@@ -3911,7 +3753,7 @@ const RestaurantsList = ({
 {
   id: "370",
   name: "Twin Peaks Farm Resort",
-  image: "https://images.unsplash.com/photo-1590080875831-7b37d61f1e90?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRye_wC2OFbWWZmgs-5nL1vU6YL1Jl2ZUv1RA&s",
   description: "Farm resort offering swimming, catering, and lodging services in a scenic setting.",
   location: "Purok 2, Batang, Ligao City",
   priceRange: "₱300 - ₱1,200",
@@ -3921,7 +3763,7 @@ const RestaurantsList = ({
 {
   id: "371",
   name: "Unica’s Kubulalohan",
-  image: "https://images.unsplash.com/photo-1625944228702-b2e289cfd8a1?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0r_DLysD1sxa-4qVhEI-CbjL3MlwUYg3_1A&s",
   description: "Eatery serving local kubulalo and Filipino specialties in Calzada, Ligao City.",
   location: "Jocelyn Austero Bldg., Maharlika Highway, Calzada, Ligao City",
   priceRange: "₱100 - ₱300",
@@ -3931,7 +3773,7 @@ const RestaurantsList = ({
 {
   id: "372",
   name: "Villa Food Cart",
-  image: "https://images.unsplash.com/photo-1612197527762-1a9cbea132e0?auto=format&fit=crop&w=1470&q=80",
+  image: "https://s3-media0.fl.yelpcdn.com/bphoto/Wk7q4FFy0czlryElkRSkbA/1000s.jpg",
   description: "Mobile food cart serving snacks and street food in Dunao, Ligao City.",
   location: "McKinley St., Dunao, Ligao City",
   priceRange: "₱30 - ₱120",
@@ -3941,7 +3783,7 @@ const RestaurantsList = ({
 {
   id: "373",
   name: "Winiña Ice Cream Refreshment",
-  image: "https://images.unsplash.com/photo-1565958011705-44e211a31e2b?auto=format&fit=crop&w=1470&q=80",
+  image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuww6D186bU_Yumj2gPCYvnNBw1zTt9FoSP-YkwHcDBBtDNYcMtN-MHOQV_9aGw9IhvMwxFaThWFBZLXcnNZ7SurWUxshlztyUzwJmCcE0TEQDC8qrKFvycOfpumYndD1GafOOxL4SaLs/s1600/mirienda.jpg",
   description: "Ice cream stand offering homemade refreshments and cool desserts.",
   location: "Honrado’s Boarding House, Rizal St., Guilid, Ligao City",
   priceRange: "₱50 - ₱200",
@@ -3950,28 +3792,19 @@ const RestaurantsList = ({
 },
 {
   id: "374",
-  name: "WRL Junkshop",
-  image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1470&q=80",
-  description: "Local junkshop buying and recycling scrap materials and metals.",
-  location: "Mercado St., Tinago, Ligao City",
-  priceRange: "Varies",
-  rating: 4.1,
-  features: ["Junkshop", "Recycling"],
-},
-{
-  id: "375",
   name: "YCS Restaurant & Catering Services",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUuYi_pB9FyzsNSa_0rAu2PRhuDsVf6qFyIA&s",
   description: "Restaurant and catering provider serving traditional Filipino cuisine for events.",
   location: "Paulba, Ligao City",
   priceRange: "₱200 - ₱700",
   rating: 4.7,
   features: ["Restaurant", "Catering", "Events"],
 },
+// Restaurants in Libon, Albay
 {
-  id: "376",
+  id: "375",
   name: "Café Emiligia",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRLcukfn5iWJyCByq2oF1LTvO-Kxh_4huUPQ&s",
   description: "A cozy café in Zone 5 offering local and international dishes for dine-in, delivery, and pick-up.",
   location: "Zone 5, Libon, Albay",
   priceRange: "₱150 - ₱500",
@@ -3979,9 +3812,9 @@ const RestaurantsList = ({
   features: ["Dine In", "Delivery", "Pick-Up"],
 },
 {
-  id: "377",
+  id: "376",
   name: "Don Calixto Food House and Resto Bar",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj1EqJVqzH1a0fC0IGYXKg_d_dHzjQ1NoIxg&s",
   description: "Popular Resto Bar in Zone 4 serving hearty meals and drinks, available for dine-in, delivery, and pick-up.",
   location: "Zone 4, Libon, Albay",
   priceRange: "₱200 - ₱600",
@@ -3989,9 +3822,9 @@ const RestaurantsList = ({
   features: ["Dine In", "Delivery", "Pick-Up", "Resto Bar"],
 },
 {
-  id: "378",
+  id: "377",
   name: "Antonette's Place Restaurant",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU18r2o7WjgLjYi4bSOVoZGOi4UEMC7Qh33Q&s",
   description: "A family-friendly restaurant in Zone 4 serving Filipino comfort food with dine-in and takeout options.",
   location: "Zone 4, Libon, Albay",
   priceRange: "₱150 - ₱500",
@@ -3999,9 +3832,9 @@ const RestaurantsList = ({
   features: ["Dine In", "Pick-Up"],
 },
 {
-  id: "379",
+  id: "378",
   name: "Don Calixto Café",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "Don Calixto Café",
   description: "Casual café in Zone 4 offering coffee, pastries, and light meals for dine-in and takeout.",
   location: "Zone 4, Libon, Albay",
   priceRange: "₱100 - ₱400",
@@ -4009,9 +3842,9 @@ const RestaurantsList = ({
   features: ["Dine In", "Pick-Up", "Coffee"],
 },
 {
-  id: "380",
+  id: "379",
   name: "Villa Miranda Farm and Resort",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE7ngSLqHcaDIQ-OVlryHXM93qgB4ybYHZjQ&s",
   description: "Farm and resort experience in Macabugos, Libon, with on-site dining featuring fresh local produce.",
   location: "Macabugos, Libon, Albay",
   priceRange: "₱250 - ₱700",
@@ -4019,9 +3852,9 @@ const RestaurantsList = ({
   features: ["Resort", "Restaurant", "Dine In"],
 },
 {
-  id: "381",
+  id: "380",
   name: "Kathalina Resto",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx6gYUFNx5vbG_PRkR0gU2Sk19bmidnUGtog&s",
   description: "Zone 1 restaurant serving a variety of Filipino dishes for dine-in and takeout.",
   location: "Zone 1, Libon, Albay",
   priceRange: "₱150 - ₱500",
@@ -4029,9 +3862,9 @@ const RestaurantsList = ({
   features: ["Dine In", "Pick-Up"],
 },
 {
-  id: "382",
+  id: "381",
   name: "Chubzz",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF4O6IAqei9x0q4B4LrFkQLgJ5NzfzUqXidQ&s",
   description: "Casual eatery in Zone 2 offering local favorites for dine-in and takeout.",
   location: "Zone 2, Libon, Albay",
   priceRange: "₱120 - ₱400",
@@ -4039,9 +3872,9 @@ const RestaurantsList = ({
   features: ["Dine In", "Pick-Up"],
 },
 {
-  id: "383",
+  id: "382",
   name: "Karla Mae Food Haus & Catering Services",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLJY_k4TvqanufdYBAVqY8UyhNcd3xq9kNVg&s",
   description: "Food Haus and catering service in Oas providing traditional Filipino dishes for events and daily meals.",
   location: "Oas, Albay",
   priceRange: "₱200 - ₱600",
@@ -4049,9 +3882,9 @@ const RestaurantsList = ({
   features: ["Catering", "Dine In", "Pick-Up"],
 },
 {
-  id: "384",
+  id: "383",
   name: "Packs Carenderia & Catering Services",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMDVIXaOOCI6gp0xj7IEGMGFVbdOXG-GKy6Q&s",
   description: "Carenderia and catering provider in Oas offering affordable Filipino meals for dine-in and events.",
   location: "Oas, Albay",
   priceRange: "₱150 - ₱500",
@@ -4059,9 +3892,9 @@ const RestaurantsList = ({
   features: ["Catering", "Dine In", "Pick-Up"],
 },
 {
-  id: "385",
+  id: "384",
   name: "Via Sore and Food Avenue",
-  image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ95erJJZuC_fqrLQc-m861Ukpiw7nRP4_f5A&s",
   description: "Oas-based eatery serving a variety of local and Asian dishes for dine-in and takeout.",
   location: "Oas, Albay",
   priceRange: "₱150 - ₱550",

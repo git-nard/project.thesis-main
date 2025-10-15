@@ -133,25 +133,26 @@ const RestaurantCard = ({
       </CardContent>
 
       <CardFooter className="gap-3">
-        {/* View Details button */}
-        <Link
-          to={`/restaurants/${id}`}
-          state={{
-            id,
-            name,
-            image,
-            description,
-            location,
-            cuisine,
-            priceRange,
-            rating,
-            openingHours,
-            features,
-            onClick
-          }}
-        >
-          <Button onClick={onClick}>View Details</Button>
-        </Link>
+        {/* View Menu button */}
+          <Link
+            to={`/restaurants/${id}/menu`}
+            state={{
+              id,
+              name,
+              image,
+              description,
+              location,
+              cuisine,
+              priceRange,
+              rating,
+              openingHours,
+              features,
+              onClick,
+            }}
+          >
+            <Button>View Menu</Button>
+          </Link>
+
 
         {/* Directions button */}
         <Button

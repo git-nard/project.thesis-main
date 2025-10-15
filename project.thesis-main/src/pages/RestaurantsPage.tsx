@@ -21,11 +21,15 @@ const RestaurantsPage = () => {
           </Link>
         </div>
 
-        <h1 className="text-4xl font-bold mb-2">Restaurants in Albay</h1>
-        <p className="text-gray-600 mb-8 max-w-3xl">
-          Taste the flavors of Bicol cuisine, known for its spicy dishes and
-          unique culinary traditions at these local restaurants.
-        </p>
+        {/* Page Header */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-2">Restaurants in Albay</h1>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            Taste the flavors of Bicol cuisine, known for its spicy dishes and
+            unique culinary traditions at these local restaurants.
+          </p>
+        </div>
+
 
         <RestaurantsList />
       </div>
