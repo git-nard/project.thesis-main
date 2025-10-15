@@ -19,7 +19,7 @@ const TouristSpotDetailsPage = () => {
         </Button>
       </div>
     );
-  }
+  } 
 
   const { name, image, description, location, category, openingHours } = state;
 

@@ -1,4 +1,3 @@
-// components/tourism-activities/TourismActivitiesCard.tsx
 import React from "react";
 import { MapPin } from "lucide-react";
 import {
@@ -42,12 +41,12 @@ const TourismActivitiesCard = ({
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />
 
-        {/* category badge */}
+        {/* Category Badge */}
         <Badge variant="secondary" className="absolute top-3 right-3 bg-black/70 text-white">
           {category}
         </Badge>
 
-        {/* Bookmark Button (red) */}
+        {/* Bookmark Button */}
         <button className="group absolute top-3 left-3 bg-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-red-500">
           <i className="fa-solid fa-bookmark text-red-500 transition-all duration-300 group-hover:text-white"></i>
         </button>
@@ -61,7 +60,6 @@ const TourismActivitiesCard = ({
       {/* Content */}
       <CardContent className="p-4 flex-grow">
         <CardDescription className="text-sm line-clamp-3">{description}</CardDescription>
-
         <div className="mt-3 space-y-1 text-sm text-gray-600">
           <div className="flex items-center">
             <MapPin className="w-4 h-4 mr-1 text-gray-500" />
@@ -71,8 +69,23 @@ const TourismActivitiesCard = ({
       </CardContent>
 
       {/* Footer */}
-      <CardFooter className="p-4 pt-0 flex justify-between ">
-        <Button variant="outline" size="sm" onClick={() => navigate(`/tourism-activities/${id}`)}>
+      <CardFooter className="p-4 pt-0 flex justify-between">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() =>
+            navigate(`/tourism-activities/${id}`, {
+              state: {
+                id,
+                name,
+                image,
+                description,
+                municipality,
+                category,
+              },
+            })
+          }
+        >
           View Details
         </Button>
 
@@ -80,12 +93,15 @@ const TourismActivitiesCard = ({
           variant="ghost"
           size="sm"
           className="text-blue-600"
-          onClick={() => window.open(`https://maps.google.com/?q=${encodeURIComponent(name + " " + municipality)}`, "_blank")}
+          onClick={() =>
+            window.open(
+              `https://maps.google.com/?q=${encodeURIComponent(name + " " + municipality)}`,
+              "_blank"
+            )
+          }
         >
           <MapPin className="w-4 h-4 mr-1" /> Map
         </Button>
-
-        
       </CardFooter>
     </Card>
   );
