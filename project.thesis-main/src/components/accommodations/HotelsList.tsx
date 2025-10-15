@@ -21,8 +21,7 @@ interface HotelsListProps {
   onHotelSelect?: (hotelId: string) => void;
 }
 
-const HotelsList = ({
-  hotels = [
+export const hotels = [
     {
       id: "1",
       name: "Mayon View Resort & Spa",
@@ -1163,9 +1162,9 @@ const HotelsList = ({
   rating: 4.2,
   amenities: ["WiFi", "Air Conditioning", "Family-Friendly"]
 }
-  ],
-  onHotelSelect = (id) => console.log(`Hotel selected: ${id}`),
-}: HotelsListProps) => {
+  ]
+
+const HotelsList = () =>{
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredHotels, setFilteredHotels] = useState<Hotel[]>(hotels);
   const [showFilters, setShowFilters] = useState(false);
@@ -1239,6 +1238,10 @@ const HotelsList = ({
       amenity: [],
     });
   };
+
+  function onHotelSelect(id: string): void {
+    throw new Error("Function not implemented.");
+  }
 
   return (
     <div className="w-full bg-gray-50 py-8 px-4 md:px-6 lg:px-8">
