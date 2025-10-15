@@ -36,7 +36,7 @@ interface AttractionsListProps {
   description?: string;
 }
 
-const AttractionsList = ({
+export const AttractionsList = ({
   attractions = [
     {
       id: "1",
