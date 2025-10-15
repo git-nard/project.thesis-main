@@ -24,21 +24,13 @@ const TourismActivitiesPage = () => {
         </div>
 
         {/* Page Header */}
-        <h1 className="text-4xl font-bold mb-2">Tourism Activities in Albay</h1>
-        <p className="text-gray-600 mb-8 max-w-3xl">
-          Discover Albay’s activities across all municipalities — from cultural workshops and farm visits to island-hopping and adventure tours.
-        </p>
-
-        {/* Highlight / Featured Section (3 featured cards) */}
-        <div className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4">Featured Activities</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Featured items — these IDs must match items in the main list */}
-            <LinkFeatured id="legazpi-mayon-atv" title="Mayon ATV Adventure" img="https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/cvqclaybh3wv68t4zila.jpg" category="Adventure" municipality="Legazpi City, Albay" />
-            <LinkFeatured id="camalig-sumlang-rafting" title="Sumlang Lake Rafting" img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSbEGqKWASl4oLyUOfbL07lFq1wvBdnZn67Q&s" category="Leisure / Nature" municipality="Camalig, Albay" />
-            <LinkFeatured id="bacacay-cagraray" title="Cagraray Eco Park & Misibis Bay" img="https://cf.bstatic.com/xdata/images/hotel/max1024x768/431956171.jpg?k=c8d9d4c852ef78a67074523ab9c96507dd624936d483ab9308b13a0330aa2a58&o=&hp=1" category="Resort / Park" municipality="Bacacay, Albay" />
-          </div>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-2">Tourism Activities in Albay</h1>
+          <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
+            Discover Albay’s activities across all municipalities — from cultural workshops and farm visits to island-hopping and adventure tours.
+          </p>
         </div>
+
 
         {/* Full Activities Grid */}
         <TourismActivitiesList />
