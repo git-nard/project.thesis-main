@@ -12,6 +12,7 @@ import AboutPage from "./pages/AboutPage";
 import routes from "tempo-routes";
 import DestinationListPage from "./pages/DestinationListPage";
 import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 import SafetyPage from "./pages/SafetyPage";
 import AttractionsDetailsPage from "./components/attractions/AttractionsDetailsPage";
 import Recommended from "./pages/Recommended";
@@ -33,6 +34,8 @@ import ViewItenerary from "./pages/itineraries/ViewItenerary";
 import RestaurantMenuPage from "./components/dining/RestaurantMenuPage";
 import TourismActivityDetailsPage from "./components/tourism-activities/TourismActivityDetailsPage";
 import DestinationDetailPage from "./components/destinations/DestinationDetailPage";
+
+
 
 
 
@@ -101,6 +104,9 @@ function App() {
 
 
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+
+        
         </Routes>
         {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
       </>
