@@ -16,32 +16,40 @@ const LoginPage = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    // 💡 Mock login check
-    const mockEmail = "test@gmail.com";
-    const mockPassword = "test123";
+  try {
+    const response = await fetch("http://localhost:5000/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: formData.email,
+        password: formData.password,
+      }),
+    });
 
-    if (formData.email === mockEmail && formData.password === mockPassword) {
-      // 🧠 Simulate API response
-      const mockResponse = {
-        token: "mock-token-1234567890",
-        user: {
-          name: "John Doe",
-          email: formData.email,
-        },
-      };
-
-      // ✅ Save mock data to localStorage
-      localStorage.setItem("token", mockResponse.token);
-      localStorage.setItem("user", JSON.stringify(mockResponse.user));
-
-      alert("✅ Mock login successful!");
-      window.location.href = "/";
-    } else {
-      alert("❌ Invalid email or password. Try test@example.com / password123");
+    if (!response.ok) {
+      // Backend returned an error status
+      const errorData = await response.json();
+      alert(`❌ Login failed: ${errorData.message || "Invalid credentials"}`);
+      return;
     }
-  };
+
+    const data = await response.json();
+
+    // Assuming your backend sends { token, user } on successful login
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("user", JSON.stringify(data.user));
+
+    alert("✅ Login successful!");
+    window.location.href = "/";
+  } catch (error) {
+    alert("❌ Login error. Please try again later.");
+    console.error("Login error:", error);
+  }
+};
 
   return (
     <div className="h-screen flex flex-col md:flex-row bg-gray-900 text-white overflow-hidden">
