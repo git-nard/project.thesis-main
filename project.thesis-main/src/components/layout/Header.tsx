@@ -169,12 +169,6 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-48">
           <DropdownMenuItem>
-            <a href="/recommended" className="flex items-center w-full">
-            <i className="fa-solid fa-map-marked-alt mr-2 text-gray-500"></i>
-              <span>Recommended</span>
-            </a>    
-          </DropdownMenuItem>
-          <DropdownMenuItem>
             <a href="/itineraries" className="flex items-center w-full">
               <i className="fa-solid fa-route mr-2 text-gray-500"></i>
               <span>My Itineraries</span>
