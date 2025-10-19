@@ -42,17 +42,7 @@ const Home = () => {
       <section className="py-12">
         <AttractionsList />
       </section>
-
-      {/* Hotels Section */}
-      <section className="py-12">
-        <HotelsList />
-      </section>
-
-      {/* Restaurants Section */}
-      <section className="py-12">
-        <RestaurantsList />
-      </section>
-
+      
       {/* Footer */}
       <Footer />
     </div>
