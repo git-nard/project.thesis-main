@@ -1,7 +1,7 @@
 import React from "react";
 import TouristSpotCard from "./TouristSpotsCard";
 
-const spots = [
+export const spots = [
   {
     id: "1",
     name: "Mayon Volcano",
@@ -105,7 +105,7 @@ const spots = [
     id: "10",
     name: "Cagraray Eco Park",
     image:
-      "https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/466607200_122227355606193087_3029495471951705228_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGPIL4OEfa4Uu0laQHVqXKMCRd0oOrzdxYJF3Sg6vN3FlEaa10clozK0e9_XDc55iv_bIQBTa1tNwQZnIYvJCbF&_nc_ohc=E1wLNbhmVS0Q7kNvwGtBufD&_nc_oc=AdmkTjYYrHMR5A7YtGAZhW-3e59eeQm-JtL-EdDO2MChT7Sgi70kXdblFAADyElccX4&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&_nc_gid=lyEL_v12HDlFrzcJoHVo_g&oh=00_AfbNJrbx29Jgp31_OFP31fGqGmeFmfWFMw4u376jhVKtnA&oe=68DB3535",
+      "https://static.where-e.com/Philippines/Bicol_Region/Legazpi_City/Cagraray-Eco-Energy-Park_0d783f94bd1fdef8198e1d3cc862f9aa.jpg",
     description:
       "A nature park offering eco-friendly adventures and scenic landscapes.",
     location: "Cagraray, Bacacay, Albay",
