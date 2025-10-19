@@ -30,7 +30,6 @@ import CreateYourItinerary from "./pages/itineraries/CreateYourItenerary";
 import RecommendedIteneraries from "./pages/itineraries/RecommendedItenearies";
 import SavedIteneraries from "./pages/itineraries/SavedIteneraries";
 import ViewItenerary from "./pages/itineraries/ViewItenerary";
-import RestaurantMenuPage from "./components/dining/RestaurantMenuPage";
 import TourismActivityDetailsPage from "./components/tourism-activities/TourismActivityDetailsPage";
 import DestinationDetailPage from "./components/destinations/DestinationDetailPage";
 
@@ -53,7 +52,6 @@ function App() {
 
           <Route path="/restaurants" element={<RestaurantsPage />} />
           <Route path="/restaurants/:id" element={<RestaurantsDetailsPage />} />
-          <Route path="/restaurants/:id/menu" element={<RestaurantMenuPage />} />
 
 
           <Route path="/experiences" element={<ExperiencesPage />} />
