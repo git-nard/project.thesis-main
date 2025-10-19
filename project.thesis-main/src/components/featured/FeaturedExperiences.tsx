@@ -186,9 +186,7 @@ const FeaturedExperiences = ({
             name={experience.name}
             image={experience.image}
             description={experience.description}
-            rating={experience.rating}
             location={experience.location}
-            category={experience.category}
             openingHours={experience.openingHours}
           />
         );
@@ -201,8 +199,6 @@ const FeaturedExperiences = ({
             description={experience.description}
             location={experience.location}
             priceRange={experience.priceRange}
-            rating={experience.rating}
-            amenities={experience.amenities}
           />
         );
       case "restaurant":
@@ -212,9 +208,6 @@ const FeaturedExperiences = ({
             name={experience.name}
             image={experience.image}
             description={experience.description}
-            rating={experience.rating}
-            address={experience.location}
-            cuisineType={experience.cuisineType}
             priceRange={experience.priceRange}
           />
         );
