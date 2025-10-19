@@ -50,7 +50,7 @@ const FeaturedSection = ({
           description:
             "Historic ruins of a 16th-century Franciscan church destroyed during the 1814 eruption of Mayon Volcano, offering iconic views of the volcano.",
           image:
-            "https://images.unsplash.com/photo-1596400953369-8b042b1db2b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWW3KfDnd-N5PiRN60zsDS4ecKndi6X-GD6Q&s",
           category: "attraction",
           rating: 4.6,
           location: "Daraga, Albay",
@@ -75,7 +75,7 @@ const FeaturedSection = ({
           description:
             "Popular local restaurant known for its Bicol Express and other authentic Bicolano dishes with a modern twist.",
           image:
-            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+            "https://lh3.googleusercontent.com/pw/AM-JKLVFaOMa2MTIMhL2dgNqXOaUbilpta_2KeeMVzw1AaVWlkvhoYqcbd9M1yaSyj6RQ_8tks0dcJGYCYpXHIcDtxSLSwQFVBWkYZa2AiQkBXSwTglEAVFipL_hfRyzUpAxyYwAu4u4ZiNV_l3PVd2PQ9OWqw=w920-h690-no?authuser=0",
           category: "restaurant",
           rating: 4.7,
           location: "Legazpi City, Albay",
