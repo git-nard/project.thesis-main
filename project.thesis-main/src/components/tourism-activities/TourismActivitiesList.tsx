@@ -1,7 +1,7 @@
 import React from "react";
 import TourismActivitiesCard from "./TourismActivitiesCard";
 
-const activities = [
+export const activities = [
   // TIWI
   {
     id: "tiwi-pottery",
