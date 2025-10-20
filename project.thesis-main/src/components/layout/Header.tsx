@@ -7,7 +7,7 @@ import { destinations } from "../destinations/DestinationsLists";
 import { spots } from "../tourists-spots/TouristSpotsList";
 import { activities } from "../tourism-activities/TourismActivitiesList";
 import { hotels } from "../accommodations/HotelsList";
-import { restaurant } from "../dining/RestaurantsList";
+import { restaurants } from "../dining/RestaurantsList";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -41,7 +41,7 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
       ...addType(spots, "Tourist Spot"),
       ...addType(activities, "Tourism Activity"),
       ...addType(hotels, "Hotel"),
-      ...addType(restaurant, "Restaurant"),
+      ...addType(restaurants, "Restaurant"),
     ];
   }, []);
 
@@ -87,65 +87,55 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="/attractions" className="text-gray-700 hover:text-red-600 font-medium">
-            Attractions
-          </a>
-          <a href="/tourist-spots" className="text-gray-700 hover:text-red-600 font-medium">
-            Tourist Spots
-          </a>
-          <a href="/destinations" className="text-gray-700 hover:text-red-600 font-medium">
-            Destinations
-          </a>
-          <a href="/tourism-activities" className="text-gray-700 hover:text-red-600 font-medium">
-            Tourism Activities
-          </a>
-          <a href="/hotels" className="text-gray-700 hover:text-red-600 font-medium">
-            Hotels
-          </a>
-          <a href="/restaurants" className="text-gray-700 hover:text-red-600 font-medium">
-            Restaurants
-          </a>
+<nav className="hidden md:flex items-center space-x-8">
+  <Link to="/attractions" className="text-gray-700 hover:text-red-600 font-medium">
+    Attractions
+  </Link>
+  <Link to="/tourist-spots" className="text-gray-700 hover:text-red-600 font-medium">
+    Tourist Spots
+  </Link>
+  <Link to="/destinations" className="text-gray-700 hover:text-red-600 font-medium">
+    Destinations
+  </Link>
+  <Link to="/tourism-activities" className="text-gray-700 hover:text-red-600 font-medium">
+    Tourism Activities
+  </Link>
+  <Link to="/hotels" className="text-gray-700 hover:text-red-600 font-medium">
+    Hotels
+  </Link>
+  <Link to="/restaurants" className="text-gray-700 hover:text-red-600 font-medium">
+    Restaurants
+  </Link>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                className="flex items-center space-x-1 text-gray-700 hover:text-red-600 font-medium"
-              >
-                <span>More</span>
-                <ChevronDown className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem>
-                <a href="/map" className="w-full">
-                  Interactive Map
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="/experiences" className="w-full">
-                  Experiences
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="/events" className="w-full">
-                  Events
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="/about" className="w-full">
-                  About Albay
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="/safety" className="w-full">
-                  Traveler's Safety Guide
-                </a>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </nav>
+  <DropdownMenu>
+    <DropdownMenuTrigger asChild>
+      <Button
+        variant="ghost"
+        className="flex items-center space-x-1 text-gray-700 hover:text-red-600 font-medium"
+      >
+        <span>More</span>
+        <ChevronDown className="h-4 w-4" />
+      </Button>
+    </DropdownMenuTrigger>
+    <DropdownMenuContent align="end">
+      <DropdownMenuItem>
+        <Link to="/map" className="w-full">Interactive Map</Link>
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Link to="/experiences" className="w-full">Experiences</Link>
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Link to="/events" className="w-full">Events</Link>
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Link to="/about" className="w-full">About Albay</Link>
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Link to="/safety" className="w-full">Traveler's Safety Guide</Link>
+      </DropdownMenuItem>
+    </DropdownMenuContent>
+  </DropdownMenu>
+</nav>
 
         {/* Search Bar */}
         <form onSubmit={handleSearchSubmit} className="relative ml-4">

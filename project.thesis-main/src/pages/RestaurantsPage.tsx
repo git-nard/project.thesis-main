@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { restaurants } from "@/components/dining/RestaurantsList";
 
 const RestaurantsPage = () => {
   return (
@@ -31,7 +32,7 @@ const RestaurantsPage = () => {
         </div>
 
 
-        <RestaurantsList />
+        <RestaurantsList restaurants={restaurants} />
       </div>
 
       <Footer />

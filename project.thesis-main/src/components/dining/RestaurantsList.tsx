@@ -29,7 +29,7 @@ interface RestaurantsListProps {
   onRestaurantSelect?: (id: string) => void;
 }
 
-export const restaurant = [
+export const restaurants = [
     {
       id: "1",
       name: "DJC Halo Halo",
