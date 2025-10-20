@@ -1,38 +1,35 @@
 // src/components/dining/RestaurantsList.tsx
 import React, { useState, useEffect } from "react";
 import { Search, Filter, X } from "lucide-react";
-import RestaurantCard from "./RestaurantCard";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Select,
-  SelectContent,
-  SelectItem,
   SelectTrigger,
   SelectValue,
+  SelectContent,
+  SelectItem,
 } from "@/components/ui/select";
 import { Card, CardContent } from "@/components/ui/card";
+import RestaurantCard from "@/components/dining/RestaurantCard";
 
 interface Restaurant {
   id: string;
   name: string;
   image?: string;
   description?: string;
-  rating?: number;
-  address?: string;
   location?: string;
-  cuisineType?: string;
   priceRange?: string;
+  rating?: number;
   features?: string[];
 }
 
 interface RestaurantsListProps {
-  restaurants?: Restaurant[];
-  onRestaurantSelect?: (restaurantId: string) => void;
+  restaurants: Restaurant[];
+  onRestaurantSelect?: (id: string) => void;
 }
 
-export const RestaurantsList = ({
-  restaurants = [
+export const restaurant = [
     {
       id: "1",
       name: "DJC Halo Halo",
@@ -3901,21 +3898,17 @@ export const RestaurantsList = ({
   rating: 4.5,
   features: ["Dine In", "Pick-Up", "Asian Cuisine"],
 },
-  ],
+]
+   const RestaurantsList: React.FC<RestaurantsListProps> = ({
+  restaurants,
   onRestaurantSelect = (id) => console.log(`Restaurant selected: ${id}`),
-}: RestaurantsListProps) => {
+}) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [cuisineFilter, setCuisineFilter] = useState("");
   const [priceFilter, setPriceFilter] = useState("");
   const [ratingFilter, setRatingFilter] = useState("");
   const [filteredRestaurants, setFilteredRestaurants] =
     useState<Restaurant[]>(restaurants);
   const [showFilters, setShowFilters] = useState(false);
-
-  // Extract unique cuisine types (filter out empty/undefined)
-  const cuisineTypes = Array.from(
-    new Set(restaurants.map((r) => r.cuisineType || "").filter(Boolean)),
-  ).sort();
 
   useEffect(() => {
     let result = restaurants;
@@ -3926,30 +3919,28 @@ export const RestaurantsList = ({
         (restaurant) =>
           (restaurant.name || "").toLowerCase().includes(term) ||
           (restaurant.description || "").toLowerCase().includes(term) ||
-          (restaurant.cuisineType || "").toLowerCase().includes(term) ||
-          (restaurant.address || restaurant.location || "").toLowerCase().includes(term),
+          (restaurant.location || "").toLowerCase().includes(term)
       );
     }
 
-    if (cuisineFilter) {
-      result = result.filter((restaurant) => (restaurant.cuisineType || "") === cuisineFilter);
-    }
-
     if (priceFilter) {
-      result = result.filter((restaurant) => (restaurant.priceRange || "") === priceFilter);
+      result = result.filter(
+        (restaurant) => (restaurant.priceRange || "") === priceFilter
+      );
     }
 
     if (ratingFilter) {
       const minRating = parseFloat(ratingFilter);
-      result = result.filter((restaurant) => (restaurant.rating || 0) >= minRating);
+      result = result.filter(
+        (restaurant) => (restaurant.rating || 0) >= minRating
+      );
     }
 
     setFilteredRestaurants(result);
-  }, [searchTerm, cuisineFilter, priceFilter, ratingFilter, restaurants]);
+  }, [searchTerm, priceFilter, ratingFilter, restaurants]);
 
   const clearFilters = () => {
     setSearchTerm("");
-    setCuisineFilter("");
     setPriceFilter("");
     setRatingFilter("");
   };
@@ -3958,8 +3949,11 @@ export const RestaurantsList = ({
     <div className="w-full bg-gray-50 py-8 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col space-y-4">
+          {/* Header Section */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <h2 className="text-3xl font-bold text-gray-900">Restaurants in Albay</h2>
+            <h2 className="text-3xl font-bold text-gray-900">
+              Restaurants in Albay
+            </h2>
 
             <div className="flex items-center gap-2 w-full md:w-auto">
               <div className="relative flex-grow md:w-64">
@@ -3982,38 +3976,31 @@ export const RestaurantsList = ({
                 <Filter className="h-4 w-4" />
               </Button>
 
-              {(searchTerm || cuisineFilter || priceFilter || ratingFilter) && (
-                <Button variant="ghost" size="sm" onClick={clearFilters} className="flex-shrink-0 gap-1">
+              {(searchTerm || priceFilter || ratingFilter) && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={clearFilters}
+                  className="flex-shrink-0 gap-1"
+                >
                   <X className="h-4 w-4" /> Clear
                 </Button>
               )}
             </div>
           </div>
 
+          {/* Filter Section */}
           {showFilters && (
             <Card className="w-full bg-white">
               <CardContent className="p-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Cuisine Type</label>
-                    <Select value={cuisineFilter} onValueChange={setCuisineFilter}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Any cuisine" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="">Any cuisine</SelectItem>
-                        {cuisineTypes.map((cuisine) => (
-                          <SelectItem key={cuisine} value={cuisine}>
-                            {cuisine}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Price Filter */}
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Price Range</label>
-                    <Select value={priceFilter} onValueChange={setPriceFilter}>
+                    <Select
+                      value={priceFilter}
+                      onValueChange={setPriceFilter}
+                    >
                       <SelectTrigger>
                         <SelectValue placeholder="Any price" />
                       </SelectTrigger>
@@ -4022,14 +4009,20 @@ export const RestaurantsList = ({
                         <SelectItem value="₱">₱ (Budget)</SelectItem>
                         <SelectItem value="₱₱">₱₱ (Moderate)</SelectItem>
                         <SelectItem value="₱₱₱">₱₱₱ (Expensive)</SelectItem>
-                        <SelectItem value="₱₱₱₱">₱₱₱₱ (Very Expensive)</SelectItem>
+                        <SelectItem value="₱₱₱₱">
+                          ₱₱₱₱ (Very Expensive)
+                        </SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
+                  {/* Rating Filter */}
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Rating</label>
-                    <Select value={ratingFilter} onValueChange={setRatingFilter}>
+                    <Select
+                      value={ratingFilter}
+                      onValueChange={setRatingFilter}
+                    >
                       <SelectTrigger>
                         <SelectValue placeholder="Any rating" />
                       </SelectTrigger>
@@ -4046,13 +4039,18 @@ export const RestaurantsList = ({
             </Card>
           )}
 
+          {/* Results Section */}
           {filteredRestaurants.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-12 text-center">
               <div className="text-gray-400 mb-4">
                 <Search className="h-12 w-12 mx-auto" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">No restaurants found</h3>
-              <p className="text-gray-500 max-w-md">Try adjusting your filters or search term.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                No restaurants found
+              </h3>
+              <p className="text-gray-500 max-w-md">
+                Try adjusting your filters or search term.
+              </p>
               <Button onClick={clearFilters} className="mt-4">
                 Clear all filters
               </Button>
@@ -4066,19 +4064,21 @@ export const RestaurantsList = ({
                     name={restaurant.name}
                     image={restaurant.image}
                     description={restaurant.description}
-                    location={restaurant.location || restaurant.address || ""}
-                    cuisine={restaurant.cuisineType || ""}
+                    location={restaurant.location || ""}
                     priceRange={restaurant.priceRange || ""}
                     features={restaurant.features || []}
+                    onClick={() => onRestaurantSelect?.(restaurant.id)}
                   />
                 </div>
               ))}
             </div>
           )}
 
+          {/* Footer Info */}
           {filteredRestaurants.length > 0 && (
             <div className="text-center text-gray-500 mt-4">
-              Showing {filteredRestaurants.length} of {restaurants.length} restaurants in Albay
+              Showing {filteredRestaurants.length} of {restaurants.length}{" "}
+              restaurants in Albay
             </div>
           )}
         </div>

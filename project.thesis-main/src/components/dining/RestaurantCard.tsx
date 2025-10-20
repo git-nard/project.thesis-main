@@ -22,6 +22,7 @@ interface RestaurantCardProps {
   priceRange?: string;
   openingHours?: string;
   features?: string[];
+  onClick?: () => void;
 }
 
 const RestaurantCard = ({
