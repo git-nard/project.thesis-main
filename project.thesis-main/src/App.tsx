@@ -33,6 +33,10 @@ import SavedIteneraries from "./pages/itineraries/SavedIteneraries";
 import ViewItenerary from "./pages/itineraries/ViewItenerary";
 import TourismActivityDetailsPage from "./components/tourism-activities/TourismActivityDetailsPage";
 import DestinationDetailPage from "./components/destinations/DestinationDetailPage";
+import Notifications from "./components/notifications/Notifications";
+import { events } from "./components/events/eventsData";
+
+
 
 
 
@@ -45,6 +49,7 @@ function App() {
   return (
     <Suspense fallback={<p>Loading...</p>}>
       <>
+       <Notifications events={events} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/attractions" element={<AttractionsPage />} />
@@ -63,6 +68,7 @@ function App() {
 
           <Route path="/events" element={<EventsPage />} />
           <Route path="/events/:id" element={<EventsDetailsPage />} />
+          
 
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/view-calendar" element={<ViewCalendarPage />} />
@@ -103,6 +109,8 @@ function App() {
 
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          
+          
 
         
         </Routes>

@@ -61,6 +61,24 @@ const EventsDetailsPage = () => {
               {event.description}
             </p>
 
+            {event.video && (
+            <div className="my-6 rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                className="w-full h-64 md:h-96"
+                src={
+                  event.video
+                    .replace("watch?v=", "embed/")
+                    .replace("youtu.be/", "www.youtube.com/embed/")
+                    .replace("shorts/", "embed/") // 👈 automatically fix Shorts too
+                }
+                title={`${event.title} Video`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          )}
+
+
             <Button asChild>
               <a
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
