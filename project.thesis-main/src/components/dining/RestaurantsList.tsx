@@ -49,7 +49,7 @@ export const RestaurantsList = ({
       name: "Magayon Pizzeria",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Qi4J6e_0SjA7P9eJYjwHe2RwmHPYA3DRVA&s",
-      description: "Authentic Filipino-style pizza with a local twist.",
+      description: "Magayon Pizzeria is a cozy local eatery that serves freshly baked pizzas made with authentic Bicolano.",
       location: "Tiwi, Albay",
       priceRange: "₱250 - ₱700",
       rating: 4.6,
@@ -4066,12 +4066,10 @@ export const RestaurantsList = ({
                     name={restaurant.name}
                     image={restaurant.image}
                     description={restaurant.description}
-                    rating={restaurant.rating || 0}
                     location={restaurant.location || restaurant.address || ""}
                     cuisine={restaurant.cuisineType || ""}
                     priceRange={restaurant.priceRange || ""}
                     features={restaurant.features || []}
-                    onClick={() => onRestaurantSelect && onRestaurantSelect(restaurant.id)}
                   />
                 </div>
               ))}

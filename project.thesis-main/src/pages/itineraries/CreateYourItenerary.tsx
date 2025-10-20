@@ -1,4 +1,3 @@
-// src/pages/CreateItinerary.tsx
 import React, { useState, useEffect } from "react";
 import { Plus, Trash2, Calendar, MapPin, Clock, ChevronLeft, Luggage } from "lucide-react";
 import { Button } from "@/components/ui/button";

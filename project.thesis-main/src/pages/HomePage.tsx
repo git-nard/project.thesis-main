@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/home/HeroSection";
 import SearchBar from "@/components/search/SearchBar";
-import FeaturedSection from "@/components/featured/FeaturedSection";
+import FeaturedSection from "../components/featured/FeaturedSection";
 import MapPreview from "@/components/map/MapPreview";
 import { Compass, Hotel, Utensils } from "lucide-react";
 import Footer from "@/components/layout/Footer";
@@ -59,7 +59,10 @@ const HomePage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <HeroSection onSearch={handleSearch} onCtaClick={handleExploreClick} />
+      <HeroSection
+        onSearch={(searchTerm: string) => handleSearch(searchTerm, {})}
+        onCtaClick={handleExploreClick}
+      />
 
       {/* Main Content */}
       <main className="flex-1">
@@ -72,7 +75,7 @@ const HomePage = () => {
             />
           </div>
         </div>
-
+        
         {/* Categories Section */}
         <div id="categories-section">
           <section className="w-full py-12 bg-gray-50">

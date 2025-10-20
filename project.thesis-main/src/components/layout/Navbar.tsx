@@ -30,9 +30,12 @@ const Navbar = ({
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Tourist Spots", path: "/tourist-spots" },
+    { name: "Destinations", path: "/destinations" },
+    { name: "Tourism Activities", path: "/tourism-activities" },
     { name: "Hotels", path: "/hotels" },
     { name: "Restaurants", path: "/restaurants" },
-    { name: "Interactive Map", path: "/map" },
+    { name: "Events", path: "/events" },
+    
   ];
 
   return (

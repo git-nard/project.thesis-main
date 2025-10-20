@@ -23,38 +23,14 @@ const DestinationListPage = () => {
         </div>
 
         {/* Page Header */}
-        <h1 className="text-4xl font-bold mb-2">Destinations in Albay</h1>
-        <p className="text-gray-600 mb-8 max-w-3xl">
-          Discover Albay’s most iconic and hidden destinations — from scenic
-          hills and beaches to historical landmarks and eco-tourism wonders.
-        </p>
-
-        {/* Highlight Section */}
-        <div className="mb-8 bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg">
-          <h2 className="text-2xl font-bold mb-4">Featured Destination: Ligñon Hill</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            <div>
-              <p className="text-gray-700 mb-4">
-                Ligñon Hill Nature Park offers a panoramic view of Mayon Volcano,
-                Albay Gulf, and Legazpi City. The hill features an observatory deck,
-                zipline, and a scenic hiking trail perfect for adventure seekers.
-              </p>
-              <ul className="list-disc pl-5 text-gray-700 space-y-1">
-                <li>Perfect view of Mayon Volcano</li>
-                <li>Adventure activities like zipline and trekking</li>
-                <li>Sunrise and sunset viewing spots</li>
-              </ul>
-              <Button className="mt-4">Explore Ligñon Hill</Button>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-md">
-              <img
-                src="https://albay.gov.ph/wp-content/uploads/2020/02/DSC_0053-1024x678.jpg"
-                alt="Ligñon Hill"
-                className="w-full h-64 object-cover"
-              />
-            </div>
+          <div className="text-center mb-10">
+            <h1 className="text-4xl font-bold mb-2">Destinations in Albay</h1>
+            <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
+              Discover Albay’s most iconic and hidden destinations — from scenic
+              hills and beaches to historical landmarks and eco-tourism wonders.
+            </p>
           </div>
-        </div>
+
 
         {/* Destinations List */}
         <DestinationsList />

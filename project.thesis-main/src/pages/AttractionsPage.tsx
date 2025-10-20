@@ -21,13 +21,16 @@ const AttractionsPage = () => {
           </Link>
         </div>
 
-        <h1 className="text-4xl font-bold mb-2">
-          Tourist Attractions in Albay
-        </h1>
-        <p className="text-gray-600 mb-8 max-w-3xl">
-          Discover the natural wonders, historical sites, and cultural landmarks
-          that make Albay a must-visit destination in the Philippines.
-        </p>
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h1 className="text-4xl font-bold mb-2 text-gray-900">
+            Tourist Attractions in Albay
+          </h1>
+          <p className="text-gray-600 mb-4">
+            Discover the natural wonders, historical sites, and cultural landmarks 
+            that make Albay a must-visit destination in the Philippines.
+          </p>
+        </div>
+
 
         <div className="mb-8 bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg">
           <h2 className="text-2xl font-bold mb-4">Explore Mayon Volcano</h2>
@@ -60,7 +63,6 @@ const AttractionsPage = () => {
                   <span>Photography spots at Cagsawa Ruins</span>
                 </div>
               </div>
-              <Button className="mt-4">View Mayon Volcano Tours</Button>
             </div>
             <div className="rounded-lg overflow-hidden shadow-md">
               <img

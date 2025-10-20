@@ -12,8 +12,6 @@ interface Hotel {
   description: string;
   location: string;
   priceRange: string;
-  rating: number;
-  amenities: string[];
 }
 
 interface HotelsListProps {
@@ -21,156 +19,94 @@ interface HotelsListProps {
   onHotelSelect?: (hotelId: string) => void;
 }
 
-export const hotels = [
+export const hotels: Hotel[] = [
     {
-      id: "1",
-      name: "Mayon View Resort & Spa",
-      image:
-        "https://gttp.images.tshiftcdn.com/223373/x/0/legazpi-albay-travel-guide-mayon-volcano-hotels-itinerary-11.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883",
-      description:
-        "Luxury resort with stunning views of Mayon Volcano, featuring a spa, infinity pool, and fine dining restaurant.",
-      location: "Legazpi City, Albay",
-      priceRange: "₱5,000 - ₱12,000",
-      rating: 4.8,
-      amenities: [
-        "Free WiFi",
-        "Swimming Pool",
-        "Restaurant",
-        "Spa",
-        "Fitness Center",
-      ],
-    },
-    {
-      id: "2",
-      name: "Albay Boutique Hotel",
-      image:
-        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1470&q=80",
-      description:
-        "Charming boutique hotel in the heart of Legazpi City with traditional Filipino design elements and modern amenities.",
-      location: "Legazpi City, Albay",
-      priceRange: "₱3,000 - ₱6,000",
-      rating: 4.5,
-      amenities: [
-        "Free WiFi",
-        "Breakfast Included",
-        "Air Conditioning",
-        "Room Service",
-      ],
-    },
-    {
-      id: "3",
-      name: "Daraga Homestay",
-      image:
-        "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=1470&q=80",
-      description:
-        "Authentic Filipino homestay experience with local hosts, home-cooked meals, and cultural immersion opportunities.",
-      location: "Daraga, Albay",
-      priceRange: "₱1,500 - ₱2,500",
-      rating: 4.7,
-      amenities: [
-        "Free WiFi",
-        "Breakfast Included",
-        "Local Guide",
-        "Cultural Activities",
-      ],
-    },
-    {
-      id: "4",
-      name: "Cagsawa Ruins Inn",
-      image:
-        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      description:
-        "Budget-friendly accommodation near the historic Cagsawa Ruins with basic amenities and friendly staff.",
-      location: "Cagsawa, Albay",
-      priceRange: "₱1,000 - ₱2,000",
-      rating: 4.0,
-      amenities: ["Free WiFi", "Air Conditioning", "Tour Arrangements"],
-    },
-    {
-      id: "5",
-      name: "Tabaco Bay Resort",
-      image:
-        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/27/63/f0/misibis-bay-aerial-shot.jpg?w=1200&h=-1&s=1",
-      description:
-        "Beachfront resort in Tabaco City with water sports activities, seafood restaurant, and relaxing ocean views.",
-      location: "Tabaco City, Albay",
-      priceRange: "₱4,000 - ₱8,000",
-      rating: 4.3,
-      amenities: [
-        "Beachfront",
-        "Swimming Pool",
-        "Restaurant",
-        "Water Sports",
-        "Free WiFi",
-      ],
-    },
-    {
-      id: "6",
-      name: "Tiwi Hot Springs Hotel",
-      image:
-        "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      description:
-        "Relaxing hotel with natural hot spring pools, spa treatments, and scenic mountain views in Tiwi.",
-      location: "Tiwi, Albay",
-      priceRange: "₱3,500 - ₱7,000",
-      rating: 4.6,
-      amenities: [
-        "Hot Springs",
-        "Spa",
-        "Restaurant",
-        "Mountain View",
-        "Free WiFi",
-      ],
-    },
-    {
-  id: "7",
-  name: "Casa Cecilia Gamboa’s Orchard",
-  image: "https://scontent.fmnl37-2.fna.fbcdn.net/v/t1.15752-9/553700893_1495403821725548_5132505395007434392_n.png?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeEn6dMy6Jj0Hiabexa49O4d7-PP36ZVYgLv48_fplViArSjmCk9kh2kshstlLer1A-w-aKPLS0Ugw_rc9D9Nc09&_nc_ohc=r8Ajmwe8ioQQ7kNvwH7mtZk&_nc_oc=AdnWXBsEKOKX72vzJyT1kg3XN52Yb0DhwKGHfo18xmASm9YAClQ2iaTF-wTxcFwgL5g&_nc_zt=23&_nc_ht=scontent.fmnl37-2.fna&oh=03_Q7cD3gFX6xcb4tg0-ArQdiecYp6egbVIHjfs3mOzF-JDub5I6g&oe=6910AF15",
-  description: "Cool atmosphere and cozy accommodation surrounded by nature.",
-  location: "Purok 1, San Jose, Malilipot, Albay",
-  priceRange: "₱2,000 - ₱4,000",
-  rating: 4.5,
-  amenities: ["Free WiFi", "Parking", "Breakfast Included"],
-},
-{
-  id: "8",
-  name: "Misibis Resort and Hotel Management Inc.",
-  image: "https://scontent.fmnl3-1.fna.fbcdn.net/v/t1.15752-9/551818412_1394201025408370_2606581467867946619_n.png?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeFgf8pwNYpE5_ERBtVBmbKAuxBNDl1pc-G7EE0OXWlz4YaO9ifAiJyWr73LFwSi0YzspFdd_wq3VVFBXm9fXDh2&_nc_ohc=l9do27kLMrIQ7kNvwH6r6Pb&_nc_oc=AdnPXGTuFFyi1le9WqvW4Sc6jZBfsvdPqR4lkrvsNna3UA2CS8uxX80O6UJZziRe1Uo&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&oh=03_Q7cD3gEmsa82FDyEa29-P6vSOBob06brFFk01ZD0Y3gjo3gGQQ&oe=6910CE17",
-  description: "Your tropical island getaway — a private hideaway built on a pristine beach.",
-  location: "Sitio Mosboron, Brgy. Misibis, Bacacay, Albay",
-  priceRange: "₱10,000 - ₱25,000",
-  rating: 4.9,
-  amenities: ["Beachfront", "Swimming Pool", "Restaurant", "Spa"],
-},
-{
-  id: "9",
-  name: "Patio de San Jose Resort and Convention Center, Inc.",
-  image: "https://scontent.fmnl3-4.fna.fbcdn.net/v/t1.15752-9/552984246_1858199331802216_114848082875195087_n.png?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeFPihzw_YGCaMtxYPTD7tSsgGW3oCPjosSAZbegI-OixPGSda4ppgoza1NKos9rSmu-D5SsWsqJhXsIpsI6zt-G&_nc_ohc=MPMc7ZKQx-0Q7kNvwFDffxM&_nc_oc=AdmoitelJxYvcH49mGk2DQ7V7CaqXjH45zjc9c4BkMshk_dM_5lrWvDJ_EwDv_fhyDA&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&oh=03_Q7cD3gG-hAaBsgt7UCZ1bdvLy-k3NnqSiHh2GjyVsFSMjIaNGw&oe=6910CC1C",
-  description: "A perfect place to relax, breathe fresh air, and enjoy the ocean breeze with your loved ones.",
-  location: "Purok 5, Brgy. San Jose, Malilipot, Albay",
-  priceRange: "₱3,000 - ₱6,000",
-  rating: 4.6,
-  amenities: ["Swimming Pool", "Restaurant", "Event Hall", "Free WiFi"],
-},
-{
-  id: "10",
-  name: "Bienvinida Hotel and Resort",
-  image: "https://scontent.fmnl37-2.fna.fbcdn.net/v/t1.15752-9/553238220_814644167624426_6511458214513389429_n.png?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeEtqjZXM7LzjVcyxLg8tKK9rYeDnHLPt7mth4Occs-3uVk1e6Ty2HxlD3Y4jXGNufDPzQmz32nDUaBvvCgJt7B5&_nc_ohc=qL8mecvnS_AQ7kNvwHfbtLW&_nc_oc=AdnlijCnxVVCJxMh4gJNE5L5CKIpoJISiyYFU2j8owy9kEwThqOUevIytTPIzEyO5jY&_nc_zt=23&_nc_ht=scontent.fmnl37-2.fna&oh=03_Q7cD3gGlHkpmONEchohknbA1BgI1TMddu_hd_NJAVpN_92SSCw&oe=6910BDA4",
-  description: "Clean and cool waters with a relaxing natural environment.",
-  location: "Purok 4, Brgy. San Juan, Sto. Domingo, Albay",
-  priceRange: "₱2,500 - ₱5,000",
-  rating: 4.3,
-  amenities: ["Swimming Pool", "Free Parking", "Restaurant"],
-},
+    id: "1",
+    name: "Mayon View Resort & Spa",
+    image: "https://gttp.images.tshiftcdn.com/223373/x/0/legazpi-albay-travel-guide-mayon-volcano-hotels-itinerary-11.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883",
+    description: "Luxury resort with stunning views of Mayon Volcano, featuring a spa, infinity pool, and fine dining restaurant.",
+    location: "Legazpi City, Albay",
+    priceRange: "₱5,000 - ₱12,000",
+  },
+  {
+    id: "2",
+    name: "Albay Boutique Hotel",
+    image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1470&q=80",
+    description: "Albay Boutique Hotel is a stylish and cozy retreat located in the heart of Legazpi City. It offers elegantly designed rooms, modern amenities, and a relaxing ambiance perfect for both business and leisure travelers. Guests can enjoy convenient access to popular attractions, local dining spots, and breathtaking views of Mayon Volcano..",
+    location: "Legazpi City, Albay",
+    priceRange: "₱3,000 - ₱6,000",
+  },
+  {
+    id: "3",
+    name: "Daraga Homestay",
+    image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=1470&q=80",
+    description: "Authentic Filipino homestay experience with local hosts, home-cooked meals, and cultural immersion opportunities.",
+    location: "Daraga, Albay",
+    priceRange: "₱1,500 - ₱2,500",
+  },
+  {
+    id: "4",
+    name: "Cagsawa Ruins Inn",
+    image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    description: "Cagsawa Ruins Inn offers a charming and affordable stay just minutes away from the iconic Cagsawa Ruins. Guests can enjoy comfortable rooms, warm local hospitality, and stunning views of the Mayon Volcano. It’s the perfect spot for travelers seeking a peaceful retreat with easy access to Albay’s historical and natural attractions..",
+    location: "Cagsawa, Albay",
+    priceRange: "₱1,000 - ₱2,000",
+  },
+  {
+    id: "5",
+    name: "Tabaco Bay Resort",
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/27/63/f0/misibis-bay-aerial-shot.jpg?w=1200&h=-1&s=1",
+    description: "Beachfront resort in Tabaco City with water sports activities, seafood restaurant, and relaxing ocean views.",
+    location: "Tabaco City, Albay",
+    priceRange: "₱4,000 - ₱8,000",
+  },
+  {
+    id: "6",
+    name: "Tiwi Hot Springs Hotel",
+    image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    description: "Tiwi Hot Springs Hotel provides a relaxing escape surrounded by nature and the soothing warmth of natural hot springs. Guests can unwind in therapeutic pools, enjoy comfortable accommodations, and experience the tranquil beauty of Tiwi, Albay. It’s an ideal destination for wellness seekers and travelers looking to rejuvenate amidst scenic landscapes.",
+    location: "Tiwi, Albay",
+    priceRange: "₱3,500 - ₱7,000",
+  },
+  {
+    id: "7",
+    name: "Casa Cecilia Gamboa's Orchard",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM3OF4rzye3CJu3h76DARtqDnd8h9E5IUTwA&s",
+    description: "Casa Cecilia Gamboa’s Orchard is a peaceful countryside retreat surrounded by lush fruit trees and vibrant gardens. Guests can experience authentic Bicolano hospitality, fresh farm-to-table meals, and a serene escape from city life. It’s an ideal destination for nature lovers seeking relaxation and a taste of rural charm in Albay.",
+    location: "Purok 1, San Jose, Malilipot, Albay",
+    priceRange: "₱2,000 - ₱4,000",
+  },
+  {
+    id: "8",
+    name: "Misibis Resort and Hotel Management Inc.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ZFEl7J4wYf3zzpnjoTL6og9LUtYUIWhh4w&s",
+    description: "Misibis Resort and Hotel Management Inc. is a world-class luxury destination nestled on Cagraray Island in Albay. Known for its pristine beaches, water sports, and breathtaking views of the Pacific Ocean, it offers an unforgettable tropical escape. Guests can indulge in fine dining, spa treatments, and adventure activities, making it the ultimate getaway in Bicol..",
+    location: "Sitio Mosboron, Brgy. Misibis, Bacacay, Albay",
+    priceRange: "₱10,000 - ₱25,000",
+  },
+  {
+    id: "9",
+    name: "Patio de San Jose Resort and Convention Center, Inc.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNKSQtVgAsH4GezZjW-5ArGFMWWY1idE2cjA&s",
+    description: "Patio de San Jose Resort and Convention Center, Inc. offers a relaxing retreat in the heart of Albay, blending comfort, leisure, and elegance. It features spacious accommodations, lush surroundings, and modern amenities perfect for family vacations or corporate events. With its inviting pools and grand convention facilities, it’s an ideal venue for both relaxation and celebrations.",
+    location: "Purok 5, Brgy. San Jose, Malilipot, Albay",
+    priceRange: "₱3,000 - ₱6,000",
+  },
+  {
+    id: "10",
+    name: "Bienvinida Hotel and Resort",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL1Ry73Z19Pd4MOJN04Yb1tcxQk2KrPKTidQ&s",
+    description: "Bienvenida Hotel and Resort offers a perfect blend of comfort, leisure, and Bicolano hospitality. Guests can enjoy spacious rooms, refreshing pools, and relaxing garden views ideal for family vacations or weekend getaways. Located conveniently in Albay, it provides easy access to local attractions, dining spots, and scenic landmarks..",
+    location: "Purok 4, Brgy. San Juan, Sto. Domingo, Albay",
+    priceRange: "₱2,500 - ₱5,000",
+  },
 {
   id: "11",
   name: "Costal View Beach Resort",
   image: "https://scontent.fmnl3-4.fna.fbcdn.net/v/t1.15752-9/553953847_24673486755606913_6585956722996306827_n.png?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeElkm9LJb5mcTFFxDhgra66OgTSypilIBk6BNLKmKUgGSsOXXJTpRkjNJ4StuNtnLokBVK-DZMkpO8XHXUqicbM&_nc_ohc=KolKCCbT9rQQ7kNvwFrACRU&_nc_oc=AdkPJvkcmEaAFuGV7CAXTHtg_uwyEzjVRsRXpGU-ZYu81NPyYfzPnyASm-4ez6YwNqk&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&oh=03_Q7cD3gHlkalQ98tAlNFCsJddUNz4-PUjBjaA6v8Ke5LbAHqIug&oe=6910ABE7",
-  description: "Offers accommodations from standard to executive rooms, plus a function hall for special events.",
+  description: "Coastal View Beach Resort offers a serene seaside getaway with stunning views of the ocean and golden sunsets. Guests can relax in cozy beachfront cottages, enjoy fresh local seafood, and experience the laid-back charm of Albay’s coastal life. It’s the perfect destination for families, couples, and travelers seeking peace and natural beauty by the shore..",
   location: "Calayucay, Sto. Domingo, Albay",
   priceRange: "₱3,000 - ₱6,000",
-  rating: 4.4,
-  amenities: ["Beachfront", "Function Hall", "Restaurant", "Free WiFi"],
 },
 {
   id: "12",
@@ -179,8 +115,6 @@ export const hotels = [
   description: "Relax by the pool with a glass of mango shake in hand and enjoy a seaside escape.",
   location: "Purok 3, Calayucay, Sto. Domingo, Albay",
   priceRange: "₱3,000 - ₱7,000",
-  rating: 4.5,
-  amenities: ["Swimming Pool", "Restaurant", "Beach Access"],
 },
 {
   id: "13",
@@ -189,8 +123,6 @@ export const hotels = [
   description: "A holistic place for relaxation and wellness that reinvigorates the mind and soul.",
   location: "Brgy. Cajugotan, Sto. Domingo, Albay",
   priceRange: "₱3,000 - ₱6,000",
-  rating: 4.7,
-  amenities: ["Spa", "Restaurant", "Wellness Center", "Free WiFi"],
 },
 {
   id: "14",
@@ -199,8 +131,6 @@ export const hotels = [
   description: "Experience Tabaco’s warmth, dining, entertainment, and tour arrangements in one place.",
   location: "A.A. Berces St., Tabaco City, Albay",
   priceRange: "₱2,500 - ₱5,500",
-  rating: 4.2,
-  amenities: ["Restaurant", "Free WiFi", "Room Service"],
 },
 {
   id: "15",
@@ -209,8 +139,6 @@ export const hotels = [
   description: "Affordable hotel and restaurant with an event venue and Zumba sessions on the top deck.",
   location: "Ziga Avenue, Tabaco City, Albay",
   priceRange: "₱2,000 - ₱4,000",
-  rating: 4.3,
-  amenities: ["Restaurant", "Event Space", "Free WiFi"],
 },
 {
   id: "16",
@@ -219,8 +147,6 @@ export const hotels = [
   description: "Features rooms, dormitory sleeping, swimming pool, tennis and basketball court, and mini chapel.",
   location: "San Francisco, Malilipot, Albay",
   priceRange: "₱2,000 - ₱5,000",
-  rating: 4.4,
-  amenities: ["Swimming Pool", "Sports Facilities", "Chapel", "Free Parking"],
 },
 {
   id: "17",
@@ -229,8 +155,6 @@ export const hotels = [
   description: "A beachfront getaway offering relaxation, good food, and coastal views.",
   location: "Purok 2, Brgy. Calayucay, Sto. Domingo, Albay",
   priceRange: "₱2,500 - ₱6,000",
-  rating: 4.3,
-  amenities: ["Beachfront", "Restaurant", "Free WiFi"],
 },
 {
   id: "18",
@@ -239,8 +163,6 @@ export const hotels = [
   description: "Overlooking Albay Gulf with a scenic Mayon Volcano view and black sand beach.",
   location: "Brgy. Calayucay, Sto. Domingo, Albay",
   priceRange: "₱3,000 - ₱6,500",
-  rating: 4.6,
-  amenities: ["Beachfront", "Restaurant", "Ocean View", "Free Parking"],
 },
 {
   id: "19",
@@ -249,8 +171,6 @@ export const hotels = [
   description: "Affordable yet quality accommodation with great service and comfort.",
   location: "Ziga Avenue, Divino Rostro, Tabaco City, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.2,
-  amenities: ["Air Conditioning", "Free WiFi", "Room Service"],
 },
 {
   id: "20",
@@ -259,8 +179,6 @@ export const hotels = [
   description: "Located near Tabaco seaport, perfect for travelers seeking convenience and comfort.",
   location: "Purok 3, Bonifacio St., Brgy. Cormidal, Tabaco City, Albay",
   priceRange: "₱1,200 - ₱2,500",
-  rating: 4.1,
-  amenities: ["Free WiFi", "Parking", "Air Conditioning"],
 },
 {
   id: "21",
@@ -269,8 +187,6 @@ export const hotels = [
   description: "Warm and cozy place to rest between your travels with excellent comfort.",
   location: "Herra St., Tabaco City, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.3,
-  amenities: ["Free WiFi", "Air Conditioning", "Room Service"],
 },
 {
   id: "22",
@@ -279,8 +195,6 @@ export const hotels = [
   description: "Luxury and relaxation await with a wide range of amenities and top-tier service.",
   location: "A.A. Berces St., Quinale, Tabaco City, Albay",
   priceRange: "₱4,000 - ₱8,000",
-  rating: 4.8,
-  amenities: ["Swimming Pool", "Restaurant", "Free WiFi", "Fitness Center"],
 },
 {
   id: "23",
@@ -289,8 +203,6 @@ export const hotels = [
   description: "Offers a restaurant, private parking, free bikes, bar, and a lush garden view.",
   location: "Zone 7, Brgy. Panal, Tabaco City, Albay",
   priceRange: "₱3,000 - ₱6,000",
-  rating: 4.5,
-  amenities: ["Restaurant", "Parking", "Garden", "Bar"],
 },
 {
   id: "24",
@@ -299,8 +211,6 @@ export const hotels = [
   description: "Breathtaking mountain views and relaxing natural springs for a rejuvenating stay.",
   location: "Brgy. 1 Poblacion, Malilipot, Albay",
   priceRange: "₱2,000 - ₱4,000",
-  rating: 4.4,
-  amenities: ["Spring Water Pool", "Mountain View", "Restaurant"],
 },
 {
   id: "25",
@@ -309,8 +219,6 @@ export const hotels = [
   description: "A spotless and well-maintained bed and breakfast blending nostalgia with modern style.",
   location: "#1 Bes Street, Brgy. 13 Poblacion, Bacacay, Albay",
   priceRange: "₱3,000 - ₱5,000",
-  rating: 4.7,
-  amenities: ["Breakfast Included", "Restaurant", "Air Conditioning"],
 },
 {
   id: "26",
@@ -319,8 +227,6 @@ export const hotels = [
   description: "Perpetually fed by cool mountain streams — vibrant, refreshing, and peaceful.",
   location: "Mayon Crossing, Brgy. Buang, Tabaco City, Albay",
   priceRange: "₱2,000 - ₱4,500",
-  rating: 4.5,
-  amenities: ["Spring Water", "Mountain View", "Restaurant", "Free WiFi"],
 },
 {
   id: "27",
@@ -329,8 +235,6 @@ export const hotels = [
   description: "A relaxing resort nestled in Parong, Pawa, Manito — perfect for quiet getaways surrounded by nature.",
   location: "Purok 4, Parong, Pawa, Manito, Albay",
   priceRange: "₱1,000 - ₱2,500",
-  rating: 4.3,
-  amenities: ["Resort", "Swimming Pool", "Nature View"],
 },
 {
   id: "28",
@@ -339,8 +243,6 @@ export const hotels = [
   description: "Where your vacation feels like home — comfort and relaxation for travelers in Camalig.",
   location: "Crossing Ilawod, Camalig, Albay",
   priceRange: "₱1,200 - ₱2,800",
-  rating: 4.4,
-  amenities: ["Free WiFi", "Restaurant", "Parking"],
 },
 {
   id: "29",
@@ -349,8 +251,6 @@ export const hotels = [
   description: "New, cozy, and clean at a very affordable price — an ideal place to stay in Daraga.",
   location: "Purok 2, Tagas, Daraga, Albay",
   priceRange: "₱1,000 - ₱2,000",
-  rating: 4.2,
-  amenities: ["Affordable", "Clean Rooms", "Accessible Location"],
 },
 {
   id: "30",
@@ -359,8 +259,6 @@ export const hotels = [
   description: "A distinct addition to Daraga — a smart choice for travelers seeking wellness and relaxation.",
   location: "Ardhil Subdivision, Lakandula Drive, Tagas, Daraga, Albay",
   priceRange: "₱1,800 - ₱3,500",
-  rating: 4.5,
-  amenities: ["Spa", "Restaurant", "WiFi", "Massage"],
 },
 {
   id: "31",
@@ -369,8 +267,6 @@ export const hotels = [
   description: "A refreshing swimming destination located in Tagas, Daraga — enjoy cool waters and great amenities.",
   location: "Purok 4, Brgy. Tagas, Daraga, Albay",
   priceRange: "₱800 - ₱1,500",
-  rating: 4.3,
-  amenities: ["Swimming Pool", "Picnic Area", "Parking"],
 },
 {
   id: "32",
@@ -379,8 +275,6 @@ export const hotels = [
   description: "Splendid service and modern facilities — ideal for both business and leisure stays.",
   location: "#10 Malvar St., Brgy. Kimantong, Daraga, Albay",
   priceRange: "₱2,000 - ₱3,800",
-  rating: 4.6,
-  amenities: ["Free Breakfast", "Conference Hall", "WiFi"],
 },
 {
   id: "33",
@@ -389,8 +283,6 @@ export const hotels = [
   description: "One of the best function halls in the province — perfect for events and gatherings.",
   location: "Tagas, Daraga, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.4,
-  amenities: ["Event Hall", "Parking", "WiFi"],
 },
 {
   id: "34",
@@ -399,8 +291,6 @@ export const hotels = [
   description: "Affordable and quality stay along Maharlika Highway — comfort meets accessibility.",
   location: "Maharlika Highway, Brgy. San Roque, Daraga, Albay",
   priceRange: "₱1,200 - ₱2,500",
-  rating: 4.3,
-  amenities: ["Restaurant", "WiFi", "Parking"],
 },
 {
   id: "35",
@@ -409,8 +299,6 @@ export const hotels = [
   description: "Affordable container-style accommodation made from recycled shipping containers — eco-friendly and creative.",
   location: "Purok 3, Brgy. Maroroy, Daraga, Albay",
   priceRange: "₱800 - ₱1,500",
-  rating: 4.2,
-  amenities: ["Eco-friendly", "Affordable", "Parking"],
 },
 {
   id: "36",
@@ -419,8 +307,6 @@ export const hotels = [
   description: "Colorful, spacious, and well-maintained rooms perfect for short or long stays.",
   location: "Purok 3, Brgy. Kimantong, Daraga, Albay",
   priceRange: "₱1,000 - ₱2,200",
-  rating: 4.1,
-  amenities: ["Spacious Rooms", "WiFi", "Parking"],
 },
 {
   id: "37",
@@ -429,8 +315,6 @@ export const hotels = [
   description: "Quiet place to relax with parking space for each room at the most affordable rates.",
   location: "1996 Velasco St., Doña Maria Subd., Daraga, Albay",
   priceRange: "₱900 - ₱2,000",
-  rating: 4.2,
-  amenities: ["Parking", "WiFi", "Affordable"],
 },
 {
   id: "38",
@@ -439,8 +323,6 @@ export const hotels = [
   description: "Offers comfort, service, and amenities for a memorable stay in Daraga.",
   location: "Rizal Street, Sagpon, Daraga, Albay",
   priceRange: "₱1,800 - ₱3,500",
-  rating: 4.5,
-  amenities: ["Restaurant", "WiFi", "Conference Hall"],
 },
 {
   id: "39",
@@ -449,8 +331,6 @@ export const hotels = [
   description: "Relaxing rooms with massage and food delivery — comfort meets convenience.",
   location: "Doña Maria Subd., Tagas, Daraga, Albay",
   priceRange: "₱1,200 - ₱2,800",
-  rating: 4.3,
-  amenities: ["Massage", "Room Service", "WiFi"],
 },
 {
   id: "40",
@@ -459,8 +339,6 @@ export const hotels = [
   description: "Conveniently located minutes away from Legazpi City center — offering modern amenities and event spaces.",
   location: "A. Aquende Drive, Legazpi City, Albay",
   priceRange: "₱2,000 - ₱4,000",
-  rating: 4.5,
-  amenities: ["Conference Hall", "Free WiFi", "Restaurant"],
 },
 {
   id: "41",
@@ -469,8 +347,6 @@ export const hotels = [
   description: "Offers the best blends of coffee by Nespresso and cozy rooms for both leisure and business stays.",
   location: "Rizal St., Brgy. 18, Cabagñan, Legazpi City, Albay",
   priceRange: "₱2,000 - ₱4,500",
-  rating: 4.6,
-  amenities: ["Café", "Restaurant", "WiFi", "Event Hall"],
 },
 {
   id: "42",
@@ -479,18 +355,14 @@ export const hotels = [
   description: "Upscale rooms with quilted headboards, flat screens, tea/coffee-making facilities, and elegant suites.",
   location: "Brgy. 31-Centro-Baybay (POB), Legazpi City, Albay",
   priceRange: "₱3,000 - ₱5,000",
-  rating: 4.7,
-  amenities: ["Free WiFi", "Restaurant", "Spa", "Conference Room"],
 },
 {
   id: "43",
   name: "La Venezia Hotel & Spa",
-  image: "hhttps://scontent.fmnl3-3.fna.fbcdn.net/v/t1.15752-9/553657300_2376112306156549_6597100907491699599_n.png?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHROfvfsq5c-EP82kkr3qc11tVSSceM267W1VJJx4zbrpItzGC7cWmK-0DWV0nZ2Ok7zSwtyX5dervNgz3Tx9MA&_nc_ohc=aa6_bjH_RC4Q7kNvwF2bhZV&_nc_oc=AdnDnqoKcmtSI9Q4tTt2cW-CRpMPTLeSvPU8mAjaMIaqNzpuaE4bTz8JwpxHELvno7I&_nc_zt=23&_nc_ht=scontent.fmnl3-3.fna&oh=03_Q7cD3gFWEOUkFq-styTldy7hcm0TMPnM6vKHoxyd5h7C7a0AnQ&oe=6910CFBE",
+  image: "https://images.trvl-media.com/lodging/3000000/2210000/2204900/2204897/1b75bcdf.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
   description: "Stress-free stay with Wi-Fi, taxi, and car hire services for a convenient Legazpi experience.",
   location: "Renaissance Gardens, Washington Drive, Brgy. 40-Cruzada, Legazpi City, Albay",
   priceRange: "₱2,500 - ₱4,800",
-  rating: 4.5,
-  amenities: ["Spa", "Car Hire", "Restaurant", "WiFi"],
 },
 {
   id: "44",
@@ -499,8 +371,6 @@ export const hotels = [
   description: "Homey rooms featuring flat-screen TVs, cable programming, and complimentary Wi-Fi.",
   location: "F. Imperial St. corner L. Los Baños Ave., Legazpi City, Albay",
   priceRange: "₱1,800 - ₱3,500",
-  rating: 4.4,
-  amenities: ["WiFi", "TV", "Restaurant", "Parking"],
 },
 {
   id: "45",
@@ -509,8 +379,6 @@ export const hotels = [
   description: "Enjoy a free breakfast daily and recreational amenities for a delightful stay.",
   location: "F. Imperial Street corner Terminal Rd., Bitano, Legazpi City, Albay",
   priceRange: "₱2,000 - ₱3,800",
-  rating: 4.4,
-  amenities: ["Free Breakfast", "WiFi", "Restaurant"],
 },
 {
   id: "46",
@@ -519,8 +387,6 @@ export const hotels = [
   description: "Relaxed hotel in a bustling area with colorful façade and views of Mayon Volcano.",
   location: "Brgy. 16, Kawit East, Washington Drive, Legazpi City, Albay",
   priceRange: "₱2,000 - ₱4,000",
-  rating: 4.6,
-  amenities: ["Volcano View", "Restaurant", "WiFi"],
 },
 {
   id: "47",
@@ -529,8 +395,6 @@ export const hotels = [
   description: "Conservative rooms with refined décor and modern amenities near Legazpi Airport.",
   location: "Airport Road, Washington Drive, Brgy. 40-Cruzada, Legazpi City, Albay",
   priceRange: "₱3,000 - ₱5,000",
-  rating: 4.6,
-  amenities: ["Restaurant", "Bar", "WiFi", "Airport Access"],
 },
 {
   id: "48",
@@ -539,8 +403,6 @@ export const hotels = [
   description: "Air-conditioned rooms with modern amenities for business and leisure travelers.",
   location: "Corner Imelda Roces Ave., Brgy. 38, Gogon, Legazpi City, Albay",
   priceRange: "₱3,000 - ₱5,000",
-  rating: 4.7,
-  amenities: ["Restaurant", "Conference Hall", "WiFi"],
 },
 {
   id: "49",
@@ -549,8 +411,6 @@ export const hotels = [
   description: "Modern hotel offering free breakfast, a restaurant, and 24-hour front desk services.",
   location: "Purok 1, Brgy. 33, Peñaranda St., Legazpi City, Albay",
   priceRange: "₱2,500 - ₱4,500",
-  rating: 4.5,
-  amenities: ["Free Breakfast", "WiFi", "Restaurant", "24-Hour Service"],
 },
 {
   id: "50",
@@ -559,8 +419,6 @@ export const hotels = [
   description: "Variety of convenient and tasty dining options with relaxing recreational facilities.",
   location: "Gov. Forbes St. corner Rizal St., Brgy. 31, Centro Baybay, Legazpi City, Albay",
   priceRange: "₱2,000 - ₱4,000",
-  rating: 4.5,
-  amenities: ["Restaurant", "WiFi", "Boutique Interiors"],
 },
 {
   id: "51",
@@ -569,8 +427,6 @@ export const hotels = [
   description: "View of Mayon Volcano, walking distance to malls, church, and tourist spots.",
   location: "Diamond St., Imperial Court Subd., Phase 1, Cabangan, Legazpi City",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.3,
-  amenities: ["Volcano View", "Breakfast", "WiFi", "Gift Shop"],
 },
 {
   id: "52",
@@ -579,8 +435,6 @@ export const hotels = [
   description: "Cozy residential rooms just 10 minutes’ walk to Legazpi Boulevard and Albay Gulf.",
   location: "Buckingham St., Imperial Ridgeview Subd., Legazpi City, Albay",
   priceRange: "₱1,200 - ₱2,800",
-  rating: 4.2,
-  amenities: ["Residential Rooms", "WiFi", "Parking"],
 },
 {
   id: "53",
@@ -589,8 +443,6 @@ export const hotels = [
   description: "Ideal airport hotel for busy executives and tourists eager to explore Bicol.",
   location: "Benny Imperial St., Brgy. 16, Kawit East, Washington Drive (POB), Legazpi City",
   priceRange: "₱2,500 - ₱4,800",
-  rating: 4.5,
-  amenities: ["Airport Access", "WiFi", "Restaurant", "Conference Hall"],
 },
 {
   id: "54",
@@ -599,8 +451,6 @@ export const hotels = [
   description: "Classic accommodation choice with modern comfort in the heart of Legazpi.",
   location: "238 PNR-Peñaranda St., Brgy. 33, Iraya (POB.), Legazpi City, Albay",
   priceRange: "₱1,800 - ₱3,800",
-  rating: 4.3,
-  amenities: ["WiFi", "Restaurant", "Event Venue"],
 },
 {
   id: "55",
@@ -609,8 +459,6 @@ export const hotels = [
   description: "Perfectly situated for tourists and businessmen alike — comfortable and easy to find.",
   location: "#15 Sikatuna St., Old Albay District, Legazpi City",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.4,
-  amenities: ["WiFi", "Breakfast", "Parking"],
 },
 {
   id: "56",
@@ -619,8 +467,6 @@ export const hotels = [
   description: "Offers reasonable rates for rooms that exceed expectations — service that delights and amenities that impress.",
   location: "Marquez St., Brgy. 14, Ilawod Old Albay District, Legazpi City",
   priceRange: "₱1,800 - ₱3,500",
-  rating: 4.6,
-  amenities: ["WiFi", "Restaurant", "Affordable Rates"],
 },
 {
   id: "57",
@@ -629,8 +475,6 @@ export const hotels = [
   description: "Distinctive nautical-themed interiors with panoramic view of Albay Gulf.",
   location: "3rd & 4th Floor, Bldg. 9, Embarcadero, Legazpi City",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.4,
-  amenities: ["Seaside View", "WiFi", "Restaurant"],
 },
 {
   id: "58",
@@ -639,8 +483,6 @@ export const hotels = [
   description: "A small cozy hotel with a homelike feel located in Jamora Subdivision.",
   location: "Jamora Subd., Brgy. 20, Cabangan East, Legazpi City, Albay",
   priceRange: "₱1,000 - ₱2,200",
-  rating: 4.2,
-  amenities: ["WiFi", "Affordable", "Homey Feel"],
 },
 {
   id: "59",
@@ -649,8 +491,6 @@ export const hotels = [
   description: "Clean and affordable hostel conveniently located on Washington Drive.",
   location: "Maristel Bldg., Washington Drive, Brgy. Cruzada, Legazpi City, Albay",
   priceRange: "₱800 - ₱1,500",
-  rating: 4.1,
-  amenities: ["Affordable", "WiFi", "Parking"],
 },
 {
   id: "60",
@@ -659,8 +499,6 @@ export const hotels = [
   description: "Unpretentious rooms in a budget-friendly hotel with warm service and a convenient location.",
   location: "Yashano Mall, Imelda Roces Ave., Brgy. Gogon, Legazpi City, Albay",
   priceRange: "₱1,200 - ₱2,500",
-  rating: 4.2,
-  amenities: ["WiFi", "Restaurant", "Budget-Friendly"],
 },
 {
   id: "61",
@@ -669,8 +507,6 @@ export const hotels = [
   description: "Newtown Hometel is a cozy place to stay during your vacation or business trips in the lovely city.",
   location: "F. Aquende St., Brgy. Bagumbayan, Washington Drive, Legazpi City",
   priceRange: "₱1,500 - ₱2,800",
-  rating: 4.3,
-  amenities: ["WiFi", "Air Conditioning", "Parking"]
 },
 {
   id: "62",
@@ -679,8 +515,6 @@ export const hotels = [
   description: "Best find for cheap and comfortable stay in Nikyjm Hometel.",
   location: "Narra St., Pag Asa Brgy. 42, Rawis, Legazpi City",
   priceRange: "₱1,000 - ₱2,000",
-  rating: 4.0,
-  amenities: ["WiFi", "Budget-Friendly", "Air Conditioning"]
 },
 {
   id: "63",
@@ -689,8 +523,6 @@ export const hotels = [
   description: "The ApplePeach House is the only modern minimalist Art Gallery boutique hotel at the heart of Legazpi.",
   location: "Corner Rosario and Marquez St., Old Albay, Legazpi City",
   priceRange: "₱2,000 - ₱4,000",
-  rating: 4.5,
-  amenities: ["WiFi", "Art Gallery", "Restaurant", "Boutique"]
 },
 {
   id: "64",
@@ -699,8 +531,6 @@ export const hotels = [
   description: "Surrounded by tropical vegetation and exotic plants, this place is hidden and away from the crowded city.",
   location: "Purok 3, Brgy. 9 Pinarik, Legazpi City",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.4,
-  amenities: ["WiFi", "Nature Views", "Swimming Pool", "Eco-Friendly"]
 },
 {
   id: "65",
@@ -709,8 +539,6 @@ export const hotels = [
   description: "Riserr Residences puts the best of Legazpi at your fingertips, making your stay both relaxing and enjoyable.",
   location: "#04 Brgy. 8 Bagumbayan, Washington Drive, Legazpi City",
   priceRange: "₱1,800 - ₱3,500",
-  rating: 4.3,
-  amenities: ["WiFi", "Air Conditioning", "Parking", "Rooftop Terrace"]
 },
 {
   id: "66",
@@ -719,8 +547,6 @@ export const hotels = [
   description: "RNR Suites provides a rooftop terrace and more. Treat yourself to a massage or other spa services.",
   location: "Vinzons St., Brgy. 5 Sagmin, Legazpi City",
   priceRange: "₱2,000 - ₱3,800",
-  rating: 4.4,
-  amenities: ["WiFi", "Spa", "Rooftop Terrace", "Restaurant"]
 },
 {
   id: "67",
@@ -729,8 +555,6 @@ export const hotels = [
   description: "Sampaguita Tourist Inn offers a budget-friendly environment with many helpful amenities designed to enhance your stay.",
   location: "Purok 1, Washington Drive, Cruzada, Legazpi City",
   priceRange: "₱900 - ₱1,800",
-  rating: 4.0,
-  amenities: ["WiFi", "Budget-Friendly", "Parking"]
 },
 {
   id: "68",
@@ -739,8 +563,6 @@ export const hotels = [
   description: "Splendid service together with a wide range of facilities provided will make you complain for nothing during your stay.",
   location: "#667 Vibal St., Brgy. 8 Bagumbayan, Legazpi City",
   priceRange: "₱1,200 - ₱2,500",
-  rating: 4.2,
-  amenities: ["WiFi", "Restaurant", "Live Music"]
 },
 {
   id: "69",
@@ -749,432 +571,345 @@ export const hotels = [
   description: "At Shell Inn, your comfort and satisfaction come first. They look forward to welcoming you to Legazpi.",
   location: "2nd Floor Purok 7, Brgy. 47 Arimbay, Legazpi City",
   priceRange: "₱1,000 - ₱2,000",
-  rating: 4.1,
-  amenities: ["WiFi", "Air Conditioning", "Budget-Friendly"]
 },
 {
   id: "70",
   name: "Vicente’s Residences",
-  image: "https://example.com/vicentes_residences.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq1y_SzmY1XgMGhlfgwggGzGk5TtBL1xEGTQ&s",
   description: "Vicente Residences is a wise choice for travelers visiting Legazpi City.",
   location: "#47 Sikatuna St., Brgy. 13 Ilawod West, Legazpi City",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.3,
-  amenities: ["WiFi", "Air Conditioning", "Parking"]
 },
 {
   id: "71",
   name: "Magayon Hotel",
-  image: "https://example.com/magayon_hotel.png",
+  image: "https://images.trvl-media.com/lodging/14000000/13100000/13095900/13095801/c39924a6.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
   description: "Magayon Hotel offers impeccable service and all the essential amenities to travelers.",
   location: "Brgy. 33, PNR-Peñaranda St., Iraya, Legazpi City",
   priceRange: "₱1,800 - ₱3,500",
-  rating: 4.4,
-  amenities: ["WiFi", "Restaurant", "Parking"]
 },
 {
   id: "72",
   name: "Mayon View Garden Apartelle",
-  image: "https://example.com/mayon_view_garden.png",
+  image: "https://pix10.agoda.net/hotelImages/301315/-1/416b4fb31eecff109e9ebc606fb0b3ad.jpg?ca=12&ce=1&s=414x232",
   description: "Mayon View Garden Apartelle is very popular among tourists. Smooth check-in/out process, flexible policies, and friendly management ensure great satisfaction.",
   location: "382 Narra St., Pag Asa, Rawis, Legazpi City",
   priceRange: "₱1,500 - ₱2,800",
-  rating: 4.3,
-  amenities: ["WiFi", "Air Conditioning", "Parking"]
 },
 {
   id: "73",
   name: "Meaco Royal Hotel Inc.",
-  image: "https://example.com/meaco_royal_hotel.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlXagFSd6O2eyv_v3QEqL2TYwWp-6Ba4ftgg&s",
   description: "Getting in and around Legazpi is a breeze when staying at Meaco Royal Hotel-Legazpi, located just minutes away from the city center.",
   location: "Peñaranda St., Brgy. Oro Site, Legazpi City",
   priceRange: "₱2,000 - ₱4,000",
-  rating: 4.5,
-  amenities: ["WiFi", "Restaurant", "Parking"]
 },
 {
   id: "74",
   name: "Legazpi Amigos Hometel",
-  image: "https://example.com/legazpi_amigos_hometel.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyGWFa3OozGKZCOhxVxNrZfv1EQ2_VbactnA&s",
   description: "Located at the heart of the city, this hostel is perfect for backpackers visiting the best of Legazpi City without breaking the bank.",
   location: "J. Estevez St., Guevarra Subd., Legazpi City",
   priceRange: "₱900 - ₱1,800",
-  rating: 4.0,
-  amenities: ["WiFi", "Budget-Friendly", "Air Conditioning"]
 },
 {
   id: "75",
   name: "La Roca Veranda Suites and Restaurant",
-  image: "https://example.com/la_roca_veranda.png",
+  image: "https://pix10.agoda.net/hotelImages/285528/0/1a97b86aa97d92f78dae1fab591835f4.jpeg?s=414x232",
   description: "Finding an ideal romantic small hotel in Legazpi does not have to be difficult. La Roca Veranda Suites is a nice option for travelers.",
   location: "Lakandula Drive, Gogon, Legazpi City",
   priceRange: "₱2,000 - ₱4,000",
-  rating: 4.5,
-  amenities: ["WiFi", "Restaurant", "Romantic", "Rooftop Terrace"]
 },
 {
   id: "76",
   name: "Casa Basilisa Inc.",
-  image: "https://example.com/casa_basilisa.png",
+  image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/580247629.jpg?k=eea658e69e99e3c6a55ea523011a0767f8f63b01e9fea2f6c9bde9cbd0bc9fb0&o=&hp=1",
   description: "This hotel is within the region of Cagsawa Ruins and Mayon Volcano. Rooms stay in one of 19 guest rooms featuring flat-screen TVs, cable, showers, complimentary toiletries, and slippers.",
   location: "Diversion Road, San Rafael, Guinobatan, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.3,
-  amenities: ["WiFi", "TV", "Air Conditioning"]
 },
 {
   id: "77",
   name: "Ooh La La Paradise Spring Resort",
-  image: "https://example.com/ooh_la_la.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7uGZNeNXBpOkJGDUaXVIQfIbxJA8Nf_6GMg&s",
   description: "A beautiful hidden paradise deep inside Guinobatan, Albay, with 4 large spring-water swimming pools, landscaped grounds, and leisure activities such as beach-volley, tennis, ping-pong, billiards, basketball, and badminton.",
   location: "Muladdbucad Grande, Guinobatan, Albay",
   priceRange: "₱2,000 - ₱4,000",
-  rating: 4.5,
-  amenities: ["WiFi", "Swimming Pool", "Sports Facilities", "Family-Friendly"]
 },
 {
   id: "78",
   name: "Mayon Garden Resort",
-  image: "https://example.com/mayon_garden.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFbzsDklQ8RMXqTeZxnR1Go9a03L83SDz4xA&s",
   description: "Nature-inspired paradise resort at the foot of the glorious Mayon Volcano in Albay, Philippines.",
   location: "Purok 8, Masarawag, Guinobatan, Albay",
   priceRange: "₱1,800 - ₱3,500",
-  rating: 4.4,
-  amenities: ["WiFi", "Nature Views", "Swimming Pool"]
 },
 {
   id: "79",
   name: "Kris-Faith of Noah Resort",
-  image: "https://example.com/kris_faith.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH15l7XZbWTb7aEtle5FcHICOdbNvw5mNfBA&s",
   description: "Popular hotel resort in Guinobatan, perfect for friends and family outings with affordable accommodation.",
   location: "261 P-5, Brgy. San Francisco, Guinobatan, Albay",
   priceRange: "₱1,200 - ₱2,500",
-  rating: 4.2,
-  amenities: ["WiFi", "Family-Friendly", "Air Conditioning"]
 },
 {
   id: "80",
   name: "Kayla & Carly Beach Resort",
-  image: "https://example.com/kayla_carly.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtpwZRWtCRCCR54T_ARbStj9dsO327EnpyPw&s",
   description: "A resort that lets you breathe fresh air, recharge, and enjoy a relaxing environment.",
   location: "Brgy. Tapel, Oas, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.3,
-  amenities: ["WiFi", "Beachfront", "Relaxation"]
 },
 {
   id: "81",
   name: "Palacio Beach Resort",
-  image: "https://example.com/palacio_beach.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKSnB0gnVBVpgE6330iv6m8d8gWEyGmSwDKQ&s",
   description: "A must-visit beach resort offering perfect stay, excellent services, and wonderful experiences.",
   location: "Sitio Imacoto, Cagmanaba, Oas, Albay",
   priceRange: "₱1,800 - ₱3,500",
-  rating: 4.4,
-  amenities: ["WiFi", "Swimming Pool", "Beachfront", "Restaurant"]
 },
 {
   id: "82",
   name: "Sabando Ocampo Beach Resort",
-  image: "https://example.com/sabando_ocampo.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT9qJ-fu9F1HBeB4C5hw1qBl2qOflOwbdblw&s",
   description: "Enjoy stand-up paddleboarding and other watersports. Ideal for team buildings, seminars, and events.",
   location: "Brgy. Maramba, Oas, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.3,
-  amenities: ["WiFi", "Beachfront", "Watersports", "Events Venue"]
 },
 {
   id: "83",
   name: "Victoria Bay Resort",
-  image: "https://example.com/victoria_bay.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXP4CTIarQ6doE7UbMR8b7gN4-5unbPqI-IA&s",
   description: "Offers various amenities including hotel, restaurant, function hall, swimming pool, and watersports activities.",
   location: "Sitio Imacoto, Brgy. Cagmanaba, Oas, Albay",
   priceRange: "₱2,000 - ₱4,000",
-  rating: 4.5,
-  amenities: ["WiFi", "Restaurant", "Swimming Pool", "Watersports"]
 },
 {
   id: "84",
   name: "Villa Sofia Resort",
-  image: "https://example.com/villa_sofia.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkPR5-bkpiFN_nubM1lSmgth0W_bg0Z5KnUA&s",
   description: "A great resort with amazing food, excellent service, and stunning sunset views.",
   location: "Sitio Imacoto, Brgy. Cagmanaba, Oas, Albay",
   priceRange: "₱2,000 - ₱4,000",
-  rating: 4.5,
-  amenities: ["WiFi", "Restaurant", "Beachfront", "Scenic Views"]
 },
 {
   id: "85",
   name: "Banana Tourist Villa",
-  image: "https://example.com/banana_villa.png",
-  description: "An accommodation and travel agency assisting guests to organize work, individual, or family journeys.",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuVxcBCLUUJ6MlhwhMiVlGXo_b-fkeazhMTg&s",
+  description: "Banana Tourist Villa provides a cozy and affordable stay for travelers exploring Albay. The villa offers clean, comfortable rooms and a welcoming ambiance that makes guests feel at home. Its convenient location allows easy access to nearby attractions, dining spots, and local transportation hubs.",
   location: "Alnay, Polangui, Albay",
   priceRange: "₱1,200 - ₱2,500",
-  rating: 4.2,
-  amenities: ["WiFi", "Travel Assistance", "Family-Friendly"]
 },
 {
   id: "86",
   name: "Dreamwave Beach Resort, Inc. / Dreamwave Hotel Polangui",
-  image: "https://example.com/dreamwave_hotel.png",
+  image: "https://pix10.agoda.net/hotelImages/530/5302289/5302289_18071014310066764847.jpg?ca=0&ce=1&s=414x232",
   description: "With a wide range of services catered to both business and leisure travelers, Dreamwave Hotel Polangui ensures you get the best out of your stay.",
   location: "Diversion Road, Brgy. Ubaliw, Polangui, Albay",
   priceRange: "₱1,800 - ₱3,500",
-  rating: 4.4,
-  amenities: ["WiFi", "Restaurant", "Swimming Pool", "Air Conditioning"]
 },
 {
   id: "87",
   name: "RR Beach Resort",
-  image: "https://example.com/rr_beach_resort.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNHM0QJZi82aAPH8E8lhm8Q5uTwKpXHBJvCg&s",
   description: "Situated near Malidong and close to Cagbatana Point, this tropical beach offers relaxing ocean waves and gorgeous shiny shells.",
   location: "Sitio Cagbatano, Brgy. Malidong, Pio Duran, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.3,
-  amenities: ["WiFi", "Beachfront", "Relaxation", "Family-Friendly"]
 },
 {
   id: "88",
   name: "Alfredo’s Camp Homestay",
-  image: "https://example.com/alfredos_camp.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwfdsITnbZkiRR2LdZnaYN-GGosuzn4aH1EQ&s",
   description: "Relaxing, secured, and safe beach-cation accommodation at low and affordable prices.",
   location: "Sitio Tambac, Maonon, Ligao City, Albay",
   priceRange: "₱800 - ₱1,500",
-  rating: 4.1,
-  amenities: ["WiFi", "Budget-Friendly", "Beachfront"]
 },
 {
   id: "89",
   name: "Dajay Homestay",
-  image: "https://example.com/dajay_homestay.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgQz8zDNDjG5hbJ5njLflq05MMH9s_OS8P5g&s",
   description: "Private homestay offering your family and friends a chance to enjoy the beach view and socio-cultural activities while relaxing.",
   location: "Sitio Tambac, Maonon, Ligao City, Albay",
   priceRange: "₱900 - ₱1,600",
-  rating: 4.0,
-  amenities: ["WiFi", "Beachfront", "Family-Friendly"]
 },
 {
   id: "90",
   name: "La Fontana Beach Resort",
-  image: "https://example.com/la_fontana_beach.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOitty3IOoomzZTEuPUE0CdWpMwDYQe4VzcQ&s",
   description: "A good place to chill and relax with the whole family, assuring every aspect of your stay exceeds expectations.",
   location: "Brgy. Cabarian, Ligao City, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.2,
-  amenities: ["WiFi", "Swimming Pool", "Family-Friendly", "Beachfront"]
 },
 {
   id: "91",
   name: "Queen’s Resort",
-  image: "https://example.com/queens_resort.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1tD59tCVEDxExNTQRLWGq5bos6TXWN3634g&s",
   description: "The resort offers a pleasing ambiance with various beautiful spots for relaxation.",
   location: "Purok 7, Herrera, Ligao City, Albay",
   priceRange: "₱1,500 - ₱3,200",
-  rating: 4.3,
-  amenities: ["WiFi", "Swimming Pool", "Relaxation"]
 },
 {
   id: "92",
   name: "Elkanville Hotel",
-  image: "https://example.com/elkanville_hotel.png",
+  image: "https://pix10.agoda.net/hotelImages/10774510/-1/1a66b562d80248ad1601dac5417c5e3d.jpg?ca=9&ce=1&s=414x232",
   description: "Committed to making your stay the ultimate luxury experience. Enjoy a stress-free and comforting staycation.",
   location: "Sitio Togbon, Batang, Ligao City, Albay",
   priceRange: "₱2,000 - ₱4,000",
-  rating: 4.5,
-  amenities: ["WiFi", "Air Conditioning", "Restaurant", "Luxury"]
 },
 {
   id: "93",
   name: "Bloom’s Beach Resort",
-  image: "https://example.com/blooms_beach.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0YWO43F9ihR7hHTG_Mvq65FjUo6rvP7js3A&s",
   description: "A nice and scenic beach place with affordable price and accommodation.",
   location: "Sitio Tambac, Maonon, Ligao City, Albay",
   priceRange: "₱900 - ₱1,800",
-  rating: 4.1,
-  amenities: ["WiFi", "Beachfront", "Budget-Friendly"]
 },
 {
   id: "94",
   name: "Casa de Misericordia Retreat House & Pilgrim Center",
-  image: "https://example.com/casa_de_misericordia.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAjh49gu-qwTwW_toKNffAFFh5DqTKoqJOmQ&s",
   description: "Accommodation near Kawa-Kawa Hill and Nature Park, northeast of Ranao Lake, providing peaceful and reflective stay.",
   location: "811 Carmel Heights, Kawa Kawa, Taburan, Ligao City, Albay",
   priceRange: "₱1,200 - ₱2,500",
-  rating: 4.2,
-  amenities: ["WiFi", "Retreat", "Peaceful Ambiance"]
 },
 {
   id: "95",
   name: "Cocofarm Resort",
-  image: "https://example.com/cocofarm_resort.png",
-  description: "Clean and well-maintained environment and rooms, offering a relaxing and stress-free ambiance.",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLJUKUiBz1zY7zk9A-zdKfADpsFRAL_vDm-g&s",
+  description: "Cocofarm Resort offers a serene getaway surrounded by lush coconut groves and nature’s tranquility. Guests can enjoy eco-friendly accommodations, fresh local cuisine, and a peaceful atmosphere ideal for relaxation. It’s the perfect destination for those seeking a refreshing escape from the city while experiencing Albay’s rural charm.",
   location: "Purok 5, Brgy. Batang, Ligao City, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.3,
-  amenities: ["WiFi", "Swimming Pool", "Nature-Friendly"]
 },
 {
   id: "96",
   name: "David Hometel",
-  image: "https://example.com/david_hometel.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_vXVx4Zc0TZkOx6byMpsJJw3DRUJhaoMv9g&s",
   description: "Offers fully refundable rates with free cancellation, free WiFi, parking, and features a restaurant.",
   location: "Guilid, Ligao City, Albay",
   priceRange: "₱1,200 - ₱2,500",
-  rating: 4.1,
-  amenities: ["WiFi", "Restaurant", "Free Parking", "Budget-Friendly"]
 },
 {
   id: "97",
   name: "Don Manuel Rendezvous Resort",
-  image: "https://example.com/don_manuel.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTv5hoA_-Fy3LZGQlg7nMlGtpA258G4KA-tQ&s",
   description: "Situated northwest of Basag River and east of Basay River, a great resort for relaxing and enjoyable stay.",
   location: "Purok 7 Borokborokan, Brgy. Herrera, Ligao City, Albay",
   priceRange: "₱1,800 - ₱3,500",
-  rating: 4.3,
-  amenities: ["WiFi", "Swimming Pool", "Family-Friendly"]
 },
 {
   id: "98",
   name: "Francis Lodge",
-  image: "https://example.com/francis_lodge.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGvE9kHc5zK7WLW5rTbnlZJJkisnFvsiSK-g&s",
   description: "Featuring a shared lounge and coffee shop, perfect for a relaxed stay in Ligao City.",
   location: "Purok 5, Tambo, Ligao City, Albay",
   priceRange: "₱1,200 - ₱2,500",
-  rating: 4.2,
-  amenities: ["WiFi", "Coffee Shop", "Shared Lounge"]
 },
 {
   id: "99",
   name: "Gulod Tourist Inn",
-  image: "https://example.com/gulod_inn.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3PJwV2S_ZNc6aBgjedMdmPcuZcQKushNx-g&s",
   description: "Situated near Kawa-Kawa Hill and Nature Park, offering convenient access to local attractions.",
   location: "California Village, Kawa Kawa, Tuburan, Ligao City, Albay",
   priceRange: "₱1,200 - ₱2,500",
-  rating: 4.1,
-  amenities: ["WiFi", "Budget-Friendly", "Air Conditioning"]
 },
 {
   id: "100",
   name: "Hotel Marites",
-  image: "https://example.com/hotel_marites.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPsA5a6ACVvR4zlj273KJyoZ9tz10UF5cAA&s",
   description: "Rooms equipped with air conditioning and cable TV, offering comfortable and convenient services.",
   location: "Sta. Ana Street, Tinago, Ligao City, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.2,
-  amenities: ["WiFi", "Air Conditioning", "TV"]
 },
 {
   id: "101",
   name: "Hotel Villa de California, Inc.",
-  image: "https://example.com/hotel_villa_de_california.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqLYIJgQTcp8u9BhOA0QbSrQalPi5uI2rmAg&s",
   description: "Top amenities including free WiFi in the lobby, swimming pool, spa, restaurant, hotel bar, and gym.",
   location: "618 Maharlika Highway, corner California Village, Ligao City, Albay",
   priceRange: "₱2,500 - ₱4,500",
-  rating: 4.5,
-  amenities: ["WiFi", "Swimming Pool", "Spa", "Restaurant", "Gym"]
 },
 {
   id: "102",
   name: "Park View Hotel",
-  image: "https://example.com/park_view_hotel.png",
+  image: "https://pix10.agoda.net/hotelImages/729964/-1/2165d465c4c687a997f85610fc182f3d.jpg?ca=9&ce=1&s=414x232",
   description: "Excellent service and superior facilities make for an unforgettable stay. All rooms are designed to make guests feel at home.",
   location: "Blumentritt Street, Guilid, Ligao City, Albay",
   priceRange: "₱1,800 - ₱3,500",
-  rating: 4.3,
-  amenities: ["WiFi", "Air Conditioning", "Restaurant", "Parking"]
 },
 {
   id: "103",
   name: "Punta Almara Beach Resort Station 1",
-  image: "https://example.com/punta_almara1.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY-1vZlSdXCia6FooNRwNlWiSWECHDwecW5g&s",
   description: "Beach resort featuring a mini Jacuzzi, dazzling light show in the pool and fountain.",
   location: "Brgy. Guilid, Ligao City, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.2,
-  amenities: ["WiFi", "Swimming Pool", "Beachfront", "Jacuzzi"]
 },
 {
   id: "104",
   name: "Punta Almara Beach Resort Station 2 & 3",
-  image: "https://example.com/punta_almara2_3.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJMt1zkx8xrG4ioBmkEhY0ZLjqKPMxvIKJzw&s",
   description: "Beachfront resort with mini Jacuzzi, light show in the pool, and beautiful seaside ambiance.",
   location: "Sitio Tambac, Brgy. Maonon, Ligao City, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.2,
-  amenities: ["WiFi", "Beachfront", "Swimming Pool", "Jacuzzi"]
 },
 {
   id: "105",
   name: "Shore Laterazza Resort",
-  image: "https://example.com/shore_laterazza.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfzGvjiXE7KEWsQGjrGEm0Tk_FJrhU-dE6NA&s",
   description: "Starry night at the shore by La Terazza, the coziest place to hang out on the beach.",
   location: "Sitio Tambac, Brgy. Maonon, Ligao City, Albay",
   priceRange: "₱1,500 - ₱3,000",
-  rating: 4.3,
-  amenities: ["WiFi", "Beachfront", "Romantic", "Relaxation"]
 },
 {
   id: "106",
   name: "White Vision Guest House",
-  image: "https://example.com/white_vision.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXBCTatagFV2ALF76dsyLEtdynpgoLGHRm8w&s",
   description: "Comfortable guest house with affordable accommodation. Ideal for families, friends, or couples seeking a homey atmosphere.",
   location: "308 San Pascual St., Brgy. Pandan, Ligao City, Albay",
   priceRange: "₱900 - ₱1,800",
-  rating: 4.1,
-  amenities: ["WiFi", "Budget-Friendly", "Family-Friendly"]
 },
 {
   id: "107",
   name: "Josoc Inn",
-  image: "https://example.com/josoc_inn.png",
+  image: "https://ligaocity.albay.gov.ph/wp-content/uploads/2018/01/josoc.jpg",
   description: "Travelers’ lodge situated near Bicol Regional Science High School and close to Ligao Station.",
   location: "Brgy. Bonga, Ligao City, Albay",
   priceRange: "₱1,000 - ₱2,000",
-  rating: 4.0,
-  amenities: ["WiFi", "Budget-Friendly", "Air Conditioning"]
 },
 {
   id: "108",
   name: "La Veranda Beach Resort",
-  image: "https://example.com/la_veranda.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThfeQ3Scz9rPa8P-M4ySp5ViLkUh5FieJtKA&s",
   description: "Excellent service and superior facilities ensure an unforgettable stay. Rooms exude an atmosphere of total peace and harmony.",
   location: "Sitio Tambac, Brgy. Maonon, Ligao City, Albay",
   priceRange: "₱1,800 - ₱3,500",
-  rating: 4.4,
-  amenities: ["WiFi", "Swimming Pool", "Beachfront", "Relaxation"]
 },
 {
   id: "109",
   name: "Ligao Bed and Breakfast",
-  image: "https://example.com/ligao_bnb.png",
+  image: "https://res.klook.com/klook-hotel/image/upload/travelapi/28000000/27030000/27028200/27028145/69195658_z.jpg",
   description: "A good choice when visiting Ligao, offering great hospitality and affordable price.",
   location: "32 San Jose Street, Brgy. Dunao, Ligao City, Albay",
   priceRange: "₱900 - ₱1,800",
-  rating: 4.1,
-  amenities: ["WiFi", "Budget-Friendly", "Family-Friendly"]
 },
 {
   id: "110",
   name: "Ligao 559 Apartelle",
-  image: "https://example.com/ligao_559.png",
+  image: "https://lh3.googleusercontent.com/places/AAcXr8qrUcldXUevXM-4SqUyHwzdbk3Up0EtsuVjfl4Ufo56tUg5Ff1RhXIJTFSqaXFwxOl29VkMFeu_Hb7Yt1Mk229WHnrUic6drig=s1600-w740-h740",
   description: "Accommodation situated northwest of Malison River and southeast of Cabilogan River, offering comfortable stay.",
   location: "Brgy. Tomolin, Ligao City, Albay",
   priceRange: "₱1,200 - ₱2,500",
-  rating: 4.2,
-  amenities: ["WiFi", "Air Conditioning", "Family-Friendly"]
 }
   ]
 
-const HotelsList = () =>{
+const HotelsList = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredHotels, setFilteredHotels] = useState<Hotel[]>(hotels);
   const [showFilters, setShowFilters] = useState(false);
   const [filters, setFilters] = useState({
     price: { min: "", max: "" },
-    rating: { min: "", max: "" },
-    amenity: [] as string[],
   });
 
-  // --- FILTERING LOGIC ---
   useEffect(() => {
     let result = hotels;
 
@@ -1189,7 +924,7 @@ const HotelsList = () =>{
       );
     }
 
-    // Price Range
+    // Price Range Filter
     if (filters.price.min || filters.price.max) {
       result = result.filter((hotel) => {
         const [lowStr, highStr] = hotel.priceRange
@@ -1206,48 +941,25 @@ const HotelsList = () =>{
       });
     }
 
-    // Rating Range
-    if (filters.rating.min || filters.rating.max) {
-      result = result.filter((hotel) => {
-        const rating = hotel.rating;
-        const min = filters.rating.min ? parseFloat(filters.rating.min) : 0;
-        const max = filters.rating.max ? parseFloat(filters.rating.max) : 5;
-        return rating >= min && rating <= max;
-      });
-    }
-
-    // Amenity Filter
-    if (filters.amenity.length > 0) {
-      result = result.filter((hotel) =>
-        filters.amenity.every((a) =>
-          hotel.amenities.some(
-            (hA) => hA.toLowerCase() === a.toLowerCase()
-          )
-        )
-      );
-    }
-
     setFilteredHotels(result);
-  }, [searchTerm, filters, hotels]);
+  }, [searchTerm, filters]);
 
   const clearFilters = () => {
     setSearchTerm("");
     setFilters({
       price: { min: "", max: "" },
-      rating: { min: "", max: "" },
-      amenity: [],
     });
   };
 
   function onHotelSelect(id: string): void {
-    throw new Error("Function not implemented.");
+    console.log("Selected hotel:", id);
   }
 
   return (
     <div className="w-full bg-gray-50 py-8 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col space-y-4">
-          {/* --- HEADER --- */}
+          {/* Header */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <h2 className="text-3xl font-bold text-gray-900">
               Accommodations in Albay
@@ -1271,12 +983,7 @@ const HotelsList = () =>{
               >
                 <SlidersHorizontal className="h-4 w-4" />
               </Button>
-              {(searchTerm ||
-                filters.price.min ||
-                filters.price.max ||
-                filters.rating.min ||
-                filters.rating.max ||
-                filters.amenity.length > 0) && (
+              {(searchTerm || filters.price.min || filters.price.max) && (
                 <Button
                   variant="ghost"
                   size="sm"
@@ -1289,16 +996,7 @@ const HotelsList = () =>{
             </div>
           </div>
 
-          {/* --- FILTER MODAL --- */}
-          {showFilters && (
-            <FilterModal
-              onClose={() => setShowFilters(false)}
-              filters={filters}
-              setFilters={setFilters}
-            />
-          )}
-
-          {/* --- HOTEL LIST --- */}
+          {/* Hotel List */}
           {filteredHotels.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-12 text-center">
               <div className="text-gray-400 mb-4">
@@ -1330,8 +1028,7 @@ const HotelsList = () =>{
 
           {filteredHotels.length > 0 && (
             <div className="text-center text-gray-500 mt-4">
-              Showing {filteredHotels.length} of {hotels.length} accommodations
-              in Albay
+              Showing {filteredHotels.length} of {hotels.length} accommodations in Albay
             </div>
           )}
         </div>
