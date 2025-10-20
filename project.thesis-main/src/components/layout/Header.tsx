@@ -4,6 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
 import { destinations } from "../destinations/DestinationsLists";
+import { spots } from "../tourists-spots/TouristSpotsList";
+import { activities } from "../tourism-activities/TourismActivitiesList";
+import { hotels } from "../accommodations/HotelsList";
+import { restaurant } from "../dining/RestaurantsList";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,12 +31,27 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
     }
   }, []);
 
+  // ✅ Combine all lists into one searchable array
+  const allPlaces = useMemo(() => {
+    const addType = (list: any[], type: string) =>
+      list.map((item) => ({ ...item, type }));
+
+    return [
+      ...addType(destinations, "Destination"),
+      ...addType(spots, "Tourist Spot"),
+      ...addType(activities, "Tourism Activity"),
+      ...addType(hotels, "Hotel"),
+      ...addType(restaurant, "Restaurant"),
+    ];
+  }, []);
+
+  // ✅ Filter all places by search query
   const filteredResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
-    return destinations.filter((dest) =>
-      dest.name.toLowerCase().includes(searchQuery.toLowerCase())
+    return allPlaces.filter((place) =>
+      place.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
-  }, [searchQuery]);
+  }, [searchQuery, allPlaces]);
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -79,7 +98,7 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
             Destinations
           </a>
           <a href="/tourism-activities" className="text-gray-700 hover:text-red-600 font-medium">
-            Tourism-Activities
+            Tourism Activities
           </a>
           <a href="/hotels" className="text-gray-700 hover:text-red-600 font-medium">
             Hotels
@@ -90,17 +109,40 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="flex items-center space-x-1 text-gray-700 hover:text-red-600 font-medium">
+              <Button
+                variant="ghost"
+                className="flex items-center space-x-1 text-gray-700 hover:text-red-600 font-medium"
+              >
                 <span>More</span>
                 <ChevronDown className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem><a href="/map" className="w-full">Interactive Map</a></DropdownMenuItem>
-              <DropdownMenuItem><a href="/experiences" className="w-full">Experiences</a></DropdownMenuItem>
-              <DropdownMenuItem><a href="/events" className="w-full">Events</a></DropdownMenuItem>
-              <DropdownMenuItem><a href="/about" className="w-full">About Albay</a></DropdownMenuItem>
-              <DropdownMenuItem><a href="/safety" className="w-full">Traveler's Safety Guide</a></DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="/map" className="w-full">
+                  Interactive Map
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="/experiences" className="w-full">
+                  Experiences
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="/events" className="w-full">
+                  Events
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="/about" className="w-full">
+                  About Albay
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="/safety" className="w-full">
+                  Traveler's Safety Guide
+                </a>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
@@ -121,20 +163,42 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
             <Search className="h-4 w-4" />
           </button>
 
+          {/* ✅ Combined Search Results */}
           {filteredResults.length > 0 && (
-            <div className="results-container border border-gray-200 bg-white mt-1 absolute w-full rounded-sm shadow-lg z-50">
+            <div className="results-container border border-gray-200 bg-white mt-1 absolute w-full rounded-sm shadow-lg z-50 max-h-96 overflow-y-auto">
               <ul>
-                {filteredResults.map((result: any, index: number) => (
-                  <li key={index}>
-                    <Link
-                      to={`/destinations/${result.id}`}
-                      state={result}
-                      className="block p-5 hover:bg-gray-100 rounded"
-                    >
-                      {result.name}
-                    </Link>
-                  </li>
-                ))}
+                {filteredResults.map((result: any, index: number) => {
+                  // Create dynamic path based on type
+                  const path = (() => {
+                    switch (result.type) {
+                      case "Destination":
+                        return `/destinations/${result.id}`;
+                      case "Tourist Spot":
+                        return `/tourist-spots/${result.id}`;
+                      case "Tourism Activity":
+                        return `/tourism-activities/${result.id}`;
+                      case "Hotel":
+                        return `/hotels/${result.id}`;
+                      case "Restaurant":
+                        return `/restaurants/${result.id}`;
+                      default:
+                        return `/details/${result.id}`;
+                    }
+                  })();
+
+                  return (
+                    <li key={index} className="border-b last:border-0">
+                      <Link
+                        to={path}
+                        state={result}
+                        className="block p-4 hover:bg-gray-100 rounded"
+                      >
+                        <div className="font-semibold text-gray-900">{result.name}</div>
+                        <div className="text-xs text-gray-500">{result.type}</div>
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           )}
@@ -213,13 +277,6 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
-
-      {/* Mobile Menu (optional) */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 py-4 px-4">
-          {/* You can add mobile nav content here if needed */}
-        </div>
-      )}
     </header>
   );
 };

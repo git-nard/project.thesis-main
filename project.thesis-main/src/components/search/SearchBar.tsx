@@ -158,7 +158,7 @@ const SearchBar = ({
                 className="w-full rounded-md border border-gray-300 p-2 text-sm"
               >
                 <option value="all">All Categories</option>
-                <option value="attractions">Tourist Spots</option>
+                <option value="tourist-spots">Tourist Spots</option>
                 <option value="hotels">Hotels</option>
                 <option value="restaurants">Restaurants</option>
               </select>
