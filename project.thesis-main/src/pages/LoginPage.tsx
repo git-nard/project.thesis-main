@@ -15,43 +15,72 @@ const LoginPage = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // TODO: Handle login API call
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch("http://localhost:5000/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: formData.email,
+        password: formData.password,
+      }),
+    });
+
+    if (!response.ok) {
+      // Backend returned an error status
+      const errorData = await response.json();
+      alert(`❌ Login failed: ${errorData.message || "Invalid credentials"}`);
+      return;
+    }
+
+    const data = await response.json();
+
+    // Assuming your backend sends { token, user } on successful login
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("user", JSON.stringify(data.user));
+
+    alert("✅ Login successful!");
+    window.location.href = "/";
+  } catch (error) {
+    alert("❌ Login error. Please try again later.");
+    console.error("Login error:", error);
+  }
+};
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row bg-gray-900 text-white">
-      {/* LEFT SIDE - Hero Image */}
-      <div className="relative hidden md:flex md:w-1/2">
-        <img
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80"
-          alt="Travel background"
-          className="object-cover w-full h-full opacity-80"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900/60 to-transparent" />
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-8">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-5xl font-extrabold tracking-wide mb-4 text-white drop-shadow-xl"
-          >
-            Wanderer
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg max-w-md text-gray-200 leading-relaxed"
-          >
-            Discover breathtaking destinations, hidden gems, and new adventures
-            every day — your next journey starts here.
-          </motion.p>
-        </div>
-      </div>
-
+    <div className="h-screen flex flex-col md:flex-row bg-gray-900 text-white overflow-hidden">
+  {/* LEFT SIDE - Hero Image */}
+  <div className="relative hidden md:flex md:w-1/2">
+    <img
+      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80"
+      alt="Travel background"
+      className="object-cover w-full h-full opacity-80"
+    />
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900/60 to-transparent" />
+    <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-8">
+      <motion.h1
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="text-5xl font-extrabold tracking-wide mb-4 text-white drop-shadow-xl"
+      >
+        Wanderer
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="text-lg max-w-md text-gray-200 leading-relaxed"
+      >
+        Discover breathtaking destinations, hidden gems, and new adventures
+        every day — your next journey starts here.
+      </motion.p>
+    </div>
+  </div>
       {/* RIGHT SIDE - Login Form */}
       <div className="flex flex-col justify-center items-center w-full md:w-1/2 relative p-8 md:p-16">
         {/* Subtle background glow */}
