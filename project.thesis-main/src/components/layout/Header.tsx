@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { Search, Menu, X, MapPin, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,16 +18,21 @@ interface HeaderProps {
 const Header = ({ onSearch = () => {} }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [results, setResults] = useState([]);
-  const [user, setUser] = useState<any>(null); // ✅ Manage user state
+  const [user, setUser] = useState<any>(null);
 
-  // ✅ On mount, check if user is logged in
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
       setUser(JSON.parse(storedUser));
     }
   }, []);
+
+  const filteredResults = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    return destinations.filter((dest) =>
+      dest.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [searchQuery]);
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,30 +43,16 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const filteredResults = useMemo(() => {
-    setResults(
-      destinations.filter((dest) =>
-        dest.name.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    );
-    return results;
-  }, [destinations, searchQuery]);
-
-  // ✅ Proper logout clears localStorage + state
   const handleLogout = () => {
-  localStorage.removeItem("token");
-  localStorage.removeItem("user");
-  setUser(null);
-
-  // ✅ Stay on the home page
-  if (window.location.pathname !== "/") {
-    window.location.href = "/";
-  } else {
-    // Optional: reload to immediately update the header UI
-    window.location.reload();
-  }
-};
-
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setUser(null);
+    if (window.location.pathname !== "/") {
+      window.location.href = "/";
+    } else {
+      window.location.reload();
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm border-b border-gray-200">
@@ -84,7 +75,7 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
           <a href="/tourist-spots" className="text-gray-700 hover:text-red-600 font-medium">
             Tourist Spots
           </a>
-          <a href="/Destinations" className="text-gray-700 hover:text-red-600 font-medium">
+          <a href="/destinations" className="text-gray-700 hover:text-red-600 font-medium">
             Destinations
           </a>
           <a href="/tourism-activities" className="text-gray-700 hover:text-red-600 font-medium">
@@ -99,30 +90,17 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                className="flex items-center space-x-1 text-gray-700 hover:text-red-600 font-medium"
-              >
+              <Button variant="ghost" className="flex items-center space-x-1 text-gray-700 hover:text-red-600 font-medium">
                 <span>More</span>
                 <ChevronDown className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem>
-                <a href="/map" className="w-full">Interactive Map</a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="/experiences" className="w-full">Experiences</a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="/events" className="w-full">Events</a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="/about" className="w-full">About Albay</a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="/safety" className="w-full">Traveler's Safety Guide</a>
-              </DropdownMenuItem>
+              <DropdownMenuItem><a href="/map" className="w-full">Interactive Map</a></DropdownMenuItem>
+              <DropdownMenuItem><a href="/experiences" className="w-full">Experiences</a></DropdownMenuItem>
+              <DropdownMenuItem><a href="/events" className="w-full">Events</a></DropdownMenuItem>
+              <DropdownMenuItem><a href="/about" className="w-full">About Albay</a></DropdownMenuItem>
+              <DropdownMenuItem><a href="/safety" className="w-full">Traveler's Safety Guide</a></DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
@@ -143,10 +121,10 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
             <Search className="h-4 w-4" />
           </button>
 
-          {results.length > 0 && searchQuery.length > 0 && (
-            <div className="results-container border border-gray-200 bg-white mt-1 absolute w-full rounded-sm shadow-lg">
+          {filteredResults.length > 0 && (
+            <div className="results-container border border-gray-200 bg-white mt-1 absolute w-full rounded-sm shadow-lg z-50">
               <ul>
-                {results.map((result: any, index: number) => (
+                {filteredResults.map((result: any, index: number) => (
                   <li key={index}>
                     <Link
                       to={`/destinations/${result.id}`}
@@ -162,7 +140,7 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
           )}
         </form>
 
-        {/* ✅ Auth Section */}
+        {/* Auth Section */}
         {user ? (
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -225,40 +203,6 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
             </Link>
           </div>
         )}
-          {/* User Dropdown */}
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <button className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100">
-            <i className="fa-solid fa-user text-gray-700"></i>
-          </button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-48">
-          <DropdownMenuItem>
-            <a href="/itineraries" className="flex items-center w-full">
-              <i className="fa-solid fa-route mr-2 text-gray-500"></i>
-              <span>My Itineraries</span>
-            </a>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <a href="/saved" className="flex items-center w-full">
-              <i className="fa-solid fa-bookmark mr-2 text-gray-500"></i>
-              <span>Saved</span>
-            </a>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <a href="/settings" className="flex items-center w-full">
-              <i className="fa-solid fa-gear mr-2 text-gray-500"></i>
-              <span>Settings</span>
-            </a>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="text-red-600 focus:text-red-600">
-            <button className="flex items-center w-full text-left">
-              <i className="fa-solid fa-right-from-bracket mr-2"></i>
-              <span>Logout</span>
-            </button>
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
 
         {/* Mobile Menu Button */}
         <button
@@ -273,7 +217,7 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
       {/* Mobile Menu (optional) */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 py-4 px-4">
-          {/* mobile nav content here */}
+          {/* You can add mobile nav content here if needed */}
         </div>
       )}
     </header>
