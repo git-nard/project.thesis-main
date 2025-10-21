@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Bell } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 interface Event {
   id: string;
@@ -22,8 +22,15 @@ interface NotificationsProps {
 const Notifications: React.FC<NotificationsProps> = ({ events, daysAhead = 180 }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [upcomingEvents, setUpcomingEvents] = useState<Event[]>([]);
+  const location = useLocation();
+
+  // 🧠 Hide notifications on these pages:
+  const hiddenRoutes = ["/login", "/register"];
+  const isHidden = hiddenRoutes.some((path) => location.pathname.startsWith(path));
 
   useEffect(() => {
+    if (isHidden) return; // skip if on hidden pages
+
     const now = new Date();
     const future = new Date();
     future.setDate(now.getDate() + daysAhead);
@@ -33,7 +40,6 @@ const Notifications: React.FC<NotificationsProps> = ({ events, daysAhead = 180 }
       let start = new Date();
       let end = new Date();
 
-      // Match formats like "October 14-23", "February 23 – March 13", "May 1", or "2025-10-25"
       const match = event.date.match(
         /^([A-Za-z]+)?\s*(\d{1,2})(?:\s*[–-]\s*([A-Za-z]+)?\s*(\d{1,2}))?$/
       );
@@ -43,12 +49,10 @@ const Notifications: React.FC<NotificationsProps> = ({ events, daysAhead = 180 }
         start = new Date(`${startMonth || ""} ${startDay}, ${currentYear}`);
         end = new Date(`${endMonth || startMonth || ""} ${endDay || startDay}, ${currentYear}`);
       } else {
-        // fallback for ISO or full dates
         start = new Date(event.date);
         end = new Date(event.date);
       }
 
-      // If the event already ended this year, assume it’s next year
       if (end < now && end.getMonth() < now.getMonth()) {
         start.setFullYear(currentYear + 1);
         end.setFullYear(currentYear + 1);
@@ -57,18 +61,15 @@ const Notifications: React.FC<NotificationsProps> = ({ events, daysAhead = 180 }
       return { ...event, startDate: start, endDate: end };
     });
 
-    // Keep events happening today or in the future
     const filtered = parsedEvents.filter(
       (e) => e.endDate >= now && e.startDate <= future
     );
 
-    // Sort by soonest start date
     filtered.sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
-
     setUpcomingEvents(filtered);
-  }, [events, daysAhead]);
+  }, [events, daysAhead, isHidden]);
 
-  if (upcomingEvents.length === 0) return null;
+  if (isHidden || upcomingEvents.length === 0) return null;
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
