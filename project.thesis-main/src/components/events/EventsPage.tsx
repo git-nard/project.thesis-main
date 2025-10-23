@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, Calendar, MapPin, Clock, Users } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -15,15 +15,63 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { events } from "./eventsData";
 
-const EventsPage = () => {
-  // ✅ Store bookmarked events (for demo)
-  const [bookmarked, setBookmarked] = useState<string[]>([]);
+// ✅ Correct imports for saving + auth
+import { saveSpot, isSpotSaved } from "../../savedSpots";
+import { getCurrentUser } from "../../Auth";
 
-  // ✅ Toggle function
-  const toggleBookmark = (id: string) => {
-    setBookmarked((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
+const EventsPage = () => {
+  const navigate = useNavigate();
+
+  // ✅ Logged in user
+  const [user, setUser] = useState<any>(null);
+
+  // ✅ Saved state tracking (per event)
+  const [savedEvents, setSavedEvents] = useState<{ [key: string]: boolean }>({});
+
+  useEffect(() => {
+    setUser(getCurrentUser());
+
+    // Initialize saved states
+    const initialSaved: { [key: string]: boolean } = {};
+    events.forEach((event) => {
+      const uniqueId = `event-${event.id}`;
+      initialSaved[uniqueId] = isSpotSaved(uniqueId);
+    });
+    setSavedEvents(initialSaved);
+  }, []);
+
+  const handleSave = (eventData: any) => {
+    const uniqueId = `event-${eventData.id}`;
+
+    // Require login
+    if (!user) {
+      if (
+        window.confirm(
+          "You need to sign up or log in to save this event. Go to sign-up?"
+        )
+      ) {
+        navigate("/register");
+      }
+      return;
+    }
+
+    const newSpot = {
+      id: uniqueId,
+      name: eventData.title,
+      image: eventData.image,
+      description: eventData.description,
+      location: eventData.location,
+      category: eventData.category,
+      date: eventData.date,
+      time: eventData.time,
+      type: "event",
+    };
+
+    const result = saveSpot(newSpot);
+    setSavedEvents((prev) => ({
+      ...prev,
+      [uniqueId]: result,
+    }));
   };
 
   return (
@@ -40,27 +88,29 @@ const EventsPage = () => {
           </Link>
         </div>
 
-        {/* Page Header */}
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold mb-2">Events & Festivals in Albay</h1>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Experience the vibrant culture and traditions of Albay through its
-              colorful festivals and exciting events throughout the year.
-            </p>
-          </div>
-
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-2">
+            Events & Festivals in Albay
+          </h1>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            Experience the vibrant culture and traditions of Albay through its
+            colorful festivals and exciting events throughout the year.
+          </p>
+        </div>
 
         {/* Events Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {events.map((event) => {
-            const isBookmarked = bookmarked.includes(event.id);
+            const uniqueId = `event-${event.id}`;
+            const isBookmarked = savedEvents[uniqueId] || false;
 
             return (
               <Card
                 key={event.id}
                 className="overflow-hidden hover:shadow-lg transition-shadow relative"
               >
-                {/* 📸 Image Section */}
+                {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={event.image}
@@ -70,7 +120,7 @@ const EventsPage = () => {
 
                   {/* Bookmark Button */}
                   <button
-                    onClick={() => toggleBookmark(event.id)}
+                    onClick={() => handleSave(event)}
                     className={`group absolute top-3 left-3 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 shadow-md ${
                       isBookmarked
                         ? "bg-red-500"
