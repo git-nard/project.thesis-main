@@ -1,16 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { MapPin } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
 import { useNavigate } from "react-router-dom";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { saveSpot, isSpotSaved } from "../../savedSpots";
+import { getCurrentUser } from "../../Auth";
 
 interface TouristSpotCardProps {
   id: string;
@@ -19,112 +14,55 @@ interface TouristSpotCardProps {
   description: string;
   location: string;
   category: string;
-  openingHours?: string;
 }
 
-const TouristSpotCard = ({
-  id,
-  name,
-  image,
-  description,
-  location,
-  category,
-  openingHours = "Open 24 hours",
-}: TouristSpotCardProps) => {
+const TouristSpotCard = ({ id, name, image, description, location, category }: TouristSpotCardProps) => {
   const navigate = useNavigate();
+  const [isSaved, setIsSaved] = useState(isSpotSaved(`tourist-${id}`));
+
+  const handleSave = () => {
+      const user = getCurrentUser();
+      if (!user) {
+        if (window.confirm("You need to sign up or log in to save this destination. Go to sign-up?")) {
+          navigate("/register");
+        }
+        return;
+      }
+
+    const saved = saveSpot({ id: `tourist-${id}`, name, image, description, location, category, type: "tourist" });
+    setIsSaved(saved);
+  };
 
   return (
-    <Card className="w-full max-w-[350px] h-[400px] overflow-hidden flex flex-col bg-white hover:shadow-lg transition-shadow duration-300">
-      {/* Image */}
+    <Card className="w-full max-w-sm overflow-hidden bg-white hover:shadow-lg transition-all duration-300">
       <div className="relative h-48 overflow-hidden">
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-        />
-        <Badge
-          variant="secondary"
-          className="absolute top-3 right-3 bg-black/70 text-white"
+        <img src={image} alt={name} className="h-full w-full object-cover transition-transform duration-300 hover:scale-105" />
+        <Badge className="absolute top-3 right-3 bg-white/80 text-gray-800">{category}</Badge>
+
+        <button
+          onClick={handleSave}
+          className={`group absolute top-3 left-3 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+            isSaved ? "bg-red-500" : "bg-white hover:bg-red-500"
+          }`}
         >
-          {category}
-        </Badge>
-        <button className="group absolute top-3 left-3 bg-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-red-500">
-          <i className="fa-solid fa-bookmark text-red-500 transition-all duration-300 group-hover:text-white"></i>
+          <i className={`fa-solid fa-bookmark text-lg transition-all duration-300 ${isSaved ? "text-white" : "text-red-500 group-hover:text-white"}`}></i>
         </button>
-
-
-
-
       </div>
 
-      {/* Header */}
-      <CardHeader className="p-4 pb-0">
-        <CardTitle className="text-xl font-bold truncate">{name}</CardTitle>
+      <CardHeader>
+        <CardTitle>{name}</CardTitle>
+        <CardDescription className="flex items-center text-sm">
+          <MapPin className="h-4 w-4 mr-1 text-gray-500" /> {location}
+        </CardDescription>
       </CardHeader>
 
-      {/* Content */}
-      <CardContent className="p-4 flex-grow">
-        <CardDescription className="text-sm line-clamp-3">
-          {description}
-        </CardDescription>
-        <div className="mt-3 space-y-1 text-sm text-gray-600">
-          <div className="flex items-center">
-            <MapPin className="w-4 h-4 mr-1 text-gray-500" />
-            <span className="truncate">{location}</span>
-          </div>
-          <div>{openingHours}</div>
-        </div>
+      <CardContent>
+        <p className="text-sm text-gray-600 line-clamp-3">{description}</p>
       </CardContent>
 
-      {/* Footer */}
-      <CardFooter className="p-4 pt-0 flex justify-between">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() =>
-            navigate(`/tourist-spots/${id}`, {
-              state: {
-                id,
-                name,
-                image,
-                description,
-                location,
-                category,
-                openingHours,
-              },
-            })
-          }
-        >
+      <CardFooter>
+        <Button onClick={() => navigate(`/tourist-spots/${id}`, { state: { id, name, image, description, location, category } })}>
           View Details
-        </Button>
-        <Button
-          variant="ghost"
-          size="sm"
-          className="text-blue-600"
-          onClick={() => {
-            if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(
-                (position) => {
-                  const { latitude, longitude } = position.coords;
-                  const destination = encodeURIComponent(`${name} ${location}`);
-                  const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${destination}`;
-                  window.open(mapsUrl, "_blank");
-                },
-                (error) => {
-                  console.error("Geolocation error:", error);
-                  // Fallback: use My Location if permission denied
-                  const fallbackUrl = `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${encodeURIComponent(
-                    name + " " + location
-                  )}`;
-                  window.open(fallbackUrl, "_blank");
-                }
-              );
-            } else {
-              alert("Geolocation is not supported by your browser.");
-            }
-          }}
-        >
-          <MapPin className="w-4 h-4 mr-1" /> Directions
         </Button>
       </CardFooter>
     </Card>
