@@ -24,7 +24,7 @@ import TourismActivitiesPage from "./pages/TourismActivitiesPage";
 import TouristSpotListPage from "./components/tourists-spots/TouristSpotListPage";
 import TouristSpotDetailsPage from "./components/tourists-spots/TouristSpotDetailsPage";
 import HotelsDetailsPage from "./pages/hotels/HotelsDetailsPage";
-import RestaurantsDetailsPage from "./pages/restaurants/RestaurantsDetailsPage";
+import RestaurantsDetailsPage from "./components/dining/RestaurantsDetailsPage";
 import EventsPage from "./components/events/EventsPage";
 import EventsDetailsPage from "./components/events/EventsDetailsPage";
 import CreateYourItinerary from "./pages/itineraries/CreateYourItenerary";
@@ -36,6 +36,7 @@ import DestinationDetailPage from "./components/destinations/DestinationDetailPa
 import Notifications from "./components/notifications/Notifications";
 import { events } from "./components/events/eventsData";
 
+import UnifiedMapPage from "./components/map/UnifiedMapPage";
 
 
 
@@ -65,6 +66,8 @@ function App() {
           <Route path="/experiences" element={<ExperiencesPage />} />
 
           <Route path="/map" element={<MapPage />} />
+          
+          <Route path="/unified-map" element={<UnifiedMapPage />} />
 
           <Route path="/events" element={<EventsPage />} />
           <Route path="/events/:id" element={<EventsDetailsPage />} />
