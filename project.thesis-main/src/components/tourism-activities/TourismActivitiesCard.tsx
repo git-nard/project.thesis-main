@@ -122,24 +122,25 @@ const TourismActivitiesCard = ({
 
       {/* Footer */}
       <CardFooter className="p-4 pt-0 flex justify-between">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() =>
-            navigate(`/tourism-activities/${id}`, {
-              state: {
-                id,
-                name,
-                image,
-                description,
-                municipality,
-                category,
-              },
-            })
-          }
-        >
-          View Details
-        </Button>
+          <Button
+            size="sm"
+            className="bg-black hover:bg-gray-800 text-white"
+            onClick={() =>
+              navigate(`/tourism-activities/${id}`, {
+                state: {
+                  id,
+                  name,
+                  image,
+                  description,
+                  municipality,
+                  category,
+                },
+              })
+            }
+          >
+            View Details
+          </Button>
+
 
         <Button
           variant="ghost"
@@ -154,7 +155,6 @@ const TourismActivitiesCard = ({
             )
           }
         >
-          <MapPin className="w-4 h-4 mr-1" /> Map
         </Button>
       </CardFooter>
     </Card>

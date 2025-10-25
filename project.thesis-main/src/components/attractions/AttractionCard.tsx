@@ -70,7 +70,10 @@ const AttractionCard = ({
           to={`/attractions/${id}`}
           state={{ name, image, description, location, openingHours }}
         >
-          <Button variant="outline" size="sm">
+          <Button
+            className="bg-black hover:bg-gray-800 text-white"
+            size="sm"
+          >
             View Details
           </Button>
         </Link>

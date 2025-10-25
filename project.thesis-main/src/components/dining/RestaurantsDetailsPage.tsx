@@ -5,14 +5,14 @@ import { ChevronLeft, MapPin, Clock, Utensils } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-const RestaurantDetailsPage = () => {
+const RestaurantsDetailsPage = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
 
   if (!state) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-white">
-        <p className="text-gray-500 text-lg">No restaurant data available.</p>
+        <p className="text-gray-500">No restaurant data available.</p>
         <Button className="mt-4" onClick={() => navigate(-1)}>
           Go Back
         </Button>
@@ -32,31 +32,33 @@ const RestaurantDetailsPage = () => {
   } = state;
 
   useEffect(() => {
-    document.title = `${name} - Restaurant Details`;
+    document.title = name
+      ? `${name} - Restaurant Details`
+      : "Restaurant Details";
   }, [name]);
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
 
-      <main className="container mx-auto px-4 pt-24 pb-16 flex-1">
-        {/* Back Button */}
+      <main className="container mx-auto px-4 py-8 flex-grow">
+        {/* ✅ Back Button - same placement and style as TourismActivities page */}
         <Button
           variant="ghost"
-          className="flex items-center gap-2 mb-6"
+          className="flex items-center gap-2 mb-6 text-gray-800 hover:text-blue-600"
           onClick={() => navigate(-1)}
         >
           <ChevronLeft className="h-4 w-4" /> Back
         </Button>
 
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">{name}</h1>
-          <p className="text-gray-600">{cuisine}</p>
-        </div>
+        <h1 className="text-4xl font-bold mb-2">{name}</h1>
+        <p className="text-gray-600 mb-6">
+          {cuisine || "Restaurant"} {priceRange && `• ${priceRange}`}
+        </p>
 
         {/* Image */}
-        <div className="rounded-2xl overflow-hidden shadow-md mb-8">
+        <div className="rounded-lg overflow-hidden mb-6">
           <img
             src={image}
             alt={name}
@@ -65,29 +67,26 @@ const RestaurantDetailsPage = () => {
         </div>
 
         {/* Description */}
-        <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-          {description}
-        </p>
+        <p className="text-gray-700 mb-4">{description}</p>
 
-        {/* Details */}
-        <div className="space-y-3 text-gray-700 mb-8">
-          <div className="flex items-center">
-            <MapPin className="w-5 h-5 mr-2 text-blue-500" />
-            <span>{location}</span>
+        {/* Location */}
+        {location && (
+          <div className="flex items-center text-gray-600 mb-2">
+            <MapPin className="w-4 h-4 mr-1" />
+            {location}
           </div>
-          <div className="flex items-center">
-            <Clock className="w-5 h-5 mr-2 text-blue-500" />
-            <span>{openingHours}</span>
-          </div>
-          <div className="flex items-center">
-            <Utensils className="w-5 h-5 mr-2 text-blue-500" />
-            <span>{priceRange}</span>
-          </div>
-        </div>
+        )}
+
+        {/* Opening Hours */}
+        {openingHours && (
+          <p className="text-gray-600 mb-2">
+            <Clock className="inline w-4 h-4 mr-1" /> {openingHours}
+          </p>
+        )}
 
         {/* Features */}
         {features && features.length > 0 && (
-          <div className="mb-8">
+          <div className="mb-6">
             <h2 className="text-2xl font-semibold mb-3">Available Options</h2>
             <div className="flex flex-wrap gap-2">
               {features.map((feature: string, index: number) => (
@@ -102,21 +101,23 @@ const RestaurantDetailsPage = () => {
           </div>
         )}
 
-        {/* Directions */}
-        <Button
-          className="mt-6"
-          onClick={() =>
-            window.open(
-              `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${encodeURIComponent(
-                name + " " + location
-              )}`,
-              "_blank"
-            )
-          }
-        >
-          <MapPin className="mr-2 h-4 w-4" />
-          Get Directions
-        </Button>
+        {/* Get Directions Button - Black Theme */}
+        <div className="flex gap-4 mt-6">
+          <Button
+            onClick={() =>
+              window.open(
+                `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                  name + " " + location
+                )}`,
+                "_blank"
+              )
+            }
+            className="bg-black hover:bg-gray-800 text-white"
+          >
+            <MapPin className="mr-2 h-4 w-4" />
+            Get Directions
+          </Button>
+        </div>
       </main>
 
       <Footer />
@@ -124,4 +125,4 @@ const RestaurantDetailsPage = () => {
   );
 };
 
-export default RestaurantDetailsPage;
+export default RestaurantsDetailsPage;
