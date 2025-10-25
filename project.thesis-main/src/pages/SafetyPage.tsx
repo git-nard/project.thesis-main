@@ -11,6 +11,18 @@ import {
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogCancel,
+} from "@/components/ui/alert-dialog";
+
+import LiveAlert from "../components/liveAlert";
+
 const SafetyPage = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -157,7 +169,25 @@ const SafetyPage = () => {
             Albay.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg">View Live Alerts</Button>
+            {/* View Live Alerts Button with Dialog */}
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button size="lg">View Live Alerts</Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Real-Time Alerts for Albay</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    Stay informed with the latest weather and volcanic updates.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <LiveAlert />
+                <div className="mt-4 flex justify-end">
+                  <AlertDialogCancel>Close</AlertDialogCancel>
+                </div>
+              </AlertDialogContent>
+            </AlertDialog>
+
             <Button size="lg" variant="outline">
               Download Safety Guide
             </Button>
