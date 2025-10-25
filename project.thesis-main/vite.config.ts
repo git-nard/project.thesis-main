@@ -28,8 +28,14 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  server: {
-    // @ts-ignore
+    server: {
     allowedHosts: true,
-  }
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000', // or the port where your backend runs
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 });
