@@ -168,7 +168,6 @@ const RestaurantCard = ({
             )
           }
         >
-          <MapPin className="h-4 w-4 mr-1" /> Directions
         </Button>
       </CardFooter>
     </Card>

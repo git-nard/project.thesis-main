@@ -159,7 +159,6 @@ const HotelCard = ({
             }
           }}
         >
-          <MapPin className="w-4 h-4 mr-1" /> Directions
         </Button>
       </CardFooter>
     </Card>

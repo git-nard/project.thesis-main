@@ -155,7 +155,6 @@ const TourismActivitiesCard = ({
             )
           }
         >
-          <MapPin className="w-4 h-4 mr-1" /> Map
         </Button>
       </CardFooter>
     </Card>
