@@ -69,12 +69,12 @@ const TourismActivitiesDetailsPage = () => {
           <p className="text-gray-600 mb-6">⏰ {openingHours}</p>
         )}
 
-        {/* Get Directions Button - Black Theme */}
+        {/* Get Directions Button (with route) */}
         <div className="flex gap-4 mt-6">
           <Button
             onClick={() =>
               window.open(
-                `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${encodeURIComponent(
                   name + " " + municipality
                 )}`,
                 "_blank"

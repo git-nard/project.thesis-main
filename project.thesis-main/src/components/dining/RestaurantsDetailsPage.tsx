@@ -42,7 +42,7 @@ const RestaurantsDetailsPage = () => {
       <Navbar />
 
       <main className="container mx-auto px-4 py-8 flex-grow">
-        {/* ✅ Back Button - same placement and style as TourismActivities page */}
+        {/* ✅ Back Button */}
         <Button
           variant="ghost"
           className="flex items-center gap-2 mb-6 text-gray-800 hover:text-blue-600"
@@ -101,12 +101,12 @@ const RestaurantsDetailsPage = () => {
           </div>
         )}
 
-        {/* Get Directions Button - Black Theme */}
+        {/* ✅ Get Directions Button (Route-based) */}
         <div className="flex gap-4 mt-6">
           <Button
             onClick={() =>
               window.open(
-                `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${encodeURIComponent(
                   name + " " + location
                 )}`,
                 "_blank"

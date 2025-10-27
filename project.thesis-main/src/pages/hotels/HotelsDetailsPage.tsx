@@ -9,10 +9,10 @@ const HotelDetailPage = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
 
-  // If navigated directly without state
+  // Handle direct access without state
   if (!state) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white">
         <p className="text-gray-500">No hotel data available.</p>
         <Button className="mt-4" onClick={() => navigate(-1)}>
           Go Back
@@ -21,21 +21,21 @@ const HotelDetailPage = () => {
     );
   }
 
-  const { name, image, description, location, category, hours, mapUrl } = state;
+  const { name, image, description, location, category, hours } = state;
 
   useEffect(() => {
     document.title = name ? `${name} - Hotel Details` : "Hotel Details";
   }, [name]);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
 
-      <div className="container mx-auto px-4 py-8">
-        {/* Back Button */}
+      <main className="container mx-auto px-4 py-8 flex-grow">
+        {/* ✅ Back Button */}
         <Button
           variant="ghost"
-          className="flex items-center gap-2 mb-6"
+          className="flex items-center gap-2 mb-6 text-gray-800 hover:text-blue-600"
           onClick={() => navigate(-1)}
         >
           <ChevronLeft className="h-4 w-4" /> Back
@@ -43,7 +43,9 @@ const HotelDetailPage = () => {
 
         {/* Header Section */}
         <h1 className="text-4xl font-bold mb-2">{name}</h1>
-        <p className="text-gray-600 mb-6">{category || "Hotel / Accommodation"}</p>
+        <p className="text-gray-600 mb-6">
+          {category || "Hotel / Accommodation"}
+        </p>
 
         {/* Image */}
         <div className="rounded-lg overflow-hidden mb-6">
@@ -54,23 +56,36 @@ const HotelDetailPage = () => {
           />
         </div>
 
-        {/* Details */}
+        {/* Description */}
         <p className="text-gray-700 mb-4">{description}</p>
 
-        <div className="flex items-center text-gray-600 mb-2">
-          <MapPin className="w-4 h-4 mr-1" />
-          {location}
-        </div>
+        {/* Location */}
+        {location && (
+          <div className="flex items-center text-gray-600 mb-2">
+            <MapPin className="w-4 h-4 mr-1" />
+            {location}
+          </div>
+        )}
 
+        {/* Operating Hours */}
         {hours && <p className="text-gray-600 mb-6">{hours}</p>}
 
+        {/* ✅ Get Directions Button (with Route) */}
         <Button
-          className="bg-gray-900 text-white hover:bg-gray-800"
-          onClick={() => window.open(mapUrl, "_blank")}
+          className="bg-black hover:bg-gray-800 text-white"
+          onClick={() =>
+            window.open(
+              `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${encodeURIComponent(
+                name + " " + location
+              )}`,
+              "_blank"
+            )
+          }
         >
+          <MapPin className="mr-2 h-4 w-4" />
           Get Directions
         </Button>
-      </div>
+      </main>
 
       <Footer />
     </div>
