@@ -23,13 +23,110 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [user, setUser] = useState<any>(null);
+  const [showPreferencesModal, setShowPreferencesModal] = useState(false);
+  const [selectedPrefs, setSelectedPrefs] = useState<string[]>([]);
 
+  const preferencesList = [
+    "Adventure",
+    "Culture",
+    "Churches",
+    "Sightseeing",
+    "Nature",
+    "Food",
+    "Relaxation",
+    "Festivals",
+    "History",
+    "Beaches",
+    "Hiking",
+    "Family Trips",
+  ];
+
+  // 🧠 Fetch preferences when user logs in
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
+  const storedUser = localStorage.getItem("user");
+  const justLoggedIn = localStorage.getItem("justLoggedIn");
+
+  if (storedUser) {
+    const parsedUser = JSON.parse(storedUser);
+    setUser(parsedUser);
+
+    // ✅ If user just logged in, immediately show preferences
+    if (justLoggedIn === "true") {
+      setShowPreferencesModal(true);
+      localStorage.removeItem("justLoggedIn");
+      return;
     }
-  }, []);
+
+    // Otherwise, only show if preferences not found
+    fetch(`http://localhost:5000/api/users/${parsedUser.id}/preferences`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.preferences && data.preferences.length > 0) {
+          setSelectedPrefs(data.preferences);
+        } else {
+          setShowPreferencesModal(true);
+        }
+      })
+      .catch((err) => {
+        console.error("Error loading preferences:", err);
+        setShowPreferencesModal(true);
+      });
+  }
+}, []);
+
+
+  // ✅ Save user preferences to backend
+  const handleSavePreferences = async () => {
+    if (!user) return;
+
+    if (selectedPrefs.length === 0) {
+      alert("Please select at least one preference before continuing.");
+      return;
+    }
+
+    try {
+      const response = await fetch(
+        `http://localhost:5000/api/users/${user.id}/preferences`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+          body: JSON.stringify({ preferences: selectedPrefs }),
+        }
+      );
+
+      if (!response.ok) {
+        const errText = await response.text();
+        throw new Error(`Failed to save: ${errText}`);
+      }
+
+      const result = await response.json();
+      console.log("✅ Preferences saved:", result);
+      localStorage.setItem("preferences", JSON.stringify(selectedPrefs));
+      localStorage.setItem("preferencesModalDismissed", "true");
+      setShowPreferencesModal(false);
+      alert("Preferences saved successfully!");
+    } catch (err) {
+      console.error("❌ Error saving preferences:", err);
+      alert("Failed to save preferences. Check console for details.");
+    }
+  };
+
+  const handleClosePreferences = () => {
+    setShowPreferencesModal(false);
+    localStorage.setItem("preferencesModalDismissed", "true");
+  };
+
+  // ✅ Preference toggle
+  const handlePreferenceToggle = (pref: string) => {
+    setSelectedPrefs((prev) =>
+      prev.includes(pref)
+        ? prev.filter((p) => p !== pref)
+        : [...prev, pref]
+    );
+  };
 
   // ✅ Combine all lists into one searchable array
   const allPlaces = useMemo(() => {
@@ -45,7 +142,6 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
     ];
   }, []);
 
-  // ✅ Filter all places by search query
   const filteredResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
     return allPlaces.filter((place) =>
@@ -65,7 +161,9 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
+    localStorage.removeItem("preferences");
     setUser(null);
+
     if (window.location.pathname !== "/") {
       window.location.href = "/";
     } else {
@@ -80,62 +178,61 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
         <div className="flex items-center">
           <a href="/" className="flex items-center space-x-2">
             <MapPin className="h-6 w-6 text-red-600" />
-            <span className="text-xl font-bold text-gray-900">
-              Discover Albay
-            </span>
+            <span className="text-xl font-bold text-gray-900">Discover Albay</span>
           </a>
         </div>
 
         {/* Desktop Navigation */}
-<nav className="hidden md:flex items-center space-x-8">
-  <Link to="/attractions" className="text-gray-700 hover:text-red-600 font-medium">
-    Attractions
-  </Link>
-  <Link to="/tourist-spots" className="text-gray-700 hover:text-red-600 font-medium">
-    Tourist Spots
-  </Link>
-  <Link to="/destinations" className="text-gray-700 hover:text-red-600 font-medium">
-    Destinations
-  </Link>
-  <Link to="/tourism-activities" className="text-gray-700 hover:text-red-600 font-medium">
-    Tourism Activities
-  </Link>
-  <Link to="/hotels" className="text-gray-700 hover:text-red-600 font-medium">
-    Hotels
-  </Link>
-  <Link to="/restaurants" className="text-gray-700 hover:text-red-600 font-medium">
-    Restaurants
-  </Link>
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link to="/attractions" className="text-gray-700 hover:text-red-600 font-medium">
+            Attractions
+          </Link>
+          <Link to="/tourist-spots" className="text-gray-700 hover:text-red-600 font-medium">
+            Tourist Spots
+          </Link>
+          <Link to="/destinations" className="text-gray-700 hover:text-red-600 font-medium">
+            Destinations
+          </Link>
+          <Link to="/tourism-activities" className="text-gray-700 hover:text-red-600 font-medium">
+            Tourism Activities
+          </Link>
+          <Link to="/hotels" className="text-gray-700 hover:text-red-600 font-medium">
+            Hotels
+          </Link>
+          <Link to="/restaurants" className="text-gray-700 hover:text-red-600 font-medium">
+            Restaurants
+          </Link>
 
-  <DropdownMenu>
-    <DropdownMenuTrigger asChild>
-      <Button
-        variant="ghost"
-        className="flex items-center space-x-1 text-gray-700 hover:text-red-600 font-medium"
-      >
-        <span>More</span>
-        <ChevronDown className="h-4 w-4" />
-      </Button>
-    </DropdownMenuTrigger>
-    <DropdownMenuContent align="end">
-      <DropdownMenuItem>
-        <Link to="/map" className="w-full">Interactive Map</Link>
-      </DropdownMenuItem>
-      <DropdownMenuItem>
-        <Link to="/experiences" className="w-full">Experiences</Link>
-      </DropdownMenuItem>
-      <DropdownMenuItem>
-        <Link to="/events" className="w-full">Events</Link>
-      </DropdownMenuItem>
-      <DropdownMenuItem>
-        <Link to="/about" className="w-full">About Albay</Link>
-      </DropdownMenuItem>
-      <DropdownMenuItem>
-        <Link to="/safety" className="w-full">Traveler's Safety Guide</Link>
-      </DropdownMenuItem>
-    </DropdownMenuContent>
-  </DropdownMenu>
-</nav>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="ghost"
+                className="flex items-center space-x-1 text-gray-700 hover:text-red-600 font-medium"
+              >
+                <span>More</span>
+                <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>
+                <Link to="/map" className="w-full">Interactive Map</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/experiences" className="w-full">Experiences</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/events" className="w-full">Events</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/about" className="w-full">About Albay</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/safety" className="w-full">Traveler's Safety Guide</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </nav>
 
         {/* Search Bar */}
         <form onSubmit={handleSearchSubmit} className="relative ml-4">
@@ -153,12 +250,10 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
             <Search className="h-4 w-4" />
           </button>
 
-          {/* ✅ Combined Search Results */}
           {filteredResults.length > 0 && (
             <div className="results-container border border-gray-200 bg-white mt-1 absolute w-full rounded-sm shadow-lg z-50 max-h-96 overflow-y-auto">
               <ul>
                 {filteredResults.map((result: any, index: number) => {
-                  // Create dynamic path based on type
                   const path = (() => {
                     switch (result.type) {
                       case "Destination":
@@ -202,6 +297,7 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
                 <i className="fa-solid fa-user text-gray-700"></i>
               </button>
             </DropdownMenuTrigger>
+
             <DropdownMenuContent align="end" className="w-48">
               <DropdownMenuItem>
                 <span className="block px-2 py-1 text-sm text-gray-500">
@@ -267,6 +363,53 @@ const Header = ({ onSearch = () => {} }: HeaderProps) => {
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
+
+      {/* 🌟 Preferences Modal */}
+      {showPreferencesModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-[9999]">
+          <div className="bg-gray-900 text-white rounded-xl p-8 w-[90%] md:w-[500px] relative">
+            <button
+              onClick={() => setShowPreferencesModal(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white"
+            >
+              <X size={22} />
+            </button>
+
+            <h2 className="text-2xl font-bold text-center mb-4">
+              Let’s find out your tastes 🌍
+            </h2>
+            <p className="text-center text-gray-400 mb-6">
+              What are you into? Select as many as you like.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
+              {preferencesList.map((pref) => {
+                const isSelected = selectedPrefs.includes(pref);
+                return (
+                  <button
+                    key={pref}
+                    onClick={() => handlePreferenceToggle(pref)}
+                    className={`px-4 py-2 rounded-full border ${
+                      isSelected
+                        ? "bg-yellow-400 text-black border-yellow-400"
+                        : "border-gray-600 text-gray-300 hover:border-yellow-400 hover:text-white"
+                    } transition`}
+                  >
+                    {isSelected ? "✓ " : "+"} {pref}
+                  </button>
+                );
+              })}
+            </div>
+
+            <button
+              onClick={handleSavePreferences}
+              className="w-full py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold rounded-lg shadow-md hover:opacity-90 transition"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

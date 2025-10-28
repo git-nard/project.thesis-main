@@ -1616,7 +1616,7 @@ const DestinationsList = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {destinations.map((spot) => (
-          <DestinationsCard key={spot.id} {...spot} />
+          <DestinationsCard category={""} key={spot.id} {...spot} />
         ))}
       </div>
     </div>

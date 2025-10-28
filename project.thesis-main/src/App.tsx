@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { useRoutes, Routes, Route, Router } from "react-router-dom";
+import { useRoutes, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/home";
 import AttractionsPage from "./pages/AttractionsPage";
 import HotelsPage from "./pages/HotelsPage";
@@ -36,21 +36,17 @@ import DestinationDetailPage from "./components/destinations/DestinationDetailPa
 import Notifications from "./components/notifications/Notifications";
 import { events } from "./components/events/eventsData";
 
-import UnifiedMapPage from "./components/map/UnifiedMapPage";
-
-
-
-
-
-
-
-
+// ✅ New Settings imports
+import SettingsLayout from "./pages/Settings/SettingsLayout";
+import AccountSettings from "./pages/Settings/AccountSettings";
+import PersonalInfo from "./pages/Settings/PersonalInfo";
+import Privacy from "./pages/Settings/Privacy";
 
 function App() {
   return (
     <Suspense fallback={<p>Loading...</p>}>
       <>
-       <Notifications events={events} />
+        <Notifications events={events} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/attractions" element={<AttractionsPage />} />
@@ -62,31 +58,32 @@ function App() {
           <Route path="/restaurants" element={<RestaurantsPage />} />
           <Route path="/restaurants/:id" element={<RestaurantsDetailsPage />} />
 
-
           <Route path="/experiences" element={<ExperiencesPage />} />
 
           <Route path="/map" element={<MapPage />} />
-          
-          <Route path="/unified-map" element={<UnifiedMapPage />} />
+
+          {/* ✅ Route-based Settings layout */}
+          <Route path="/settings" element={<SettingsLayout />}>
+            <Route path="account" element={<AccountSettings />} />
+            <Route path="personal" element={<PersonalInfo />} />
+            <Route path="privacy" element={<Privacy />} />
+          </Route>
 
           <Route path="/events" element={<EventsPage />} />
           <Route path="/events/:id" element={<EventsDetailsPage />} />
-          
 
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/view-calendar" element={<ViewCalendarPage />} />
           <Route path="/about" element={<AboutPage />} />
-          
+
           <Route path="/destinations" element={<DestinationListPage />} />
           <Route path="/destinations/:id" element={<DestinationDetailPage />} />
 
           <Route path="/tourist-spots" element={<TouristSpotListPage />} />
           <Route path="/tourist-spots/:id" element={<TouristSpotDetailsPage />} />
 
-
           <Route path="/safety" element={<SafetyPage />} />
           <Route path="/recommended" element={<Recommended />} />
-
 
           <Route path="/itineraries" element={<Itineraries />} />
           <Route path="/itineraries/:id" element={<Itineraries />} />
@@ -94,29 +91,25 @@ function App() {
           <Route path="/itineraries/create" element={<CreateYourItinerary />} />
           <Route path="/saved-itineraries" element={<SavedIteneraries />} />
           <Route path="/itinerary/:id" element={<ViewItenerary />} />
-          
-        
-          
-
 
           <Route path="/tourism-activities" element={<TourismActivitiesPage />} />
           <Route path="/tourism-activities/:id" element={<TourismActivityDetailsPage />} />
-          <Route path="/tourism-activities/:id" element={<TourismActivitiesPage />} />
-
-
 
           <Route path="/saved" element={<Saved />} />
           <Route path="/saved/tourist-spots" element={<SavedTouristSpotsList />} />
-          <Route path="/saved/restaurants" element={<SavedRestaurantsList  />} />
-
+          <Route path="/saved/restaurants" element={<SavedRestaurantsList />} />
 
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          
-          
 
-        
+          {/* ✅ Optional redirect so /settings defaults to /settings/account */}
+          <Route
+            path="/settings"
+            element={<Navigate to="/settings/account" replace />}
+          />
+
         </Routes>
+
         {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
       </>
     </Suspense>

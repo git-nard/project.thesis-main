@@ -46,6 +46,7 @@ const LoginPage = () => {
     } catch (error) {
       alert("❌ Login error. Please try again later.");
       console.error("Login error:", error);
+      localStorage.setItem("justLoggedIn", "true");
     }
   };
 

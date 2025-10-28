@@ -156,7 +156,7 @@ const CategorySection = ({
               color={category.color}
               onClick={category.onClick}
             />
-          )}
+          ))}
         </div>
       </div>
     </section>

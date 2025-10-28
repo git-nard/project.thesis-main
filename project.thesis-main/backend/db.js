@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
 
 const { sql, poolPromise } = require("./dbFiles/dbOperation");
+const userPreferencesRouter = require("../backend/routes/userPreferences"); // ✅ added route import
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -15,6 +16,9 @@ const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || "1h";
 
 app.use(cors());
 app.use(bodyParser.json());
+
+// ✅ Mount user preference routes
+app.use("/api/users", userPreferencesRouter);
 
 // Utility: Generate JWT
 function generateToken(user) {
@@ -120,7 +124,7 @@ app.post("/api/login", async (req, res) => {
   }
 });
 
-// -------------------- PROTECTED ROUTE EXAMPLE --------------------
+// -------------------- PROFILE --------------------
 app.get("/api/profile", authenticateToken, async (req, res) => {
   try {
     const pool = await poolPromise;
@@ -143,5 +147,5 @@ app.use((req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`✅ Server running on http://localhost:${port}`);
 });
