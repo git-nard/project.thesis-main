@@ -13,10 +13,10 @@ interface DestinationCardProps {
   image: string;
   description: string;
   location: string;
-  region: string;
+  category: string;
 }
 
-const DestinationCard = ({ id, name, image, description, location, region }: DestinationCardProps) => {
+const DestinationCard = ({ id, name, image, description, location, category }: DestinationCardProps) => {
   const navigate = useNavigate();
   const [isSaved, setIsSaved] = useState(isSpotSaved(`destination-${id}`));
 
@@ -29,7 +29,7 @@ const DestinationCard = ({ id, name, image, description, location, region }: Des
       return;
     }
 
-    const saved = saveSpot({ id: `destination-${id}`, name, image, description, location, region, type: "destination" });
+    const saved = saveSpot({ id: `destination-${id}`, name, image, description, location, category, type: "destination" });
     setIsSaved(saved);
   };
 
@@ -37,7 +37,7 @@ const DestinationCard = ({ id, name, image, description, location, region }: Des
     <Card className="w-full max-w-sm overflow-hidden bg-white hover:shadow-lg transition-all duration-300">
       <div className="relative h-48 overflow-hidden">
         <img src={image} alt={name} className="h-full w-full object-cover transition-transform duration-300 hover:scale-105" />
-        <Badge className="absolute top-3 right-3 bg-white/80 text-gray-800">{region}</Badge>
+        <Badge className="absolute top-3 right-3 bg-white/80 text-gray-800">{category}</Badge>
 
         <button
           onClick={handleSave}
@@ -61,7 +61,7 @@ const DestinationCard = ({ id, name, image, description, location, region }: Des
       </CardContent>
 
       <CardFooter>
-        <Link to={`/destinations/${id}`} state={{ id, name, image, description, location, region }}>
+        <Link to={`/destinations/${id}`} state={{ id, name, image, description, location, category }}>
           <Button>View Details</Button>
         </Link>
       </CardFooter>

@@ -5,11 +5,11 @@ const config = require("./dbConfig");
 const poolPromise = new sql.ConnectionPool(config)
   .connect()
   .then(pool => {
-    console.log("Connected to MSSQL");
+    console.log("✅ Connected to MSSQL");
     return pool;
   })
   .catch(err => {
-    console.log("Database Connection Failed! ", err);
+    console.error("❌ Database Connection Failed!", err);
     throw err;
   });
 
