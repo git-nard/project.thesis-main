@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import { useRoutes, Routes, Route, Navigate } from "react-router-dom";
-import Home from "./components/home";
+import { useRoutes, Routes, Route, Navigate } from "react-router-dom"; // Keep useRoutes and Routes for v6
+import HomePage from "./pages/HomePage"; // Assuming HomePage is the correct component to use
 import AttractionsPage from "./pages/AttractionsPage";
 import HotelsPage from "./pages/HotelsPage";
 import RestaurantsPage from "./pages/RestaurantsPage";
@@ -41,6 +41,7 @@ import SettingsLayout from "./pages/Settings/SettingsLayout";
 import AccountSettings from "./pages/Settings/AccountSettings";
 import PersonalInfo from "./pages/Settings/PersonalInfo";
 import Privacy from "./pages/Settings/Privacy";
+import UnifiedMapPage from "./components/map/UnifiedMapPage";
 
 function App() {
   return (
@@ -48,18 +49,14 @@ function App() {
       <>
         <Notifications events={events} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} /> {/* Use HomePage here */}
           <Route path="/attractions" element={<AttractionsPage />} />
           <Route path="/attractions/:id" element={<AttractionsDetailsPage />} />
-
           <Route path="/hotels" element={<HotelsPage />} />
           <Route path="/hotels/:id" element={<HotelsDetailsPage />} />
-
           <Route path="/restaurants" element={<RestaurantsPage />} />
           <Route path="/restaurants/:id" element={<RestaurantsDetailsPage />} />
-
           <Route path="/experiences" element={<ExperiencesPage />} />
-
           <Route path="/map" element={<MapPage />} />
 
           {/* ✅ Route-based Settings layout */}
@@ -71,43 +68,31 @@ function App() {
 
           <Route path="/events" element={<EventsPage />} />
           <Route path="/events/:id" element={<EventsDetailsPage />} />
-
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/view-calendar" element={<ViewCalendarPage />} />
           <Route path="/about" element={<AboutPage />} />
-
           <Route path="/destinations" element={<DestinationListPage />} />
           <Route path="/destinations/:id" element={<DestinationDetailPage />} />
-
           <Route path="/tourist-spots" element={<TouristSpotListPage />} />
           <Route path="/tourist-spots/:id" element={<TouristSpotDetailsPage />} />
-
           <Route path="/safety" element={<SafetyPage />} />
           <Route path="/recommended" element={<Recommended />} />
-
           <Route path="/itineraries" element={<Itineraries />} />
           <Route path="/itineraries/:id" element={<Itineraries />} />
           <Route path="/itineraries/recommended" element={<RecommendedIteneraries />} />
           <Route path="/itineraries/create" element={<CreateYourItinerary />} />
           <Route path="/saved-itineraries" element={<SavedIteneraries />} />
           <Route path="/itinerary/:id" element={<ViewItenerary />} />
-
           <Route path="/tourism-activities" element={<TourismActivitiesPage />} />
           <Route path="/tourism-activities/:id" element={<TourismActivityDetailsPage />} />
-
           <Route path="/saved" element={<Saved />} />
           <Route path="/saved/tourist-spots" element={<SavedTouristSpotsList />} />
           <Route path="/saved/restaurants" element={<SavedRestaurantsList />} />
-
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
 
           {/* ✅ Optional redirect so /settings defaults to /settings/account */}
-          <Route
-            path="/settings"
-            element={<Navigate to="/settings/account" replace />}
-          />
-
+          <Route path="/settings" element={<Navigate to="/settings/account" replace />} />
         </Routes>
 
         {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}

@@ -1,62 +1,162 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Navbar from "@/components/layout/Navbar";
+import Header from "@/components/layout/Header";
 import HeroSection from "@/components/home/HeroSection";
-import SearchBar from "@/components/search/SearchBar";
-import FeaturedSection from "../components/featured/FeaturedSection";
-import MapPreview from "@/components/map/MapPreview";
-import { Compass, Hotel, Utensils } from "lucide-react";
+import InteractiveMap from "@/components/map/InteractiveMap";
 import Footer from "@/components/layout/Footer";
+import AttractionsList from "@/components/attractions/AttractionsList";
 
 const HomePage = () => {
-  // Handler for search functionality
+  const topTouristSpots = [
+    {
+      id: "1",
+      rank: 1,
+      name: "Cagsawa Ruins",
+      municipality: "Daraga",
+      image:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/8c/40/87/cagsawa-ruins-park.jpg?w=1200&h=1200&s=1",
+      description:
+        "Historic ruins from the 1814 Mayon eruption, a symbol of Albay’s resilience.",
+      domestic: 583597,
+      foreign: 1960,
+      total: 585557,
+    },
+    {
+      id: "2",
+      rank: 2,
+      name: "Albay Parks and Wildlife",
+      municipality: "Legazpi City",
+      image:
+        "https://legazpirentacar.com/wp-content/uploads/sites/4/2023/05/Albay-1.jpg",
+      description:
+        "A family-friendly eco-park home to local wildlife and lush greenery.",
+      domestic: 303964,
+      foreign: 2794,
+      total: 306758,
+    },
+    {
+      id: "3",
+      rank: 3,
+      name: "Highlands Park",
+      municipality: "Legazpi City",
+      image:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/fa/99/7b/the-parks-conservancy.jpg?w=900&h=-1&s=1",
+      description:
+        "A scenic viewpoint offering breathtaking panoramas of Mayon Volcano and Legazpi.",
+      domestic: 229219,
+      foreign: 1396,
+      total: 230615,
+    },
+    {
+      id: "4",
+      rank: 4,
+      name: "Sumlang Lake",
+      municipality: "Camalig",
+      image:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/a9/63/d8/img-20171230-083653-largejpg.jpg?w=1200&h=-1&s=1",
+      description:
+        "A tranquil lake with bamboo rafts and a stunning view of Mayon.",
+      domestic: 113268,
+      foreign: 1341,
+      total: 114609,
+    },
+    {
+      id: "5",
+      rank: 5,
+      name: "Kawa-Kawa Hill",
+      municipality: "Ligao City",
+      image:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/2b/59/d2/img-20180326-100821-largejpg.jpg?w=1200&h=-1&s=1",
+      description:
+        "A spiritual and nature park known for its Stations of the Cross and scenic hilltop view.",
+      domestic: 68024,
+      foreign: 56,
+      total: 68080,
+    },
+  ];
+
+  const featuredAttractions = [
+    {
+      id: "1",
+      name: "Mayon Volcano",
+      image:
+        "https://albay.gov.ph/wp-content/uploads/2020/02/joenabells_20200226_120826_0.jpg",
+      description:
+        'Known as the "Perfect Cone" for its symmetrical shape, Mayon Volcano is an active stratovolcano and a popular tourist destination in Albay.',
+      location: "Albay Province, Philippines",
+      category: "Natural Wonder",
+      openingHours: "Open 24 hours",
+    },
+    {
+      id: "2",
+      name: "Cagsawa Ruins",
+      image:
+        "https://www.southeastasianarchaeology.com/wp-content/uploads/2022/05/Cagsawa-Ruins-The-Philippines.jpg",
+      description:
+        "Historic ruins of a 16th-century Franciscan church destroyed by the 1814 eruption of Mayon Volcano. The bell tower remains standing and is an iconic symbol of Albay.",
+      location: "Daraga, Albay, Philippines",
+      category: "Historical Site",
+      openingHours: "6:00 AM - 6:00 PM",
+    },
+    {
+      id: "3",
+      name: "Sumlang Lake",
+      image:
+        "https://legazpirentacar.com/wp-content/uploads/sites/4/2023/05/Sumlang-9.jpg",
+      description:
+        "A serene lake offering stunning views of Mayon Volcano and traditional bamboo rafts for tourists to enjoy the scenery.",
+      location: "Camalig, Albay, Philippines",
+      category: "Natural Wonder",
+      openingHours: "7:00 AM - 5:00 PM",
+    },
+    {
+      id: "4",
+      name: "Lignon Hill Nature Park",
+      image:
+        "https://gttp.images.tshiftcdn.com/375966/x/0/lignon-hill-nature-park.jpg",
+      description:
+        "A popular viewpoint offering panoramic views of Legazpi City, Mayon Volcano, and Albay Gulf. Features ziplines and hiking trails.",
+      location: "Legazpi City, Albay, Philippines",
+      category: "Nature Park",
+      openingHours: "5:00 AM - 9:00 PM",
+    },
+    {
+      id: "5",
+      name: "Hoyop-Hoyopan Cave",
+      image:
+        "https://legazpirentacar.com/wp-content/uploads/sites/4/2023/05/Hoyop-2.jpg.crdownload.jpg",
+      description:
+        "A natural cave with interesting rock formations and a cool breeze flowing through it, hence its name which means 'blowing wind'.",
+      location: "Camalig, Albay, Philippines",
+      category: "Natural Wonder",
+      openingHours: "8:00 AM - 5:00 PM",
+    },
+    {
+      id: "6",
+      name: "Kawa-Kawa Hill",
+      image:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/2b/59/d2/img-20180326-100821-largejpg.jpg?w=1200&h=-1&s=1",
+      description:
+        "A hill shaped like an inverted bowl featuring life-sized Stations of the Cross and offering panoramic views of Mayon Volcano.",
+      location: "Ligao City, Albay, Philippines",
+      category: "Religious Site",
+      openingHours: "6:00 AM - 6:00 PM",
+    },
+  ];
+
   const handleSearch = (query: string, filters: any) => {
     console.log("Search query:", query, "Filters:", filters);
-    // In a real app, this would navigate to search results or filter content
   };
 
-  // Handler for hero CTA button
   const handleExploreClick = () => {
-    // Smooth scroll to categories section
-    document.getElementById("categories-section")?.scrollIntoView({
+    document.getElementById("top-destinations")?.scrollIntoView({
       behavior: "smooth",
     });
   };
 
-  // Handler for view all clicks in featured section
-  const handleViewAllClick = (category: string) => {
-    console.log(`View all ${category} clicked`);
-    // In a real app, this would navigate to the respective category page
-  };
-
-  // Handler for featured item clicks
-  const handleFeaturedItemClick = (item: any) => {
-    console.log("Featured item clicked:", item);
-    // In a real app, this would navigate to the detail page for the item
-  };
-
-  // Handler for view full map click
-  const handleViewFullMapClick = () => {
-    console.log("View full map clicked");
-    // In a real app, this would navigate to the interactive map page
-  };
-
-  // Handler for map location clicks
-  const handleMapLocationClick = (location: any) => {
-    console.log("Map location clicked:", location);
-    // In a real app, this would show a popup or navigate to the location detail
-  };
-
-  // Handler for category card clicks
-  const handleCategoryClick = (categoryId: string) => {
-    console.log(`Category ${categoryId} clicked`);
-    // In a real app, this would navigate to the respective category page
-  };
-
   return (
     <div className="flex min-h-screen flex-col bg-white">
-      {/* Navigation */}
-      <Navbar />
+      {/* Header */}
+      <Header />
 
       {/* Hero Section */}
       <HeroSection
@@ -64,194 +164,76 @@ const HomePage = () => {
         onCtaClick={handleExploreClick}
       />
 
-      {/* Main Content */}
-      <main className="flex-1">
-        {/* Global Search Bar (centered below hero) */}
-        <div className="container mx-auto -mt-8 px-4 relative z-20">
-          <div className="mx-auto max-w-3xl">
-            <SearchBar
-              onSearch={handleSearch}
-              className="rounded-xl shadow-lg"
-            />
-          </div>
-        </div>
-        
-        {/* Categories Section */}
-        <div id="categories-section">
-          <section className="w-full py-12 bg-gray-50">
-            <div className="container mx-auto px-4">
-              {/* Section Header */}
-              <div className="mb-10 text-center">
-                <h2 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-                  Explore Albay
-                </h2>
-                <p className="mx-auto max-w-2xl text-gray-600">
-                  Discover the best tourist spots, accommodations, and dining
-                  options in Albay, Philippines.
-                </p>
-              </div>
-
-              {/* Category Cards */}
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {/* Tourist Spots Card */}
-                <div
-                  className="group h-full w-full cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg bg-white hover:border-green-400 rounded-lg border"
-                  onClick={() => handleCategoryClick("attractions")}
-                >
-                  <div className="p-6">
-                    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-green-600">
-                      <Compass className="h-7 w-7" />
-                    </div>
-                    <h3 className="text-xl font-bold">Tourist Spots</h3>
-                  </div>
-                  <div className="p-6 pt-0">
-                    <p className="text-sm text-gray-600">
-                      Explore the natural wonders and cultural heritage sites of
-                      Albay, including the iconic Mayon Volcano.
-                    </p>
-                  </div>
-                  <div className="p-6 pt-0">
-                    <div className="flex items-center text-sm font-medium transition-colors text-green-600 group-hover:text-green-700">
-                      Explore Tourist Spots
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Accommodations Card */}
-                <div
-                  className="group h-full w-full cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg bg-white hover:border-blue-400 rounded-lg border"
-                  onClick={() => handleCategoryClick("hotels")}
-                >
-                  <div className="p-6">
-                    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-blue-100 text-blue-600">
-                      <Hotel className="h-7 w-7" />
-                    </div>
-                    <h3 className="text-xl font-bold">Accommodations</h3>
-                  </div>
-                  <div className="p-6 pt-0">
-                    <p className="text-sm text-gray-600">
-                      Find the perfect place to stay, from luxury resorts with
-                      volcano views to budget-friendly hotels in the city.
-                    </p>
-                  </div>
-                  <div className="p-6 pt-0">
-                    <div className="flex items-center text-sm font-medium transition-colors text-blue-600 group-hover:text-blue-700">
-                      Explore Accommodations
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Restaurants Card */}
-                <div
-                  className="group h-full w-full cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg bg-white hover:border-orange-400 rounded-lg border"
-                  onClick={() => handleCategoryClick("restaurants")}
-                >
-                  <div className="p-6">
-                    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-orange-100 text-orange-600">
-                      <Utensils className="h-7 w-7" />
-                    </div>
-                    <h3 className="text-xl font-bold">Restaurants</h3>
-                  </div>
-                  <div className="p-6 pt-0">
-                    <p className="text-sm text-gray-600">
-                      Taste the flavors of Bicol cuisine, known for its spicy
-                      dishes and unique culinary traditions.
-                    </p>
-                  </div>
-                  <div className="p-6 pt-0">
-                    <div className="flex items-center text-sm font-medium transition-colors text-orange-600 group-hover:text-orange-700">
-                      Explore Restaurants
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        {/* Featured Section */}
-        <FeaturedSection
-          onViewAllClick={handleViewAllClick}
-          onItemClick={handleFeaturedItemClick}
-        />
-
-        {/* Map Preview Section */}
-        <div className="container mx-auto my-16 px-4">
-          <MapPreview
-            onViewFullMap={handleViewFullMapClick}
-            onLocationClick={handleMapLocationClick}
-          />
-        </div>
-
-        {/* Call to Action Section */}
-        <section className="bg-blue-600 py-16 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-              Ready to Explore Albay?
+      {/* Top 5 Tourist Destinations Section */}
+      <section id="top-destinations" className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              TOP 5 TOURIST DESTINATIONS
             </h2>
-            <p className="mx-auto mb-8 max-w-2xl text-lg text-blue-100">
-              Plan your perfect trip to Albay and discover the beauty of Mayon
-              Volcano, local cuisine, and Filipino hospitality.
+            <p className="text-gray-600 mt-2">
+              Based on annual visitor statistics - discover Albay’s most visited
+              landmarks.
             </p>
-            <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-              <Link
-                to="/tourist-spots"
-                className="rounded-full bg-white px-8 py-3 font-semibold text-blue-600 shadow-md transition-colors hover:bg-blue-50"
-              >
-                Explore Tourist Spots
-              </Link>
-              <Link
-                to="/map"
-                className="rounded-full border border-white bg-transparent px-8 py-3 font-semibold text-white transition-colors hover:bg-white/10"
-              >
-                View Interactive Map
-              </Link>
-            </div>
           </div>
-        </section>
-      </main>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+            {topTouristSpots.map((spot) => (
+              <div
+                key={spot.id}
+                className="rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition-all duration-300"
+              >
+                <img
+                  src={spot.image}
+                  alt={spot.name}
+                  className="w-full h-48 object-cover"
+                />
+
+                <div className="p-5 text-left">
+                  <div className="flex justify-between items-center mb-2">
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {spot.name}
+                    </h3>
+                    <span className="text-sm font-bold bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                      #{spot.rank}
+                    </span>
+                  </div>
+
+                  <p className="text-gray-600 text-sm mb-3">{spot.description}</p>
+
+                  <p className="text-sm text-gray-700 mb-2">
+                    <strong>Municipality:</strong> {spot.municipality}
+                  </p>
+
+                  <div className="text-sm text-gray-600 space-y-1">
+                    <p>
+                      🏠 <strong>Domestic:</strong> {spot.domestic.toLocaleString()}
+                    </p>
+                    <p>
+                      ✈️ <strong>Foreign:</strong> {spot.foreign.toLocaleString()}
+                    </p>
+                    <p>
+                      🌍 <strong>Total:</strong> {spot.total.toLocaleString()}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Map Section */}
+      <div className="container mx-auto my-16 px-4">
+        <InteractiveMap />
+      </div>
+
+      {/* Featured Attractions Section */}
+      <AttractionsList
+        attractions={featuredAttractions}
+        title="Featured Attractions"
+        description="Explore the most popular natural wonders, historical sites, and cultural landmarks in Albay."
+      />
 
       {/* Footer */}
       <Footer />
